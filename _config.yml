@@ -14,7 +14,7 @@ future: true
 # SNS settings
 RSS: false
 # weibo_username:     普通市民吉良桑
-zhihu_username:     phycho-35
+# zhihu_username:     phycho-35
 github_username:    scliubit
 # twitter_username:   scliubit
 #facebook_username:  huxpro
