@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "About"
+title: "CV"
 description: " "
 header-img: "img/about-bg.jpg"
 multilingual: true
@@ -11,12 +11,12 @@ multilingual: true
 
 <!-- Chinese Version -->
 <div class="zh post-container">
-    {% capture about_zh %}{% include cv/zh.md %}{% endcapture %}
+    {% capture cv_zh %}{% include cv/zh.md %}{% endcapture %}
     {{ cv_zh | markdownify }}
 </div>
 
 <!-- English Version -->
 <div class="en post-container">
-    {% capture about_en %}{% include cv/en.md %}{% endcapture %}
+    {% capture cv_en %}{% include cv/en.md %}{% endcapture %}
     {{ cv_en | markdownify }}
 </div>
