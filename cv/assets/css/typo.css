@@ -160,7 +160,7 @@ u, .typo-u {
 
 /* 标记，类似于手写的荧光笔的作用 */
 mark {
-  background: #1abc9cad;
+  background: #1abc9c41;
   border-bottom: 1px solid #ffedce;
   padding: 2px;
   margin: 0 5px;

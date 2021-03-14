@@ -198,7 +198,7 @@ progress::-moz-progress-value {
   line-height: 2; }
 
 mark {
-  background: #1abc9cad; }
+  background: #1abc9c41; }
 
 @media screen and (max-width: 1169px) {
   .container .info-unit h3 span {
