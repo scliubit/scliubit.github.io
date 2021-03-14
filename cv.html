@@ -3,19 +3,9 @@ layout: raw
 title: "CV"
 description: " "
 header-img: "img/about-bg.jpg"
-multilingual: true
+multilingual: false
 ---
-
-{% include multilingual-sel.html %}
-
-<!-- Chinese Version -->
-<div class="zh post-container">
+<div>
     {% capture CV_zh %}{% include CV/zh.md %}{% endcapture %}
     {{ CV_zh | markdownify }}
-</div>
-
-<!-- English Version -->
-<div class="en post-container">
-    {% capture CV_en %}{% include CV/en.md %}{% endcapture %}
-    {{ CV_en | markdownify }}
 </div>
