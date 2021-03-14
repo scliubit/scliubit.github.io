@@ -1,35 +1,3 @@
-<!DOCTYPE html>
-<html lang="zh-cn">
-
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"
-    />
-    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
-    <meta name="format-detection" content="email=no" />
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="format-detection" content="telephone=no" />
-    <meta name="renderer" content="webkit">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <meta name="apple-mobile-web-app-title" content="Amaze UI" />
-    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
-    <meta http-equiv="Pragma" content="no-cache" />
-    <meta http-equiv="Expires" content="0" />
-    <title>[简历]张大侠-前端开发工程师/杭州</title>
-    <link rel="shortcut icon" href="_includes/CV/assets/images/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="_includes/CV/assets/css/typo.css">
-    <link rel="stylesheet" href="_includes/CV/assets/css/font-awesome.min.css">
-    <link rel="stylesheet" href="_includes/CV/assets/css/index.css">
-    <script>
-        function loading() {
-            document.getElementsByClassName('avatar')[0].style.display = 'block';
-            document.getElementsByClassName('loading')[0].style.display = 'none';
-        }
-    </script>
-</head>
-
-<body>
 
     <header class="header"></header>
 
@@ -403,6 +371,3 @@
     </aside>
 
     <script src="./_includes/CV/assets/js/index.js"></script>
-</body>
-
-</html>
