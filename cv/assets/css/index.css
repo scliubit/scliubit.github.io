@@ -226,11 +226,11 @@ body .info-unit h3 {
     -webkit-animation-delay: 0.8s;
 }
 
-.container .side .info-unit .me .portrait img {
+.container .side .info-unit .me .portrait .ava img {
     display: none;
     width: 12rem;
     height: 12rem;
-    border-radius: 0%;
+    border-radius: 5%;
 }
 
 
