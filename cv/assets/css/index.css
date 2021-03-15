@@ -149,7 +149,7 @@ body .info-unit h3 {
     width: 60%;
 }
 
-.container .side .info-unit ul li {
+.container .side .info-unit ul li h3 {
     margin-bottom: 1rem;
     list-style: disc;
 }
