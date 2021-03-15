@@ -228,9 +228,9 @@ body .info-unit h3 {
 
 .container .side .info-unit .me .portrait img {
     display: none;
-    width: 8rem;
-    height: 8rem;
-    border-radius: 50%;
+    width: 12rem;
+    height: 12rem;
+    border-radius: 0%;
 }
 
 
