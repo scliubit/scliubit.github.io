@@ -1,10 +1,5 @@
 <header class="header"></header>
-<script>
-    function loading() {
-        document.getElementsByClassName('avatar')[0].style.display = 'block';
-        document.getElementsByClassName('loading')[0].style.display = 'none';
-    }
-</script>
+
 <article class="container">
     <section class="side" id="side">
 
@@ -86,6 +81,12 @@
         <!-- 个人肖像 -->
         <section class="me">
             <section class="portrait">
+                <script>
+                    function loading() {
+                        document.getElementsByClassName('avatar')[0].style.display = 'block';
+                        document.getElementsByClassName('loading')[0].style.display = 'none';
+                    }
+                </script>
                 <!-- 头像照片 -->
 
                 <div class="loading">
@@ -96,7 +97,7 @@
                     <span></span>
                 </div>
                 <div align="center">
-                    <img src="assets/images/avatar.jpg" style="display:block; margin:0 auto;" alt="" onload=loading()>
+                    <img src="assets/images/avatar.jpg" style="display:block; margin:0 auto;" alt="" onload="loading()">
                 </div>
                 <!--<img src="assets/images/avatar.jpg" >onload="loading()"-->
             </section>
