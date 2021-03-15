@@ -153,6 +153,7 @@ body .info-unit h3 {
 .container .side .info-unit .me .portrait {
     margin: 0 auto;
     margin-bottom: 1rem;
+    margin-top: 2rem;
     width: 12rem;
     height: 12rem;
     overflow: hidden;
