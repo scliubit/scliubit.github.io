@@ -49,6 +49,10 @@
                 <!-- 网易云跟帖 评论框 start -->
                 <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
                 <!-- 网易云跟帖 评论框 end -->
+                {% endif %} {% if site.valine_comment %}
+                <!-- Valine跟帖 评论框 start -->
+                <div id="vcomments"></div>
+                <!-- Valine跟帖 评论框 end -->
                 {% endif %}
             </div>
 
@@ -102,7 +106,7 @@
 <!-- 网易云跟帖JS代码 end -->
 {% endif %} {% if site.valine_comment %}
 <!-- Valine跟帖JS代码 start -->
-<div id="vcomments"></div>
+<script src='//unpkg.com/valine/dist/Valine.min.js'></script>
 <script>
     new Valine({
         el: '#vcomments',
