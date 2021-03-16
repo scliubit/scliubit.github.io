@@ -59,7 +59,10 @@ kramdown:
 
 
 # Disqus settings
-disqus_username: scliu
+disqus_username: false
+
+# Valine settings
+valine_comment: true
 
 # Netease settings
 netease_comment: false
