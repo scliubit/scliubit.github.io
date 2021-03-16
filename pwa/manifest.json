@@ -7,9 +7,9 @@
     "sizes": "640x639",
     "type": "image/png"
   }, {
-    "src": "icons/895.png",
+    "src": "icons/895.jpg",
     "sizes": "895x895",
-    "type": "image/png"
+    "type": "image/jpg"
   }],
   "background_color": "#fff",
   "theme_color": "#000",
