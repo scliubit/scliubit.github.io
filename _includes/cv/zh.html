@@ -113,7 +113,7 @@
             function getAge() {
                 var myDate = new Date();
                 var myAge = myDate.getYear() - 98;
-                var age = getElementsById("age");
+                var age = getElementById("age");
                 age.innerHTML = myAge;
             }
         </script>
@@ -125,7 +125,7 @@
             <ul>
                 <li>
                     <label>个人信息</label>
-                    <span>Shicong Liu / 男 / <span id="age"></span>岁</span>
+                    <span>Shicong Liu / 男 / <span id="age" onload="getAge()"></span>岁</span>
                 </li>
                 <li>
                     <label>英语水平</label>
