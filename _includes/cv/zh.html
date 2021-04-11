@@ -109,6 +109,14 @@
         </section>
 
         <!-- 基本信息 -->
+        <script>
+            function getAge() {
+                var myDate = new Date();
+                var myAge = myDate.getYear() - 98;
+                var age = getElementsById("age");
+                age.innerHTML = myAge;
+            }
+        </script>
         <section class="profile info-unit">
             <h2>
                 <i class="fa fa-user" aria-hidden="true"></i>基本信息
@@ -117,7 +125,7 @@
             <ul>
                 <li>
                     <label>个人信息</label>
-                    <span>Shicong Liu / 男 / 23岁</span>
+                    <span>Shicong Liu / 男 / <span id="age"></span>岁</span>
                 </li>
                 <li>
                     <label>英语水平</label>
