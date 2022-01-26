@@ -1,1 +1,0 @@
-Hello there, im a casual graduate student of Beijing Institute of Technology.
