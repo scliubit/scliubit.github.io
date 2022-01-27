@@ -59,13 +59,19 @@ def build(self, input_shape):
 
 ## LaTeX 公式
 
-$
+一句话
+
+<div>
+$$
 \begin{align}
 \tilde{r}(t)&=\sum_{\ell=0}^{L-1}\sqrt{\alpha_\ell}\tilde{s}(t-\tau_\ell)\notag\\
 &=\sum_{\ell=0}^{L-1}\sqrt{\alpha_\ell}\mathfrak{R}\{s(t-\tau_\ell)e^{2\pi f(t-\tau_\ell)}\}\notag\\
 &=\mathfrak{R}\{\sum_{\ell=0}^{L-1}\sqrt{\alpha_\ell} s(t-\tau_\ell)e^{2\pi f(t-\tau_\ell)}\}
 \end{align}
-$
+$$
+</div>
+
+一句话
 
 ## 引用
 
