@@ -6,6 +6,7 @@ date:       2022-01-27 12:00:00
 author:     "Shicong Liu"
 header-img: "img/home.jpg"
 catalog: true
+mathjax: true
 tags:
     - 生活
     - Meta
