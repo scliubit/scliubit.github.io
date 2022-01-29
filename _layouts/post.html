@@ -47,6 +47,22 @@ layout: default
                     {% endif %}
                 </ul>
                 <hr style="visibility: hidden;">
+                <!-- valine 公共JS代码 start (一个网页只需插入一次) -->
+                {% if site.valine_comment %}
+                    {% if page.comment %}
+                    <div id="vcomments"></div>
+                    <script>
+                        new Valine({
+                            el: '#vcomments',
+                            appId: 'uWWBO9lDLRid2C0A9qfUz8FY-gzGzoHsz',
+                            appKey: 'KUwa76G0dmjFUuUKIsOT1knf',
+                            placeholder: 'clnb',
+                            avatar: 'identicon',
+                            visitor: true
+                        })
+                    </script>
+                    {% endif %}
+                {% endif %}
 
                 {% if site.disqus_username %}
                 <!-- disqus 评论框 start -->
@@ -117,9 +133,8 @@ layout: default
 <!-- 网易云跟帖JS代码 end -->
 {% endif %}
 
-
-{% if site.disqus_username %}
 <!-- disqus 公共JS代码 start (一个网页只需插入一次) -->
+{% if site.disqus_username %}
 <div id="disqus_thread"></div>
 <script>
     /**
