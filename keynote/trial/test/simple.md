@@ -1,3 +1,7 @@
+---
+hide-in-nav: true
+---
+
 ## Slide 1.1
 
 ```js

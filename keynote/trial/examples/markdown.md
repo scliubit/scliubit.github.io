@@ -1,3 +1,7 @@
+---
+hide-in-nav: true
+---
+
 # Markdown Demo
 
 
