@@ -1,1 +1,1 @@
-console.log("感谢您的浏览，期待能够加入贵公司！我的博客：https://scliubit.github.io/");
+console.log("Thanks for your visiting. Blog homepage index: https://scliubit.github.io/");
