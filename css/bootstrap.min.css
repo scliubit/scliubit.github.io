@@ -1835,7 +1835,8 @@ blockquote {
     padding: 10px 20px;
     margin: 0 0 20px;
     font-size: 17.5px;
-    border-left: 5px solid #eee
+    border-left: 5px solid #cd5c5c;/*#eee*/
+    background-color:#cd5c5c30
 }
 
 blockquote ol:last-child,

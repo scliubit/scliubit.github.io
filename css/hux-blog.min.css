@@ -822,8 +822,8 @@ article {
 }
 
 blockquote {
-    color: gray;
-    font-style: italic;
+    color: #cd5c5c;/*gray*/
+    font-style: normal;/*italic*/
     font-size: .95em;
     margin: 20px 0 20px
 }
@@ -916,7 +916,12 @@ samp {
     color: #0085a1
 }
 
-.post-container h1,
+.post-container h1 {
+    margin: 50px 0 20px;
+    line-height: 1.8;
+    text-align: center;
+}
+
 .post-container h2,
 .post-container h3,
 .post-container h4,
