@@ -1,6 +1,6 @@
 # Site settings
 title: 去码头整点薯条
-SEOTitle: 朝花夕拾 | Homepage
+SEOTitle: Homepage of Shicong
 header-img: img/home-bg.jpg
 email: scliubit@163.com
 description: "一些草稿, 备份, 与胡思乱想"
@@ -38,7 +38,7 @@ anchorjs: true                          # if you want to customize anchor. check
 # from PR#40, to support local preview for Jekyll 3.0
 # make sure you have this gem installed
 # `$ gem install jekyll-paginate`
-plugins: [jekyll-paginate]
+plugins: [jekyll-paginate, jekyll-feed]
 
 
 
