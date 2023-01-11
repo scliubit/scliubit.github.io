@@ -23,6 +23,6 @@
         "push": "git push origin master --tag"
     },
     "dependencies": {
-        "ajv": "^6.12.3"
+        "ajv": "^8.0.0"
     }
 }
