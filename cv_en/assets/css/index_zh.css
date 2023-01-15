@@ -373,8 +373,8 @@ progress::-webkit-progress-bar {
 }
 
 progress::-webkit-progress-value {
-    /*background-color: #1abc9c;*/
-    background-color: #002fa7;
+    background-color: #1abc9c;
+    /* background-color: #002fa7; */
 }
 
 progress::-moz-progress-bar {
