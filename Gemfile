@@ -6,4 +6,4 @@ gem "rake"
 
 gem "webrick", "~> 1.7"
 
-# gem 'jekyll-feed'
+gem 'jekyll-feed'
