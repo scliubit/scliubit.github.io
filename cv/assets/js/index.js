@@ -1,1 +1,0 @@
-console.log("感谢您的浏览! 博客地址: https://scliubit.github.io/");

@@ -1,9 +1,9 @@
 # Site settings
-title: 去码头整点薯条
+title: Shicong's Blog
 SEOTitle: Homepage of Shicong
 header-img: img/home-bg.jpg
 email: scliubit@163.com
-description: "一些草稿, 备份, 与胡思乱想"
+description: "Life Record"
 keyword: "scliu, scliubit, Shicong Liu, 刘仕聪"
 url: "https://scliubit.github.io"              # your host, for absolute URL
 baseurl: ""                             # for example, '/blog' if your blog hosted on 'host/blog'
@@ -14,11 +14,11 @@ future: true
 # SNS settings
 RSS: false
 weibo_username:     false
-zhihu_username:     false
+zhihu_username:     scliu
 github_username:    scliubit
 twitter_username:   false
 #facebook_username:  huxpro
-#linkedin_username:  firstname-lastname-idxxxx
+linkedin_username:  shicong-liu-3b6b2724a
 
 
 
@@ -82,14 +82,14 @@ netease_comment: false
 
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
-sidebar-about-description: "一般市民聪桑 <br> At least, a student."
-sidebar-avatar: https://scliubit.github.io/img/avatar.jpeg # use absolute URL, seeing it's used in both `/` and `/about/`
+sidebar-about-description: "M.Phil Student BIT."
+sidebar-avatar: /img/avatar.jpeg # use absolute URL, seeing it's used in both `/` and `/about/`
 
 
 
 # Featured Tags
 featured-tags: true                     # whether or not using Feature-Tags
-featured-condition-size: 1              # A tag will be featured if the size of it is more than this condition value
+featured-condition-size: 2              # A tag will be featured if the size of it is more than this condition value
 
 
 

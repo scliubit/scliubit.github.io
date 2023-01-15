@@ -1,3 +1,4 @@
-Hello, my name is Shicong Liu, 24 years old. I live in the University Town area in the northwest of Haidian District, Beijing, unmarried. I am studying in the School of Information and Electronics, Beijing Institute of Technology, where I have to work overtime until 23:00 every day before returning to the dormitory (lol). I don't smoke, and the wine is just a taste. I go to bed at 1 a.m. and get 8 hours of sleep every day. Before going to bed, I must drink a cup of warm whey protein powder (~30g), then watch the live broadcast for 40 minutes, go to bed, fall asleep immediately, and never keep fatigue and stress until the next day. My workmates all say that I am normal.
 
-For more information, please check the **CV** page on the navigation bar above :-D
+I am Shicong Liu, M.Phil student at Beijing Institute of Technology. This site is used to log my ideas and life. I am currently planning for a Ph.D. position in Europe/HK/Canada with a focus on wireless communications. You can reach me by email: scliubit [at] 163 [dot] com.
+
+For more information, please check out my **CV** page on the navigation bar above :-D

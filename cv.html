@@ -3,9 +3,10 @@ layout: raw
 title: "CV"
 description: " "
 header-img: "img/about-bg.jpg"
+hide-in-nav: true
 multilingual: false
 ---
 <div>
-    {% capture CV_zh %}{% include cv/zh.html %}{% endcapture %}
-    {{ CV_zh | markdownify }}
+    {% capture CV_en %}{% include cv/zh.html %}{% endcapture %}
+    {{ CV_en | markdownify }}
 </div>
