@@ -1,14 +1,14 @@
 {
-    "name": "hux-blog",
-    "title": "Hux Blog",
-    "author": "Hux <huxpro@gmail.com>",
-    "version": "1.8.2",
-    "homepage": "http://huxpro.github.io",
+    "name": "shicong-blog",
+    "title": "Shicong's Blog",
+    "author": "Shicong <scliubit@gmail.com>",
+    "version": "1.0.0",
+    "homepage": "https://scliubit.github.io",
     "repository": {
         "type": "git",
-        "url": "https://github.com/Huxpro/huxpro.github.io"
+        "url": "https://github.com/scliubit/scliubit.github.io"
     },
-    "bugs": "https://github.com/Huxpro/huxpro.github.io/issues",
+    "bugs": "https://github.com/scliubit/scliubit.github.io/issues",
     "devDependencies": {
         "grunt": ">=1.5.2",
         "grunt-banner": "~0.6.0",
