@@ -8,6 +8,7 @@ header-img: "img/home-dark.jpg"
 catalog: true
 mathjax: true
 comment: true
+hide-in-nav: true
 tags:
     - 生活
     - 摸鱼

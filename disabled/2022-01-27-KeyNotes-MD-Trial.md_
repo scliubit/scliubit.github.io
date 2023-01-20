@@ -6,6 +6,7 @@ iframe: 	"/keynote/trial/"
 date:       2022-01-27 19:00:00
 author:     "Shicong Liu"
 header-img: "img/home.jpg"
+hide-in-nav: true
 tags:
     - Slides
     - 测试
