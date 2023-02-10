@@ -1,8 +1,8 @@
 ---
 layout:     post
-title:      "🤔Comments on "Deep Semantic Communications"
+title:      "🤔Comments on Deep Semantic Communications"
 subtitle:   "👣Stepping in Place"
-date:       2022-02-10 23:59:00
+date:       2023-02-10 23:59:00
 author:     "Shicong Liu"
 header-img: "img/home-dark.jpg"
 catalog: true
