@@ -23,4 +23,4 @@ Something kind of weird is happening every day recently. The economy is bad, the
 
 
 
-Will everything be better in the future? Seems not. Please give me some hope.
+Will everything become better in the future?
