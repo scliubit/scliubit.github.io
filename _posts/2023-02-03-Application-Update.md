@@ -77,3 +77,7 @@ The interview with CTH went fine, but finally I was not selected. I received not
 ## Jan. 2023
 
 HKPFS application recommended by CityU. Thanks a lot to Dr. YU. I can't be more grateful to him.
+
+## Feb. 2023
+
+Several interviews of recent applied positions. Not so confident for the results.
