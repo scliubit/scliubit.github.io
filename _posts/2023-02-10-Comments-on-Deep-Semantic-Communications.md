@@ -1,7 +1,7 @@
 ---
 layout:     post
-title:      "🤔Comments on Deep Semantic Communications"
-subtitle:   "👣Stepping in Place"
+title:      "🤔Paper Reading on Deep Semantic Communications"
+subtitle:   "👣Long way to go"
 date:       2023-02-10 23:59:00
 author:     "Shicong Liu"
 header-img: "img/home-dark.jpg"
@@ -54,7 +54,7 @@ I have rechecked that paper immediately and get some of the clues as (anyway I w
 
 
 
-I am also having some other issues with regard to this paper, but not as significant as the one above hence not presented. This post is mainly given to record my reading reactions and thinkings and have no offense purposed to the authors. Anyway, maybe most of the issues can be well-explained =).
+I am also having some other issues with regard to this paper, but not as significant as the one above hence not presented. This post is mainly given to record my reading reactions and thinkings and have no offense purpose to the authors. Anyway, maybe most of the issues can be well-explained =).
 
 
 

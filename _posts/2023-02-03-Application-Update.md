@@ -24,8 +24,6 @@ As the application season for the 2023 Fall starts, I must consider my Ph.D. pla
 
 Bad news always came in twice. Other than the war between Russia and Ukraine, rumors went that EU has tighten the visa review for universities involved in 10043, and will reduce research funding in the global economic downturn (which can lead to smaller amount of Ph.D. headcount).
 
-I feel that I have developed mild depression.
-
 The only thing that seems to be smooth is getting a satisfying IELTS score in 2 weeks, while all the other things are piling shits up. Since the end of 2021, one JSAC and one TVT journal paper I have submitted were directly rejected, and the JSAC paper being submitted has not yet received any update so far. My [resume](https://scliubit.github.io/cv_en) doesn't seem to have any improvements at all this year, which means that I am still using the last year's resume for Ph.D. positions. Today, I joined an information exchange WeChat group for studying abroad on the recommendation of a friend. After I introduced myself, I got to know several applicants with very strong backgrounds such as SEU+THU, which seriously increased my internal pressure.
 
 One last gratifying thing is that I still have a group of good friends who can help me. Maybe they will never see it here, but thanks to S. Zeng for recommending the European friends who helped me introduce the delivery process of TU/e, and thanks to T. Liu for helping me revise the documents and introducing a lot of application experience, and comforting me with my failure experience. I also thank B. Ouyang for introducing resources, providing documents, experience and other help, as well as X. Bian and many other friends for their help. I can't list them all here.
@@ -44,13 +42,11 @@ All the professors in the direction of wireless and signal processing that I hav
 
 ## Oct. 2022
 
-I was very dazed thinking about whether to read ETHZ in a different direction. 
-
 The Ph.D. project in KTH was postponed for one week. Maybe the professor felt that none of the resumes is good enough. KTH is the school I most want to go to in Northern Europe at present. Pity.
 
 Dr. Xianghao YU in CityU is a very nice professor. I have learned a lot after talking with him. If I am able to get the offer, maybe I'll join his group.
 
-No interviews for now. I want good news.
+No other interviews for now.
 
 
 
@@ -80,4 +76,4 @@ HKPFS application recommended by CityU. Thanks a lot to Dr. YU. I can't be more 
 
 ## Feb. 2023
 
-Several interviews of recent applied positions. Not so confident for the results.
+Several interviews of recent applied positions. Not confident for the results.

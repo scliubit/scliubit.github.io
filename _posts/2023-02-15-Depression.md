@@ -13,14 +13,4 @@ tags:
     - 日常
 ---
 
-
-
-Another Valentine's Day alone, but Im actually feeling more relaxed than spending these kinds of holidays with people.
-
-
-
-Something kind of weird is happening every day recently. The economy is bad, the political environment is bad, and the researches in my field are bad. Always get up early but catch up late. Feeling kind of depressed after all the failures recently.
-
-
-
-Will everything become better in the future?
+# Will everything become better in the future?
