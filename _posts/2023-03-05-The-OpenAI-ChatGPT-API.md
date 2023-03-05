@@ -26,6 +26,8 @@ Thanks to the front-end engineers, an UI was given open-sourced[^2] to make it e
 
 Just try it.
 
+`Mar. 5`: Improved the *temperature* parameter to increase the diversity of answers.
+
 
 
 > Note that since some pre-defined prompts are in Chinese, the bot is more likely to use Mandarin, but is still able to speak other languages with proper queries. This deployment actually plays a role in avoiding some proxy censorships.
