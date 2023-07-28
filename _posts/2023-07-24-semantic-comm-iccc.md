@@ -16,7 +16,7 @@ tags:
 
 
 
-A conference paper on semantic communications has been accepted by IEEE/CIC ICCC 2023, and will be presented orally by me [during the conference](https://iccc2023.ieee-iccc.org/) (10-13 Aug., Dalian). Preprint version will soon be available on arXiv.
+A conference paper on semantic communications has been accepted by IEEE/CIC ICCC 2023, and will be presented orally by me [during the conference](https://iccc2023.ieee-iccc.org/) (10-13 Aug., Dalian). Preprint version will soon be [available on arXiv](https://arxiv.org/abs/2307.12266).
 
 
 
