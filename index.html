@@ -4,6 +4,24 @@ description: " "
 ---
 
 {% for post in paginator.posts %}
+{% if post.layout != 'post' %}
+<div class="post-preview">
+    <a href="{{ post.url | prepend: site.baseurl }}">
+        <h2 class="post-title">
+            {{ post.title }}
+        </h2>
+    </a>
+</div>
+<hr>
+{% endif %}
+{% endfor %}
+<!-- <hr> -->
+<h1 class="post-title">
+    <div style="text-align:center; margin-top: 30px;">Posts</div>
+</h1>
+<hr>
+{% for post in paginator.posts %}
+{% if post.layout == 'post' %}
 <div class="post-preview">
     <a href="{{ post.url | prepend: site.baseurl }}">
         <h2 class="post-title">
@@ -16,9 +34,9 @@ description: " "
         {% endif %}
         <div class="post-content-preview">
             {% if post.lang == 'en' %}
-                {{ post.content | strip_html | truncate:150 }}
-            {% else %}
                 {{ post.content | strip_html | truncate:100 }}
+            {% else %}
+                {{ post.content | strip_html | truncate:50 }}
             {% endif %}
         </div>
     </a>
@@ -27,8 +45,8 @@ description: " "
     </p>
 </div>
 <hr>
+{% endif %}
 {% endfor %}
-
 <!-- Pager -->
 {% if paginator.total_pages > 1 %}
 <ul class="pager">
