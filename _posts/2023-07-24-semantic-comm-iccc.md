@@ -53,7 +53,7 @@ A conference paper on semantic communications has been accepted by IEEE/CIC ICCC
 
 # 系统模型 ｜ System Model
 
-编解码器的基本结构如下所示，我们对Transformer结构的修改很少，不同点主要体现在传输部分。在完成编码之后，我们可以选择将信号进行拼接与比特交织之后送入二进制信道。该过程梯度可以选择`straight-through`的方式实现，而在传输后我们迭代译码。
+编解码器的基本结构如下所示，编码器部分我们采用了预训练的BERT模型，这是由于我们尝试train-from-scratch时发现所构造的数据集不够general，难以构建一个相对完整的语义数据库。该预训练模型将随着Decoder的训练同时fine-tune；解码器部分采用简单的Transformer-Decoder模型，这里我们对Transformer结构的修改很少，不同点主要体现在传输部分。在完成编码之后，我们可以选择将信号进行拼接与比特交织之后送入二进制信道。该过程梯度可以选择`straight-through`的方式实现，而在传输后我们迭代译码。
 
 <div>
 <img src="/img/semcom/enc.png" alt="ENC" style="zoom:25%;"/>
