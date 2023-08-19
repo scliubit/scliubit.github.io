@@ -134,7 +134,7 @@ blockquote {
     margin: 1em 3em 1em 2em;
 }
 
-@media only screen and ( max-width: 640px) {
+@media only screen and (max-width: 640px) {
     blockquote {
         margin: 1em 0;
     }
@@ -207,7 +207,7 @@ sup {
 }
 
 :root sub,
- :root sup {
+:root sup {
     vertical-align: baseline;
     /* for ie9 and other modern browsers */
 }
@@ -300,6 +300,12 @@ hr {
     height: 10px;
 }
 
+hr.myhrline {
+    margin-top: 0;
+    margin-bottom: 1.8em;
+    margin-left: 200px;
+    margin-right: 200px;
+}
 
 /* 底部印刷体、版本等标记 */
 
