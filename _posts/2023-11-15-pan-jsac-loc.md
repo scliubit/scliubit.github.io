@@ -283,7 +283,11 @@ J_{p, q}=2 p_z \Delta_R \omega_u-2 p_y \Delta_R \varphi_u, \quad Q_{p, q}=0
 <div>
 <img src="/img/panjsacloc/simpara.png" alt="sim" style="zoom:45%;"/>
 </div>
+---
 
+# 小结
+
+本文通过观察自相关矩阵的性质，提出了一种基于角度解耦的定位方法。然而，由于仍考虑基于MUSIC的方案，我们仍无法高效地定位（采样数多，计算复杂度高）。
 
 
 
