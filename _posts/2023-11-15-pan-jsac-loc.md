@@ -40,7 +40,15 @@ tags:
 \boldsymbol{a}_{R, u}^i[m]=\exp \left(-j \frac{2 \pi}{\lambda_i}\left(d_{R, u}^m-d_u^0\right)\right)
 \end{equation}
 </div>
-增益$g_{R,u}^i$此处单独建模，并作为带估计参数，有信道建模$\boldsymbol{h}_{R, u}^i=g_{R, u}^i \boldsymbol{a}_{R, u}^i$。值得一提的是，关于距离和角度的参考模型如图。后续的角度计算均基于此图的定义。
+增益$g_{R,u}^i$此处单独建模，并作为带估计参数，有信道建模
+
+<div>
+    \begin{equation}
+    {\bf h}_{R, u}^i = g_{R, u}^i {\mathbf a}_{R, u}^i
+    \end{equation}
+</div>
+
+值得一提的是，关于距离和角度的参考模型如图。后续的角度计算均基于此图的定义。
 
 <div>
 <img src="/img/panjsacloc/propmodel.png" alt="sys" style="zoom:45%;"/>
