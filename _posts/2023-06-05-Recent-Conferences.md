@@ -35,5 +35,5 @@ tags:
 |    ICC'24    |    23/10/11    |    24/06/09     |       丹佛       |        [ICC](https://icc2024.ieee-icc.org/)         |
 | Asilomar'23  |      TBD       |    23/10/29     |  Pacific Grove   |    [Asilomar](https://www.asilomarsscconf.org/)     |
 |   WCSP'23    |    23/06/30    |    23/11/02     |       杭州       |    [WCSP](http://www.ic-wcsp.org/2023/index.asp)    |
-| Globecom'23  |    23/07/15    |    23/12/04     |   开普敦，南非   | [GLOBECOM](https://globecom2024.ieee-globecom.org/) |
+| Globecom'23  |    23/07/15    |    23/12/04     |      吉隆坡      | [GLOBECOM](https://globecom2024.ieee-globecom.org/) |
 |  VTCFall'23  |    23/07/30    |    23/10/10     |       香港       |  [VTC](https://events.vtsociety.org/vtc2023-fall/)  |
