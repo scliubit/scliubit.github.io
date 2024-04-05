@@ -105,12 +105,12 @@ page-mathjax: true
 
 
 # Friends
-friends: [
-    {
-        title: "whitesad",
-        href: "http://whitesad.xyz/"
-    },{
-        title: "lovecatc",
-        href: "https://lovecatc.com/"
-    }
-]
+# friends: [
+#     {
+#         title: "whitesad",
+#         href: "http://whitesad.xyz/"
+#     },{
+#         title: "lovecatc",
+#         href: "https://lovecatc.com/"
+#     }
+# ]
