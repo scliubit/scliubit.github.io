@@ -1,0 +1,37 @@
+ICC'24的会议Program今天在EDAS上发布了，今天闲暇无事对结果稍作统计，不保证结果正确，请谨慎参考。
+
+本次ICC共收稿`935`篇，涉及作者`3282`位，以及学术机构(大学，研究所等)`1223`所。
+
+和其他通信会议一样，本次会议仍然围绕网络、通信等话题展开，其中关键词分布如下。
+
+<div>
+<img src="/img/icc24/kws.png" alt="kws" style="zoom:75%;"/>
+</div>
+
+本次会议中，北京邮电大学(`Beijing University of Posts and Telecommunications`)在作者数和论文数两个指标中均拔得头筹，共发表`43`篇论文，涉及`107`位作者。
+
+<div>
+<img src="/img/icc24/numpapers.png" alt="papers" style="zoom:75%;"/>
+</div>
+以学术机构论文计数的统计结果如上图所示。
+
+按照国家/地区分布，论文数量统计结果如下
+
+<div>
+<img src="/img/icc24/country_region.png" alt="cr" style="zoom:45%;"/>
+</div>
+
+由于同一篇论文可能由多个国家/地区合作，上图论文数量加和将大于总论文数（935），同时也显示出通信领域中国大陆（不含港澳台地区）的在全世界的耦合程度。
+
+第一作者所属学术机构情况如下
+
+<div>
+<img src="/img/icc24/first_author_inst.png" alt="fi" style="zoom:45%;"/>
+</div>
+
+相对应的，第一作者的国家/地区分布情况如下
+
+<div>
+<img src="/img/icc24/first_author_cr.png" alt="cr2" style="zoom:45%;"/>
+</div>
+以上是本次ICC'24的简单分布统计，后续将根据实际情况不定期更新。
