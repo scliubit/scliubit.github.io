@@ -13,13 +13,7 @@ tags:
     - test
 ---
 
-很久前就该做的事情直到今天才终于想起来......无论如何，坑总算是填上了。
-
-`The task that should have been done a long time ago was only remembered today... anyway, the pit is finally filled.`
-
-这里就用早期的ICC'24统计信息的post来做第一期双语支持的测试了
-
-`The first test of bilingual support falls on the ICC'24 statistic post on Mar. 16`
+⬆️ Please push the button to select your language. Chinese by default.
 
 ---
 
