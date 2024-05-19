@@ -1,8 +1,8 @@
 ---
 layout:     post
-title:      "🛜通信会议总结"
-subtitle:   "✈️是时候来一场旅游了"
-date:       2024-03-18 23:59:00
+title:      "🛜 通信会议速查表"
+subtitle:   "✈️ DDL Lookup Table"
+date:       2024-05-20 23:59:00
 author:     "Shicong Liu"
 header-img: "img/home-dark.jpg"
 catalog: true
@@ -16,25 +16,44 @@ tags:
 
 
 
-会议信息总结
+会议DDL速查表。会议时间往往会延期。
 
-不定期更新
+Lookup Table for communications related conferences. DDLs are usually extended in recent years.
 
-|     会议     | Due (YY/MM/DD) | Conf (YY/MM/DD) |      举办地点      |                         网站                          |
-| :----------: | :------------: | :-------------: | :----------------: | :---------------------------------------------------: |
-|  VTCFall'24  |    24/04/22    |    24/10/07     | Washington DC, USA | [VTCFall](https://events.vtsociety.org/vtc2024-fall/) |
-|   WCSP'24    |    24/06/15    |    24/10/24     |    Hefei, China    |     [WCSP](http://www.ic-wcsp.org/2024/index.asp)     |
-| Globecom'24  |    24/04/01    |    24/12/08     |    开普敦，南非    |  [GLOBECOM](https://globecom2024.ieee-globecom.org/)  |
-| VTCSpring'24 |    23/12/28    |    24/06/24     |       新加坡       |  [VTC](https://events.vtsociety.org/vtc2024-spring/)  |
-|   SPAWC'24   |    24/04/11    |    24/09/10     |        卢卡        |            [SPAWC](https://spawc2024.org/)            |
-|     Due      |     ------     |     ------      |       ------       |                        ------                         |
-|   PIMRC‘24   |    24/02/10    |    24/09/02     |  瓦伦西亚，西班牙  |      [PIMRC](https://pimrc2024.ieee-pimrc.org/)       |
-|   ISIT'24    |    24/01/29    |    24/07/07     |        雅典        |          [ISIT](https://ieee-isit.org/home)           |
-|  ICASSP'24   |    23/09/06    |    24/04/14     |        首尔        |        [ICASSP](https://2024.ieeeicassp.org/)         |
-|   WCNC'24    |    23/10/11    |    24/04/21     |        迪拜        |        [WCNC](https://wcnc2024.ieee-wcnc.org/)        |
-|  ICMLCN'24   |    23/09/15    |    24/05/05     |     斯德哥尔摩     |     [ICMLCN](https://icmlcn2024.ieee-icmlcn.org/)     |
-|    ICC'24    |    23/10/11    |    24/06/09     |        丹佛        |         [ICC](https://icc2024.ieee-icc.org/)          |
-| Asilomar'23  |      TBD       |    23/10/29     |   Pacific Grove    |     [Asilomar](https://www.asilomarsscconf.org/)      |
-|   WCSP'23    |    23/06/30    |    23/11/02     |        杭州        |     [WCSP](http://www.ic-wcsp.org/2023/index.asp)     |
-| Globecom'23  |    23/07/15    |    23/12/04     |       吉隆坡       |  [GLOBECOM](https://globecom2024.ieee-globecom.org/)  |
-|  VTCFall'23  |    23/07/30    |    23/10/10     |        香港        |   [VTC](https://events.vtsociety.org/vtc2023-fall/)   |
+2024
+
+| DDL (M) | Conference   | Date (M)      | Location                | Website                                                      |
+| ------- | ------------ | ------------- | ----------------------- | ------------------------------------------------------------ |
+| Jan.    | ISIT'24      | Jul.          | Athens, Greece          | [ISIT'24](https://2024.ieee-isit.org/)                       |
+| Feb.    | PIMRC'24     | Sept.         | Valencia, Spain         | [PIMRC'24](https://pimrc2024.ieee-pimrc.org/program)         |
+| Mar.    | MeditCom'24  | Jul.          | Madrid, Spain           | [MeditCom'24](https://meditcom2024.ieee-meditcom.org/)       |
+|         | MobiCom'24   | Nov.          | Washington DC, USA      | [MobiCom'24](https://www.sigmobile.org/mobicom/2024/)        |
+| Apr.    | Globecom'24  | Dec.          | Cape Town, South Africa | [Globecom'24](https://globecom2024.ieee-globecom.org/)       |
+|         | VTCFall'24   | Oct.          | Washington DC, USA      | [VTCFall'24](https://events.vtsociety.org/vtc2024-fall/)     |
+|         | SPAWC'24     | Sept.         | Luca, Italy             | [SPAWC'24](https://spawc2024.org/)                           |
+|         | ICCC'24      | Aug.          | Hangzhou, China         | [ICCC'24](https://iccc2024.ieee-iccc.org/)                   |
+| May.    | Asilomar'24  | Oct.          | Pacific Grove, CA, USA  | [Asilomar](https://www.asilomarsscconf.org/)                 |
+| Jun.    | WCSP'24      | Oct.          | Hefei, China            | [WCSP'24](http://www.ic-wcsp.org/2024/)                      |
+| Jul.    | HK6GWS'24    | Sept.         | Hong Kong, China        | [HK6GWS'24](https://hk6gws2024.ieee-hk6gws.org/)             |
+|         | INFOCOM'24   | Dec.          | Vancouver, Canada       | [INFOCOM'24](https://infocom2024.ieee-infocom.org/)          |
+| Aug.    |              |               |                         |                                                              |
+| Sept.   | ICASSP'25    | Apr.${}^{+1}$ | Hyderabad, India        | [ICASSP'25](https://2025.ieeeicassp.org/)                    |
+|         | ICMLCN'25    |               |                         |                                                              |
+|         | WCNC'25      | Mar.${}^{+1}$ | Milan, Italy            | [WCNC'25](https://wcnc2025.ieee-wcnc.org/)                   |
+|         | MMSys'25     | Mar.${}^{+1}$ | Bari, Italy             | [MMSys'25](https://2025.acmmmsys.org/)                       |
+| Oct.    | ICC'25       | Jun.${}^{+1}$ | Montreal QC Canada      | [ICC'25](https://icc2024.ieee-icc.org/)                      |
+| Nov.    |              |               |                         |                                                              |
+| Dec.    | VTCSpring'25 | Jun.${}^{+1}$ | Oslo, Norway            | [VTCSpring'25](https://events.vtsociety.org/vtc2025-spring/) |
+
+${}^{+1}$ 表示实际开会时间在第二年
+
+${}^{+1}$ means the conference will be held the year after.
+
+
+
+# Read More
+
+[^1]: [ComSoc Future Conferences & Events](https://www.comsoc.org/conferences-events/search-future?f%5B0%5D=event_type%3A46)
+[^2]: [SPS Conferences & Events](https://signalprocessingsociety.org/events/conferences)
+[^3]: [ITSoc Conferences & Events](https://www.itsoc.org/news-events/upcoming-events)
+[^4]: [VTS Conferences & Events](https://vtsociety.org/conferences/about-conferences#upcoming)
