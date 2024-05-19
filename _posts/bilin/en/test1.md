@@ -8,7 +8,7 @@ Similar to other communication conferences, this conference focuses on topics re
 <img src="/img/icc24/kws.png" alt="kws" style="zoom:75%;">
 </div>
 
-In this conference, Beijing University of Posts and Telecommunications (`Beijing University of Posts and Telecommunications`) ranks first in both the number of authors and papers. They have published 43 papers with the involvement of 107 authors.
+In this conference, Beijing University of Posts and Telecommunications (`北京邮电大学`) ranks first in both the number of authors and papers. They have published 43 papers with the involvement of 107 authors.
 
 <div>
 <img src="/img/icc24/numpapers.png" alt="papers" style="zoom:75%;">

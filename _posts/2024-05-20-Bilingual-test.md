@@ -13,7 +13,7 @@ tags:
     - test
 ---
 
-⬆️ Please push the button to select your language. Chinese by default.
+⬆️&#xFE0E; Please push the button to select your language. Chinese by default.
 
 ---
 
