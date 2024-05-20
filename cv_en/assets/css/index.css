@@ -250,7 +250,7 @@ body .info-unit h3 {
 
 .container .side .info-unit ul li h3 {
     margin-bottom: 1rem;
-    list-style: disc;
+    list-style: square;
 }
 
 .container .main {
@@ -271,7 +271,12 @@ body .info-unit h3 {
 
 .container .main .info-unit ul li {
     margin-bottom: 1rem;
-    list-style: disc;
+    list-style: square;
+}
+
+li::marker{
+   font-size: 1.4em;
+   line-height: 0.1;
 }
 
 .container .main .info-unit ul li h3 .link {
