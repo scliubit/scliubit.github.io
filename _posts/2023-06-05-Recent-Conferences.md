@@ -41,7 +41,8 @@ Lookup Table for communications related conferences. DDLs are usually extended i
 |         | ICMLCN'25    |               |                         |                                                              |
 |         | WCNC'25      | Mar.${}^{+1}$ | Milan, Italy            | [WCNC'25](https://wcnc2025.ieee-wcnc.org/)                   |
 |         | MMSys'25     | Mar.${}^{+1}$ | Bari, Italy             | [MMSys'25](https://2025.acmmmsys.org/)                       |
-| Oct.    | ICC'25       | Jun.${}^{+1}$ | Montreal QC Canada      | [ICC'25](https://icc2024.ieee-icc.org/)                      |
+| Oct.    | ICC'25       | Jun.${}^{+1}$ | Montreal QC Canada      | [ICC'25](https://icc2025.ieee-icc.org/)                      |
+|         | ICC'26       | Jun.${}^{+2}$ | Glasgow, UK             | [ICC'26](https://icc2026.ieee-icc.org/)                      |
 | Nov.    |              |               |                         |                                                              |
 | Dec.    | VTCSpring'25 | Jun.${}^{+1}$ | Oslo, Norway            | [VTCSpring'25](https://events.vtsociety.org/vtc2025-spring/) |
 

@@ -1,41 +1,8 @@
----
-layout:     post
-title:      "📑 基于离散长球变换的近场信道估计"
-subtitle:   "📑 ICC'24 Wireless Communications Symposium"
-date:       2024-06-20 23:59:00
-author:     "Shicong Liu"
-header-img: "img/home-dark.jpg"
-catalog: true
-mathjax: true
-comment: true
-multilingual: true
-hide-in-nav: true
-tags:
-    - 学习
----
 
 
+今日我们的一篇基于离散长球变换的近场信道估计的论文被Flagship会议ICC'24正会的Wireless Communications Symposium接收，pre-print目前可以在[arXiv](https://arxiv.org/abs/2310.18180)上阅读。
 
-⬆️ Please push the button to select your language. Chinese by default.
-
----
-
-<!-- Chinese Version -->
-<div class="zh post-container">
-    {% capture about_zh %}{% include_relative bilin/zh/icc24.md %}{% endcapture %}
-    {{ about_zh | markdownify }}
-</div>
-<!-- English Version -->
-
-<div class="en post-container">
-    {% capture about_en %}{% include_relative bilin/en/icc24.md %}{% endcapture %}
-    {{ about_en | markdownify }}
-</div>
-
-
-{% if false %}
-
-今日我们的一篇基于离散长球变换的近场信道估计的论文被Flagship会议ICC'24正会的Wireless Communications Symposium接收，pre-print目前可以在[arXiv](https://arxiv.org/abs/2310.18180)上阅读。本文简单介绍提出方案的思路，并对部分审稿人意见的予以解答。
+目前开源代码与演示文稿已在[GitHub](https://github.com/scliubit/DPSS-Slides-Codes)上公开
 
 # 背景
 
@@ -54,6 +21,7 @@ tags:
 {\bf E}({\bf r}_{\rm R}) = \int_{ {\mathcal{S}_{\rm T} } } {\mathbf{G} }\left({\bf r}_{\rm T},{\bf r}_{\rm R}\right) {\bf J}({\bf r}_{\rm T})~{\rm d}{\bf r}_{\rm T},
 \end{equation}
 </div>
+
 其中格林函数有如下形式
 
 <div>\begin{align}
@@ -61,6 +29,7 @@ tags:
 	{} & {} \left. -\frac{1}{(\kappa \Vert {\bf r} \Vert)^2}\left( {\bf I}-3\hat{\bf r}\hat{\bf r}^H \right) \right]\label{green}\\
 	\simeq {} & {} \varphi_0 \frac{e^{-j\kappa \Vert {\bf r}\Vert}}{\Vert{\bf r}\Vert} \left( {\bf I}-\hat{\bf r}\hat{\bf r}^H \right),\notag
 \end{align}</div>
+
 
 很显然，格林函数在天线近场之外的区域内时高次项的影响甚微，忽略后就是我们常用的球面波模型。这里为了简化分析只考虑其中一个极化方向，则阵列响应可以改写为
 
@@ -70,6 +39,7 @@ tags:
 	\label{eq:sv}
 \end{equation}
 </div>
+
 
 若两侧均为ULA阵列，那么简单的直射径信道可以建模为
 
@@ -82,6 +52,7 @@ tags:
 \end{equation}
 </div>
 
+
 其中通过定义$\tilde{g}(\cdot) = g(\cdot)/\varphi_0$我们忽略了常量$\varphi_0$造成的影响。这里先考虑简单的莱斯信道，那么有
 
 <div>
@@ -90,6 +61,7 @@ tags:
 	\label{eq:channelmodel}
 \end{equation}
 </div>
+
 
 ---
 
@@ -104,6 +76,7 @@ tags:
     \end{equation}
 </div>
 
+
 那么单次观测模型就可以写作
 
 <div>
@@ -111,6 +84,7 @@ tags:
     {\bf y}^{(t)} = \left( ({\bf f}^{(t)})^{T}\otimes {\bf W}^{(t)} \right){\rm vec}({\bf H})+\tilde{\bf n}^{(t)}
     \end{equation}
 </div>
+
 
 将多次观测叠加之后就有了
 
@@ -120,6 +94,7 @@ tags:
 	\label{eq:linearproblem}
 \end{equation}
 </div>
+
 
 那么简单来说优化问题可以写作
 
@@ -131,6 +106,7 @@ tags:
 	\end{aligned}
 \end{equation}
 </div>
+
 
 该问题的求解并不困难，目前也已经有许多文献介绍，主要方法就是优化放缩，贪婪迭代或者贝叶斯推断。贪婪迭代是一种折中复杂度与性能的方法，一般实现方式为字典匹配。但是近场字典的设计是个关键问题，因此我们提出如下解决方案。
 
@@ -151,6 +127,7 @@ tags:
 \end{equation}
 </div>
 
+
 其中的每一个元素可以表示为
 
 <div>
@@ -163,6 +140,7 @@ tags:
 \end{equation}
 </div>
 
+
 做一点小小的近似可以得到
 
 <div>
@@ -174,6 +152,7 @@ tags:
 \end{align}
 </div>
 
+
 然后对该矩阵做EVD分解容易知道
 
 <div>
@@ -183,6 +162,7 @@ tags:
 \end{equation}
 </div>
 
+
 其中我们剥离了有位置属性的参数
 
 <div>
@@ -191,6 +171,7 @@ tags:
 	\label{eq:compensation}
 \end{equation}
 </div>
+
 
 但是对EVD的结果并不影响。容易知道这时的相关矩阵中元素可以表示为
 
@@ -204,6 +185,7 @@ tags:
 \end{equation}
 </div>
 
+
 该形式恰好是Sinc函数的形式，那么我们据此可以快速计算字典。实际上这个字典恰好是DPSS序列，该序列更存在快速算法实现，此处并不展开。
 
 字典设计的方法总结如图
@@ -216,11 +198,13 @@ tags:
 
 
 
+
 # 部分仿真结果
 
 <div>
 <img src="/img/icc24/sim1.png" alt="sys" style="zoom:45%;"/>
 </div>
+
 
 该仿真结果主要证明，该码本的稀疏化效果较好（相比DFT和极坐标），正交性高，且过程中的近似可以视作无误差。
 
@@ -228,11 +212,13 @@ tags:
 <img src="/img/icc24/sim2.png" alt="sys" style="zoom:50%;"/>
 </div>
 
+
 这两个图主要比较不同采样数和不同码本冗余倍数下的差异。结论显然，不再赘述。
 
 <div>
 <img src="/img/icc24/sim3.png" alt="sys" style="zoom:55%;"/>
 </div>
+
 
 该图展示估计误差在不同范围时的收敛性。
 
@@ -240,7 +226,6 @@ tags:
 <img src="/img/icc24/tab1.png" alt="sys" style="zoom:45%;"/>
 </div>
 
+
 最后表格比较了一下 如果想要达到指定性能，需要多大的码本。
 
-
-{% endif %}
