@@ -37,8 +37,6 @@
 
 不过对于初次到达日本的人而言，还是有不少需要提前知道的东西。
 
-
-
 ## 公共交通
 
 日本的公共交通似乎处于中国和欧美的一个平衡点，没有中国的那么烧钱维护，但也不像美国很多地区那种让人坐都不像坐。
@@ -51,7 +49,7 @@
 
 
 
-## 清洁城市
+## 「清洁城市」
 
 日本非常离谱的一个特点，城市垃圾桶很少很少，基本只在便利店和自动售货机旁边才能看到。旅游过程中产生的垃圾，有时候不得不带回酒店处理。
 
@@ -66,6 +64,8 @@
 
 
 # 一些图像记录
+
+> 如果您的设备支持HDR显示，您或许会发现部分图像携带了亮度信息。若为您带来了不佳的阅读体验，请在下方留言
 
 航班从HKG出发，掠过台湾上空飞抵KIX。醒来时正好路过台中地区，这是我原本的旅行计划。
 
@@ -84,23 +84,88 @@
 <div>
 <img src="/img/kansai/st1.jpeg" width="400px" />
 </div>
-
 一刻也没有为拍坏的照片哀悼，立即赶到现场的是英雄王和大帝战斗过的地方！正好赶上挪威之星号靠岸神户港，Fate的名场面不得不塞进一个庞然大物XD。
-
-<div>
-<img src="/img/kansai/bridge.jpeg" width="400px" />
-</div>
 
 神户据说是很早期开放给外国人居留的地区，因此保留了一些外国风格的建筑，一些仍作为展品展示，例如北野异人馆附近。该建筑被Fate系列作品取景作为远坂凛的住宅。
 
 <div>
-<img src="/img/kansai/house1.jpeg" width="400px" />
+    <table>
+        <tr>
+            <td>
+                <img src="/img/kansai/bridge.jpeg" width="300px" height="200" style="display:block; margin:0 auto;">
+            </td>
+            <td>
+                <img src="/img/kansai/house2.jpeg" width="300px" height="200" style="display:block; margin:0 auto;">
+            </td>
+        </tr>
+    </table>
 </div>
+
 
 Man!
 
 <div>
-<img src="/img/kansai/kobe.jpeg" width="400px" />
+    <table>
+        <tr>
+            <td>
+                <img src="/img/kansai/kobe.jpeg" width="300px" style="display:block; margin:0 auto;">
+            </td>
+            <td>
+                <img src="/img/kansai/kobe2.jpeg" width="300px" style="display:block; margin:0 auto;">
+            </td>
+        </tr>
+    </table>
+</div>
+
+神户给人的感觉就是一个很有钱也很宜居的城市。很遗憾，最后一天因为时间耽搁没能登顶摩耶山，否则就能看到日本人口中的「价值百万的夜景」了 :P
+
+<div>
+<img src="/img/kansai/kobe3.jpeg" width="300px" />
+</div>
+
+---
+
+去大阪之前我没有做具体规划，实际体验并不佳。大阪天守阁是大阪的第一个目的地，但这座天守阁是后期重建的，相比之下姬路城其实更值得拜访。
+
+<div>
+<img src="/img/kansai/osaka2.jpeg" width="300px" />
+</div>
+
+格力高的广告牌，几乎是每一个拜访大阪的人都一定会打卡的地标。
+
+<div>
+<img src="/img/kansai/osaka3.jpeg" width="400px" />
+</div>
+
+说出来你可能不信，我居然在大阪看到了香港风味饭店。后面的通天阁，高度并不算很高，但是登顶之后可以选择滑梯下来，非常刺激。
+
+<div>
+<img src="/img/kansai/osaka4.jpeg" width="300px" />
+</div>
+
+---
+
+京都的照片还没来得及做后期，个人感觉值得游玩的地方更多一些。对于我来说最值得去的是伏见稻荷大社，据说是全日本所有稻荷神社的总社。不知是巧合还是不巧，去的那两天都在下雨，这导致神社里面红绿色的饱和度大大提升，且游客数量要比往日少得多，随手就可以拍摄独享的moment。
+
+顺便按照惯例+1s
+
+<div>
+    <table>
+        <tr>
+            <td>
+                <img src="/img/kansai/kyoto1.jpeg" width="300px" style="display:block; margin:0 auto;">
+            </td>
+            <td>
+                <img src="/img/kansai/p1.jpeg" width="300px" style="display:block; margin:0 auto;">
+            </td>
+        </tr>
+    </table>
+</div>
+
+最后几天我才明白过来，日本旅游很重要的一点是早起。等到了接近中午的时候，二年坂三年坂附近已经人满为患，不过标志性的机位还是让我找到了
+
+<div>
+<img src="/img/kansai/23.jpeg" width="400px" />
 </div>
 
 *To be Continued*
