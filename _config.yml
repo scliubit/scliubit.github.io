@@ -82,7 +82,7 @@ netease_comment: false
 
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
-sidebar-about-description: "Ph.D. Student at CityU Hong Kong."
+sidebar-about-description: "Ph.D. Candidate at CityU Hong Kong."
 sidebar-avatar: /img/avatar.jpeg # use absolute URL, seeing it's used in both `/` and `/about/`
 
 
