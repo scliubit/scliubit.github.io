@@ -13,5 +13,6 @@ paperurl: 'https://ieeexplore.ieee.org/document/10622872'
 arxiv: 'https://arxiv.org/abs/2310.18180'
 slidesurl: 'https://github.com/scliubit/DPSS-Slides-Codes'
 codes: 'https://github.com/scliubit/DPSS-Slides-Codes'
+DOI: '10.1109/ICC51166.2024.10622872'
 # citation: 'Your Name, You. (2009). &quot;Paper Title Number 1.&quot; <i>Journal 1</i>. 1(1).'
 ---

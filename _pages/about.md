@@ -30,6 +30,13 @@ redirect_from:
 {% endif %}
 {% assign url = gsDataBaseUrl | append: "google-scholar-stats/gs_data_shieldsio.json" %}
 
+
+
+<img src="https://img.shields.io/github/actions/workflow/status/scliubit/scliubit.github.io/google_citation.yml?branch=main&logo=github" height="50px">
+<img src="https://img.shields.io/github/last-commit/scliubit/scliubit.github.io?logo=github" height="50px">
+<img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fscliubit.github.io&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=visits&edge_flat=false" height="50px"/>
+<br>
+
 Hello :-)
 
 I am a Ph.D. candidate at City University of Hong Kong currently in Hong Kong SAR. My research interest includes signal processing and system design in wireless communication. I have published some papers at IEEE ComSoc conferences and journals with total google scholar citations ~500.
@@ -38,6 +45,7 @@ I am a Ph.D. candidate at City University of Hong Kong currently in Hong Kong SA
 
 # News
 
+- <b><font color="#FF0000">[2024.11]</font></b> One coauthored <a href="https://www.nature.com/articles/s41467-024-54168-3" target="_blank">article</a> was accepted by <b>Nature Communications</b>
 - <b><font color="#FF0000">[2024.11]</font></b> One <a href="https://arxiv.org/abs/2403.11809" target="_blank">journal paper</a> was accepted by IEEE JSAC
 - <b><font color="#FF0000">[2024.08]</font></b> I was awarded the CityU Academic Excellence and QE Award
 - <b><font color="#FF0000">[2024.07]</font></b> One <a href="https://arxiv.org/abs/2405.01000" target="_blank">conference paper</a> was accepted by IEEE Globecom'24
@@ -91,6 +99,10 @@ I am a Ph.D. candidate at City University of Hong Kong currently in Hong Kong SA
 	{% if pub.codes %}
 		[<a href="{{ pub.codes }}" target="_blank">Codes</a>]
 	{% endif %}
+	{% if pub.DOI %}
+		<a href="https://doi.org/{{ pub.DOI }}" target="_blank"><img src="https://zenodo.org/badge/DOI/{{ pub.DOI }}.svg" height="60px"></a>
+		<img src="https://api.juleskreuer.eu/citation-badge.php?doi={{ pub.DOI }}" height="60px">
+	{% endif %}
 	<br>
   	</p>
 	{% endif %}
@@ -128,6 +140,10 @@ I am a Ph.D. candidate at City University of Hong Kong currently in Hong Kong SA
 	{% endif %}
 	{% if pub.codes %}
 		[<a href="{{ pub.codes }}" target="_blank">Codes</a>]
+	{% endif %}
+	{% if pub.DOI %}
+		<a href="https://doi.org/{{ pub.DOI }}" target="_blank"><img src="https://zenodo.org/badge/DOI/{{ pub.DOI }}.svg" height="60px"></a>
+		<img src="https://api.juleskreuer.eu/citation-badge.php?doi={{ pub.DOI }}" height="60px">
 	{% endif %}
 	<br>
   	</p>
@@ -169,9 +185,10 @@ I am a Ph.D. candidate at City University of Hong Kong currently in Hong Kong SA
 	{% if pub.codes %}
 		[<a href="{{ pub.codes }}" target="_blank">Codes</a>]
 	{% endif %}
-	<!-- {% if pub.citation %}
-		{{ pub.citation }}
-	{% endif %} -->
+	{% if pub.DOI %}
+		<a href="https://doi.org/{{ pub.DOI }}" target="_blank"><img src="https://zenodo.org/badge/DOI/{{ pub.DOI }}.svg" height="60px"></a>
+		<img src="https://api.juleskreuer.eu/citation-badge.php?doi={{ pub.DOI }}" height="60px">
+	{% endif %}
 	<br>
   	</p>
 	{% endif %}
@@ -228,4 +245,7 @@ I am a Ph.D. candidate at City University of Hong Kong currently in Hong Kong SA
     src="//rf.revolvermaps.com/0/0/8.js?i=5sp8fsqa9x1&amp;m=7&amp;c=ff0000&amp;cr1=ffffff&amp;f=georgia&amp;l=33&amp;s=200"
     async="async">
 </script>
-</div>
+
+<!-- </div> -->
+ <!-- <a href='https://www.krankenversicherungsvergleich.at/'>Krankenversicherungen</a> <script type='text/javascript' src='https://www.freevisitorcounters.com/auth.php?id=af7b5a34ef7ad33fde457d02943c0af515836844'></script> -->
+<!-- <script type="text/javascript" src="https://www.freevisitorcounters.com/en/home/counter/1261609/t/3"></script> -->

@@ -11,6 +11,7 @@ category: conferences
 date: "Dec. 2024"
 # paperurl: 'https://ieeexplore.ieee.org/document/10622872'
 arxiv: 'https://arxiv.org/abs/2405.01000'
+DOI: '10.48550/arXiv.2405.01000'
 # slidesurl: 'http://academicpages.github.io/files/slides1.pdf'
 codes: 'https://github.com/scliubit/XL-MIMO-sUCA-Loc'
 # paperurl: 'http://academicpages.github.io/files/paper1.pdf'

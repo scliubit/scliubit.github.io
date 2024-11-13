@@ -10,6 +10,7 @@ category: conferences
 # excerpt: 'This paper is about the number 1. The number 2 is left for future work.'
 date: "Aug. 2023"
 paperurl: 'https://ieeexplore.ieee.org/document/10233424'
+DOI: '10.1109/ICCC57788.2023.10233424'
 # arxiv: 'https://arxiv.org/abs/2310.18180'
 # slidesurl: 'https://github.com/scliubit/DPSS-Slides-Codes'
 # codes: 'https://github.com/scliubit/DPSS-Slides-Codes'

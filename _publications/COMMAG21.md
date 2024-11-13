@@ -16,6 +16,7 @@ date: "Jun. 2021"
 # codes: 'https://github.com/scliubit/complex-DnCNN'
 # slidesurl: 'http://academicpages.github.io/files/slides1.pdf'
 paperurl: 'https://ieeexplore.ieee.org/document/9502642'
+DOI: '10.1109/MCOM.001.2001081'
 # citation: 'Your Name, You. (2009). &quot;Paper Title Number 1.&quot; <i>Journal 1</i>. 1(1).'
 ---
 

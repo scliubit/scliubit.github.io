@@ -14,6 +14,7 @@ category: manuscripts
 date: "Nov. 2024"
 # paperurl: 'https://ieeexplore.ieee.org/document/10622872'
 arxiv: 'https://arxiv.org/abs/2403.11809'
+DOI: '10.48550/arXiv.2403.11809'
 # slidesurl: 'http://academicpages.github.io/files/slides1.pdf'
 # citation: 'Your Name, You. (2009). &quot;Paper Title Number 1.&quot; <i>Journal 1</i>. 1(1).'
 ---

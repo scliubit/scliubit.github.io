@@ -23,8 +23,8 @@ main:
   - title: "Awards"
     url: /#awards-and-honors
 
-  - title: "|"
-    url: /#awards-and-honors
+  # - title: "|"
+  #   url: /#awards-and-honors
 
   # - title: "Talks"
   #   url: /talks/    
@@ -32,10 +32,10 @@ main:
   # - title: "Teaching"
   #   url: /teaching/    
     
-  - title: "Album"
+  - title: "/Album"
     url: /portfolio/
         
-  - title: "Blog Posts"
+  - title: "/Blog Posts"
     url: /year-archive/
     
   # - title: "CV"
