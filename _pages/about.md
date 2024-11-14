@@ -239,12 +239,12 @@ I am a Ph.D. candidate at City University of Hong Kong currently in Hong Kong SA
     }
 </style>
 
-<div class='center'>
+<!-- <div class='center'>
 <h5>STAT</h5>
 <script type="text/javascript"
     src="//rf.revolvermaps.com/0/0/8.js?i=5sp8fsqa9x1&amp;m=7&amp;c=ff0000&amp;cr1=ffffff&amp;f=georgia&amp;l=33&amp;s=200"
     async="async">
-</script>
+</script> -->
 
 <!-- </div> -->
  <!-- <a href='https://www.krankenversicherungsvergleich.at/'>Krankenversicherungen</a> <script type='text/javascript' src='https://www.freevisitorcounters.com/auth.php?id=af7b5a34ef7ad33fde457d02943c0af515836844'></script> -->
