@@ -115,6 +115,14 @@ img {
   -ms-interpolation-mode: bicubic;
 }
 
+.postimg {
+  // width: auto; 
+  height: auto; 
+  max-width: 100%;  
+  margin: 1.5em auto 1.6em auto;
+  display: block;
+}
+
 /* Prevent max-width from affecting Google Maps */
 
 #map_canvas img,
