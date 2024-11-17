@@ -11,10 +11,6 @@ redirect_from:
     h1 {text-align: center}
 	h2 {text-align: left}
 </style>
-<!-- .someClass {
-   display: flex;
-   justify-content: space-between;
-} -->
 
 <style type="text/css">
 	.someClass {
@@ -66,7 +62,7 @@ I am a Ph.D. candidate at City University of Hong Kong currently in Hong Kong SA
 
 # Publications
 
-<a href="/publications/">More Details</a>
+Selected publications. <a href="/publications/">More Details</a>
 
 ## Journals
 

@@ -47,6 +47,8 @@
         <li><a href="mailto:{{ author.email }}"><i class="fas fa-fw fa-envelope icon-pad-right" aria-hidden="true"></i>{{ site.data.ui-text[site.locale].email_label | default: "Email" }}</a></li>
       {% endif %}
 
+      
+
       <!-- Font Awesome and Academicons icons / Academic websites -->
       {% if author.arxiv %}
         <li><a href="{{ author.arxiv }}"><i class="ai ai-arxiv ai-fw icon-pad-right"></i>arXiv</a></li>
@@ -166,6 +168,9 @@
       {% if author.zhihu %}
       <li><a href="htps://www.zhihu.com/people/{{ author.zhihu }}"><i class="fab fa-fw fa-zhihu icon-pad-right" aria-hidden="true"></i>Zhihu</a></li>
       {% endif %}      
+      {% if author.unsplash %}
+        <li><a href="https://unsplash.com/@{{ author.unsplash }}"><i class="fab fa-unsplash icon-pad-right" aria-hidden="true"></i>Unsplash</a></li>
+      {% endif %}
     </ul>
   </div>
 </div>
