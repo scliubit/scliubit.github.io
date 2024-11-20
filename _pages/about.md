@@ -224,24 +224,27 @@ Selected publications. <a href="/publications/">More Details</a>
 
 
 # Stats
-<hr>
+<br>
+<!-- <hr> -->
 <style>
     .center {
         text-align: center;
+		width: 300px;
+		margin: 0 auto;
     }
     hr {
-        width: 50%; /* Adjust width as needed */
+        width: 200px; /* Adjust width as needed */
         margin: 0 auto; /* Center the hr */
     }
 </style>
 
+<div class='center'>
+<script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=ffffff&w=300&t=tt&d=dmVatQT8g0590arpll0thgjnbjngqp0QqLSiLkH5KuU'></script>
+</div>
 <!-- <div class='center'>
 <h5>STAT</h5>
 <script type="text/javascript"
     src="//rf.revolvermaps.com/0/0/8.js?i=5sp8fsqa9x1&amp;m=7&amp;c=ff0000&amp;cr1=ffffff&amp;f=georgia&amp;l=33&amp;s=200"
     async="async">
 </script> -->
-
 <!-- </div> -->
- <!-- <a href='https://www.krankenversicherungsvergleich.at/'>Krankenversicherungen</a> <script type='text/javascript' src='https://www.freevisitorcounters.com/auth.php?id=af7b5a34ef7ad33fde457d02943c0af515836844'></script> -->
-<!-- <script type="text/javascript" src="https://www.freevisitorcounters.com/en/home/counter/1261609/t/3"></script> -->
