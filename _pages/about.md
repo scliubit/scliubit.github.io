@@ -41,6 +41,7 @@ I am a Ph.D. candidate at City University of Hong Kong currently in Hong Kong SA
 
 # News
 
+- <b><font color="#000000">[2024.11]</font></b> Albums and Posts now support multiple languages :-P
 - <b><font color="#FF0000">[2024.11]</font></b> One coauthored <a href="https://www.nature.com/articles/s41467-024-54168-3" target="_blank">article</a> was accepted by <b>Nature Communications</b>
 - <b><font color="#FF0000">[2024.11]</font></b> One <a href="https://arxiv.org/abs/2403.11809" target="_blank">journal paper</a> was accepted by IEEE JSAC
 - <b><font color="#FF0000">[2024.08]</font></b> I was awarded the CityU Academic Excellence and QE Award

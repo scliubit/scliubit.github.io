@@ -313,7 +313,9 @@ plugins:
   - jekyll-paginate
   - jekyll-sitemap
   - jemoji
+  # - jekyll-multiple-languages-plugin
 
+# languages: ["zh", "en"]
 # Mimic GitHub Pages with --safe
 whitelist:
   - jekyll-feed
