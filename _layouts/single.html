@@ -57,6 +57,7 @@ layout: default
       {% endunless %}
 
       <section class="page__content" itemprop="text">
+        {% if page.permalink != '/' %}
         <hr>
         <div id="google_translate_element">Translation Provider: Google</div>
         <script type="text/javascript">
@@ -70,6 +71,7 @@ layout: default
         </script>
         <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
         <br>
+        {% endif %}
         {{ content }}
 
         {% if page.citation and page.paperurl and page.slidesurl %}
