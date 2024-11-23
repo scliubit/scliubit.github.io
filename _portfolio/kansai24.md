@@ -2,7 +2,7 @@
 title: "Sabbatical - Kansai, Japan"
 excerpt: "KANSAI<br/><img src='/images/album/kansai/bridge.jpeg' width=500px margin-top=20px>"
 collection: portfolio
-permalink: /portfolio/kansai24
+permalink: /portfolio/kansai24.html
 date: 2024-06-01
 ---
 

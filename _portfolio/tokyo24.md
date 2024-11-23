@@ -2,7 +2,7 @@
 title: "Travel - Tokyo, Japan"
 excerpt: "TOKYO on FILM<br/><img src='/images/album/tokyo/shinjuku.jpeg' width=500px margin-top=20px>"
 collection: portfolio
-permalink: /portfolio/tokyo24
+permalink: /portfolio/tokyo24.html
 date: 2024-09-27
 ---
 
