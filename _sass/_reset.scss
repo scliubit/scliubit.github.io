@@ -119,8 +119,16 @@ img {
   // width: auto; 
   height: auto; 
   max-width: 100%;  
-  margin: 1.5em auto 1.6em auto;
+  margin: 1.5em auto 0.6em auto;
   display: block;
+}
+
+div .caption{
+  font-size: 0.8em;
+  text-align: center;
+  // margin-top: 0.5em;
+  margin-bottom: 1.0em;
+  color: mix(#fff, $text-color, 25%);
 }
 
 /* Prevent max-width from affecting Google Maps */
