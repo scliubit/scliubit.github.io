@@ -54,10 +54,10 @@ date: 2024-09-27
     <table class="borderlesstabel">
         <tr>
             <td>
-                <img class="postimg" src="/images/album/tokyo/temple1.jpeg" style="display:block; margin:0 auto; width: 240px; height: 360px;">
+                <img class="postimg" src="/images/album/tokyo/temple1.jpeg" style="display:block; margin:0 auto; width: 240px;">
             </td>
             <td>
-                <img class="postimg" src="/images/album/tokyo/tower1.jpeg" style="display:block; margin:0 auto; width: 240px; height: 360px;">
+                <img class="postimg" src="/images/album/tokyo/tower1.jpeg" style="display:block; margin:0 auto; width: 240px;">
             </td>
         </tr>
     </table>
@@ -70,10 +70,10 @@ date: 2024-09-27
     <table class="borderlesstabel">
         <tr>
             <td>
-                <img class="postimg" src="/images/album/tokyo/temple2.jpeg" style="display:block; margin:0 auto; width: 360px; height: 240px;">
+                <img class="postimg" src="/images/album/tokyo/temple2.jpeg" style="display:block; margin:0 auto; width: 360px;">
             </td>
             <td>
-                <img class="postimg" src="/images/album/tokyo/car1.jpeg" style="display:block; margin:0 auto; width: 360px; height: 240px;">
+                <img class="postimg" src="/images/album/tokyo/car1.jpeg" style="display:block; margin:0 auto; width: 360px;">
             </td>
         </tr>
     </table>
@@ -108,10 +108,10 @@ date: 2024-09-27
     <table class="borderlesstabel">
         <tr>
             <td>
-                <img class="postimg" src="/images/album/tokyo/shinjuku.jpeg" style="display:block; margin:0 auto; width: 360px; height: 240px;">
+                <img class="postimg" src="/images/album/tokyo/shinjuku.jpeg" style="display:block; margin:0 auto; width: 360px;">
             </td>
             <td>
-                <img class="postimg" src="/images/album/tokyo/shinjuku3.jpeg" style="display:block; margin:0 auto; width: 360px; height: 240px;">
+                <img class="postimg" src="/images/album/tokyo/shinjuku3.jpeg" style="display:block; margin:0 auto; width: 360px;">
             </td>
         </tr>
     </table>
@@ -126,13 +126,13 @@ date: 2024-09-27
     <table class="borderlesstabel">
         <tr>
             <td>
-                <img class="postimg" src="/images/album/tokyo/tower2.jpeg" style="display:block; margin:0 auto; width: 240px; height: 360px;">
+                <img class="postimg" src="/images/album/tokyo/tower2.jpeg" style="display:block; margin:0 auto; width: 240px;">
             </td>
             <td>
-                <img class="postimg" src="/images/album/tokyo/tower3.jpg" style="display:block; margin:0 auto; width: 240px; height: 360px;">
+                <img class="postimg" src="/images/album/tokyo/tower3.jpg" style="display:block; margin:0 auto; width: 240px;">
             </td>
             <td>
-                <img class="postimg" src="/images/album/tokyo/tower4.jpeg" style="display:block; margin:0 auto; width: 240px; height: 360px;">
+                <img class="postimg" src="/images/album/tokyo/tower4.jpeg" style="display:block; margin:0 auto; width: 240px;">
             </td>
         </tr>
     </table>
@@ -151,10 +151,10 @@ date: 2024-09-27
     <table class="borderlesstabel">
         <tr>
             <td>
-                <img class="postimg" src="/images/album/tokyo/palace1.jpeg" style="display:block; margin:0 auto; width: 360px; height: 240px;">
+                <img class="postimg" src="/images/album/tokyo/palace1.jpeg" style="display:block; margin:0 auto; width: 360px;">
             </td>
             <td>
-                <img class="postimg" src="/images/album/tokyo/palace2.jpeg" style="display:block; margin:0 auto; width: 360px; height: 240px;">
+                <img class="postimg" src="/images/album/tokyo/palace2.jpeg" style="display:block; margin:0 auto; width: 360px;">
             </td>
         </tr>
     </table>
@@ -173,10 +173,10 @@ date: 2024-09-27
     <table class="borderlesstabel">
         <tr>
             <td>
-                <img class="postimg" src="/images/album/tokyo/shrine1.jpeg" style="display:block; margin:0 auto; width: 360px; height: 240px;">
+                <img class="postimg" src="/images/album/tokyo/shrine1.jpeg" style="display:block; margin:0 auto; width: 360px;">
             </td>
             <td>
-                <img class="postimg" src="/images/album/tokyo/shrine2.jpeg" style="display:block; margin:0 auto; width: 360px; height: 240px;">
+                <img class="postimg" src="/images/album/tokyo/shrine2.jpeg" style="display:block; margin:0 auto; width: 360px;">
             </td>
         </tr>
     </table>
@@ -223,10 +223,10 @@ date: 2024-09-27
 <table class="borderlesstabel">
     <tr>
         <td>
-            <img class="postimg" src="/images/album/tokyo/kamakura1.jpeg" style="display:block; margin:0 auto; width: 360px; height: 240px;">
+            <img class="postimg" src="/images/album/tokyo/kamakura1.jpeg" style="display:block; margin:0 auto; width: 360px;">
         </td>
         <td>
-            <img class="postimg" src="/images/album/tokyo/kamakura2.jpeg" style="display:block; margin:0 auto; width: 360px; height: 240px;">
+            <img class="postimg" src="/images/album/tokyo/kamakura2.jpeg" style="display:block; margin:0 auto; width: 360px;">
         </td>
     </tr>
 </table>
@@ -267,7 +267,7 @@ date: 2024-09-27
     </tr>
     <tr>
         <td>
-            <img class="postimg" src="/images/album/tokyo/shinjuku3.jpeg" style="display:block; margin:0 auto; width: 360px; height: 240px;">
+            <img class="postimg" src="/images/album/tokyo/shinjuku3.jpeg" style="display:block; margin:0 auto; width: 360px;">
         </td>
     </tr>
 </table>
@@ -280,13 +280,39 @@ date: 2024-09-27
     </tr>
     <tr>
         <td>
-            <img class="postimg" src="/images/album/tokyo/shinjuku4.jpeg" style="display:block; margin:0 auto; width: 360px; height: 240px;">
+            <img class="postimg" src="/images/album/tokyo/shinjuku4.jpeg" style="display:block; margin:0 auto; width: 360px;">
         </td>
     </tr>
 </table>
 <div class="caption">你的名字 × 新宿环形交通灯 | Kodak ColorPlus 200</div>
 </div>
 
+> 这部分照片排版比较困难，后续会不定时更新。
+
+# 其他
+
+有些照片边走边拍，没什么好介绍的，传到这里留档。
+
+
+<div>
+<table class="borderlesstabel">
+    <tr>
+        <td>
+            <img class="postimg" src="/images/album/tokyo/others1.jpeg" style="display:block; margin:0 auto; width: 360px;">
+        </td>
+        <td>
+            <img class="postimg" src="/images/album/tokyo/others2.jpeg" style="display:block; margin:0 auto; width: 360px;">
+        </td>
+    </tr>
+</table>
+<div class="caption">铁路岔口; 急行町田 | Kodak ColorPlus 200</div>
+</div>
+
+
+<div>
+    <img class="postimg" src="/images/album/tokyo/others3.jpeg" width="360px" />
+    <div class="caption">一辈子乐队 | Kodak ColorPlus 200</div>
+</div>
 
 
 *To Be Continued*

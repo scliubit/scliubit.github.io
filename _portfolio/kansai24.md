@@ -100,10 +100,10 @@ date: 2024-06-01
     <table class="borderlesstabel">
         <tr>
             <td>
-                <img class="postimg" src="/images/album/kansai/bridge.jpeg" style="display:block; margin:0 auto; width: 300px; height: 200px;">
+                <img class="postimg" src="/images/album/kansai/bridge.jpeg" style="display:block; margin:0 auto; width: 360px;">
             </td>
             <td>
-                <img class="postimg" src="/images/album/kansai/house2.jpeg" style="display:block; margin:0 auto; width: 300px; height: 200px;">
+                <img class="postimg" src="/images/album/kansai/house2_.jpeg" style="display:block; margin:0 auto; width: 360px;">
             </td>
         </tr>
     </table>
@@ -116,10 +116,10 @@ Man!
     <table class="borderlesstabel">
         <tr>
             <td>
-                <img class="postimg" src="/images/album/kansai/kobe.jpeg" style="display:block; margin:0 auto; width: 300px; height: 200px;">
+                <img class="postimg" src="/images/album/kansai/kobe.jpeg" style="display:block; margin:0 auto; width: 360px;">
             </td>
             <td>
-                <img class="postimg" src="/images/album/kansai/kobe2.jpeg" style="display:block; margin:0 auto; width: 300px; height: 200px;">
+                <img class="postimg" src="/images/album/kansai/kobe2.jpeg" style="display:block; margin:0 auto; width: 360px;">
             </td>
         </tr>
     </table>
