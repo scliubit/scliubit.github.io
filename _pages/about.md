@@ -35,7 +35,7 @@ redirect_from:
 
 Hello :-)
 
-I am a Ph.D. candidate at City University of Hong Kong currently in Hong Kong SAR. My research interest includes signal processing and system design in wireless communication. I have published some papers at IEEE ComSoc conferences and journals with total google scholar citations ~500.
+I received my B.S. and M.S. degree in Electrical Engineering from Beijing Institute of Technology, Beijing, China, in 2020 and 2023, respectively, under the supervision of <a href="https://gaozhen16.github.io" target="_blank">Prof. Zhen GAO</a>. I am currently a Ph.D. candidate at the City University of Hong Kong in Hong Kong SAR under the supervision of <a href="https://www.ee.cityu.edu.hk/~alexyu/" target="_blank">Prof. Xianghao YU</a>. My research interest includes signal processing and wireless communication. I have published some papers at IEEE ComSoc conferences and journals with total google scholar citations ~500.
 
 <b><a href="/files/CV_Shicong.pdf" ><font color="#FF0000">Download Full CV</font></a></b>
 
@@ -197,7 +197,7 @@ Selected publications. <a href="/publications/">More Details</a>
 
 ## Academics
 
-- **Session Chair**, <i>Antenna and Smart Antenna</i>, IEEE Globecom'23, Cape Town, South Africa.
+- **Session Chair**, <i>Antenna and Smart Antenna</i>, IEEE Globecom'24, Cape Town, South Africa.
 - **Session Chair**, <i>Mobile and Wireless Networks</i>, IEEE/CIC ICCC'23, Dalian, China.
 - **Peer Reviewer**, IEEE ComSoc Journals and Conferences.
 
@@ -242,10 +242,4 @@ Selected publications. <a href="/publications/">More Details</a>
 <div class='center'>
 <script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=ffffff&w=300&t=tt&d=dmVatQT8g0590arpll0thgjnbjngqp0QqLSiLkH5KuU'></script>
 </div>
-<!-- <div class='center'>
-<h5>STAT</h5>
-<script type="text/javascript"
-    src="//rf.revolvermaps.com/0/0/8.js?i=5sp8fsqa9x1&amp;m=7&amp;c=ff0000&amp;cr1=ffffff&amp;f=georgia&amp;l=33&amp;s=200"
-    async="async">
-</script> -->
-<!-- </div> -->
+
