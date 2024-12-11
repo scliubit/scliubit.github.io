@@ -38,6 +38,7 @@ $type-size-2                : 1.953em;  // ~31.248px
 $type-size-3                : 1.563em;  // ~25.008px
 $type-size-4                : 1.25em;   // ~20px
 $type-size-5                : 1em;      // ~16px
+$type-size-55               : 0.875em;  // ~14px
 $type-size-6                : 0.75em;   // ~12px
 $type-size-7                : 0.6875em; // ~11px
 $type-size-8                : 0.625em;  // ~10px
@@ -56,6 +57,7 @@ $sidebar-link-max-width     : 250px;
    ========================================================================== */
 
 $gray                       : #7a8288;
+$red                        : #ee5f5b;
 $dark-gray                  : mix(#000, $gray, 40%);
 $darker-gray                : mix(#000, $gray, 60%);
 $light-gray                 : mix(#fff, $gray, 50%);
@@ -67,6 +69,7 @@ $code-background-color      : #fafafa;
 $code-background-color-dark : $light-gray;
 $text-color                 : $dark-gray;
 $border-color               : $lighter-gray;
+$quote-background-color     : mix(#fff, #f00, 90%);
 
 $primary-color              : #7a8288;
 $success-color              : #62c462;

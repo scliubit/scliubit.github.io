@@ -41,6 +41,7 @@ I received my B.S. and M.S. degree in Electrical Engineering from Beijing Instit
 
 # News
 
+- <b><font color="#FF0000">[2024.12]</font></b> Nominated as 2024 <a href="https://www.comsoc.org/publications/journals/ieee-comml/reviewer-and-editor-appreciation" target="_blank">Exemplary Reviewers</a> of IEEE Communications Letters
 - <b><font color="#000000">[2024.11]</font></b> Albums and Posts now support multiple languages :-P
 - <b><font color="#FF0000">[2024.11]</font></b> One coauthored <a href="https://www.nature.com/articles/s41467-024-54168-3" target="_blank">article</a> was accepted by <b>Nature Communications</b>
 - <b><font color="#FF0000">[2024.11]</font></b> One <a href="https://arxiv.org/abs/2403.11809" target="_blank">journal paper</a> was accepted by IEEE JSAC
@@ -212,15 +213,16 @@ Selected publications. <a href="/publications/">More Details</a>
 
 # Awards and Honors
 
-- <div class="someClass"><div>1st place in National Undergraduate Algorithmic Game Theory Championship</div><div>2018</div></div>
+- <div class="someClass"><div>Exemplary Reviewers of IEEE Communications Letters</div><div>2024</div></div>
+- <div class="someClass"><div>CityU Academic Excellence and QE Award</div><div>2024</div></div>
+- <div class="someClass"><div>Entrance Fellowship of CityU Graduate School</div><div>2023</div></div>
+- <div class="someClass"><div>Beijing Municipal Outstanding Master Graduate</div><div>2023</div></div>
+- <div class="someClass"><div>Hong Kong Ph.D. Fellowship Scheme (HKPFS) Awardee</div><div>2023</div></div>
+- <div class="someClass"><div>2021 Outstanding Student</div><div>2021</div></div>
+- <div class="someClass"><div>2021 National Scholarship (~2.5%) for Graduate Students</div><div>2021</div></div>
+- <div class="someClass"><div>2020 National Scholarship (~2.5%) for Graduate Students</div><div>2020</div></div>
 - <div class="someClass"><div>Meritorious Winner (~7%) in Mathematical Contest in Modeling (MCM)</div><div>2019</div></div>
-- <div class=someClass><div>2020 National Scholarship (~2.5%) for Graduate Students</div><div>2020</div></div>
-- <div class=someClass><div>2021 National Scholarship (~2.5%) for Graduate Students</div><div>2021</div></div>
-- <div class=someClass><div>2021 Outstanding Student</div><div>2021</div></div>
-- <div class=someClass><div>Hong Kong Ph.D. Fellowship Scheme (HKPFS) Awardee</div><div>2023</div></div>
-- <div class=someClass><div>Beijing Municipal Outstanding Master Graduate</div><div>2023</div></div>
-- <div class=someClass><div>Entrance Fellowship of CityU Graduate School</div><div>2023</div></div>
-- <div class=someClass><div>CityU Academic Excellence and QE Award</div><div>2024</div></div>
+- <div class="someClass"><div>1st place in National Undergraduate Algorithmic Game Theory Championship</div><div>2018</div></div>
 
 
 
