@@ -1,5 +1,5 @@
 ---
-title: "Conference - Cape Town, South Africa"
+title: "Conference - Globecom'24 - Cape Town, South Africa"
 excerpt: "Cape Town on Film<br/><img src='/images/album/cape/sunset2.jpeg' width=500px margin-top=20px>"
 collection: portfolio
 permalink: /portfolio/capetown24.html
@@ -72,7 +72,7 @@ HKG到CPT据可考历史是存在直飞航班的。目前由于航线人数等�
 
 <div>
     <img class="postimg" src="/images/album/cape/tablemount2.jpeg" width="360px" />
-    <div class="caption">桌山 (山顶云海) | Kodak Cinestill 800T</div>
+    <div class="caption">桌山 (山顶云海) | Kodak Cinestill 800T (with ND)</div>
 </div>
 
 ## Twelve Apostles
