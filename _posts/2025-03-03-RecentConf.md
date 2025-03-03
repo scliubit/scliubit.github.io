@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      "📌   【置顶】通信会议速查表<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Pin] Recent Conferences"
+title:      "📌   【置顶】通信会议速查表<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Pin] Recent Conferences"
 subtitle:   "DDL Lookup Table"
 date:       2025-03-03
 author:     "Shicong Liu"
@@ -39,20 +39,20 @@ Lookup Table for communications related conferences. DDLs are usually extended i
 | Jun.    | WCSP'25      | Oct.          | TBD                       | [WCSP'25](http://www.ic-wcsp.org/2025/)                      |
 | Jul.    | HK6GWS'25    | Sep.          | Hong Kong, China          | [HK6GWS'25](https://hk6gws2025.ieee-hk6gws.org/)             |
 |         | INFOCOM'25   | May           | London, UK                | [INFOCOM'25](https://infocom2025.ieee-infocom.org/)          |
-|         | INFOCOM'26   | May${}^{+1}$  | Tokyo, Japan              | TBD                                                          |
+|         | INFOCOM'26   | May$${}^{+1}$$  | Tokyo, Japan              | TBD                                                          |
 | Aug.    |              |               |                           |                                                              |
-| Sept.   | ICASSP'26    | May${}^{+1}$  | Barcelona, Spain          | [ICASSP'26](https://2026.ieeeicassp.org/)                    |
-|         | WCNC'26      | Apr.${}^{+1}$ | Kuala Lumpur, Malaysia    | [WCNC'26](https://wcnc2026.ieee-wcnc.org/)                   |
-|         | MMSys'26     | Mar.${}^{+1}$ | TBD                       | TBD                                                          |
+| Sept.   | ICASSP'26    | May$${}^{+1}$$  | Barcelona, Spain          | [ICASSP'26](https://2026.ieeeicassp.org/)                    |
+|         | WCNC'26      | Apr.$${}^{+1}$$ | Kuala Lumpur, Malaysia    | [WCNC'26](https://wcnc2026.ieee-wcnc.org/)                   |
+|         | MMSys'26     | Mar.$${}^{+1}$$ | TBD                       | TBD                                                          |
 | Oct.    | ICC'25       | Jun.          | Montreal QC Canada        | [ICC'25](https://icc2025.ieee-icc.org/)                      |
-|         | ICC'26       | Jun.${}^{+1}$ | Glasgow, UK               | [ICC'26](https://icc2026.ieee-icc.org/)                      |
+|         | ICC'26       | Jun.$${}^{+1}$$ | Glasgow, UK               | [ICC'26](https://icc2026.ieee-icc.org/)                      |
 |         | ICMLCN'26    | TBD           | TBD                       | TBD                                                          |
 | Nov.    |              |               |                           |                                                              |
-| Dec.    | VTCSpring'26 | May${}^{+1}$  | Nice, France              | [VTCSpring'26](https://events.vtsociety.org/vtc2026-spring/) |
+| Dec.    | VTCSpring'26 | May$${}^{+1}$$  | Nice, France              | [VTCSpring'26](https://events.vtsociety.org/vtc2026-spring/) |
 
-${}^{+1}$ 表示实际开会时间在第二年
+$${}^{+1}$$ 表示实际开会时间在第二年
 
-${}^{+1}$ means the conference will be held the year after.
+$${}^{+1}$$ means the conference will be held the year after.
 
 
 
@@ -73,15 +73,15 @@ ${}^{+1}$ means the conference will be held the year after.
 | Jul.    | HK6GWS'24    | Sept.         | Hong Kong, China        | [HK6GWS'24](https://hk6gws2024.ieee-hk6gws.org/)             |
 |         | INFOCOM'24   | Dec.          | Vancouver, Canada       | [INFOCOM'24](https://infocom2024.ieee-infocom.org/)          |
 | Aug.    |              |               |                         |                                                              |
-| Sept.   | ICASSP'25    | Apr.${}^{+1}$ | Hyderabad, India        | [ICASSP'25](https://2025.ieeeicassp.org/)                    |
+| Sept.   | ICASSP'25    | Apr.$${}^{+1}$$ | Hyderabad, India        | [ICASSP'25](https://2025.ieeeicassp.org/)                    |
 |         | ICMLCN'25    |               |                         |                                                              |
-|         | WCNC'25      | Mar.${}^{+1}$ | Milan, Italy            | [WCNC'25](https://wcnc2025.ieee-wcnc.org/)                   |
-|         | MMSys'25     | Mar.${}^{+1}$ | Bari, Italy             | [MMSys'25](https://2025.acmmmsys.org/)                       |
-| Oct.    | ICC'25       | Jun.${}^{+1}$ | Montreal QC Canada      | [ICC'25](https://icc2025.ieee-icc.org/)                      |
-|         | ICC'26       | Jun.${}^{+2}$ | Glasgow, UK             | [ICC'26](https://icc2026.ieee-icc.org/)                      |
+|         | WCNC'25      | Mar.$${}^{+1}$$ | Milan, Italy            | [WCNC'25](https://wcnc2025.ieee-wcnc.org/)                   |
+|         | MMSys'25     | Mar.$${}^{+1}$$ | Bari, Italy             | [MMSys'25](https://2025.acmmmsys.org/)                       |
+| Oct.    | ICC'25       | Jun.$${}^{+1}$$ | Montreal QC Canada      | [ICC'25](https://icc2025.ieee-icc.org/)                      |
+|         | ICC'26       | Jun.$${}^{+2}$$ | Glasgow, UK             | [ICC'26](https://icc2026.ieee-icc.org/)                      |
 | Nov.    |              |               |                         |                                                              |
-| Dec.    | VTCSpring'25 | Jun.${}^{+1}$ | Oslo, Norway            | [VTCSpring'25](https://events.vtsociety.org/vtc2025-spring/) |
-|         | ICMLCN'25    | May${}^{+1}$  | Barcelona, Spain        | [ICMLCN'25](https://icmlcn2025.ieee-icmlcn.org/)             |
+| Dec.    | VTCSpring'25 | Jun.$${}^{+1}$$ | Oslo, Norway            | [VTCSpring'25](https://events.vtsociety.org/vtc2025-spring/) |
+|         | ICMLCN'25    | May$${}^{+1}$$  | Barcelona, Spain        | [ICMLCN'25](https://icmlcn2025.ieee-icmlcn.org/)             |
 
 
 
