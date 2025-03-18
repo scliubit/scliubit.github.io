@@ -1,6 +1,6 @@
 ---
 title: "SP - Hasselblad 503cx Repair Diary"
-excerpt: "Hasselblad 503cx Repair Diary<br/><img src='/images/album/hassel/503cx.jpeg' width=500px margin-top=20px>"
+excerpt: "Hasselblad 503cx Repair Diary (Sample Images Updated)<br/><img src='/images/album/hassel/503cx.jpeg' width=500px margin-top=20px>"
 # excerpt: "TOKYO on FILM<br/><img src='/images/album/tokyo/shinjuku.jpeg' width=500px margin-top=20px>"
 collection: portfolio
 permalink: /portfolio/hassel25.html
@@ -78,7 +78,37 @@ date: 2025-03-14
 
 按照相反的流程我们可以比较轻松地将机身恢复，值得注意的是快门按钮对准以及反光板预升按钮的对准。经过我的尝试，反光板预升按钮似乎不能在安装过程中被正确对准，因此需要我们使用细螺丝刀等工具挑一下，具体可见参考视频[^4]的4:00处。此外，复位时需要注意左侧的OTF测光接口，可能需要镊子来固定其位置，以便两个小螺丝的安装。
 
+# 参考样片
 
+黑白胶片为修复前仅有的几张成功拍摄照片，彩色胶片为修复后拍摄的样片。
+
+<div>
+    <table class="borderlesstabel">
+        <tr>
+            <td>
+                <img class="postimg" src="/images/album/hassel/bw1.jpeg" style="display:block; margin:0 auto; width: 360px;">
+            </td>
+            <td>
+                <img class="postimg" src="/images/album/hassel/bw2.jpeg" style="display:block; margin:0 auto; width: 360px;">
+            </td>
+        </tr>
+    </table>
+    <div class="caption">Shek Kip Mei | FOMAPAN 200</div>
+</div>
+
+<div>
+    <table class="borderlesstabel">
+        <tr>
+            <td>
+                <img class="postimg" src="/images/album/hassel/c1.jpeg" style="display:block; margin:0 auto; width: 360px;">
+            </td>
+            <td>
+                <img class="postimg" src="/images/album/hassel/c2.jpeg" style="display:block; margin:0 auto; width: 360px;">
+            </td>
+        </tr>
+    </table>
+    <div class="caption">CityUHK | Kodak Portra 400</div>
+</div>
 
 # 参考资料
 

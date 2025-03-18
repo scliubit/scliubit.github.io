@@ -7,6 +7,8 @@ author_profile: true
 
 {% include base_path %}
 
+{% include refresher.html %}
+
 <!-- sort by date -->
 {% assign sorted = site.portfolio | sort: 'date' %}
 {% assign sorted = sorted | reverse %}

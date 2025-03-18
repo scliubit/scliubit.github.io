@@ -1,0 +1,61 @@
+<br>
+
+<style type="text/css">
+	.content-container {
+      display: flex;
+      align-items: center;
+      gap: 10px; /* 设置元素之间的间距 */
+      flex-wrap: wrap; /* 如果屏幕过窄，元素会自动换行 */
+    }
+
+    .button-container {
+      position: relative;
+      display: inline-block;
+    }
+
+	/* Tooltip styling */
+    .tooltip {
+      visibility: hidden;
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      border-radius: 5px;
+      padding: 5px;
+      position: absolute;
+      z-index: 1;
+      bottom: 125%; /* Position above the button */
+      left: 50%;
+      transform: translateX(-50%);
+      white-space: nowrap;
+      font-size: 14px;
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+
+    /* Tooltip arrow */
+    .tooltip::after {
+      content: "";
+      position: absolute;
+      top: 100%; /* Position below the tooltip */
+      left: 50%;
+      transform: translateX(-50%);
+      border-width: 5px;
+      border-style: solid;
+      border-color: #333 transparent transparent transparent;
+    }
+
+    /* Show tooltip on hover */
+    .button-container:hover .tooltip {
+      visibility: visible;
+      opacity: 1;
+    }
+</style>
+<script>
+    function refreshPage() {
+          location.reload();
+        }
+    </script>
+<div class="button-container">
+    <button class="refresh-btn" onclick="refreshPage()">Refresh</button>
+    <div class="tooltip">Refresh for Updates</div>
+</div>

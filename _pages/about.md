@@ -17,7 +17,62 @@ redirect_from:
 		display: flex;
 		justify-content: space-between;
 	}
+
+	.content-container {
+      display: flex;
+      align-items: center;
+      gap: 10px; /* 设置元素之间的间距 */
+      flex-wrap: wrap; /* 如果屏幕过窄，元素会自动换行 */
+    }
+
+    .button-container {
+      position: relative;
+      display: inline-block;
+    }
+
+	/* Tooltip styling */
+    .tooltip {
+      visibility: hidden;
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      border-radius: 5px;
+      padding: 5px;
+      position: absolute;
+      z-index: 1;
+      bottom: 125%; /* Position above the button */
+      left: 50%;
+      transform: translateX(-50%);
+      white-space: nowrap;
+      font-size: 14px;
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+
+    /* Tooltip arrow */
+    .tooltip::after {
+      content: "";
+      position: absolute;
+      top: 100%; /* Position below the tooltip */
+      left: 50%;
+      transform: translateX(-50%);
+      border-width: 5px;
+      border-style: solid;
+      border-color: #333 transparent transparent transparent;
+    }
+
+    /* Show tooltip on hover */
+    .button-container:hover .tooltip {
+      visibility: visible;
+      opacity: 1;
+    }
 </style>
+
+<script>
+function refreshPage() {
+      location.reload();
+    }
+</script>
 
 {% if site.google_scholar_stats_use_cdn %}
 {% assign gsDataBaseUrl = "https://cdn.jsdelivr.net/gh/" | append: site.repository | append: "@" %}
@@ -26,17 +81,21 @@ redirect_from:
 {% endif %}
 {% assign url = gsDataBaseUrl | append: "google-scholar-stats/gs_data_shieldsio.json" %}
 
-
-
+<div class="content-container" style="font-size:0.8em;">
 <img src="https://img.shields.io/github/actions/workflow/status/scliubit/scliubit.github.io/google_citation.yml?branch=main&logo=github" height="50px">
 <img src="https://img.shields.io/github/last-commit/scliubit/scliubit.github.io?logo=github" height="50px">
 <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fscliubit.github.io&count_bg=%2379C83D&title_bg=%23555555&icon=googleanalytics.svg&icon_color=%23E7E7E7&title=visits&edge_flat=false" height="50px"/>
+<div class="button-container">
+      <button class="refresh-btn" onclick="refreshPage()">Refresh</button>
+      <div class="tooltip">Refresh for Updates</div>
+</div>
+<!-- <button class="refresh-btn" onclick="refreshPage()" height="50px">Refresh</button><div class="tooltip">Click to refresh the page</div> -->
+</div>
 <br>
-
 
 Hello :-)
 
-I received my B.S. and M.S. degree in Electrical Engineering from Beijing Institute of Technology, Beijing, China, in 2020 and 2023, respectively, under the supervision of <a href="https://gaozhen16.github.io" target="_blank">Prof. Zhen GAO</a>. I am currently a Ph.D. candidate at the City University of Hong Kong, Hong Kong SAR, under the supervision of <a href="https://www.ee.cityu.edu.hk/~alexyu/" target="_blank">Prof. Xianghao YU</a>. My research interest includes signal processing and wireless communication. I have published some papers at IEEE ComSoc conferences and journals with total google scholar citations ~500.
+I received my B.S. and M.S. degree in Electrical Engineering from Beijing Institute of Technology, Beijing, China, in 2020 and 2023, respectively, under the supervision of <a href="https://gaozhen16.github.io" target="_blank">Prof. Zhen GAO</a>. I am currently a Ph.D. candidate at the City University of Hong Kong, Hong Kong SAR, under the supervision of <a href="https://www.ee.cityu.edu.hk/~alexyu/" target="_blank">Prof. Xianghao YU</a>. My research interest includes signal processing and wireless communication. I have published some papers at IEEE ComSoc conferences and journals with total google scholar citations ~600.
 
 <b><a href="/files/CV_Shicong.pdf" ><font color="#FF0000">Download Full CV</font></a></b>
 
