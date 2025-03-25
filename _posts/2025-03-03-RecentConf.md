@@ -2,7 +2,7 @@
 layout:     post
 title:      "📌   【置顶】通信会议速查表<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Pin] Recent Conferences"
 subtitle:   "DDL Lookup Table"
-date:       2025-03-03
+date:       2025-12-31
 author:     "Shicong Liu"
 permalink:  /posts/RecentConf/
 excerpt:    "会议DDL速查表。会议时间往往会延期。<br>Lookup Table for communications related conferences. DDLs are usually extended in recent years."
