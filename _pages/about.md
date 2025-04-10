@@ -155,7 +155,7 @@ Selected publications. <a href="/publications/">More Details</a>
 		[<a href="{{ pub.paperurl }}" target="_blank">Paper</a>]
 	{% endif %}
 	{% if pub.codes %}
-		[<a href="{{ pub.codes }}" target="_blank">Codes</a>]
+		[<a href="{{ pub.codes }}" target="_blank"><font color="#FF0000">Codes</font></a>]
 	{% endif %}
 	{% if pub.DOI %}
 		<a href="https://doi.org/{{ pub.DOI }}" target="_blank"><img src="https://zenodo.org/badge/DOI/{{ pub.DOI }}.svg" height="60px"></a>
@@ -197,7 +197,7 @@ Selected publications. <a href="/publications/">More Details</a>
 		[<a href="{{ pub.paperurl }}" target="_blank">Paper</a>]
 	{% endif %}
 	{% if pub.codes %}
-		[<a href="{{ pub.codes }}" target="_blank">Codes</a>]
+		[<a href="{{ pub.codes }}" target="_blank"><font color="#FF0000">Codes</font></a>]
 	{% endif %}
 	{% if pub.DOI %}
 		<a href="https://doi.org/{{ pub.DOI }}" target="_blank"><img src="https://zenodo.org/badge/DOI/{{ pub.DOI }}.svg" height="60px"></a>
@@ -241,7 +241,7 @@ Selected publications. <a href="/publications/">More Details</a>
 		[<a href="{{ pub.paperurl }}" target="_blank">Paper</a>]
 	{% endif %}
 	{% if pub.codes %}
-		[<a href="{{ pub.codes }}" target="_blank">Codes</a>]
+		[<a href="{{ pub.codes }}" target="_blank"><font color="#FF0000">Codes</font></a>]
 	{% endif %}
 	{% if pub.DOI %}
 		<a href="https://doi.org/{{ pub.DOI }}" target="_blank"><img src="https://zenodo.org/badge/DOI/{{ pub.DOI }}.svg" height="60px"></a>
