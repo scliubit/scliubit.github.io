@@ -8,12 +8,14 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-22.04
+    runs-on: macos-latest
     steps:
     - uses: actions/checkout@v2
     - name: Install Reqs
       run: |
-        sudo apt-get install python3-setuptools
+        brew install python3
+        brew install git
+        # sudo apt-get install python3-setuptools
     - name: Run
       run: |
         cd ./google_scholar_crawler
