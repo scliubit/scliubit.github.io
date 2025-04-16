@@ -1,11 +1,13 @@
+print('test')
+
 from scholarly import scholarly
 # import jsonpickle
 import json
 from datetime import datetime
 import os
 
-print(os.environ['GOOGLE_SCHOLAR_ID'])
-author: dict = scholarly.search_author_id(os.environ['GOOGLE_SCHOLAR_ID'])
+GOOGLE_SCHOLAR_ID = 'x47f3O4AAAAJ'
+author: dict = scholarly.search_author_id(GOOGLE_SCHOLAR_ID)
 scholarly.fill(author, sections=['basics', 'indices', 'counts', 'publications'])
 name = author['name']
 print(f'Author: {name}')
