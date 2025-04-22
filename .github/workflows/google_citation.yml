@@ -13,11 +13,16 @@ jobs:
     - uses: actions/checkout@v2
     - name: Install Reqs
       run: |
+        # brew install python3
+        # brew install git
         sudo apt-get install python3-setuptools
     - name: Run
       run: |
         cd ./google_scholar_crawler
+        # python3 -m venv ./tempenv
+        # source ./tempenv/bin/activate
         pip3 install -r requirements.txt
+        pip3 install --upgrade certifi
         python3 main.py
         cd ./results
         git init
