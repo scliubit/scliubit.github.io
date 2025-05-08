@@ -1,20 +1,29 @@
-print('test')
-
-from scholarly import scholarly
+from scholarly import scholarly, ProxyGenerator
+import logging
+from fp.fp import FreeProxy
 # import jsonpickle
 import json
 from datetime import datetime
 import os
+logging.basicConfig(level=logging.INFO)
 
-GOOGLE_SCHOLAR_ID = 'x47f3O4AAAAJ'
-author: dict = scholarly.search_author_id(GOOGLE_SCHOLAR_ID)
-scholarly.fill(author, sections=['basics', 'indices', 'counts', 'publications'])
-name = author['name']
-print(f'Author: {name}')
-author['updated'] = str(datetime.now())
-author['publications'] = {v['author_pub_id']:v for v in author['publications']}
-print(json.dumps(author, indent=2))
-print('Get Citations Done')
+try:
+    logging.info("Script started")
+    proxy = FreeProxy().get()
+    logging.info(f"Proxy: {proxy}")
+    pg = ProxyGenerator()
+    pg.FreeProxies()
+    scholarly.use_proxy(pg)
+
+    GOOGLE_SCHOLAR_ID = 'x47f3O4AAAAJ'
+    author: dict = scholarly.search_author_id(GOOGLE_SCHOLAR_ID)
+    scholarly.fill(author, sections=['basics', 'indices', 'counts', 'publications'])
+    name = author['name']
+    author['updated'] = str(datetime.now())
+    author['publications'] = {v['author_pub_id']:v for v in author['publications']}
+except Exception as e:
+    logging.error(f"Error occurred: {e}")
+    raise
 
 os.makedirs('results', exist_ok=True)
 with open(f'results/gs_data.json', 'w') as outfile:
