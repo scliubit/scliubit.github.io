@@ -84,7 +84,7 @@ function refreshPage() {
 <div class="content-container" style="font-size:0.8em;">
 <img src="https://img.shields.io/github/actions/workflow/status/scliubit/scliubit.github.io/google_citation.yml?branch=main&logo=github" height="50px">
 <img src="https://img.shields.io/github/last-commit/scliubit/scliubit.github.io?logo=github" height="50px">
-<img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fscliubit.github.io&count_bg=%2379C83D&title_bg=%23555555&icon=googleanalytics.svg&icon_color=%23E7E7E7&title=visits&edge_flat=false" height="50px"/>
+<!-- <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fscliubit.github.io&count_bg=%2379C83D&title_bg=%23555555&icon=googleanalytics.svg&icon_color=%23E7E7E7&title=visits&edge_flat=false" height="50px"/> -->
 <div class="button-container">
       <button class="refresh-btn" onclick="refreshPage()">Refresh</button>
       <div class="tooltip">Refresh for Updates</div>
