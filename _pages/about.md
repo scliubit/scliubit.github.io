@@ -101,6 +101,7 @@ I received my B.S. and M.S. degree in Electrical Engineering from Beijing Instit
 
 # News
 
+- <b><font color="#000000">[2025.05]</font></b> An errata for JSAC'25 was released. See <a href="/posts/JSAC25ERRATA/">here</a> for more info.
 - <b><font color="#FF0000">[2024.12]</font></b> Nominated as 2024 <a href="https://www.comsoc.org/publications/journals/ieee-comml/reviewer-and-editor-appreciation" target="_blank">Exemplary Reviewers</a> of IEEE Communications Letters
 - <b><font color="#000000">[2024.11]</font></b> Albums and Posts now support multiple languages :-P
 - <b><font color="#FF0000">[2024.11]</font></b> One coauthored <a href="https://www.nature.com/articles/s41467-024-54168-3" target="_blank">article</a> was accepted by <b>Nature Communications</b>
