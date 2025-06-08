@@ -155,6 +155,9 @@ Selected publications. <a href="/publications/">More Details</a>
 	{% if pub.paperurl %}
 		[<a href="{{ pub.paperurl }}" target="_blank">Paper</a>]
 	{% endif %}
+	{% if pub.errata %}
+		[<a href="{{ pub.errata }}" target="_blank">errata</a>]
+	{% endif %}
 	{% if pub.codes %}
 		[<a href="{{ pub.codes }}" target="_blank"><font color="#FF0000">Codes</font></a>]
 	{% endif %}

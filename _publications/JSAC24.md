@@ -16,6 +16,7 @@ paperurl: 'https://ieeexplore.ieee.org/document/10845870'
 arxiv: 'https://arxiv.org/abs/2403.11809'
 DOI: '10.1109/JSAC.2025.3531578'
 codes: 'https://github.com/scliubit/sensing-ce-xlmimo'
+errata: '/posts/JSAC25ERRATA/'
 # slidesurl: 'http://academicpages.github.io/files/slides1.pdf'
 # citation: 'Your Name, You. (2009). &quot;Paper Title Number 1.&quot; <i>Journal 1</i>. 1(1).'
 ---
