@@ -36,11 +36,139 @@ date: 2025-06-04
     <div class="caption">明治神宫的雨中婚礼 ｜ Portra 400</div>
 </div>
 
+另：东京塔下排队时手欠没有回卷就拆了底盖，导致一卷东京胶片曝光。
+
+
+<div>
+    <img class="postimg" src="/images/album/tokyo2/jpcp.jpeg" width="450px" />
+    <div class="caption">我超，日共</div>
+</div>
+
 
 # 圣地巡礼
 
-~~好忙没时间写，有时间一定补上~~
+由于去年九月已经来过东京，本次行程并没有包括典型东京景点，关于东京的初见~~攻略~~记录可以参见[胶片里的东京](./tokyo24.html)。
 
-~~本期的主题是とある科学の超電磁砲~~
+从07年连载，10年动画化的《とある科学の超電磁砲》系列作品，自其发布以来便广受欢迎。作为魔法的禁书目录系列作品的外传性质作品，该作颇有喧宾夺主的意味，在观众群体中热度一度超越魔禁原作。该系列作品中的架空城市“学园都市”原型是东京的立川市[^1]和多摩市，其卫星图与实际地理位置完全一致
+
+<table class="borderlesstabel">
+    <tr>
+        <td>
+            <img class="postimg" src="/images/album/tokyo2/s1e1.jpeg" style="display:block; margin:0 auto; width: 480px;">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <img class="postimg" src="/images/album/tokyo2/s1e1r.jpeg" style="display:block; margin:0 auto; width: 480px;">
+        </td>
+    </tr>
+</table>
+<div class="caption">魔法的禁书目录 S1E1 & 卫星地图</div>
+
+多摩中心站是访问多摩市（在多摩地区中一个比较小的城市）的主要方式，该站以及部分城区的标志性特征就是红砖砌设的墙面和道路。多摩中心站附近的人行桥上，可以看到标志性开场场景
+
+<table class="borderlesstabel">
+    <tr>
+        <td>
+            <img class="postimg" src="/images/album/tokyo2/tama_1.jpeg" style="display:block; margin:0 auto; width: 480px;">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <img class="postimg" src="/images/album/tokyo2/tama_1r.jpg" style="display:block; margin:0 auto; width: 480px;">
+        </td>
+    </tr>
+</table>
+<div class="caption">超电磁炮系列经典开场</div>
+
+这个绿植长椅是作品中经常出现的场景，只可惜这里我的拍摄角度有点低。实话讲这次的圣地巡礼我全部是盲拍，全靠记忆。
+
+<table class="borderlesstabel">
+    <tr>
+        <td>
+            <img class="postimg" src="/images/album/tokyo2/tama_2.jpeg" style="display:block; margin:0 auto; width: 480px;">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <img class="postimg" src="/images/album/tokyo2/tama_2_2.jpeg" style="display:block; margin:0 auto; width: 480px;">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <img class="postimg" src="/images/album/tokyo2/tama_2r.jpeg" style="display:block; margin:0 auto; width: 480px;">
+        </td>
+    </tr>
+</table>
+<div class="caption">经典场景</div>
+
+上面的两个场景中出现的大楼实际上是同一个，即朝日生命大厦（这个其实是朝日保险大楼，日语汉字很神奇吧）。从上面的场景向朝日生命大厦前进，可以看到第一集中一个（个人认为）非常galgame的场景
+
+<table class="borderlesstabel">
+    <tr>
+        <td>
+            <img class="postimg" src="/images/album/tokyo2/tama3.jpeg" style="display:block; margin:0 auto; width: 480px;">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <img class="postimg" src="/images/album/tokyo2/tama3r.jpeg" style="display:block; margin:0 auto; width: 480px;">
+        </td>
+    </tr>
+</table>
+<div class="caption">黑子 -3-</div>
+
+相同机位，向后转180度，可以看到下一个分镜，这个场景有点过于还原
+
+<table class="borderlesstabel">
+    <tr>
+        <td>
+            <img class="postimg" src="/images/album/tokyo2/tama4.jpeg" style="display:block; margin:0 auto; width: 480px;">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <img class="postimg" src="/images/album/tokyo2/tama4r.jpeg" style="display:block; margin:0 auto; width: 480px;">
+        </td>
+    </tr>
+</table>
+<div class="caption">还原度真高啊</div>
+
+继续向朝日大厦前进还可以看到下一个分镜
+
+<table class="borderlesstabel">
+    <tr>
+        <td>
+            <img class="postimg" src="/images/album/tokyo2/tama5.jpeg" style="display:block; margin:0 auto; width: 480px;">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <img class="postimg" src="/images/album/tokyo2/tama5r.jpeg" style="display:block; margin:0 auto; width: 480px;">
+        </td>
+    </tr>
+</table>
+<div class="caption">OP分镜 - 朝日生命大厦</div>
+
+<table class="borderlesstabel">
+    <tr>
+        <td>
+            <img class="postimg" src="/images/album/tokyo2/s2e4_1.jpeg" style="display:block; margin:0 auto; width: 480px;">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <img class="postimg" src="/images/album/tokyo2/s2e4_1r.jpeg" style="display:block; margin:0 auto; width: 480px;">
+        </td>
+    </tr>
+</table>
+<div class="caption">多摩市无轨电车</div>
+
+
+~~好忙没时间写，有时间一定补完~~
 
 *To Be Continued*
+
+鸣谢版权方[bilibili](https://www.bilibili.com/); 圣地标记人[@阿宽Martin](https://space.bilibili.com/515824104), [@ngwrb](https://x.com/ngwrb)。
+
+[^1]: 立川和多摩是东京都西部多摩地区的两个城市，立川位于东京市区的西部。查了一下，中国和韩国居然都有叫利川的地方！
