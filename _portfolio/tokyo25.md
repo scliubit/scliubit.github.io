@@ -1,6 +1,6 @@
 ---
 title: "Travel - Tokyo, Japan - II"
-excerpt: "TOKYO on FILM<br/><img src='/images/album/tokyo/tama.jpeg' width=500px margin-top=20px>"
+excerpt: "ONE LAST PILGRIMAGE<br/><img src='/images/album/tokyo2/tama5r.jpeg' width=500px margin-top=20px>"
 collection: portfolio
 permalink: /portfolio/tokyo25.html
 date: 2025-06-04
@@ -153,6 +153,54 @@ date: 2025-06-04
 <table class="borderlesstabel">
     <tr>
         <td>
+            <img class="postimg" src="/images/album/tokyo2/tama6.jpeg" style="display:block; margin:0 auto; width: 480px;">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <img class="postimg" src="/images/album/tokyo2/tama6r.jpeg" style="display:block; margin:0 auto; width: 480px;">
+        </td>
+    </tr>
+</table>
+<div class="caption">分镜 - 朝日生命大厦楼下</div>
+
+超电磁炮的第一季第一集与最后一集都发生在这个桥上，且台词都相同：「这座城市还真不会让人无聊呢」。
+
+<table class="borderlesstabel">
+    <tr>
+        <td>
+            <img class="postimg" src="/images/album/tokyo2/tama7.jpeg" style="display:block; margin:0 auto; width: 480px;">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <img class="postimg" src="/images/album/tokyo2/tama7r.jpeg" style="display:block; margin:0 auto; width: 480px;">
+        </td>
+    </tr>
+</table>
+<div class="caption">梦开始的地方</div>
+
+OVA中的对这座桥后面的楼梯做了一处取景，且OVA中使用了复古DV机的画质风格（~~实际上这个作品发布时，DV机还算是时尚单品~~）。我们在拍照时，就在这个楼梯位置闻到了很强的大麻味道，日本的禁毒也和开玩笑一样。
+
+<table class="borderlesstabel">
+    <tr>
+        <td>
+            <img class="postimg" src="/images/album/tokyo2/tama_ova.jpeg" style="display:block; margin:0 auto; width: 480px;">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <img class="postimg" src="/images/album/tokyo2/tama_ovar.jpeg" style="display:block; margin:0 auto; width: 480px;">
+        </td>
+    </tr>
+</table>
+<div class="caption">OVA分镜</div>
+
+以上场景均在多摩市拍摄，可以看到大部分场景都和动画中有相似的红砖墙面与街道。还有一些零星取景地分散在多摩中央站附近，但受限于时间我们没有每一个都去打卡。从多摩离开后我们匆匆赶往了下一站立川，位于多摩地区较北的位置，乘坐的便是动画中多次出现的单轨电车。
+
+<table class="borderlesstabel">
+    <tr>
+        <td>
             <img class="postimg" src="/images/album/tokyo2/s2e4_1.jpeg" style="display:block; margin:0 auto; width: 480px;">
         </td>
     </tr>
@@ -162,8 +210,63 @@ date: 2025-06-04
         </td>
     </tr>
 </table>
-<div class="caption">多摩市无轨电车</div>
+<div class="caption">多摩地区单轨电车</div>
 
+<table class="borderlesstabel">
+    <tr>
+        <td>
+            <img class="postimg" src="/images/album/tokyo2/tachi1.jpeg" style="display:block; margin:0 auto; width: 480px;">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <img class="postimg" src="/images/album/tokyo2/tachi1r.jpeg" style="display:block; margin:0 auto; width: 480px;">
+        </td>
+    </tr>
+</table>
+<div class="caption">立川JR站</div>
+
+<table class="borderlesstabel">
+    <tr>
+        <td>
+            <img class="postimg" src="/images/album/tokyo2/tachi2.jpeg" style="display:block; margin:0 auto; width: 480px;">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <img class="postimg" src="/images/album/tokyo2/tachi2r.jpeg" style="display:block; margin:0 auto; width: 480px;">
+        </td>
+    </tr>
+</table>
+<div class="caption">桥上分镜</div>
+
+<table class="borderlesstabel">
+    <tr>
+        <td>
+            <img class="postimg" src="/images/album/tokyo2/tachi3.jpeg" style="display:block; margin:0 auto; width: 480px;">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <img class="postimg" src="/images/album/tokyo2/tachi3r.jpeg" style="display:block; margin:0 auto; width: 480px;">
+        </td>
+    </tr>
+</table>
+<div class="caption">桥下分镜</div>
+
+<table class="borderlesstabel">
+    <tr>
+        <td>
+            <img class="postimg" src="/images/album/tokyo2/tachi4.jpeg" style="display:block; margin:0 auto; width: 480px;">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <img class="postimg" src="/images/album/tokyo2/tachi4r.jpeg" style="display:block; margin:0 auto; width: 480px;">
+        </td>
+    </tr>
+</table>
+<div class="caption">利川JR站人行平台分镜</div>
 
 ~~好忙没时间写，有时间一定补完~~
 
