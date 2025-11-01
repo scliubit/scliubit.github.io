@@ -12,7 +12,8 @@ comment: true
 multilingual: true
 hide-in-nav: true
 tags:
-    - study
+    - research
+    - conference
     - academic
     - feed
 ---
