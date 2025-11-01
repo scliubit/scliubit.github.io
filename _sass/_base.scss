@@ -20,6 +20,19 @@ body {
     overflow: hidden;
   }
 }
+:lang(zh),
+:lang(zh-CN),
+:lang(zh-TW),
+:lang(zh-HK) {
+  /* better height for Chinese */
+  line-height: 1.7;
+
+  /* 
+   * Set more appropriate fonts for Chinese.
+   */
+  font-family: $global-font-family, "PingFang SC", "Microsoft YaHei", "Hiragino Sans GB", sans-serif;
+}
+
 
 h1, h2, h3, h4, h5, h6 {
   margin: 1em 0 0.5em;
