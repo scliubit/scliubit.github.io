@@ -1,0 +1,17 @@
+<script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$','$$'], ['\\[','\\]']]
+      },
+      svg: {
+        fontCache: 'global'
+      },
+      loader: {
+        load: ['input/tex', 'output/svg'] 
+      },
+      startup: {
+        output: 'svg'
+      }
+    };
+</script>
