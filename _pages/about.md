@@ -101,7 +101,7 @@ I received my B.S. and M.S. degree in Electrical Engineering from Beijing Instit
 
 # News
 
-- <b><font color="#FF0000">[2025.12]</font></b> New paper submitted to IEEE TWC, available on <a href="https://arxiv.org/abs/2512.21660">arXiv</a>. Toy demo available <a href="./demo/">here</a>.
+- <b><font color="#FF0000">[2025.12]</font></b> New paper submitted to IEEE TWC, available on <a href="https://arxiv.org/abs/2512.21660">arXiv</a>. Toy demo available <a href="./demo.html">here</a>.
 <!-- - <b><font color="#FF0000">[2025.12]</font></b> Comments and discussions for [TWC'25]() are released. See <a href="/posts/TWC25COMMENTS/">here</a> for more info.  -->
 - <b><font color="#FF0000">[2025.10]</font></b> New paper submitted to IEEE ICC. Preprints will be available soon.
 - <b><font color="#FF0000">[2025.08]</font></b> New paper submitted to IEEE TWC, available on <a href="https://arxiv.org/abs/2508.01201">arXiv</a>.
