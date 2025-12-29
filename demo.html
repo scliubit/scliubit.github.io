@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Antenna Placement Demo by Gemini 3 Pro</title>
+    
+    <script>
+        window.MathJax = {
+            options: {
+                enableMenu: false,
+                menuOptions: { settings: { inTabOrder: false } }
+            },
+            tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
+            svg: { fontCache: 'none' },
+            startup: {
+                pageReady: () => MathJax.startup.defaultPageReady()
+            }
+        };
+    </script>
+    <script type="text/javascript" id="MathJax-script" async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+    </script>
+
+    <style>
+        :root {
+            --primary: #2563eb;
+            --bg: #f8fafc;
+            --panel-bg: #ffffff;
+            --border: #e2e8f0;
+            --text: #334155;
+            --danger: #ef4444;
+            --success: #10b981;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+
+        @media (min-width: 900px) {
+            .container {
+                grid-template-columns: 380px 1fr;
+            }
+        }
+
+        .left-column, .right-column {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .card {
+            background: var(--panel-bg);
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            border: 1px solid var(--border);
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        h2, h3 {
+            margin-top: 0;
+            color: #1e293b;
+            border-bottom: 2px solid var(--bg);
+            padding-bottom: 10px;
+            margin-bottom: 15px;
+            font-size: 1.1em;
+        }
+
+        .static-params {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-bottom: 20px;
+            background: #f1f5f9;
+            padding: 15px;
+            border-radius: 8px;
+        }
+
+        .param-group label {
+            display: block;
+            font-size: 0.9em;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .param-group input {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #cbd5e1;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        .slider-control {
+            margin-bottom: 15px;
+            border: 1px solid #e2e8f0;
+            padding: 10px;
+            border-radius: 8px;
+        }
+
+        .slider-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 8px;
+        }
+
+        .slider-label {
+            font-size: 1em;
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        .slider-value {
+            font-family: monospace;
+            font-weight: bold;
+            background: #e0f2fe;
+            color: #0369a1;
+            padding: 2px 6px;
+            border-radius: 4px;
+        }
+
+        .range-inputs {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .range-inputs input[type="number"] {
+            width: 50px;
+            padding: 4px;
+            font-size: 0.8em;
+            text-align: center;
+            border: 1px solid #cbd5e1;
+            border-radius: 4px;
+        }
+
+        .range-inputs input[type="range"] {
+            flex-grow: 1;
+            cursor: pointer;
+        }
+
+        .status-panel {
+            margin-top: 10px;
+            padding: 10px;
+            border-radius: 6px;
+            font-size: 0.9em;
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            min-height: 50px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .status-valid {
+            border-left: 4px solid var(--success);
+            background-color: #ecfdf5;
+        }
+
+        .status-error {
+            border-left: 4px solid var(--danger);
+            background-color: #fef2f2;
+            color: #991b1b;
+        }
+
+        canvas {
+            width: 100%;
+            background: #fff;
+            border-radius: 8px;
+            border: 1px solid #cbd5e1;
+        }
+
+        #mainCanvas { height: 350px; }
+        #ueCanvas { height: 180px; }
+
+        .table-container {
+            margin-top: 20px;
+            overflow-x: auto;
+            max-height: 300px;
+            overflow-y: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.9em;
+        }
+
+        th {
+            background: #f1f5f9;
+            position: sticky;
+            top: 0;
+            z-index: 1;
+            font-weight: normal;
+        }
+
+        th, td {
+            padding: 8px;
+            border: 1px solid #e2e8f0;
+            text-align: center;
+        }
+        
+        mjx-container { outline: none !important; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="left-column">
+        <div class="card">
+            <h3>Parameter Setup</h3>
+
+            <div class="static-params">
+                <div class="param-group">
+                    <label>Antenna Number $M$</label>
+                    <input type="number" id="inp_M" value="16" min="3" step="1">
+                </div>
+                <br>
+                <div class="param-group">
+                    <label>Aperture $A_{\mathrm T}$</label>
+                    <input type="number" id="inp_A" value="5" step="0.1">
+                </div>
+            </div>
+
+            <div class="slider-control">
+                <div class="slider-header">
+                    <span class="slider-label">UE $x_0$</span>
+                    <span class="slider-value" id="val_x0">0.00</span>
+                </div>
+                <div class="range-inputs">
+                    <input type="number" id="min_x0" value="-10">
+                    <input type="range" id="sli_x0" min="-10" max="10" step="0.1" value="0">
+                    <input type="number" id="max_x0" value="10">
+                </div>
+            </div>
+
+            <div class="slider-control">
+                <div class="slider-header">
+                    <span class="slider-label">UE $y_0$</span>
+                    <span class="slider-value" id="val_y0">20.00</span>
+                </div>
+                <div class="range-inputs">
+                    <input type="number" id="min_y0" value="0.1">
+                    <input type="range" id="sli_y0" min="0.1" max="50" step="0.1" value="20">
+                    <input type="number" id="max_y0" value="50">
+                </div>
+            </div>
+
+            <div class="slider-control">
+                <div class="slider-header">
+                    <span class="slider-label">UE $\theta_{\text{UE}}$</span>
+                    <span class="slider-value" id="val_theta">$0.00^{\circ}$</span>
+                </div>
+                <div class="range-inputs">
+                    <input type="number" id="min_theta" value="-60">
+                    <input type="range" id="sli_theta" min="-60" max="60" step="1" value="0">
+                    <input type="number" id="max_theta" value="60">
+                </div>
+            </div>
+
+            <div id="statusBox" class="status-panel status-valid">
+                Initializing...
+            </div>
+        </div>
+
+        <!-- UE -->
+        <div class="card">
+            <h3>UE Rotation $\theta_{\mathrm{UE}}$</h3>
+            <canvas id="ueCanvas"></canvas>
+        </div>
+    </div>
+
+    <div class="right-column">
+        <div class="card">
+            <h3>Optimal Antenna Placement with Incident Direction</h3>
+            <canvas id="mainCanvas"></canvas>
+            <div style="font-size: 0.85em; color: #64748b; margin-top:5px; text-align: center;">
+                * Red dashed line indicates the incident direction from $(x_0, y_0)$
+            </div>
+            
+            <div class="table-container">
+                <table id="dataTable">
+                    <thead>
+                        <tr>
+                            <th>$m$</th>
+                            <th>$t_m$</th>
+                            <th>$s_m$</th>
+                            <th>$x_{\mathrm{BS}}^{(m)}$</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    const state = {
+        M: 16,
+        A: 5,
+        x0: 0,
+        y0: 10,
+        thetaDeg: 0,
+        isValid: true,
+        data: []
+    };
+
+    const dom = {
+        inputs: {
+            M: document.getElementById('inp_M'),
+            A: document.getElementById('inp_A')
+        },
+        sliders: {
+            x0: { slider: document.getElementById('sli_x0'), min: document.getElementById('min_x0'), max: document.getElementById('max_x0'), val: document.getElementById('val_x0') },
+            y0: { slider: document.getElementById('sli_y0'), min: document.getElementById('min_y0'), max: document.getElementById('max_y0'), val: document.getElementById('val_y0') },
+            theta: { slider: document.getElementById('sli_theta'), min: document.getElementById('min_theta'), max: document.getElementById('max_theta'), val: document.getElementById('val_theta') }
+        },
+        status: document.getElementById('statusBox'),
+        mainCanvas: document.getElementById('mainCanvas'),
+        ueCanvas: document.getElementById('ueCanvas'),
+        tbody: document.querySelector('#dataTable tbody')
+    };
+
+    function initListeners() {
+        ['M', 'A'].forEach(key => {
+            dom.inputs[key].addEventListener('input', () => {
+                updateStateFromDOM();
+                calculate();
+                drawMain();
+                drawUE();
+            });
+        });
+
+        Object.keys(dom.sliders).forEach(key => {
+            const group = dom.sliders[key];
+            
+            group.slider.addEventListener('input', () => {
+                group.val.textContent = key === 'theta' ? group.slider.value + '°' : parseFloat(group.slider.value).toFixed(2);
+                updateStateFromDOM();
+                calculate();
+                drawMain();
+                drawUE();
+            });
+
+            [group.min, group.max].forEach(input => {
+                input.addEventListener('change', () => {
+                    let minVal = parseFloat(group.min.value);
+                    let maxVal = parseFloat(group.max.value);
+                    if (minVal >= maxVal) {
+                        maxVal = minVal + 1;
+                        group.max.value = maxVal;
+                    }
+                    group.slider.min = minVal;
+                    group.slider.max = maxVal;
+                    
+                    let curVal = parseFloat(group.slider.value);
+                    if (curVal < minVal) curVal = minVal;
+                    if (curVal > maxVal) curVal = maxVal;
+                    group.slider.value = curVal;
+                    group.val.textContent = key === 'theta' ? curVal + '°' : curVal.toFixed(2);
+
+                    updateStateFromDOM();
+                    calculate();
+                    drawMain();
+                    drawUE();
+                });
+            });
+        });
+    }
+
+    function updateStateFromDOM() {
+        state.M = parseInt(dom.inputs.M.value);
+        state.A = parseFloat(dom.inputs.A.value);
+        state.x0 = parseFloat(dom.sliders.x0.slider.value);
+        state.y0 = parseFloat(dom.sliders.y0.slider.value);
+        state.thetaDeg = parseFloat(dom.sliders.theta.slider.value);
+    }
+
+    let isRenderingMath = false;
+
+    function calculate() {
+        const { M, A, x0, y0, thetaDeg } = state;
+        if (M < 3 || isNaN(M)) return;
+
+        const theta = thetaDeg * Math.PI / 180.0;
+        const phi0 = Math.atan(-x0 / y0);
+        const diff = Math.abs(phi0 - theta);
+        const limit = Math.PI / 2;
+
+        let statusHtml = "";
+        if (diff >= limit) {
+            state.isValid = false;
+            const diffDeg = (diff * 180 / Math.PI).toFixed(1);
+            dom.status.className = 'status-panel status-error';
+            statusHtml = `<span>$|\\varphi_0 - \\theta_{\\mathrm{UE}}| = ${diffDeg}^{\\circ} \\ge 90^{\\circ}$</span>`;
+            state.data = [];
+        } else {
+            state.isValid = true;
+            const phi0Deg = (phi0 * 180 / Math.PI).toFixed(1);
+            dom.status.className = 'status-panel status-valid';
+            statusHtml = `<span>$\\varphi_0 = ${phi0Deg}^{\\circ}$,  $ \\varphi_0 - \\theta_{\\mathrm{UE}} = ${(diff * 180 / Math.PI).toFixed(1)}^{\\circ}$</span>`;
+        }
+
+        dom.status.innerHTML = statusHtml;
+        
+        if (window.MathJax && window.MathJax.typesetPromise && !isRenderingMath) {
+            isRenderingMath = true;
+            MathJax.typesetPromise([dom.status]).then(() => {
+                isRenderingMath = false;
+            }).catch(err => {
+                console.warn('MathJax render error:', err);
+                isRenderingMath = false;
+            });
+        }
+
+        if (!state.isValid) return;
+
+        let t = [-1, 1];
+        const N = M - 2;
+        for (let n = 1; n <= N; n++) {
+            t.push(Math.cos(((2 * n - 1) / (2 * N)) * Math.PI));
+        }
+        t.sort((a, b) => a - b);
+
+        const calc_s_boundary = (x) => Math.sin(Math.atan((x - x0) / y0) - theta);
+        const s_min = calc_s_boundary(-A / 2);
+        const s_max = calc_s_boundary(A / 2);
+
+        const results = [];
+        for (let i = 0; i < M; i++) {
+            const tm = t[i];
+            const sm = s_min + (tm + 1) / 2 * (s_max - s_min);
+            let s_clamped = Math.max(-1, Math.min(1, sm));
+            const phi_angle = Math.asin(s_clamped) + theta;
+            const x = x0 + y0 * Math.tan(phi_angle);
+            results.push({ id: i+1, t: tm, s: sm, x: x });
+        }
+        state.data = results;
+    }
+
+    function drawUE() {
+        const canvas = dom.ueCanvas;
+        const ctx = canvas.getContext('2d');
+        const dpr = window.devicePixelRatio || 1;
+        const rect = canvas.getBoundingClientRect();
+        canvas.width = rect.width * dpr;
+        canvas.height = rect.height * dpr;
+        ctx.scale(dpr, dpr);
+
+        const w = rect.width;
+        const h = rect.height;
+        const cx = w / 2;
+        const cy = h / 2;
+
+        ctx.clearRect(0, 0, w, h);
+
+        const thetaRad = state.thetaDeg * Math.PI / 180;
+        
+        ctx.save();
+        ctx.translate(cx, cy);
+        ctx.rotate(-thetaRad);
+
+        const ballCount = 6;
+        const arrayLen = 120; 
+        const spacing = arrayLen / (ballCount - 1);
+        const startX = -arrayLen / 2;
+
+        ctx.beginPath();
+        ctx.moveTo(startX, 0);
+        ctx.lineTo(-startX, 0);
+        ctx.strokeStyle = '#94a3b8';
+        ctx.lineWidth = 2;
+        ctx.stroke();
+
+        for(let i=0; i<ballCount; i++) {
+            ctx.beginPath();
+            ctx.arc(startX + i*spacing, 0, 4, 0, Math.PI*2);
+            ctx.fillStyle = '#2563eb'; 
+            ctx.fill();
+        }
+        
+        ctx.restore();
+    }
+
+    function drawMain() {
+        const canvas = dom.mainCanvas;
+        const ctx = canvas.getContext('2d');
+        const dpr = window.devicePixelRatio || 1;
+        const rect = canvas.getBoundingClientRect();
+        canvas.width = rect.width * dpr;
+        canvas.height = rect.height * dpr;
+        ctx.scale(dpr, dpr);
+        
+        const w = rect.width;
+        const h = rect.height;
+        const cy = h / 2;
+
+        ctx.clearRect(0, 0, w, h);
+
+        if (!state.isValid) {
+            ctx.fillStyle = '#fff1f2';
+            ctx.fillRect(0, 0, w, h);
+            ctx.fillStyle = '#ef4444';
+            ctx.font = 'bold 16px sans-serif';
+            ctx.textAlign = 'center';
+            ctx.fillText("Invalid Parameters", w/2, h/2);
+            updateTable(true);
+            return;
+        }
+
+        const A = state.A;
+        const padding = 40;
+        const viewRange = Math.max(10, A * 1.5);
+        const minX = -viewRange / 2;
+        const maxX = viewRange / 2;
+        const mapX = (val) => padding + (val - minX) / (maxX - minX) * (w - 2*padding);
+
+        const incidentAngle = Math.atan2(-state.y0, state.x0);
+        const arrowLen = 100;
+
+        ctx.save();
+        ctx.translate(w/2, cy);
+        
+        ctx.beginPath();
+        ctx.strokeStyle = '#ef4444';
+        ctx.lineWidth = 1.5;
+        ctx.setLineDash([6, 4]);
+        
+        const startX = Math.cos(incidentAngle) * arrowLen;
+        const startY = Math.sin(incidentAngle) * arrowLen;
+        
+        ctx.moveTo(startX, startY);
+        ctx.lineTo(0, 0);
+        ctx.stroke();
+
+        ctx.beginPath();
+        ctx.setLineDash([]);
+        ctx.rotate(incidentAngle);
+        ctx.moveTo(10, -5); 
+        ctx.lineTo(0, 0);
+        ctx.lineTo(10, 5);
+        ctx.stroke();
+        
+        ctx.restore();
+
+        ctx.beginPath();
+        ctx.strokeStyle = '#94a3b8';
+        ctx.lineWidth = 2;
+        ctx.moveTo(padding, cy);
+        ctx.lineTo(w - padding, cy);
+        ctx.stroke();
+
+        ctx.strokeStyle = '#ef4444';
+        ctx.setLineDash([5, 5]);
+        [-A/2, A/2].forEach((val, idx) => {
+            const x = mapX(val);
+            ctx.beginPath();
+            ctx.moveTo(x, cy - 40);
+            ctx.lineTo(x, cy + 40);
+            ctx.stroke();
+            ctx.fillStyle = '#ef4444';
+            ctx.font = '12px sans-serif';
+            ctx.textAlign = 'center';
+            ctx.fillText(idx === 0 ? `-A/2` : `A/2`, x, cy - 45);
+        });
+        ctx.setLineDash([]);
+
+        state.data.forEach(p => {
+            const px = mapX(p.x);
+            if(px > 0 && px < w) {
+                ctx.beginPath();
+                ctx.arc(px, cy, 6, 0, Math.PI * 2);
+                ctx.fillStyle = '#2563eb';
+                ctx.fill();
+                ctx.strokeStyle = '#fff';
+                ctx.lineWidth = 2;
+                ctx.stroke();
+            }
+        });
+
+        updateTable();
+    }
+
+    function updateTable(clear = false) {
+        const tbody = dom.tbody;
+        if (clear) {
+            tbody.innerHTML = '';
+            return;
+        }
+        let html = '';
+        state.data.forEach(row => {
+            html += `
+                <tr>
+                    <td>${row.id}</td>
+                    <td>${row.t.toFixed(4)}</td>
+                    <td>${row.s.toFixed(4)}</td>
+                    <td style="color:#2563eb; font-weight:bold">${row.x.toFixed(4)}</td>
+                </tr>
+            `;
+        });
+        tbody.innerHTML = html;
+    }
+
+    initListeners();
+    calculate();
+    drawMain();
+    drawUE();
+
+</script>
+
+</body>
+</html>

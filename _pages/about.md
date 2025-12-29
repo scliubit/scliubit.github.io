@@ -101,6 +101,8 @@ I received my B.S. and M.S. degree in Electrical Engineering from Beijing Instit
 
 # News
 
+- <b><font color="#FF0000">[2025.12]</font></b> New paper submitted to IEEE TWC, available on <a href="https://arxiv.org/abs/2512.21660">arXiv</a>. Toy demo available <a href="./demo/">here</a>.
+<!-- - <b><font color="#FF0000">[2025.12]</font></b> Comments and discussions for [TWC'25]() are released. See <a href="/posts/TWC25COMMENTS/">here</a> for more info.  -->
 - <b><font color="#FF0000">[2025.10]</font></b> New paper submitted to IEEE ICC. Preprints will be available soon.
 - <b><font color="#FF0000">[2025.08]</font></b> New paper submitted to IEEE TWC, available on <a href="https://arxiv.org/abs/2508.01201">arXiv</a>.
 - <b><font color="#000000">[2025.05]</font></b> An errata for JSAC'25 was released. See <a href="/posts/JSAC25ERRATA/">here</a> for more info.
@@ -108,11 +110,11 @@ I received my B.S. and M.S. degree in Electrical Engineering from Beijing Instit
 - <b><font color="#000000">[2024.11]</font></b> Albums and Posts now support multiple languages :-P
 - <b><font color="#FF0000">[2024.11]</font></b> One coauthored <a href="https://www.nature.com/articles/s41467-024-54168-3" target="_blank">article</a> was accepted by <b>Nature Communications</b>
 - <b><font color="#FF0000">[2024.11]</font></b> One <a href="https://arxiv.org/abs/2403.11809" target="_blank">journal paper</a> was accepted by IEEE JSAC
-- <b><font color="#FF0000">[2024.08]</font></b> I was awarded the CityU Academic Excellence and QE Award
-- <b><font color="#FF0000">[2024.07]</font></b> One <a href="https://arxiv.org/abs/2405.01000" target="_blank">conference paper</a> was accepted by IEEE Globecom'24
 
 <details><summary>More News</summary>
 <ul>
+<li><b><font color="#FF0000">[2024.08]</font></b> I was awarded the CityU Academic Excellence and QE Award</li>
+<li><b><font color="#FF0000">[2024.07]</font></b> One <a href="https://arxiv.org/abs/2405.01000" target="_blank">conference paper</a> was accepted by IEEE Globecom'24</li>
 <li><b>[2023.10]</b> One <a href="https://arxiv.org/abs/2310.18180" target="_blank">conference paper</a> was accepted by IEEE ICC'23</li>
 </ul>
 </details>
@@ -150,6 +152,9 @@ Selected publications. <a href="/publications/">More Details</a>
 	, "{{ pub.title }}", <i>{{ pub.venue }}</i>, vol. {{ pub.vol }}, no. {{ pub.issue }}, pp. {{ pub.pp }}, {{ pub.date | date: "%b. %Y" }}.
 	{% if pub.arxiv %}
 		[<a href="{{ pub.arxiv }}" target="_blank">arXiv</a>]
+	{% endif %}
+	{% if pub.demo %}
+		[<a href="{{ pub.demo }}" target="_blank"><font color="#FF0000">Demo</font></a>]
 	{% endif %}
 	{% if pub.slidesurl %}
 		[<a href="{{ pub.slidesurl }}" target="_blank">Slides</a>]
@@ -196,6 +201,9 @@ Selected publications. <a href="/publications/">More Details</a>
 	{% if pub.arxiv %}
 		[<a href="{{ pub.arxiv }}" target="_blank">arXiv</a>]
 	{% endif %}
+	{% if pub.demo %}
+		[<a href="{{ pub.demo }}" target="_blank"><font color="#FF0000">Demo</font></a>]
+	{% endif %}
 	{% if pub.slidesurl %}
 		[<a href="{{ pub.slidesurl }}" target="_blank">Slides</a>]
 	{% endif %}
@@ -239,6 +247,9 @@ Selected publications. <a href="/publications/">More Details</a>
 	{% endif %}
 	{% if pub.arxiv %}
 		[<a href="{{ pub.arxiv }}" target="_blank">arXiv</a>]
+	{% endif %}
+	{% if pub.demo %}
+		[<a href="{{ pub.demo }}" target="_blank"><font color="#FF0000">Demo</font></a>]
 	{% endif %}
 	{% if pub.slidesurl %}
 		[<a href="{{ pub.slidesurl }}" target="_blank">Slides</a>]
