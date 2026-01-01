@@ -68,6 +68,13 @@ redirect_from:
     }
 </style>
 
+<style>
+    p {
+        text-align: justify;
+        text-justify: inter-word;
+    }
+</style>
+
 <script>
 function refreshPage() {
       location.reload();

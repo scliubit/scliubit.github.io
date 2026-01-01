@@ -31,6 +31,9 @@ body {
    * Set more appropriate fonts for Chinese.
    */
   font-family: $global-font-family, "PingFang SC", "Microsoft YaHei", "Hiragino Sans GB", sans-serif;
+  tt, code, kbd, samp, pre, code span {
+  font-family: $monospace;
+}
 }
 
 
