@@ -123,6 +123,15 @@ img {
   display: block;
 }
 
+.postimg2 {
+  width: auto;
+  height: auto;
+  max-height: 360px;      // 最大高度限制
+  max-width: 100%;        // 宽度不超过容器
+  margin: 1.5em auto 0.6em auto;
+  display: block;
+}
+
 div .caption{
   font-size: 0.8em;
   text-align: center;
