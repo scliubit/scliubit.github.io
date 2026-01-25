@@ -102,7 +102,7 @@ function refreshPage() {
 
 Hello :-)
 
-I received my B.S. and M.S. degree in Electrical Engineering from Beijing Institute of Technology, Beijing, China, in 2020 and 2023, respectively, under the supervision of <a href="https://gaozhen16.github.io" target="_blank">Prof. Zhen GAO</a>. I am currently a Ph.D. candidate at the City University of Hong Kong, Hong Kong SAR, under the supervision of <a href="https://www.ee.cityu.edu.hk/~alexyu/" target="_blank">Prof. Xianghao YU</a>. My research interest includes signal processing and wireless communication. I have published some papers at IEEE ComSoc conferences and journals with total google scholar citations ~700.
+I received my B.S. and M.S. degree in Electrical Engineering from Beijing Institute of Technology, Beijing, China, in 2020 and 2023, respectively, under the supervision of <a href="https://gaozhen16.github.io" target="_blank">Prof. Zhen GAO</a>. I am currently a Ph.D. candidate at the City University of Hong Kong, Hong Kong SAR, under the supervision of <a href="https://www.ee.cityu.edu.hk/~alexyu/" target="_blank">Prof. Xianghao YU</a>. My research interest includes signal processing and wireless communication. I have published some papers at IEEE ComSoc/SPS conferences and journals with total google scholar citations ~800.
 
 <b><a href="/files/CV_Shicong.pdf" ><font color="#FF0000">Download Full CV</font></a></b>
 
@@ -284,6 +284,7 @@ Selected publications. <a href="/publications/">More Details</a>
 
 ## Academics
 
+- **TPC Member**, <i>Wireless Communication</i>, IEEE ICC'26, Glasgow, Scotland, UK.
 - **Session Chair**, <i>Antenna and Smart Antenna</i>, IEEE Globecom'24, Cape Town, South Africa.
 - **Session Chair**, <i>Mobile and Wireless Networks</i>, IEEE/CIC ICCC'23, Dalian, China.
 - **Peer Reviewer**, IEEE ComSoc Journals and Conferences.
