@@ -108,6 +108,7 @@ I received my B.S. and M.S. degree in Electrical Engineering from Beijing Instit
 
 # News
 
+- <b><font color="#000000">[2026.02]</font></b> Dark Mode (beta) is now available! Click the button on the top right corner to switch between light and dark mode. Please let me know if you encounter any issues :-)
 - <b><font color="#FF0000">[2026.02]</font></b> Nominated as 2025 <a href="https://www.comsoc.org/publications/journals/ieee-wcl/reviewer-appreciation" target="_blank">Exemplary Reviewer</a> of <span style="font-variant-caps: small-caps;">IEEE Wireless Communications Letters</span>
 - <b><font color="#FF0000">[2026.01]</font></b> New paper submitted to IEEE WCL.
 - <b><font color="#FF0000">[2026.01]</font></b> Two conference papers accepted by ICASSP'26 and ICC'26. Available online: <a href="https://arxiv.org/abs/2509.13822">ICASSP'26</a>, <a href="/files/icc26.pdf">ICC'26</a>.
@@ -117,11 +118,11 @@ I received my B.S. and M.S. degree in Electrical Engineering from Beijing Instit
 - <b><font color="#FF0000">[2025.08]</font></b> New paper submitted to IEEE TWC, available on <a href="https://arxiv.org/abs/2508.01201">arXiv</a>.
 - <b><font color="#000000">[2025.05]</font></b> An errata for JSAC'25 was released. See <a href="/posts/JSAC25ERRATA/">here</a> for more info.
 - <b><font color="#FF0000">[2024.12]</font></b> Nominated as 2024 <a href="https://www.comsoc.org/publications/journals/ieee-comml/reviewer-and-editor-appreciation" target="_blank">Exemplary Reviewer</a> of <span style="font-variant-caps: small-caps;">IEEE Communications Letters</span>
-- <b><font color="#000000">[2024.11]</font></b> Albums and Posts now support multiple languages :-P
 - <b><font color="#FF0000">[2024.11]</font></b> One coauthored <a href="https://www.nature.com/articles/s41467-024-54168-3" target="_blank">article</a> was accepted by <b>Nature Communications</b>
 
 <details><summary>More News</summary>
 <ul>
+<li><b><font color="#000000">[2024.11]</font></b> Albums and Posts now support multiple languages :-P</li>
 <li><b><font color="#FF0000">[2024.11]</font></b> One <a href="https://arxiv.org/abs/2403.11809" target="_blank">journal paper</a> was accepted by IEEE JSAC</li>
 <li><b><font color="#FF0000">[2024.08]</font></b> I was awarded the CityU Academic Excellence and QE Award</li>
 <li><b><font color="#FF0000">[2024.07]</font></b> One <a href="https://arxiv.org/abs/2405.01000" target="_blank">conference paper</a> was accepted by IEEE Globecom'24</li>
@@ -301,8 +302,8 @@ Selected publications. <a href="/publications/">More Details</a>
 
 # Awards and Honors
 
-- <div class="someClass"><div>Exemplary Reviewers of <span style="font-variant-caps: small-caps;">IEEE Wireless Communications Letters</span></div><div>2025</div></div>
-- <div class="someClass"><div>Exemplary Reviewers of <span style="font-variant-caps: small-caps;">IEEE Communications Letters</span></div><div>2024</div></div>
+- <div class="someClass"><div>2025 Exemplary Reviewer of <span style="font-variant-caps: small-caps;">IEEE Wireless Communications Letters</span></div><div>2026</div></div>
+- <div class="someClass"><div>2024 Exemplary Reviewer of <span style="font-variant-caps: small-caps;">IEEE Communications Letters</span></div><div>2025</div></div>
 - <div class="someClass"><div>CityU Academic Excellence and QE Award</div><div>2024</div></div>
 - <div class="someClass"><div>Entrance Fellowship of CityU Graduate School</div><div>2023</div></div>
 - <div class="someClass"><div>Beijing Municipal Outstanding Master Graduate</div><div>2023</div></div>

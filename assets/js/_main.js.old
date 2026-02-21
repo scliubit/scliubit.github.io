@@ -6,7 +6,6 @@
 // "system". Default is "system".
 let determineThemeSetting = () => {
   let themeSetting = localStorage.getItem("theme");
-  console.log(themeSetting);
   return (themeSetting != "dark" && themeSetting != "light" && themeSetting != "system") ? "system" : themeSetting;
 };
 
@@ -83,10 +82,10 @@ if (plotlyElements.length > 0) {
 }
 
 /* ==========================================================================
-   Actions that should occur when the page has been fully loaded
+   jQuery plugin settings and other scripts
    ========================================================================== */
 
-$(document).ready(function () {
+$(document).ready(function(){
   // SCSS SETTINGS - These should be the same as the settings in the relevant files 
   const scssLarge = 925;          // pixels, from /_sass/_themes.scss
   const scssMastheadHeight = 70;  // pixels, from the current theme (e.g., /_sass/theme/_default.scss)
@@ -103,24 +102,25 @@ $(document).ready(function () {
   // Enable the theme toggle
   $('#theme-toggle').on('click', toggleTheme);
 
-  // Enable the sticky footer
-  var bumpIt = function () {
-    $("body").css("padding-bottom", "0");
-    $("body").css("margin-bottom", $(".page__footer").outerHeight(true));
-  }
-  var didResize = false;
+
+  // Sticky footer
+  var bumpIt = function() {
+      $("body").css("margin-bottom", $(".page__footer").outerHeight(true));
+    },
+    didResize = false;
+
   bumpIt();
 
-  $(window).resize(function () {
+  $(window).resize(function() {
     didResize = true;
   });
-  setInterval(function () {
+  setInterval(function() {
     if (didResize) {
       didResize = false;
       bumpIt();
-    }}, 250);
+    }
+  }, 250);
   
-
   // FitVids init
   fitvids();
 
@@ -130,18 +130,8 @@ $(document).ready(function () {
     $(".author__urls-wrapper button").toggleClass("open");
   });
 
-  // Restore the follow menu if toggled on a window resize
-  jQuery(window).on('resize', function () {
-    if ($('.author__urls.social-icons').css('display') == 'none' && $(window).width() >= scssLarge) {
-      $(".author__urls").css('display', 'block')
-    }
-  });
-
-  // Init smooth scroll, this needs to be slightly more than then fixed masthead height
-  $("a").smoothScroll({
-    offset: -scssMastheadHeight,
-    preventDefault: false,
-  });
+  // init smooth scroll, this needs to be slightly more than then fixed masthead height
+  $("a").smoothScroll({offset: -65});
 
   // add lightbox class to all image links
   $("a[href$='.jpg'],a[href$='.jpeg'],a[href$='.JPG'],a[href$='.png'],a[href$='.gif']").addClass("image-popup");
