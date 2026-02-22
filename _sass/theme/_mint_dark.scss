@@ -2,7 +2,11 @@
    MINT THEME - DARK VERSION
    ========================================================================== */
 /* Color codes used for the theme */
-$primary-color              : #30e3ca;
+
+
+/* Dark theme for the site */
+html[data-style="mint"][data-theme="dark"] {
+  $primary-color              : #30e3ca;
 $background                 : #1a2421;
 $background-light           : #243430;
 $background-lighter        : #2e443f;
@@ -31,9 +35,6 @@ $navicon-width              : 28px;
 $navicon-height             : 4px;
 $sidebar-link-max-width     : 250px;
 $sidebar-screen-min-width   : 1024px;
-
-/* Dark theme for the site */
-html[data-style="mint"][data-theme="dark"] {
   --global-base-color                 : #{$primary-color};
   --global-bg-color                   : #{$background};
   --global-footer-bg-color            : #{$footer};

@@ -2,7 +2,11 @@
    CONTRAST THEME - DARK VERSION
    ========================================================================== */
 /* Color codes used for the theme */
-$primary-color              : #ff6c60;
+
+
+/* Dark theme for the site */
+html[data-style="contrast"][data-theme="dark"] {
+  $primary-color              : #ff6c60;
 $background                 : #000000;
 $background-light           : #1a1a1a;
 $background-lighter         : #2a2a2a;
@@ -33,9 +37,6 @@ $navicon-width              : 28px;
 $navicon-height             : 4px;
 $sidebar-link-max-width     : 250px;
 $sidebar-screen-min-width   : 1024px;
-
-/* Dark theme for the site */
-html[data-style="contrast"][data-theme="dark"] {
   --global-base-color                 : #{$primary-color};
   --global-bg-color                   : #{$background};
   --global-footer-bg-color            : #{$footer};

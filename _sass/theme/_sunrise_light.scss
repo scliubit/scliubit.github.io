@@ -2,7 +2,11 @@
    SUNRISE THEME - LIGHT VERSION
    ========================================================================== */
 /* Color codes used for the theme */
-$primary-color              : #fc3a52;
+
+
+/* Light theme for the site */
+html[data-style="sunrise"] {
+    $primary-color              : #fc3a52;
 $dark-primary-color         : mix(#000, $primary-color, 40%);
 $darker-primary-color       : mix(#000, $primary-color, 60%);
 $light-primary-color        : mix(#fff, $primary-color, 50%);
@@ -35,9 +39,6 @@ $navicon-width              : 28px;
 $navicon-height             : 4px;
 $sidebar-link-max-width     : 250px;
 $sidebar-screen-min-width   : 1024px;
-
-/* Light theme for the site */
-html[data-style="sunrise"] {
     --global-base-color                 : #{$primary-color};
     --global-bg-color                   : #{$background};
     --global-footer-bg-color            : #{$footer};
@@ -54,10 +55,12 @@ html[data-style="sunrise"] {
     --global-text-color                 : #{$text};
     --global-text-color-light           : #{$text-muted};
     --global-thead-color                : #{$background-light};
+
+    .page__footer-follow .social-icons i,
+    .page__footer-follow .social-icons .svg-inline--fa {
+        color: inherit;
+    }
 }
 
-.page__footer-follow .social-icons i,
-.page__footer-follow .social-icons .svg-inline--fa {
-    color: inherit;
-}
+
 

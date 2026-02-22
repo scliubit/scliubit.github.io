@@ -1,4 +1,8 @@
-$primary-color              : #343434;
+
+
+/* Light theme for the site */
+html[data-style="dirt"] {
+  $primary-color              : #343434;
 $dark-primary-color         : mix(#000, $primary-color, 40%);
 $darker-primary-color       : mix(#000, $primary-color, 60%);
 $light-primary-color        : mix(#fff, $primary-color, 50%);
@@ -31,9 +35,6 @@ $navicon-width              : 28px;
 $navicon-height             : 4px;
 $sidebar-link-max-width     : 250px;
 $sidebar-screen-min-width   : 1024px;
-
-/* Light theme for the site */
-html[data-style="dirt"] {
   --global-base-color                 : #{$primary-color};
   --global-bg-color                   : #{$background};
   --global-footer-bg-color            : #{$footer};
@@ -50,9 +51,8 @@ html[data-style="dirt"] {
   --global-text-color                 : #{$text};
   --global-text-color-light           : #{$text-muted};
   --global-thead-color                : #{$border-light};
-}
 
-footer {
+  footer {
   color: #{$text};
 }
 
@@ -61,3 +61,5 @@ footer {
 .page__footer-follow .social-icons .svg-inline--fa:not(.fa-rss-square) {
   color: inherit;
 }
+}
+
