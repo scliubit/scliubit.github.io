@@ -4,7 +4,33 @@
   {% assign author = site.data.authors[page.author] %}{% else %}{% assign author = site.author %}
 {% endif %}
 
+
+
 <div itemscope itemtype="http://schema.org/Person">
+  <style>
+  .author__urls li a, 
+  .author__urls li.author__desktop {
+    display: flex;
+    align-items: center;
+  }
+
+  .author__urls i {
+    display: inline-block;
+    width: 1.5rem;
+    text-align: center;
+    flex-shrink: 0;
+    margin-right: 0.5rem;
+  }
+
+  .author__urls .icon-pad-right {
+    padding-right: 0 !important;
+    margin-right: 0.5rem !important;
+  }
+  
+  .author__urls img {
+    vertical-align: middle;
+  }
+</style>
 
   <div class="author__avatar">
     {% if author.avatar contains "://" %}
@@ -20,9 +46,9 @@
     {% if author.bio %}<p class="author__bio">{{ author.bio }}</p>{% endif %}
   </div>
 
-  <div class="author__urls-wrapper">
+  <div class="author__urls-wrapper" style="position: relative;">
     <button class="btn btn--inverse">Follow</button>
-    <ul class="author__urls social-icons">
+    <ul class="author__urls social-icons" style="position: absolute; z-index: 100;">
       <!-- Font Awesome icons / Biographic information  -->
 
       {% if author.location %}
@@ -55,7 +81,7 @@
         <li><a href="{{ author.arxiv }}"><i class="ai ai-arxiv ai-fw icon-pad-right"></i>arXiv</a></li>
       {% endif %}      
       {% if author.googlescholar %}
-        <li><a href="{{ author.googlescholar }}"><i class="ai ai-google-scholar icon-pad-right"></i>Google Scholar</a></li>
+        <li><a href="{{ author.googlescholar }}"><i class="ai ai-google-scholar ai-fw icon-pad-right"></i>Google Scholar</a></li>
       {% endif %}
       {% if author.semantic %}
         <li><a href="{{ author.semantic }}"><i class="ai ai-semantic-scholar ai-fw icon-pad-right"></i>Semantic Scholar</a></li>

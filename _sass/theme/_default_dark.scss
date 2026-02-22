@@ -7,7 +7,8 @@
 $primary-color              : #7a8288;
 $gray                       : #7a8288;
 $dark-gray                  : mix(#000, $gray, 40%);
-$darker-gray                : mix(#000, $gray, 60%);
+// $darker-gray                : mix(#000, $gray, 60%);
+$darker-gray                : #d4d4d4;
 $light-gray                 : mix(#fff, $gray, 50%);
 
 $background                 : #474747;
@@ -37,6 +38,7 @@ $sidebar-screen-min-width   : 1024px;
 
 /* Dark theme for the site */
 html[data-style="default"][data-theme="dark"] {
+    
     --global-base-color                 : #{$primary-color};
     --global-bg-color                   : #{$background};
     --global-footer-bg-color            : #{$background};
@@ -54,7 +56,7 @@ html[data-style="default"][data-theme="dark"] {
     --global-text-color-light           : #f3f3f3;
     --global-thead-color                : #{$background-lighter};
     --global-footnote-color             : #{mix(#ffffff, #ff0000, 10%)};
-    --global-quote-background-color     : #{mix(#000000, #ff0000, 80%)};
-    --global-quote-border-color         : #{mix(#ffffff, #ff0000, 100%)};
+    --global-quote-background-color     : #3A1F23;
+    --global-quote-border-color         : #{mix(#ffffff, #ff0000, 80%)};
 }
 

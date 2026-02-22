@@ -32,6 +32,7 @@
   padding-bottom: 0.5em;
   font-size: $type-size-3;
   color: mix(#fff, $gray, 25%);
+  // color: var(--global-text-color-light);
   border-bottom: 1px solid $border-color;
 
   + .list__item .archive__item-title {

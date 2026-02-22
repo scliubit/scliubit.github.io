@@ -1,0 +1,39 @@
+/* ==========================================================================
+   VS Code Theme Variables (Light+ & Dark+)
+   ========================================================================== */
+
+:root {
+  /* --- VS Code Light+ (默认浅色) --- */
+  --code-bg:       #ffffff;
+  --code-fg:       #000000; /* 基础文字 */
+  --code-comment:  #008000; /* 绿色注释 */
+  --code-keyword:  #0000ff; /* 蓝色关键字 */
+  --code-control:  #af00db; /* 紫色控制流 (return, if, else) */
+  --code-string:   #a31515; /* 红棕色字符串 */
+  --code-number:   #098658; /* 墨绿色数字 */
+  --code-func:     #795e26; /* 黄褐色函数 */
+  --code-type:     #267f99; /* 青色类型 */
+  --code-var:      #001080; /* 深蓝变量 */
+  --code-const:    #0070c1; /* 亮蓝常量 */
+  
+  /* 边框颜色 */
+  --code-border:   #e1e4e8; 
+}
+
+[data-theme="dark"] {
+  /* --- VS Code Dark+ (深色模式) --- */
+  --code-bg:       #1e1e1e; /* 经典深灰背景 */
+  --code-fg:       #d4d4d4; /* 浅灰文字 */
+  --code-comment:  #6a9955; /* 灰绿色注释 */
+  --code-keyword:  #569cd6; /* 亮蓝色关键字 */
+  --code-control:  #c586c0; /* 粉紫色控制流 */
+  --code-string:   #ce9178; /* 橙色字符串 */
+  --code-number:   #b5cea8; /* 浅绿数字 */
+  --code-func:     #dcdcaa; /* 浅黄函数 */
+  --code-type:     #4ec9b0; /* 青绿色类型 */
+  --code-var:      #9cdcfe; /* 浅蓝变量 */
+  --code-const:    #4fc1ff; /* 亮蓝常量 */
+
+  /* 边框颜色 (深色模式下通常不需要明显边框，或者很暗) */
+  --code-border:   #333333; 
+}

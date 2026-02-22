@@ -55,6 +55,9 @@ html[data-style="mint"] {
   --global-text-color : #{$text};
   --global-text-color-light : #{$text-muted};
   --global-thead-color : #{$lighter-primary-color};
+  --global-footnote-color : #{mix(#ffffff, #ff0000, 10%)};
+  --global-quote-background-color : #{mix(#ffffff, $primary-color, 80%)};
+  --global-quote-border-color : #{mix(#ffffff, $primary-color, 20%)};
 
 }
 

@@ -71,13 +71,12 @@ redirect_from:
 	.content-container {
   		display: flex;
   		align-items: center;
-  		gap: 8px; /* 元素间距 */
+  		gap: 8px;
 	}
 
-	/* 下拉框样式，模仿按钮风格 */
 	.theme-select {
-  		background-color: var(--global-bg-color); /* 跟随背景色 */
-  		color: var(--global-text-color);          /* 跟随文字色 */
+  		background-color: var(--global-bg-color);
+  		color: var(--global-text-color); 
   		border: 1px solid var(--global-border-color);
   		padding: 2px 5px;
   		border-radius: 4px;
@@ -115,12 +114,10 @@ function refreshPage() {
 <div class="content-container" style="font-size:0.8em;">
 <img src="https://img.shields.io/github/actions/workflow/status/scliubit/scliubit.github.io/google_citation.yml?branch=main&logo=github" height="50px">
 <img src="https://img.shields.io/github/last-commit/scliubit/scliubit.github.io?logo=github" height="50px">
-<!-- <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fscliubit.github.io&count_bg=%2379C83D&title_bg=%23555555&icon=googleanalytics.svg&icon_color=%23E7E7E7&title=visits&edge_flat=false" height="50px"/> -->
-<div class="button-container">
+<!-- <div class="button-container" style="position: relative; z-index: 0;"> -->
       <button class="refresh-btn" onclick="refreshPage()">Refresh</button>
       <div class="tooltip">Refresh for Updates</div>
-</div>
-<!-- <button class="refresh-btn" onclick="refreshPage()" height="50px">Refresh</button><div class="tooltip">Click to refresh the page</div> -->
+<!-- </div> -->
 <div class="theme-select-wrapper">
     <select id="theme-selector" class="theme-select" onchange="setStyle(this.value)">
       <option value="default">Default</option>
@@ -142,7 +139,7 @@ I received my B.S. and M.S. degree in Electrical Engineering from Beijing Instit
 
 # News
 
-- <b><font color="#FF0000">[2026.02]</font></b> Themes and Dark Modes (beta) are now available! Select the theme you like from the dropdown menu above, or click the button to toggle between light/dark modes. Please let me know if you encounter any issues :-)
+- <b><font color="#FF0000">[2026.02]</font></b> Themes and Dark Modes (beta) are now available! Select the theme you like from the dropdown menu above, or click the top-right button to toggle between light/dark modes. Please let me know if you encounter any issues :-)
 - <b><font color="#FF0000">[2026.02]</font></b> Nominated as 2025 <a href="https://www.comsoc.org/publications/journals/ieee-wcl/reviewer-appreciation" target="_blank">Exemplary Reviewer</a> of <span style="font-variant-caps: small-caps;">IEEE Wireless Communications Letters</span>
 - <b><font color="#FF0000">[2026.01]</font></b> New paper submitted to IEEE WCL.
 - <b><font color="#FF0000">[2026.01]</font></b> Two conference papers accepted by ICASSP'26 and ICC'26. Available online: <a href="https://arxiv.org/abs/2509.13822">ICASSP'26</a>, <a href="/files/icc26.pdf">ICC'26</a>.
