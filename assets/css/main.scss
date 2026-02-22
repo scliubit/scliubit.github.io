@@ -14,6 +14,18 @@
 @import "variables";
 @import "theme/{{ site.site_theme | default: 'default' | append: '_light' }}",
         "theme/{{ site.site_theme | default: 'default' | append: '_dark' }}";
+@import "theme/air_light",
+        "theme/air_dark";
+@import "theme/contrast_light",
+        "theme/contrast_dark";
+@import "theme/dirt_light",
+        "theme/dirt_dark";
+@import "theme/mint_light",
+        "theme/mint_dark";
+@import "theme/sunrise_light",
+        "theme/sunrise_dark";
+@import "theme/default_light",
+        "theme/default_dark";
 
 @import "mixins";
 @import "vendor/susy/susy";

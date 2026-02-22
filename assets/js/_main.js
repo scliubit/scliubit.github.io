@@ -4,9 +4,29 @@
 
 // Determine the expected state of the theme toggle, which can be "dark", "light", or
 // "system". Default is "system".
+
+let getStoredStyle = () => localStorage.getItem("style");
+
+// set style
+let setStyle = (style) => {
+  // If the style is not recognized, default to "default"
+  if (!style || style === "default") {
+    $("html").attr("data-style", style);
+    localStorage.setItem("style", style);
+    // $("html").removeAttr("data-style");
+    // localStorage.removeItem("style");
+    // Synchronize the dropdown display (to prevent the dropdown state from being incorrect after the user clears the cache)
+    $("#theme-selector").val("default");
+  } else {
+    $("html").attr("data-style", style);
+    localStorage.setItem("style", style);
+    // Synchronize the dropdown display
+    $("#theme-selector").val(style);
+  }
+};
+
 let determineThemeSetting = () => {
   let themeSetting = localStorage.getItem("theme");
-  console.log(themeSetting);
   return (themeSetting != "dark" && themeSetting != "light" && themeSetting != "system") ? "system" : themeSetting;
 };
 
@@ -37,6 +57,9 @@ let setTheme = (theme) => {
   } else if (use_theme === "light") {
     $("html").removeAttr("data-theme");
     $("#theme-icon").removeClass("fa-moon").addClass("fa-sun");
+  }
+  if (theme) {
+    localStorage.setItem("theme", theme);
   }
 };
 
@@ -87,21 +110,36 @@ if (plotlyElements.length > 0) {
    ========================================================================== */
 
 $(document).ready(function () {
+    const savedStyle = getStoredStyle() || "default";
+
+    setStyle(savedStyle);
+
+    setTheme();
+
+    $('#theme-selector').on('change', function(e) {
+    setStyle(e.target.value);});
+
+    $('#theme-toggle').on('click', toggleTheme);
+
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener("change", (e) => {
+    if (!localStorage.getItem("theme")) {
+      setTheme(e.matches ? "dark" : "light");
+    }});
   // SCSS SETTINGS - These should be the same as the settings in the relevant files 
   const scssLarge = 925;          // pixels, from /_sass/_themes.scss
   const scssMastheadHeight = 70;  // pixels, from the current theme (e.g., /_sass/theme/_default.scss)
 
   // If the user hasn't chosen a theme, follow the OS preference
-  setTheme();
-  window.matchMedia('(prefers-color-scheme: dark)')
-        .addEventListener("change", (e) => {
-          if (!localStorage.getItem("theme")) {
-            setTheme(e.matches ? "dark" : "light");
-          }
-        });
+//   setTheme();
+//   window.matchMedia('(prefers-color-scheme: dark)')
+//         .addEventListener("change", (e) => {
+//           if (!localStorage.getItem("theme")) {
+//             setTheme(e.matches ? "dark" : "light");
+//           }
+//         });
 
   // Enable the theme toggle
-  $('#theme-toggle').on('click', toggleTheme);
+//   $('#theme-toggle').on('click', toggleTheme);
 
   // Enable the sticky footer
   var bumpIt = function () {

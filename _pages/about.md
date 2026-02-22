@@ -66,6 +66,30 @@ redirect_from:
       visibility: visible;
       opacity: 1;
     }
+
+	/* */
+	.content-container {
+  		display: flex;
+  		align-items: center;
+  		gap: 8px; /* 元素间距 */
+	}
+
+	/* 下拉框样式，模仿按钮风格 */
+	.theme-select {
+  		background-color: var(--global-bg-color); /* 跟随背景色 */
+  		color: var(--global-text-color);          /* 跟随文字色 */
+  		border: 1px solid var(--global-border-color);
+  		padding: 2px 5px;
+  		border-radius: 4px;
+  		font-size: 0.9em;
+  		cursor: pointer;
+  		outline: none;
+  		/* height: 24px; */
+
+  		&:hover {
+    		border-color: var(--global-link-color);
+  		}
+	}
 </style>
 
 <style>
@@ -97,6 +121,16 @@ function refreshPage() {
       <div class="tooltip">Refresh for Updates</div>
 </div>
 <!-- <button class="refresh-btn" onclick="refreshPage()" height="50px">Refresh</button><div class="tooltip">Click to refresh the page</div> -->
+<div class="theme-select-wrapper">
+    <select id="theme-selector" class="theme-select" onchange="setStyle(this.value)">
+      <option value="default">Default</option>
+      <option value="air">Air</option>
+      <option value="contrast">Contrast</option>
+      <option value="dirt">Dirt</option>
+      <option value="mint">Mint</option>
+	  <option value="sunrise">Sunrise</option>
+    </select>
+  </div>
 </div>
 <br>
 
@@ -108,7 +142,7 @@ I received my B.S. and M.S. degree in Electrical Engineering from Beijing Instit
 
 # News
 
-- <b><font color="#000000">[2026.02]</font></b> Dark Mode (beta) is now available! Click the button on the top right corner to switch between light and dark mode. Please let me know if you encounter any issues :-)
+- <b><font color="#FF0000">[2026.02]</font></b> Themes and Dark Modes (beta) are now available! Select the theme you like from the dropdown menu above, or click the button to toggle between light/dark modes. Please let me know if you encounter any issues :-)
 - <b><font color="#FF0000">[2026.02]</font></b> Nominated as 2025 <a href="https://www.comsoc.org/publications/journals/ieee-wcl/reviewer-appreciation" target="_blank">Exemplary Reviewer</a> of <span style="font-variant-caps: small-caps;">IEEE Wireless Communications Letters</span>
 - <b><font color="#FF0000">[2026.01]</font></b> New paper submitted to IEEE WCL.
 - <b><font color="#FF0000">[2026.01]</font></b> Two conference papers accepted by ICASSP'26 and ICC'26. Available online: <a href="https://arxiv.org/abs/2509.13822">ICASSP'26</a>, <a href="/files/icc26.pdf">ICC'26</a>.
