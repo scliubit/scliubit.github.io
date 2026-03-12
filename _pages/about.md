@@ -114,10 +114,10 @@ function refreshPage() {
 <div class="content-container" style="font-size:0.8em;">
 <img src="https://img.shields.io/github/actions/workflow/status/scliubit/scliubit.github.io/google_citation.yml?branch=main&logo=github" height="50px">
 <img src="https://img.shields.io/github/last-commit/scliubit/scliubit.github.io?logo=github" height="50px">
-<!-- <div class="button-container" style="position: relative; z-index: 0;"> -->
+<div class="button-container" style="position: relative; z-index: 0;">
       <button class="refresh-btn" onclick="refreshPage()">Refresh</button>
       <div class="tooltip">Refresh for Updates</div>
-<!-- </div> -->
+</div>
 <div class="theme-select-wrapper">
     <select id="theme-selector" class="theme-select" onchange="setStyle(this.value)">
       <option value="default">Default</option>
@@ -157,7 +157,7 @@ I received my B.S. and M.S. degree in Electrical Engineering from Beijing Instit
 <li><b><font color="#FF0000">[2024.11]</font></b> One <a href="https://arxiv.org/abs/2403.11809" target="_blank">journal paper</a> was accepted by IEEE JSAC</li>
 <li><b><font color="#FF0000">[2024.08]</font></b> I was awarded the CityU Academic Excellence and QE Award</li>
 <li><b><font color="#FF0000">[2024.07]</font></b> One <a href="https://arxiv.org/abs/2405.01000" target="_blank">conference paper</a> was accepted by IEEE Globecom'24</li>
-<li><b>[2023.10]</b> One <a href="https://arxiv.org/abs/2310.18180" target="_blank">conference paper</a> was accepted by IEEE ICC'23</li>
+<li><b>[2023.10]</b> One <a href="https://arxiv.org/abs/2310.18180" target="_blank">conference paper</a> was accepted by IEEE ICC'24</li>
 </ul>
 </details>
 

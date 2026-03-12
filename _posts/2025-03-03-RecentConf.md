@@ -24,34 +24,35 @@ tags:
 
 Lookup Table for communications related conferences. DDLs are usually extended in recent years.
 
+改表格内容已交由Claude Code维护。
+
+This table is currently maintained by Claude Code. Please contact me if you have any questions or suggestions.
 
 
 2026
 
 | DDL (M) | Conference   | Date (M)      | Location                  | Website                                                      |
 | ------- | ------------ | ------------- | ------------------------- | ------------------------------------------------------------ |
-| Jan.    | ISIT'26     | Jun.          | Guangzhou, China | [ISIT'26](https://2026.ieee-isit.org/)                     |
-| Mar.    | PIMRC'25     | Sep.          | Singapore | [PIMRC'26](https://pimrc2026.ieee-pimrc.org/program)       |
-|         | MeditCom'26 | Jul.          | Cagliari, Italy | [MeditCom'26](https://meditcom2026.ieee-meditcom.org/)     |
-|         | MobiCom'26  | Nov.          | Austin, Texas, USA | [MobiCom'26](https://www.sigmobile.org/mobicom/2026/)      |
-| Apr.    | Globecom'26 | Dec.          | Macau, China    | [Globecom'26](https://globecom2026.ieee-globecom.org/)     |
-|         | VTCFall'26  | Sept.      | Boston, MA, USA | [VTCFall'26](https://events.vtsociety.org/vtc2026-fall/)   |
-|         | SPAWC'26    | Sept.       | Greece          | [SPAWC'25](https://2026.ieeespawc.org/)                     |
-|         | ICCC'26     | Aug.          |            | [ICCC'25](https://iccc2026.ieee-iccc.org/)                  |
-|         | Asilomar'26 | Oct.          | Pacific Grove, CA, USA    | [Asilomar](https://www.asilomarsscconf.org/)                 |
-| Jun.    | WCSP'26     | Oct.          |                        | [WCSP'26](http://www.ic-wcsp.org/2026/)                    |
+| Jan.    | ISIT'26     | Jun. 28–Jul. 3 | Guangzhou, China | [ISIT'26](https://2026.ieee-isit.org/)                     |
+| Mar.    | PIMRC'26     | Sep. 1–4      | Singapore | [PIMRC'26](https://pimrc2026.ieee-pimrc.org/)       |
+|         | MeditCom'26 | Jul. 6–9      | Cagliari, Italy | [MeditCom'26](https://meditcom2026.ieee-meditcom.org/)     |
+|         | MobiCom'26  | Oct. 26–30    | Austin, Texas, USA | [MobiCom'26](https://www.sigmobile.org/mobicom/2026/)      |
+|         | VTCFall'26  | Sep. 6–9      | Boston, MA, USA | [VTCFall'26](https://events.vtsociety.org/vtc2026-fall/)   |
+|         | SPAWC'26    | Sep. 7–9      | Athens, Greece  | [SPAWC'26](https://2026.ieeespawc.org/)                     |
+|         | ICCC'26     | Aug. 7–9      | Wuhan, China    | [ICCC'26](https://iccc2026.ieee-iccc.org/)                  |
+| Apr.    | Globecom'26 | Dec. 7–11     | Macau, China    | [Globecom'26](https://globecom2026.ieee-globecom.org/)     |
+| May.    | Asilomar'26 | Oct. 25–28    | Pacific Grove, CA, USA    | [Asilomar](https://www.asilomarsscconf.org/)                 |
+| Jun.    | WCSP'26     | Nov. 12–14    | Shenzhen, China           | [WCSP'26](http://www.ic-wcsp.org/2026/)                    |
 | Jul.    | HK6GWS'26   | Sep.          | Hong Kong, China          | [HK6GWS'26](https://hk6gws2026.ieee-hk6gws.org/)           |
-|         | INFOCOM'26  | May           | Tokyo, Japan    | [INFOCOM'26](https://infocom2026.ieee-infocom.org/)        |
-|         | INFOCOM'27  | May$${}^{+1}$$  | Honolulu, Hawaii, USA | [INFOCOM'26](https://infocom2026.ieee-infocom.org/)      |
+|         | INFOCOM'27  | May 24–27$${}^{+1}$$  | Honolulu, Hawaii, USA | [INFOCOM'27](https://infocom2026.ieee-infocom.org/)      |
 | Aug.    |              |               |                           |                                                              |
-| Sept.   | ICASSP'27   | May$${}^{+1}$$  | Toronto, Canada | [ICASSP'27](https://2027.ieeeicassp.org/)                  |
-|         | WCNC'27     | Apr.$${}^{+1}$$ | Milan, Italy | [WCNC'27](https://wcnc2027.ieee-wcnc.org/)                 |
+| Sept.   | ICASSP'27   | May 16–21$${}^{+1}$$  | Toronto, Canada | [ICASSP'27](https://2027.ieeeicassp.org/)                  |
+|         | WCNC'27     | TBD$${}^{+1}$$ | Panama City, Panama | [WCNC'27](https://wcnc2027.ieee-wcnc.org/)                 |
 |         | MMSys'27    | Mar.$${}^{+1}$$ |                        |                                                           |
-| Oct.    | ICC'26      | Jun.          | Glasgow, UK | [ICC'26](https://icc2026.ieee-icc.org/)                    |
-|         | ICC'27      | Jun.$${}^{+1}$$ | Washington, USA | [ICC'27](https://icc2027.ieee-icc.org/)                    |
-|         | ICMLCN'27   | Jan.$${}^{+1}$$ | London, UK | [ICMLCN'27](https://icmlcn2027.ieee-icmlcn.org/)         |
+| Oct.    | ICC'27      | May 30–Jun. 3$${}^{+1}$$ | Washington, D.C., USA | [ICC'27](https://icc2027.ieee-icc.org/)                    |
+|         | ICMLCN'27   | TBD$${}^{+1}$$ | TBD | [ICMLCN'27](https://icmlcn2027.ieee-icmlcn.org/)         |
 | Nov.    |              |               |                           |                                                              |
-| Dec.    | VTCSpring'26 | Jun.$${}^{+1}$$ | Hamburg, Germany  | [VTCSpring'27](https://events.vtsociety.org/vtc2027-spring/) |
+| Dec.    | VTCSpring'27 | Jun. 20–23$${}^{+1}$$ | Hamburg, Germany  | [VTCSpring'27](https://events.vtsociety.org/vtc2027-spring/) |
 
 $${}^{+1}$$ 表示实际开会时间在第二年
 
@@ -75,15 +76,14 @@ $${}^{+1}$$ means the conference will be held the year after.
 | Jun.    | WCSP'25      | Oct.          | TBD                       | [WCSP'25](http://www.ic-wcsp.org/2025/)                      |
 | Jul.    | HK6GWS'25    | Sep.          | Hong Kong, China          | [HK6GWS'25](https://hk6gws2025.ieee-hk6gws.org/)             |
 |         | INFOCOM'25   | May           | London, UK                | [INFOCOM'25](https://infocom2025.ieee-infocom.org/)          |
-|         | INFOCOM'26   | May$${}^{+1}$$  | Tokyo, Japan              | TBD                                                          |
+|         | INFOCOM'26   | May$${}^{+1}$$  | Tokyo, Japan              | [INFOCOM'26](https://infocom2026.ieee-infocom.org/)          |
 | Aug.    |              |               |                           |                                                              |
 | Sept.   | ICASSP'26    | May$${}^{+1}$$  | Barcelona, Spain          | [ICASSP'26](https://2026.ieeeicassp.org/)                    |
 |         | WCNC'26      | Apr.$${}^{+1}$$ | Kuala Lumpur, Malaysia    | [WCNC'26](https://wcnc2026.ieee-wcnc.org/)                   |
 |         | MMSys'26     | Mar.$${}^{+1}$$ | TBD                       | TBD                                                          |
 | Oct.    | ICC'25       | Jun.          | Montreal QC Canada        | [ICC'25](https://icc2025.ieee-icc.org/)                      |
-|         | ICC'26       | Jun.$${}^{+1}$$ | Glasgow, UK               | [ICC'26](https://icc2026.ieee-icc.org/)                      |
-|         | ICMLCN'26    | Apr.$${}^{+1}$$ | Abu Dhabi, UAE | TBD                                                          |
-| Nov.    |              |               |                           |                                                              |
+|         | ICMLCN'26    | Apr.$${}^{+1}$$ | TBD (postponed) | [ICMLCN'26](https://icmlcn2026.ieee-icmlcn.org/)             |
+| Nov.    | ICC'26       | Jun.$${}^{+1}$$ | Glasgow, UK               | [ICC'26](https://icc2026.ieee-icc.org/)                      |
 | Dec.    | VTCSpring'26 | May$${}^{+1}$$  | Nice, France              | [VTCSpring'26](https://events.vtsociety.org/vtc2026-spring/) |
 
 
