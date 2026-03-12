@@ -191,7 +191,7 @@ Selected publications. <a href="/publications/">More Details</a>
 		  	{{ author }}{% if forloop.last == false %}, {% endif %}
 		{% endif %}
 	{% endfor %}
-	, "{{ pub.title }}", <i>{{ pub.venue }}</i>, vol. {{ pub.vol }}, no. {{ pub.issue }}, pp. {{ pub.pp }}, {{ pub.date | date: "%b. %Y" }}.
+	, "{{ pub.title }}", <i>{{ pub.venue }}</i>, vol. {{ pub.vol }}, no. {{ pub.issue }}, pp. {{ pub.pp }}, {{ pub.date | date: "%b. %Y" }}, <b><font color="#FF0000">{{ pub.notes }}</font></b>.
 	{% if pub.arxiv %}
 		[<a href="{{ pub.arxiv }}" target="_blank">arXiv</a>]
 	{% endif %}
@@ -205,7 +205,7 @@ Selected publications. <a href="/publications/">More Details</a>
 		[<a href="{{ pub.paperurl }}" target="_blank">Paper</a>]
 	{% endif %}
 	{% if pub.errata %}
-		[<a href="{{ pub.errata }}" target="_blank">errata</a>]
+		[<a href="{{ pub.errata }}" target="_blank">Erratum</a>]
 	{% endif %}
 	{% if pub.codes %}
 		[<a href="{{ pub.codes }}" target="_blank"><font color="#FF0000">Codes</font></a>]
@@ -239,7 +239,7 @@ Selected publications. <a href="/publications/">More Details</a>
 		  	{{ author }}{% if forloop.last == false %}, {% endif %}
 		{% endif %}
 	{% endfor %}
-	, "{{ pub.title }}", <i>{{ pub.venue }}</i>, vol. {{ pub.vol }}, no. {{ pub.issue }}, pp. {{ pub.pp }}, {{ pub.date | date: "%b. %Y" }}.
+	, "{{ pub.title }}", <i>{{ pub.venue }}</i>, vol. {{ pub.vol }}, no. {{ pub.issue }}, pp. {{ pub.pp }}, {{ pub.date | date: "%b. %Y" }}, <b><font color="#FF0000">{{ pub.notes }}</font></b>.
 	{% if pub.arxiv %}
 		[<a href="{{ pub.arxiv }}" target="_blank">arXiv</a>]
 	{% endif %}
@@ -285,7 +285,7 @@ Selected publications. <a href="/publications/">More Details</a>
     {% endfor %}
     , "{{ pub.title }}",
 	{% if pub.type == "Conference" %}
-		in <i>{{ pub.venue }}</i>, {{ pub.location }}, {{ pub.date | date: "%b. %Y" }}.
+		in <i>{{ pub.venue }}</i>, {{ pub.location }}, {{ pub.date | date: "%b. %Y" }}, <b><font color="#FF0000">{{ pub.notes }}</font></b>.
 	{% endif %}
 	{% if pub.arxiv %}
 		[<a href="{{ pub.arxiv }}" target="_blank">arXiv</a>]
@@ -325,6 +325,7 @@ Selected publications. <a href="/publications/">More Details</a>
 ## Teaching
 
 - **Teaching Assistant**
+	- <div class="someClass"><div>EE3009: Data Commun. and Networking, City University of Hong Kong</div><div>2026 Spring</div></div>
 	- <div class="someClass"><div>EE3008: Principles of Communications, City University of Hong Kong</div><div>2024&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Fall</div></div>
 	- <div class="someClass"><div>EE3008: Principles of Communications, City University of Hong Kong</div><div>2024 Spring</div></div>
 	- <div class="someClass"><div>EE3008: Principles of Communications, City University of Hong Kong</div><div>2023&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Fall</div></div>
@@ -367,6 +368,6 @@ Selected publications. <a href="/publications/">More Details</a>
 </div>
 
 <div class='center'>
-<a href="https://info.flagcounter.com/4GAt"><img src="https://s01.flagcounter.com/count2/4GAt/bg_FFFFFF/txt_000000/border_CCCCCC/columns_4/maxflags_4/viewers_0/labels_0/pageviews_1/flags_0/percent_0/" alt="Flag Counter" border="0"></a>
+<a href="https://info.flagcounter.com/4GAt"><img src="https://s01.flagcounter.com/count2/4GAt/bg_FFFFFF/txt_000000/border_CCCCCC/columns_4/maxflags_8/viewers_0/labels_0/pageviews_1/flags_0/percent_0/" alt="Flag Counter" border="0"></a>
 </div>
 
