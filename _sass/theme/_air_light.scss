@@ -53,7 +53,7 @@ html[data-style="air"] {
     --global-text-color : #{$text};
     --global-text-color-light : #{$light-primary-color};
     --global-thead-color : #{$background-lighter};
-    --global-footnote-color : #{mix(#ffffff, #ff0000, 10%)};
+    --global-footnote-color : #{$danger-color};
     --global-quote-background-color : #{mix(#ffffff, $primary-color, 90%)};
     --global-quote-border-color : #{mix(#ffffff, $primary-color, 20%)};
 }

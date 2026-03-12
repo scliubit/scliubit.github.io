@@ -46,7 +46,7 @@ html[data-style="default"] {
     --global-text-color                 : #{$dark-gray};
     --global-text-color-light           : #{$light-gray};
     --global-thead-color                : #{$lighter-gray};
-    --global-footnote-color             : #{mix(#ffffff, #ff0000, 10%)};
+    --global-footnote-color             : #ff0000;
     --global-quote-background-color     : #{mix(#ffffff, #ff0000, 90%)};
     --global-quote-border-color         : #{mix(#ffffff, #ff0000, 20%)};
     --global-info-color                 : #{$info-color};

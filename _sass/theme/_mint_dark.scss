@@ -51,7 +51,7 @@ html[data-style="mint"][data-theme="dark"] {
   --global-text-color : #{$text};
   --global-text-color-light : #{$text-muted};
   --global-thead-color : #{$background-lighter};
-  --global-footnote-color : #{mix(#ffffff, #ff0000, 10%)};
+  --global-footnote-color : #{$danger-color};
   --global-quote-background-color : #{mix(#000000, $primary-color, 85%)};
   --global-quote-border-color : #{mix(#000000, $primary-color, 20%)};
 

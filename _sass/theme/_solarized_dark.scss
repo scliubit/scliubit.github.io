@@ -1,0 +1,64 @@
+/* ==========================================================================
+    SOLARIZED THEME - DARK VERSION
+    Based on Ethan Schoonover's Solarized color scheme
+    https://ethanschoonover.com/solarized/
+    ========================================================================== */
+
+/* Solarized palette */
+$sol-base03        : #002b36;
+$sol-base02        : #073642;
+$sol-base01        : #586e75;
+$sol-base00        : #657b83;
+$sol-base0         : #839496;
+$sol-base1         : #93a1a1;
+$sol-base2         : #eee8d5;
+$sol-base3         : #fdf6e3;
+$sol-yellow        : #b58900;
+$sol-orange        : #cb4b16;
+$sol-red           : #dc322f;
+$sol-magenta       : #d33682;
+$sol-violet        : #6c71c4;
+$sol-blue          : #268bd2;
+$sol-cyan          : #2aa198;
+$sol-green         : #859900;
+
+/* Color codes used for the site */
+$danger-color      : $sol-red;
+$info-color        : $sol-cyan;
+$notice-color      : $sol-base0;
+$success-color     : $sol-green;
+$warning-color     : $sol-yellow;
+
+/* Other basic settings for the template */
+$border-radius              : 4px;
+$box-shadow                 : 0 1px 1px rgba(0, 0, 0, 0.125);
+$global-transition          : all 0.2s ease-in-out;
+$masthead-height            : 70px;
+$navicon-width              : 28px;
+$navicon-height             : 4px;
+$sidebar-link-max-width     : 250px;
+$sidebar-screen-min-width   : 1024px;
+
+/* Solarized dark theme */
+html[data-style="solarized"][data-theme="dark"] {
+    --global-base-color                 : #{$sol-cyan};
+    --global-bg-color                   : #{$sol-base03};
+    --global-footer-bg-color            : #{$sol-base02};
+    --global-border-color               : #{$sol-base02};
+    --global-dark-border-color          : #{$sol-base01};
+    --global-code-background-color      : #{$sol-base02};
+    --global-code-text-color            : #{$sol-base1};
+    --global-fig-caption-color          : #{$sol-base01};
+    --global-link-color                 : #{$sol-blue};
+    --global-link-color-hover           : #{mix(#fff, $sol-blue, 20%)};
+    --global-link-color-visited         : #{$sol-violet};
+    --global-masthead-link-color        : #{$sol-base1};
+    --global-masthead-link-color-hover  : #{$sol-base2};
+    --global-text-color                 : #{$sol-base0};
+    --global-text-color-light           : #{$sol-base01};
+    --global-thead-color                : #{$sol-base02};
+    --global-footnote-color             : #{$sol-red};
+    --global-quote-background-color     : #{mix($sol-base03, $sol-yellow, 85%)};
+    --global-quote-border-color         : #{$sol-yellow};
+    --global-info-color                 : #{$info-color};
+}

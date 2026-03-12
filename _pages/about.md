@@ -33,8 +33,8 @@ redirect_from:
 	/* Tooltip styling */
     .tooltip {
       visibility: hidden;
-      background-color: #333;
-      color: #fff;
+      background-color: var(--global-text-color);
+      color: var(--global-bg-color);
       text-align: center;
       border-radius: 5px;
       padding: 5px;
@@ -58,7 +58,7 @@ redirect_from:
       transform: translateX(-50%);
       border-width: 5px;
       border-style: solid;
-      border-color: #333 transparent transparent transparent;
+      border-color: var(--global-text-color) transparent transparent transparent;
     }
 
     /* Show tooltip on hover */
@@ -96,6 +96,8 @@ redirect_from:
         text-align: justify;
         text-justify: inter-word;
     }
+    .accent { color: var(--global-footnote-color); }
+    .muted  { color: var(--global-text-color-light); }
 </style>
 
 <script>
@@ -126,6 +128,7 @@ function refreshPage() {
       <option value="dirt">Dirt</option>
       <option value="mint">Mint</option>
 	  <option value="sunrise">Sunrise</option>
+	  <option value="solarized">Solarized</option>
     </select>
   </div>
 </div>
@@ -135,28 +138,28 @@ Hello :-)
 
 I received my B.S. and M.S. degree in Electrical Engineering from Beijing Institute of Technology, Beijing, China, in 2020 and 2023, respectively, under the supervision of <a href="https://gaozhen16.github.io" target="_blank">Prof. Zhen GAO</a>. I am currently a Ph.D. candidate at the City University of Hong Kong, Hong Kong SAR, under the supervision of <a href="https://www.ee.cityu.edu.hk/~alexyu/" target="_blank">Prof. Xianghao YU</a>. My research interest includes signal processing and wireless communication. I have published some papers at IEEE ComSoc/SPS conferences and journals with total google scholar citations ~800.
 
-<b><a href="/files/CV_Shicong.pdf" ><font color="#FF0000">Download Full CV</font></a></b>
+<b><a href="/files/CV_Shicong.pdf" ><span class="accent">Download Full CV</span></a></b>
 
 # News
 
-- <b><font color="#FF0000">[2026.02]</font></b> Themes and Dark Modes (beta) are now available! Select the theme you like from the dropdown menu above, or click the top-right button to toggle between light/dark modes. Please let me know if you encounter any issues :-)
-- <b><font color="#FF0000">[2026.02]</font></b> Nominated as 2025 <a href="https://www.comsoc.org/publications/journals/ieee-wcl/reviewer-appreciation" target="_blank">Exemplary Reviewer</a> of <span style="font-variant-caps: small-caps;">IEEE Wireless Communications Letters</span>
-- <b><font color="#FF0000">[2026.01]</font></b> New paper submitted to IEEE WCL.
-- <b><font color="#FF0000">[2026.01]</font></b> Two conference papers accepted by ICASSP'26 and ICC'26. Available online: <a href="https://arxiv.org/abs/2509.13822">ICASSP'26</a>, <a href="/files/icc26.pdf">ICC'26</a>.
-- <b><font color="#FF0000">[2025.12]</font></b> New paper submitted to IEEE TWC, available on <a href="https://arxiv.org/abs/2512.21660">arXiv</a>. Toy demo available <a href="./demo.html">here</a>.
-<!-- - <b><font color="#FF0000">[2025.12]</font></b> Comments and discussions for [TWC'25]() are released. See <a href="/posts/TWC25COMMENTS/">here</a> for more info.  -->
-- <b><font color="#FF0000">[2025.10]</font></b> New paper submitted to IEEE ICC. Journal Version available on <a href="https://arxiv.org/abs/2512.21660">arXiv</a>.
-- <b><font color="#FF0000">[2025.08]</font></b> New paper submitted to IEEE TWC, available on <a href="https://arxiv.org/abs/2508.01201">arXiv</a>.
-- <b><font color="#000000">[2025.05]</font></b> An errata for JSAC'25 was released. See <a href="/posts/JSAC25ERRATA/">here</a> for more info.
-- <b><font color="#FF0000">[2024.12]</font></b> Nominated as 2024 <a href="https://www.comsoc.org/publications/journals/ieee-comml/reviewer-and-editor-appreciation" target="_blank">Exemplary Reviewer</a> of <span style="font-variant-caps: small-caps;">IEEE Communications Letters</span>
-- <b><font color="#FF0000">[2024.11]</font></b> One coauthored <a href="https://www.nature.com/articles/s41467-024-54168-3" target="_blank">article</a> was accepted by <b>Nature Communications</b>
+- <b><span class="accent">[2026.02]</span></b> Themes and Dark Modes (beta) are now available! Select the theme you like from the dropdown menu above, or click the top-right button to toggle between light/dark modes. Please let me know if you encounter any issues :-)
+- <b><span class="accent">[2026.02]</span></b> Nominated as 2025 <a href="https://www.comsoc.org/publications/journals/ieee-wcl/reviewer-appreciation" target="_blank">Exemplary Reviewer</a> of <span style="font-variant-caps: small-caps;">IEEE Wireless Communications Letters</span>
+- <b><span class="accent">[2026.01]</span></b> New paper submitted to IEEE WCL.
+- <b><span class="accent">[2026.01]</span></b> Two conference papers accepted by ICASSP'26 and ICC'26. Available online: <a href="https://arxiv.org/abs/2509.13822">ICASSP'26</a>, <a href="/files/icc26.pdf">ICC'26</a>.
+- <b><span class="accent">[2025.12]</span></b> New paper submitted to IEEE TWC, available on <a href="https://arxiv.org/abs/2512.21660">arXiv</a>. Toy demo available <a href="./demo.html">here</a>.
+<!-- - <b><span class="accent">[2025.12]</span></b> Comments and discussions for [TWC'25]() are released. See <a href="/posts/TWC25COMMENTS/">here</a> for more info.  -->
+- <b><span class="accent">[2025.10]</span></b> New paper submitted to IEEE ICC. Journal Version available on <a href="https://arxiv.org/abs/2512.21660">arXiv</a>.
+- <b><span class="accent">[2025.08]</span></b> New paper submitted to IEEE TWC, available on <a href="https://arxiv.org/abs/2508.01201">arXiv</a>.
+- <b><span class="muted">[2025.05]</span></b> An errata for JSAC'25 was released. See <a href="/posts/JSAC25ERRATA/">here</a> for more info.
+- <b><span class="accent">[2024.12]</span></b> Nominated as 2024 <a href="https://www.comsoc.org/publications/journals/ieee-comml/reviewer-and-editor-appreciation" target="_blank">Exemplary Reviewer</a> of <span style="font-variant-caps: small-caps;">IEEE Communications Letters</span>
+- <b><span class="accent">[2024.11]</span></b> One coauthored <a href="https://www.nature.com/articles/s41467-024-54168-3" target="_blank">article</a> was accepted by <b>Nature Communications</b>
 
 <details><summary>More News</summary>
 <ul>
-<li><b><font color="#000000">[2024.11]</font></b> Albums and Posts now support multiple languages :-P</li>
-<li><b><font color="#FF0000">[2024.11]</font></b> One <a href="https://arxiv.org/abs/2403.11809" target="_blank">journal paper</a> was accepted by IEEE JSAC</li>
-<li><b><font color="#FF0000">[2024.08]</font></b> I was awarded the CityU Academic Excellence and QE Award</li>
-<li><b><font color="#FF0000">[2024.07]</font></b> One <a href="https://arxiv.org/abs/2405.01000" target="_blank">conference paper</a> was accepted by IEEE Globecom'24</li>
+<li><b><span class="muted">[2024.11]</span></b> Albums and Posts now support multiple languages :-P</li>
+<li><b><span class="accent">[2024.11]</span></b> One <a href="https://arxiv.org/abs/2403.11809" target="_blank">journal paper</a> was accepted by IEEE JSAC</li>
+<li><b><span class="accent">[2024.08]</span></b> I was awarded the CityU Academic Excellence and QE Award</li>
+<li><b><span class="accent">[2024.07]</span></b> One <a href="https://arxiv.org/abs/2405.01000" target="_blank">conference paper</a> was accepted by IEEE Globecom'24</li>
 <li><b>[2023.10]</b> One <a href="https://arxiv.org/abs/2310.18180" target="_blank">conference paper</a> was accepted by IEEE ICC'24</li>
 </ul>
 </details>
@@ -191,12 +194,12 @@ Selected publications. <a href="/publications/">More Details</a>
 		  	{{ author }}{% if forloop.last == false %}, {% endif %}
 		{% endif %}
 	{% endfor %}
-	, "{{ pub.title }}", <i>{{ pub.venue }}</i>, vol. {{ pub.vol }}, no. {{ pub.issue }}, pp. {{ pub.pp }}, {{ pub.date | date: "%b. %Y" }}, <b><font color="#FF0000">{{ pub.notes }}</font></b>.
+	, "{{ pub.title }}", <i>{{ pub.venue }}</i>, vol. {{ pub.vol }}, no. {{ pub.issue }}, pp. {{ pub.pp }}, {{ pub.date | date: "%b. %Y" }}, <b><span class="accent">{{ pub.notes }}</span></b>.
 	{% if pub.arxiv %}
 		[<a href="{{ pub.arxiv }}" target="_blank">arXiv</a>]
 	{% endif %}
 	{% if pub.demo %}
-		[<a href="{{ pub.demo }}" target="_blank"><font color="#FF0000">Demo</font></a>]
+		[<a href="{{ pub.demo }}" target="_blank"><span class="accent">Demo</span></a>]
 	{% endif %}
 	{% if pub.slidesurl %}
 		[<a href="{{ pub.slidesurl }}" target="_blank">Slides</a>]
@@ -208,7 +211,7 @@ Selected publications. <a href="/publications/">More Details</a>
 		[<a href="{{ pub.errata }}" target="_blank">Erratum</a>]
 	{% endif %}
 	{% if pub.codes %}
-		[<a href="{{ pub.codes }}" target="_blank"><font color="#FF0000">Codes</font></a>]
+		[<a href="{{ pub.codes }}" target="_blank"><span class="accent">Codes</span></a>]
 	{% endif %}
 	{% if pub.DOI %}
 		<a href="https://doi.org/{{ pub.DOI }}" target="_blank"><img src="https://zenodo.org/badge/DOI/{{ pub.DOI }}.svg" height="60px"></a>
@@ -239,12 +242,12 @@ Selected publications. <a href="/publications/">More Details</a>
 		  	{{ author }}{% if forloop.last == false %}, {% endif %}
 		{% endif %}
 	{% endfor %}
-	, "{{ pub.title }}", <i>{{ pub.venue }}</i>, vol. {{ pub.vol }}, no. {{ pub.issue }}, pp. {{ pub.pp }}, {{ pub.date | date: "%b. %Y" }}, <b><font color="#FF0000">{{ pub.notes }}</font></b>.
+	, "{{ pub.title }}", <i>{{ pub.venue }}</i>, vol. {{ pub.vol }}, no. {{ pub.issue }}, pp. {{ pub.pp }}, {{ pub.date | date: "%b. %Y" }}, <b><span class="accent">{{ pub.notes }}</span></b>.
 	{% if pub.arxiv %}
 		[<a href="{{ pub.arxiv }}" target="_blank">arXiv</a>]
 	{% endif %}
 	{% if pub.demo %}
-		[<a href="{{ pub.demo }}" target="_blank"><font color="#FF0000">Demo</font></a>]
+		[<a href="{{ pub.demo }}" target="_blank"><span class="accent">Demo</span></a>]
 	{% endif %}
 	{% if pub.slidesurl %}
 		[<a href="{{ pub.slidesurl }}" target="_blank">Slides</a>]
@@ -253,7 +256,7 @@ Selected publications. <a href="/publications/">More Details</a>
 		[<a href="{{ pub.paperurl }}" target="_blank">Paper</a>]
 	{% endif %}
 	{% if pub.codes %}
-		[<a href="{{ pub.codes }}" target="_blank"><font color="#FF0000">Codes</font></a>]
+		[<a href="{{ pub.codes }}" target="_blank"><span class="accent">Codes</span></a>]
 	{% endif %}
 	{% if pub.DOI %}
 		<a href="https://doi.org/{{ pub.DOI }}" target="_blank"><img src="https://zenodo.org/badge/DOI/{{ pub.DOI }}.svg" height="60px"></a>
@@ -285,13 +288,13 @@ Selected publications. <a href="/publications/">More Details</a>
     {% endfor %}
     , "{{ pub.title }}",
 	{% if pub.type == "Conference" %}
-		in <i>{{ pub.venue }}</i>, {{ pub.location }}, {{ pub.date | date: "%b. %Y" }}, <b><font color="#FF0000">{{ pub.notes }}</font></b>.
+		in <i>{{ pub.venue }}</i>, {{ pub.location }}, {{ pub.date | date: "%b. %Y" }}, <b><span class="accent">{{ pub.notes }}</span></b>.
 	{% endif %}
 	{% if pub.arxiv %}
 		[<a href="{{ pub.arxiv }}" target="_blank">arXiv</a>]
 	{% endif %}
 	{% if pub.demo %}
-		[<a href="{{ pub.demo }}" target="_blank"><font color="#FF0000">Demo</font></a>]
+		[<a href="{{ pub.demo }}" target="_blank"><span class="accent">Demo</span></a>]
 	{% endif %}
 	{% if pub.slidesurl %}
 		[<a href="{{ pub.slidesurl }}" target="_blank">Slides</a>]
@@ -300,7 +303,7 @@ Selected publications. <a href="/publications/">More Details</a>
 		[<a href="{{ pub.paperurl }}" target="_blank">Paper</a>]
 	{% endif %}
 	{% if pub.codes %}
-		[<a href="{{ pub.codes }}" target="_blank"><font color="#FF0000">Codes</font></a>]
+		[<a href="{{ pub.codes }}" target="_blank"><span class="accent">Codes</span></a>]
 	{% endif %}
 	{% if pub.DOI %}
 		<a href="https://doi.org/{{ pub.DOI }}" target="_blank"><img src="https://zenodo.org/badge/DOI/{{ pub.DOI }}.svg" height="60px"></a>

@@ -49,7 +49,7 @@ html[data-style="dirt"] {
   --global-text-color : #{$text};
   --global-text-color-light : #{$text-muted};
   --global-thead-color : #{$border-light};
-  --global-footnote-color : #{mix(#ffffff, #ff0000, 10%)};
+  --global-footnote-color : #ff0000;
   --global-quote-background-color : #{mix(#ffffff, $primary-color, 80%)};
   --global-quote-border-color : #{mix(#ffffff, $primary-color, 20%)};
 
