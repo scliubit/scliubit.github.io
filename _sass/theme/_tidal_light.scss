@@ -1,0 +1,66 @@
+/* ==========================================================================
+   TIDAL THEME - LIGHT VERSION
+   Colorblind-safe: Deuteranopia / Protanopia (red-green)
+   Based on Wong/Okabe-Ito palette principles
+   ========================================================================== */
+
+/* Tidal palette — avoids red-green confusion */
+$cb-blue           : #0072B2;
+$cb-sky            : #56B4E9;
+$cb-orange         : #E69F00;
+$cb-vermillion     : #D55E00;
+$cb-bluegray       : #4A6274;
+
+/* Color codes used for the theme */
+html[data-style="tidal"] {
+  $primary-color   : $cb-blue;
+  $background      : #ffffff;
+  $background-light: #f5f7fa;
+  $background-lighter: #fafbfd;
+  $text            : #1a2a3a;
+  $text-muted      : #4A6274;
+  $link            : $cb-blue;
+  $link-dark       : mix(#000, $cb-blue, 20%);
+  $link-light      : mix(#fff, $cb-blue, 25%);
+  $footer          : #f0f3f7;
+  $border          : #c8d1da;
+  $border-dark     : #8a99a8;
+
+  /* Semantic colors — all distinguishable without red-green vision */
+  $danger-color    : $cb-vermillion;
+  $info-color      : $cb-sky;
+  $notice-color    : $cb-bluegray;
+  $success-color   : $cb-sky;
+  $warning-color   : $cb-orange;
+
+  /* Other basic settings for the template */
+  $border-radius              : 4px;
+  $box-shadow                 : 0 1px 1px rgba(0, 0, 0, 0.125);
+  $global-transition          : all 0.2s ease-in-out;
+  $masthead-height            : 70px;
+  $navicon-width              : 28px;
+  $navicon-height             : 4px;
+  $sidebar-link-max-width     : 250px;
+  $sidebar-screen-min-width   : 1024px;
+
+  --global-base-color                 : #{$primary-color};
+  --global-bg-color                   : #{$background};
+  --global-footer-bg-color            : #{$footer};
+  --global-border-color               : #{$border};
+  --global-dark-border-color          : #{$border-dark};
+  --global-code-background-color      : #{$background-light};
+  --global-code-text-color            : #{$text};
+  --global-fig-caption-color          : #{$text-muted};
+  --global-link-color                 : #{$link};
+  --global-link-color-hover           : #{$link-dark};
+  --global-link-color-visited         : #{mix(#000, $cb-blue, 10%)};
+  --global-masthead-link-color        : #{$text};
+  --global-masthead-link-color-hover  : #{$primary-color};
+  --global-text-color                 : #{$text};
+  --global-text-color-light           : #{$text-muted};
+  --global-thead-color                : #{$border};
+  --global-footnote-color             : #{$cb-vermillion};
+  --global-quote-background-color     : #{mix(#ffffff, $cb-orange, 90%)};
+  --global-quote-border-color         : #{$cb-orange};
+  --global-info-color                 : #{$info-color};
+}

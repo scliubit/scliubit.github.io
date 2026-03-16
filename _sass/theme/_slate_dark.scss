@@ -1,0 +1,70 @@
+/* ==========================================================================
+   SLATE THEME - DARK VERSION
+   Colorblind-safe: Achromatopsia (total color blindness)
+   Pure high-contrast grayscale — relies only on luminance differences
+   ========================================================================== */
+
+/* Color codes used for the theme */
+html[data-style="slate"][data-theme="dark"] {
+  $primary-color   : #b0b0b0;
+  $background      : #1a1a1a;
+  $background-light: #2a2a2a;
+  $background-lighter: #353535;
+  $text            : #e8e8e8;
+  $text-muted      : #999999;
+  $link            : #cccccc;
+  $link-dark       : mix(#000, #cccccc, 15%);
+  $link-light      : #ffffff;
+  $footer          : #1a1a1a;
+  $border          : #3a3a3a;
+  $border-light    : #555555;
+
+  /* Semantic colors — grayscale with distinct luminance levels */
+  $danger-color    : #cccccc;
+  $info-color      : #999999;
+  $notice-color    : #b0b0b0;
+  $success-color   : #808080;
+  $warning-color   : #bbbbbb;
+
+  /* Other basic settings for the template */
+  $border-radius              : 4px;
+  $box-shadow                 : 0 1px 1px rgba(0, 0, 0, 0.125);
+  $global-transition          : all 0.2s ease-in-out;
+  $masthead-height            : 70px;
+  $navicon-width              : 28px;
+  $navicon-height             : 4px;
+  $sidebar-link-max-width     : 250px;
+  $sidebar-screen-min-width   : 1024px;
+
+  --global-base-color                 : #{$primary-color};
+  --global-bg-color                   : #{$background};
+  --global-footer-bg-color            : #{$footer};
+  --global-border-color               : #{$border};
+  --global-dark-border-color          : #{$border-light};
+  --global-code-background-color      : #{$background-light};
+  --global-code-text-color            : #{$text-muted};
+  --global-fig-caption-color          : #{$text-muted};
+  --global-link-color                 : #{$link};
+  --global-link-color-hover           : #{$link-light};
+  --global-link-color-visited         : #{$text-muted};
+  --global-masthead-link-color        : #{$text};
+  --global-masthead-link-color-hover  : #{$primary-color};
+  --global-text-color                 : #{$text};
+  --global-text-color-light           : #{$text-muted};
+  --global-thead-color                : #{$background-lighter};
+  --global-footnote-color             : #{$text};
+  --global-quote-background-color     : #{$background-light};
+  --global-quote-border-color         : #{$border-light};
+  --global-info-color                 : #{$info-color};
+}
+
+/* Link underline for slate dark — since links lack color distinction, use underline */
+html[data-style="slate"][data-theme="dark"] a:not(.btn):not(.pagination--pager) {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+html[data-style="slate"][data-theme="dark"] a:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+}

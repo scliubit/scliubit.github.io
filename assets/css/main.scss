@@ -28,6 +28,12 @@
         "theme/default_dark";
 @import "theme/solarized_light",
         "theme/solarized_dark";
+@import "theme/tidal_light",
+        "theme/tidal_dark";
+@import "theme/coral_light",
+        "theme/coral_dark";
+@import "theme/slate_light",
+        "theme/slate_dark";
 @import "vscode_scheme";
 
 @import "mixins";

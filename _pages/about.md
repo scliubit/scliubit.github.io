@@ -15,14 +15,18 @@ redirect_from:
 <style type="text/css">
 	.someClass {
 		display: flex;
+		flex-wrap: wrap;
 		justify-content: space-between;
+	}
+	.someClass > div:last-child {
+		margin-left: auto;
 	}
 
 	.content-container {
       display: flex;
       align-items: center;
-      gap: 10px; /* 设置元素之间的间距 */
-      flex-wrap: wrap; /* 如果屏幕过窄，元素会自动换行 */
+      gap: 10px; 
+      flex-wrap: wrap; 
     }
 
     .button-container {
@@ -67,13 +71,6 @@ redirect_from:
       opacity: 1;
     }
 
-	/* */
-	.content-container {
-  		display: flex;
-  		align-items: center;
-  		gap: 8px;
-	}
-
 	.theme-select {
   		background-color: var(--global-bg-color);
   		color: var(--global-text-color); 
@@ -98,6 +95,35 @@ redirect_from:
     }
     .accent { color: var(--global-footnote-color); }
     .muted  { color: var(--global-text-color-light); }
+
+    .news-section ul {
+      list-style: none;
+      padding-left: 5.5em;
+      margin-left: 0;
+    }
+    .news-section li {
+      text-indent: -5.05em;
+      margin-bottom: 0.4em;
+    }
+    .news-section li > b:first-child {
+      font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+      font-size: 0.9em;
+      margin-right: 0.4em;
+    }
+
+    ol.publications {
+      list-style: none;
+      padding-left: 0;
+    }
+    ol.publications p {
+      padding-left: 2.5em;
+      text-indent: -2.2em;
+    }
+    .publications-number {
+      font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+      font-size: 0.9em;
+      margin-right: 0.3em;
+    }
 </style>
 
 <script>
@@ -129,6 +155,9 @@ function refreshPage() {
       <option value="mint">Mint</option>
 	  <option value="sunrise">Sunrise</option>
 	  <option value="solarized">Solarized</option>
+	  <option value="tidal">Tidal (CVD: R/G)</option>
+	  <option value="coral">Coral (CVD: B/Y)</option>
+	  <option value="slate">Slate (CVD: Mono)</option>
     </select>
   </div>
 </div>
@@ -138,21 +167,25 @@ Hello :-)
 
 I received my B.S. and M.S. degree in Electrical Engineering from Beijing Institute of Technology, Beijing, China, in 2020 and 2023, respectively, under the supervision of <a href="https://gaozhen16.github.io" target="_blank">Prof. Zhen GAO</a>. I am currently a Ph.D. candidate at the City University of Hong Kong, Hong Kong SAR, under the supervision of <a href="https://www.ee.cityu.edu.hk/~alexyu/" target="_blank">Prof. Xianghao YU</a>. My research interest includes signal processing and wireless communication. I have published some papers at IEEE ComSoc/SPS conferences and journals with total google scholar citations ~800.
 
-<b><a href="/files/CV_Shicong.pdf" ><span class="accent">Download Full CV</span></a></b>
+<b><a href="/files/CV_Shicong.pdf"><span class="accent">Download Full CV</span></a></b>
 
 # News
 
-- <b><span class="accent">[2026.02]</span></b> Themes and Dark Modes (beta) are now available! Select the theme you like from the dropdown menu above, or click the top-right button to toggle between light/dark modes. Please let me know if you encounter any issues :-)
-- <b><span class="accent">[2026.02]</span></b> Nominated as 2025 <a href="https://www.comsoc.org/publications/journals/ieee-wcl/reviewer-appreciation" target="_blank">Exemplary Reviewer</a> of <span style="font-variant-caps: small-caps;">IEEE Wireless Communications Letters</span>
-- <b><span class="accent">[2026.01]</span></b> New paper submitted to IEEE WCL.
-- <b><span class="accent">[2026.01]</span></b> Two conference papers accepted by ICASSP'26 and ICC'26. Available online: <a href="https://arxiv.org/abs/2509.13822">ICASSP'26</a>, <a href="/files/icc26.pdf">ICC'26</a>.
-- <b><span class="accent">[2025.12]</span></b> New paper submitted to IEEE TWC, available on <a href="https://arxiv.org/abs/2512.21660">arXiv</a>. Toy demo available <a href="./demo.html">here</a>.
-<!-- - <b><span class="accent">[2025.12]</span></b> Comments and discussions for [TWC'25]() are released. See <a href="/posts/TWC25COMMENTS/">here</a> for more info.  -->
-- <b><span class="accent">[2025.10]</span></b> New paper submitted to IEEE ICC. Journal Version available on <a href="https://arxiv.org/abs/2512.21660">arXiv</a>.
-- <b><span class="accent">[2025.08]</span></b> New paper submitted to IEEE TWC, available on <a href="https://arxiv.org/abs/2508.01201">arXiv</a>.
-- <b><span class="muted">[2025.05]</span></b> An errata for JSAC'25 was released. See <a href="/posts/JSAC25ERRATA/">here</a> for more info.
-- <b><span class="accent">[2024.12]</span></b> Nominated as 2024 <a href="https://www.comsoc.org/publications/journals/ieee-comml/reviewer-and-editor-appreciation" target="_blank">Exemplary Reviewer</a> of <span style="font-variant-caps: small-caps;">IEEE Communications Letters</span>
-- <b><span class="accent">[2024.11]</span></b> One coauthored <a href="https://www.nature.com/articles/s41467-024-54168-3" target="_blank">article</a> was accepted by <b>Nature Communications</b>
+<div class="news-section">
+<ul>
+<!-- <li><b><span class="accent">[2026.03]</span></b> Awarded Outstanding Master's Thesis by the Chinese Institute of Electronics (CIE).</li> -->
+<li><b><span class="accent">[2026.02]</span></b> Themes and Dark Modes (beta) are now available! Select the theme you like from the dropdown menu above, or click the top-right button to toggle between light and dark modes.</li>
+<li><b><span class="accent">[2026.02]</span></b> Nominated as 2025 <a href="https://www.comsoc.org/publications/journals/ieee-wcl/reviewer-appreciation" target="_blank">Exemplary Reviewer</a> of <span style="font-variant-caps: small-caps;">IEEE Wireless Communications Letters</span></li>
+<li><b><span class="accent">[2026.01]</span></b> New paper submitted to IEEE WCL.</li>
+<li><b><span class="accent">[2026.01]</span></b> Two conference papers accepted by ICASSP'26 and ICC'26. Available online: <a href="https://arxiv.org/abs/2509.13822">ICASSP'26</a>, <a href="/files/icc26.pdf">ICC'26</a>.</li>
+<li><b><span class="accent">[2025.12]</span></b> New paper submitted to IEEE TWC, available on <a href="https://arxiv.org/abs/2512.21660">arXiv</a>. Toy demo available <a href="./demo.html">here</a>.</li>
+<!-- <li><b><span class="accent">[2025.12]</span></b> Comments and discussions for TWC'25 are released. See <a href="/posts/TWC25COMMENTS/">here</a> for more info.</li> -->
+<li><b><span class="accent">[2025.10]</span></b> New paper submitted to IEEE ICC. Journal Version available on <a href="https://arxiv.org/abs/2512.21660">arXiv</a>.</li>
+<li><b><span class="accent">[2025.08]</span></b> New paper submitted to IEEE TWC, available on <a href="https://arxiv.org/abs/2508.01201">arXiv</a>.</li>
+<li><b><span class="muted">[2025.05]</span></b> An errata for JSAC'25 was released. See <a href="/posts/JSAC25ERRATA/">here</a> for more info.</li>
+<li><b><span class="accent">[2024.12]</span></b> Nominated as 2024 <a href="https://www.comsoc.org/publications/journals/ieee-comml/reviewer-and-editor-appreciation" target="_blank">Exemplary Reviewer</a> of <span style="font-variant-caps: small-caps;">IEEE Communications Letters</span></li>
+<li><b><span class="accent">[2024.11]</span></b> One coauthored <a href="https://www.nature.com/articles/s41467-024-54168-3" target="_blank">article</a> was accepted by <b>Nature Communications</b></li>
+</ul>
 
 <details><summary>More News</summary>
 <ul>
@@ -160,15 +193,16 @@ I received my B.S. and M.S. degree in Electrical Engineering from Beijing Instit
 <li><b><span class="accent">[2024.11]</span></b> One <a href="https://arxiv.org/abs/2403.11809" target="_blank">journal paper</a> was accepted by IEEE JSAC</li>
 <li><b><span class="accent">[2024.08]</span></b> I was awarded the CityU Academic Excellence and QE Award</li>
 <li><b><span class="accent">[2024.07]</span></b> One <a href="https://arxiv.org/abs/2405.01000" target="_blank">conference paper</a> was accepted by IEEE Globecom'24</li>
-<li><b>[2023.10]</b> One <a href="https://arxiv.org/abs/2310.18180" target="_blank">conference paper</a> was accepted by IEEE ICC'24</li>
+<li><b><span class="accent">[2023.10]</span></b> One <a href="https://arxiv.org/abs/2310.18180" target="_blank">conference paper</a> was accepted by IEEE ICC'24</li>
 </ul>
 </details>
+</div>
 
 
 # Education
 
 - <div class="someClass"><div>Ph.D. in Electronic Engineering, City University of Hong Kong</div><div>2023-2027&nbsp;(est.)</div></div>
-- <div class="someClass"><div>M.S. in Electronic Engineering, Beijing Institute of Technology</div><div>2020-2023</div></div>
+- <div class="someClass"><div>M.S. in Communications Engineering, Beijing Institute of Technology</div><div>2020-2023</div></div>
 - <div class="someClass"><div>B.S. in Electrical Engineering, Beijing Institute of Technology</div><div>2016-2020</div></div>
 
 
@@ -182,7 +216,7 @@ Selected publications. <a href="/publications/">More Details</a>
 {% assign sorted_pubs = site.publications | where: "type", "Journal" | sort: 'date' | reverse %}
 {% for pub in sorted_pubs %}
 	{% if pub.type == "Journal" %}
-	<p style="text-indent: -1.5rem;margin-left: 0rem;">
+	<p>
 	<span class="publications-number">[{{ sorted_pubs.size | minus: forloop.index | plus: 1  }}]</span>
 	{% assign authors = pub.authors | split: ", " %}
 	{% for author in authors %}
@@ -230,7 +264,7 @@ Selected publications. <a href="/publications/">More Details</a>
 {% assign sorted_pubs = site.publications | where: "type", 'Article' | sort: 'date' | reverse %}
 {% for pub in sorted_pubs %}
 	{% if pub.type == "Article" %}
-	<p style="text-indent: -1.5rem;margin-left: 0rem;">
+	<p>
 	<span class="publications-number">[{{ sorted_pubs.size | minus: forloop.index | plus: 1  }}]</span>
 	{% assign authors = pub.authors | split: ", " %}
 	{% for author in authors %}
@@ -274,7 +308,7 @@ Selected publications. <a href="/publications/">More Details</a>
 {% assign sorted_pubs = site.publications | where: "type", "Conference" | sort: 'date' | reverse %}
 {% for pub in sorted_pubs %}
 	{% if pub.type == "Conference" %}
-	<p style="text-indent: -1.5rem;margin-left: 0rem;">
+	<p>
     <span class="publications-number">[{{ sorted_pubs.size | minus: forloop.index | plus: 1  }}]</span>
     {% assign authors = pub.authors | split: ", " %}
     {% for author in authors %}
@@ -287,9 +321,7 @@ Selected publications. <a href="/publications/">More Details</a>
         {% endif %}
     {% endfor %}
     , "{{ pub.title }}",
-	{% if pub.type == "Conference" %}
 		in <i>{{ pub.venue }}</i>, {{ pub.location }}, {{ pub.date | date: "%b. %Y" }}, <b><span class="accent">{{ pub.notes }}</span></b>.
-	{% endif %}
 	{% if pub.arxiv %}
 		[<a href="{{ pub.arxiv }}" target="_blank">arXiv</a>]
 	{% endif %}
