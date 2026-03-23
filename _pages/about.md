@@ -173,6 +173,7 @@ I received my B.S. and M.S. degree in Electrical Engineering from Beijing Instit
 
 <div class="news-section">
 <ul>
+<li><b><span class="accent">[2026.03]</span></b> Manuscript accepted by IEEE TWC, available on <a href="https://arxiv.org/abs/2508.01201">arXiv</a>.</li>
 <li><b><span class="accent">[2026.03]</span></b> Awarded Outstanding Master's Thesis by the Chinese Institute of Electronics (CIE).</li>
 <li><b><span class="accent">[2026.02]</span></b> Themes and Dark Modes (beta) are now available! Select the theme you like from the dropdown menu above, or click the top-right button to toggle between light and dark modes.</li>
 <li><b><span class="accent">[2026.02]</span></b> Nominated as 2025 <a href="https://www.comsoc.org/publications/journals/ieee-wcl/reviewer-appreciation" target="_blank">Exemplary Reviewer</a> of <span style="font-variant-caps: small-caps;">IEEE Wireless Communications Letters</span></li>
@@ -181,7 +182,6 @@ I received my B.S. and M.S. degree in Electrical Engineering from Beijing Instit
 <li><b><span class="accent">[2025.12]</span></b> New paper submitted to IEEE TWC, available on <a href="https://arxiv.org/abs/2512.21660">arXiv</a>. Toy demo available <a href="./demo.html">here</a>.</li>
 <!-- <li><b><span class="accent">[2025.12]</span></b> Comments and discussions for TWC'25 are released. See <a href="/posts/TWC25COMMENTS/">here</a> for more info.</li> -->
 <li><b><span class="accent">[2025.10]</span></b> New paper submitted to IEEE ICC. Journal Version available on <a href="https://arxiv.org/abs/2512.21660">arXiv</a>.</li>
-<li><b><span class="accent">[2025.08]</span></b> New paper submitted to IEEE TWC, available on <a href="https://arxiv.org/abs/2508.01201">arXiv</a>.</li>
 <li><b><span class="muted">[2025.05]</span></b> An errata for JSAC'25 was released. See <a href="/posts/JSAC25ERRATA/">here</a> for more info.</li>
 <li><b><span class="accent">[2024.12]</span></b> Nominated as 2024 <a href="https://www.comsoc.org/publications/journals/ieee-comml/reviewer-and-editor-appreciation" target="_blank">Exemplary Reviewer</a> of <span style="font-variant-caps: small-caps;">IEEE Communications Letters</span></li>
 <li><b><span class="accent">[2024.11]</span></b> One coauthored <a href="https://www.nature.com/articles/s41467-024-54168-3" target="_blank">article</a> was accepted by <b>Nature Communications</b></li>
