@@ -177,7 +177,7 @@ I received my B.S. and M.S. degree in Electrical Engineering from Beijing Instit
 <li><b><span class="accent">[2026.03]</span></b> Awarded Outstanding Master's Thesis by the Chinese Institute of Electronics (CIE).</li>
 <li><b><span class="accent">[2026.02]</span></b> Themes and Dark Modes (beta) are now available! Select the theme you like from the dropdown menu above, or click the top-right button to toggle between light and dark modes.</li>
 <li><b><span class="accent">[2026.02]</span></b> Nominated as 2025 <a href="https://www.comsoc.org/publications/journals/ieee-wcl/reviewer-appreciation" target="_blank">Exemplary Reviewer</a> of <span style="font-variant-caps: small-caps;">IEEE Wireless Communications Letters</span></li>
-<li><b><span class="accent">[2026.01]</span></b> New paper submitted to IEEE WCL.</li>
+<li><b><span class="accent">[2026.01]</span></b> New paper submitted to IEEE WCL, available on <a href="https://arxiv.org/abs/2603.24077">arXiv</a>.</li>
 <li><b><span class="accent">[2026.01]</span></b> Two conference papers accepted by ICASSP'26 and ICC'26. Available online: <a href="https://arxiv.org/abs/2509.13822">ICASSP'26</a>, <a href="/files/icc26.pdf">ICC'26</a>.</li>
 <li><b><span class="accent">[2025.12]</span></b> New paper submitted to IEEE TWC, available on <a href="https://arxiv.org/abs/2512.21660">arXiv</a>. Toy demo available <a href="./demo.html">here</a>.</li>
 <!-- <li><b><span class="accent">[2025.12]</span></b> Comments and discussions for TWC'25 are released. See <a href="/posts/TWC25COMMENTS/">here</a> for more info.</li> -->
