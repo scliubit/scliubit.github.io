@@ -1,6 +1,6 @@
 ---
 title: "Annual Summary (MEME Plog) - 2025"
-excerpt: "MEME Plog 2025<br/><img src='/images/album/25/cover.jpg' width=500px margin-top=20px>"
+excerpt: "MEME Plog 2025<br/><img src='/images/album/25/tapmun2.jpeg' width=500px margin-top=20px>"
 collection: portfolio
 permalink: /portfolio/annual25.html
 date: 2026-01-01
