@@ -184,11 +184,11 @@ I received my B.S. and M.S. degree in Electrical Engineering from Beijing Instit
 <li><b><span class="accent">[2025.10]</span></b> New paper submitted to IEEE ICC. Journal Version available on <a href="https://arxiv.org/abs/2512.21660">arXiv</a>.</li>
 <li><b><span class="muted">[2025.05]</span></b> An errata for JSAC'25 was released. See <a href="/posts/JSAC25ERRATA/">here</a> for more info.</li>
 <li><b><span class="accent">[2024.12]</span></b> Nominated as 2024 <a href="https://www.comsoc.org/publications/journals/ieee-comml/reviewer-and-editor-appreciation" target="_blank">Exemplary Reviewer</a> of <span style="font-variant-caps: small-caps;">IEEE Communications Letters</span></li>
-<li><b><span class="accent">[2024.11]</span></b> One coauthored <a href="https://www.nature.com/articles/s41467-024-54168-3" target="_blank">article</a> was accepted by <b>Nature Communications</b></li>
 </ul>
 
 <details><summary>More News</summary>
 <ul>
+<li><b><span class="accent">[2024.11]</span></b> One coauthored <a href="https://www.nature.com/articles/s41467-024-54168-3" target="_blank">article</a> was accepted by <b>Nature Communications</b></li>
 <li><b><span class="muted">[2024.11]</span></b> Albums and Posts now support multiple languages :-P</li>
 <li><b><span class="accent">[2024.11]</span></b> One <a href="https://arxiv.org/abs/2403.11809" target="_blank">journal paper</a> was accepted by IEEE JSAC</li>
 <li><b><span class="accent">[2024.08]</span></b> I was awarded the CityU Academic Excellence and QE Award</li>
@@ -232,20 +232,20 @@ Selected publications. <a href="/publications/">More Details</a>
 	{% if pub.arxiv %}
 		[<a href="{{ pub.arxiv }}" target="_blank">arXiv</a>]
 	{% endif %}
-	{% if pub.demo %}
-		[<a href="{{ pub.demo }}" target="_blank"><span class="accent">Demo</span></a>]
-	{% endif %}
-	{% if pub.slidesurl %}
-		[<a href="{{ pub.slidesurl }}" target="_blank">Slides</a>]
-	{% endif %}
 	{% if pub.paperurl %}
 		[<a href="{{ pub.paperurl }}" target="_blank">Paper</a>]
 	{% endif %}
 	{% if pub.errata %}
 		[<a href="{{ pub.errata }}" target="_blank">Erratum</a>]
 	{% endif %}
+	{% if pub.demo %}
+		[<a href="{{ pub.demo }}" target="_blank"><span class="accent">Demo</span></a>]
+	{% endif %}
 	{% if pub.codes %}
 		[<a href="{{ pub.codes }}" target="_blank"><span class="accent">Codes</span></a>]
+	{% endif %}
+	{% if pub.slidesurl %}
+		[<a href="{{ pub.slidesurl }}" target="_blank">Slides</a>]
 	{% endif %}
 	{% if pub.DOI %}
 		<a href="https://doi.org/{{ pub.DOI }}" target="_blank"><img src="https://zenodo.org/badge/DOI/{{ pub.DOI }}.svg" height="60px"></a>
@@ -280,17 +280,20 @@ Selected publications. <a href="/publications/">More Details</a>
 	{% if pub.arxiv %}
 		[<a href="{{ pub.arxiv }}" target="_blank">arXiv</a>]
 	{% endif %}
-	{% if pub.demo %}
-		[<a href="{{ pub.demo }}" target="_blank"><span class="accent">Demo</span></a>]
-	{% endif %}
-	{% if pub.slidesurl %}
-		[<a href="{{ pub.slidesurl }}" target="_blank">Slides</a>]
-	{% endif %}
 	{% if pub.paperurl %}
 		[<a href="{{ pub.paperurl }}" target="_blank">Paper</a>]
 	{% endif %}
+	{% if pub.errata %}
+		[<a href="{{ pub.errata }}" target="_blank">Erratum</a>]
+	{% endif %}
+	{% if pub.demo %}
+		[<a href="{{ pub.demo }}" target="_blank"><span class="accent">Demo</span></a>]
+	{% endif %}
 	{% if pub.codes %}
 		[<a href="{{ pub.codes }}" target="_blank"><span class="accent">Codes</span></a>]
+	{% endif %}
+	{% if pub.slidesurl %}
+		[<a href="{{ pub.slidesurl }}" target="_blank">Slides</a>]
 	{% endif %}
 	{% if pub.DOI %}
 		<a href="https://doi.org/{{ pub.DOI }}" target="_blank"><img src="https://zenodo.org/badge/DOI/{{ pub.DOI }}.svg" height="60px"></a>
@@ -325,17 +328,20 @@ Selected publications. <a href="/publications/">More Details</a>
 	{% if pub.arxiv %}
 		[<a href="{{ pub.arxiv }}" target="_blank">arXiv</a>]
 	{% endif %}
-	{% if pub.demo %}
-		[<a href="{{ pub.demo }}" target="_blank"><span class="accent">Demo</span></a>]
-	{% endif %}
-	{% if pub.slidesurl %}
-		[<a href="{{ pub.slidesurl }}" target="_blank">Slides</a>]
-	{% endif %}
 	{% if pub.paperurl %}
 		[<a href="{{ pub.paperurl }}" target="_blank">Paper</a>]
 	{% endif %}
+	{% if pub.errata %}
+		[<a href="{{ pub.errata }}" target="_blank">Erratum</a>]
+	{% endif %}
+	{% if pub.demo %}
+		[<a href="{{ pub.demo }}" target="_blank"><span class="accent">Demo</span></a>]
+	{% endif %}
 	{% if pub.codes %}
 		[<a href="{{ pub.codes }}" target="_blank"><span class="accent">Codes</span></a>]
+	{% endif %}
+	{% if pub.slidesurl %}
+		[<a href="{{ pub.slidesurl }}" target="_blank">Slides</a>]
 	{% endif %}
 	{% if pub.DOI %}
 		<a href="https://doi.org/{{ pub.DOI }}" target="_blank"><img src="https://zenodo.org/badge/DOI/{{ pub.DOI }}.svg" height="60px"></a>

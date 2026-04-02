@@ -12,7 +12,7 @@ date: "Dec. 2024"
 paperurl: 'https://ieeexplore.ieee.org/document/10900975'
 arxiv: 'https://arxiv.org/abs/2405.01000'
 DOI: '10.1109/GLOBECOM52923.2024.10900975'
-# slidesurl: 'http://academicpages.github.io/files/slides1.pdf'
+slidesurl: 'https://github.com/scliubit/XL-MIMO-sUCA-Loc/blob/main/slides/slides_globecom24.pdf'
 codes: 'https://github.com/scliubit/XL-MIMO-sUCA-Loc'
 # paperurl: 'http://academicpages.github.io/files/paper1.pdf'
 # citation: 'Your Name, You. (2009). &quot;Paper Title Number 1.&quot; <i>Journal 1</i>. 1(1).'
