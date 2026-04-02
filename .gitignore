@@ -19,8 +19,8 @@ _drafts
 Dockerfile
 nohup.out
 ./_portfolio/denver24.md
-images/album/denver/
 ./google_scholar_crawler/temp
 google_scholar_crawler/test.ipynb
 /abandoned
 .claude
+conf-timeline.html
