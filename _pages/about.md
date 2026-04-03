@@ -228,7 +228,17 @@ Selected publications. <a href="/publications/">More Details</a>
 		  	{{ author }}{% if forloop.last == false %}, {% endif %}
 		{% endif %}
 	{% endfor %}
-	, "{{ pub.title }}", <i>{{ pub.venue }}</i>, vol. {{ pub.vol }}, no. {{ pub.issue }}, pp. {{ pub.pp }}, {{ pub.date | date: "%b. %Y" }}{% if pub.notes %}, <b><span class="accent">{{ pub.notes }}</span></b>{% endif %}.
+	, "{{ pub.title }}", <i>{{ pub.venue }}</i>, 
+	{% if pub.vol %}
+		vol. {{ pub.vol }},
+	{% endif %}
+	{% if pub.issue %}
+		no. {{ pub.issue }},
+	{% endif %}
+	{% if pub.pp %}
+		pp. {{ pub.pp }},
+	{% endif %}
+	{{ pub.date | date: "%b. %Y" }}{% if pub.notes %}, <b><span class="accent">{{ pub.notes }}</span></b>{% endif %}.
 	{% if pub.arxiv %}
 		[<a href="{{ pub.arxiv }}" target="_blank">arXiv</a>]
 	{% endif %}
