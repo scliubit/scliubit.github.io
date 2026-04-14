@@ -140,7 +140,7 @@ function refreshPage() {
 {% assign url = gsDataBaseUrl | append: "google-scholar-stats/gs_data_shieldsio.json" %}
 
 <div class="content-container" style="font-size:0.8em;">
-<img src="https://img.shields.io/github/actions/workflow/status/scliubit/scliubit.github.io/google_citation.yml?branch=main&logo=github" height="50px">
+<!-- <img src="https://img.shields.io/github/actions/workflow/status/scliubit/scliubit.github.io/google_citation.yml?branch=main&logo=github" height="50px"> -->
 <img src="https://img.shields.io/github/last-commit/scliubit/scliubit.github.io?logo=github" height="50px">
 <div class="button-container" style="position: relative; z-index: 0;">
       <button class="refresh-btn" onclick="refreshPage()">Refresh</button>
@@ -173,6 +173,7 @@ I received my B.S. and M.S. degree in Electrical Engineering from Beijing Instit
 
 <div class="news-section">
 <ul>
+<li><b><span class="accent">[2026.04]</span></b> Manuscript accepted by IEEE TWC, available on <a href="https://arxiv.org/abs/2512.21660">arXiv</a>.</li>
 <li><b><span class="accent">[2026.03]</span></b> Manuscript accepted by IEEE TWC, available on <a href="https://arxiv.org/abs/2508.01201">arXiv</a> and <a href="https://ieeexplore.ieee.org/document/11466358">IEEE</a>.</li>
 <li><b><span class="accent">[2026.03]</span></b> Awarded Outstanding Master's Thesis of 2025 by the Chinese Institute of Electronics (CIE).</li>
 <li><b><span class="accent">[2026.02]</span></b> Themes and Dark Modes (beta) are now available! Select the theme you like from the dropdown menu above, or click the top-right button to toggle between light and dark modes.</li>
