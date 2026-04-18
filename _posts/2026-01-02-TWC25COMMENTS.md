@@ -231,19 +231,19 @@ $$
 
 如果您觉得本文对您的研究有所帮助，欢迎引用:
 ```bibtex
-@misc{liu2025nf_mma,
-	title={Near-Field Communication with Massive Movable Antennas: {A} Functional Perspective}, 
-	author={Shicong Liu and Xianghao Yu and Jie Xu and Rui Zhang},
-	year={2025},
-	eprint={2508.01201},
-	archivePrefix={arXiv},
-	primaryClass={cs.IT},
-	url={https://arxiv.org/abs/2508.01201}, 
-}
+@ARTICLE{11466358,
+  author={Liu, Shicong and Yu, Xianghao and Xu, Jie and Zhang, Rui},
+  journal={IEEE Trans. Wireless Commun.}, 
+  title={Near-Field Communication With Massive Movable Antennas: A Functional Perspective}, 
+  year={2026},
+  volume={25},
+  number={},
+  pages={14455-14470},
+  doi={10.1109/TWC.2026.3677546}}
 ```
 
 ```plaintext
-S. Liu, X. Yu, J. Xu, and R. Zhang, ``Near-Field Communication with Massive Movable Antennas: A Functional Perspective,'', 2025. [Online]. Available: https://arxiv.org/abs/2508.01201
+S. Liu, X. Yu, J. Xu and R. Zhang, "Near-Field Communication With Massive Movable Antennas: A Functional Perspective," IEEE Trans. Wireless Commun. vol. 25, pp. 14455-14470, 2026.
 ```
 
 如有兴趣，也敬请关注后续论文。
