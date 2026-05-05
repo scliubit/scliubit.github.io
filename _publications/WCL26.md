@@ -12,6 +12,8 @@ arxiv: 'https://arxiv.org/abs/2603.24077'
 # codes: ''
 # slidesurl: ''
 # paperurl: ''
-# DOI: ''
+DOI: '10.1109/LWC.2026.3690036'
 # citation: ''
+notes: 'In Production'
+
 ---
