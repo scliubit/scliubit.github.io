@@ -173,7 +173,7 @@ I received my B.S. and M.S. degree in Electrical Engineering from Beijing Instit
 
 <div class="news-section">
 <ul>
-<li><b><span class="accent">[2026.05]</span></b> Manuscript accepted by IEEE WCL, available on <a href="https://arxiv.org/abs/2603.24077">arXiv</a>.</li>
+<li><b><span class="accent">[2026.05]</span></b> Manuscript accepted by IEEE WCL, available on <a href="https://arxiv.org/abs/2603.24077">arXiv</a> and <a href="https://ieeexplore.ieee.org/document/11505880">IEEE</a>.</li>
 <li><b><span class="accent">[2026.04]</span></b> Awarded Student Travel Grant for ICC 2026.</li>
 <li><b><span class="accent">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></b> Will chair oral Symposium sessions <b>WC-11 (Near-Field, ELAA & Holographic MIMO)</b> and <b>CQRM-13 (Wireless Networks II)</b> at ICC'26.</li>
 <li><b><span class="accent">[2026.04]</span></b> Manuscript accepted by IEEE TWC, available on <a href="https://arxiv.org/abs/2512.21660">arXiv</a> and <a href="https://ieeexplore.ieee.org/document/11501185">IEEE</a>. Toy demo available <a href="./demo.html">here</a>.</li>

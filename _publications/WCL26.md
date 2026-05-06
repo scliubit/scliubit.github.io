@@ -11,9 +11,9 @@ date: "May 2026"
 arxiv: 'https://arxiv.org/abs/2603.24077'
 # codes: ''
 # slidesurl: ''
-# paperurl: ''
+paperurl: 'https://ieeexplore.ieee.org/document/11505880'
 DOI: '10.1109/LWC.2026.3690036'
 # citation: ''
-notes: 'In Production'
+notes: 'Early Access'
 
 ---
