@@ -173,11 +173,12 @@ I received my B.S. and M.S. degree in Electrical Engineering from Beijing Instit
 
 <div class="news-section">
 <ul>
-<li><b><span class="accent">[2026.05]</span></b> Manuscript accepted by IEEE WCL, available on <a href="https://arxiv.org/abs/2603.24077">arXiv</a> and <a href="https://ieeexplore.ieee.org/document/11505880">IEEE</a>.</li>
-<li><b><span class="accent">[2026.04]</span></b> Awarded Student Travel Grant for ICC 2026.</li>
-<li><b><span class="accent">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></b> Will chair oral Symposium sessions <b>WC-11 (Near-Field, ELAA & Holographic MIMO)</b> and <b>CQRM-13 (Wireless Networks II)</b> at ICC'26.</li>
-<li><b><span class="accent">[2026.04]</span></b> Manuscript accepted by IEEE TWC, available on <a href="https://arxiv.org/abs/2512.21660">arXiv</a> and <a href="https://ieeexplore.ieee.org/document/11501185">IEEE</a>. Toy demo available <a href="./demo.html">here</a>.</li>
-<li><b><span class="accent">[2026.03]</span></b> Manuscript accepted by IEEE TWC, available on <a href="https://arxiv.org/abs/2508.01201">arXiv</a> and <a href="https://ieeexplore.ieee.org/document/11466358">IEEE</a>.</li>
+<li><b><span class="accent">[2026.05]</span></b> Manuscript on near-field <b>secure communication</b> via <b>bending beams</b> accepted by IEEE WCL, available on <a href="https://arxiv.org/abs/2603.24077">arXiv</a> and <a href="https://ieeexplore.ieee.org/document/11505880">IEEE</a>.</li>
+<li><b><span class="accent">[2026.04]</span></b> Awarded Student Travel Grant for ICC 2026. Will chair oral Symposium sessions </li>
+<li><b><span class="accent">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></b> <b>WC-11 (Near-Field, ELAA & Holographic MIMO)</b> and</li>
+<li><b><span class="accent">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></b> <b>CQRM-13 (Wireless Networks II)</b>.</li>
+<li><b><span class="accent">[2026.04]</span></b> Manuscript on <b>near-field optimal movable antenna placement</b> (discrete) accepted by IEEE TWC, available on <a href="https://arxiv.org/abs/2512.21660">arXiv</a> and <a href="https://ieeexplore.ieee.org/document/11501185">IEEE</a>. Toy demo available <a href="./demo.html">here</a>.</li>
+<li><b><span class="accent">[2026.03]</span></b> Manuscript on <b>near-field optimal movable antenna placement</b> (continuous) accepted by IEEE TWC, available on <a href="https://arxiv.org/abs/2508.01201">arXiv</a> and <a href="https://ieeexplore.ieee.org/document/11466358">IEEE</a>.</li>
 <li><b><span class="accent">[2026.03]</span></b> Awarded Outstanding Master's Thesis of 2025 by the Chinese Institute of Electronics (CIE).</li>
 <li><b><span class="accent">[2026.02]</span></b> Themes and Dark Modes (beta) are now available! Select the theme you like from the dropdown menu above, or click the top-right button to toggle between light and dark modes.</li>
 <li><b><span class="accent">[2026.02]</span></b> Nominated as 2025 <a href="https://www.comsoc.org/publications/journals/ieee-wcl/reviewer-appreciation" target="_blank">Exemplary Reviewer</a> of <span style="font-variant-caps: small-caps;">IEEE Wireless Communications Letters</span></li>
@@ -187,11 +188,12 @@ I received my B.S. and M.S. degree in Electrical Engineering from Beijing Instit
 <!-- <li><b><span class="accent">[2025.12]</span></b> Comments and discussions for TWC'25 are released. See <a href="/posts/TWC25COMMENTS/">here</a> for more info.</li> -->
 <li><b><span class="accent">[2025.10]</span></b> New paper submitted to IEEE ICC. Journal Version available on <a href="https://arxiv.org/abs/2512.21660">arXiv</a>.</li>
 <li><b><span class="muted">[2025.05]</span></b> An errata for JSAC'25 was released. See <a href="/posts/JSAC25ERRATA/">here</a> for more info.</li>
-<li><b><span class="accent">[2024.12]</span></b> Nominated as 2024 <a href="https://www.comsoc.org/publications/journals/ieee-comml/reviewer-and-editor-appreciation" target="_blank">Exemplary Reviewer</a> of <span style="font-variant-caps: small-caps;">IEEE Communications Letters</span></li>
+
 </ul>
 
 <details><summary>More News</summary>
 <ul>
+<li><b><span class="accent">[2024.12]</span></b> Nominated as 2024 <a href="https://www.comsoc.org/publications/journals/ieee-comml/reviewer-and-editor-appreciation" target="_blank">Exemplary Reviewer</a> of <span style="font-variant-caps: small-caps;">IEEE Communications Letters</span></li>
 <li><b><span class="accent">[2024.11]</span></b> One coauthored <a href="https://www.nature.com/articles/s41467-024-54168-3" target="_blank">article</a> was accepted by <b>Nature Communications</b></li>
 <li><b><span class="muted">[2024.11]</span></b> Albums and Posts now support multiple languages :-P</li>
 <li><b><span class="accent">[2024.11]</span></b> One <a href="https://arxiv.org/abs/2403.11809" target="_blank">journal paper</a> was accepted by IEEE JSAC</li>
