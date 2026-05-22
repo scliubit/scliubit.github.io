@@ -38,7 +38,7 @@
             background-color: var(--bg);
             color: var(--text);
             margin: 0;
-            padding: 20px;
+            padding: 12px;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -49,7 +49,7 @@
             max-width: 1200px;
             display: grid;
             grid-template-columns: 1fr;
-            gap: 20px;
+            gap: 12px;
         }
 
         @media (min-width: 900px) {
@@ -61,15 +61,15 @@
         .left-column, .right-column {
             display: flex;
             flex-direction: column;
-            gap: 20px;
+            gap: 12px;
         }
 
         .card {
             background: var(--panel-bg);
-            border-radius: 12px;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.08);
             border: 1px solid var(--border);
-            padding: 20px;
+            padding: 14px;
             display: flex;
             flex-direction: column;
         }
@@ -78,40 +78,40 @@
             margin-top: 0;
             color: #1e293b;
             border-bottom: 2px solid var(--bg);
-            padding-bottom: 10px;
-            margin-bottom: 15px;
-            font-size: 1.1em;
+            padding-bottom: 6px;
+            margin-bottom: 10px;
+            font-size: 1.05em;
         }
 
         .static-params {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 15px;
-            margin-bottom: 20px;
+            gap: 10px;
+            margin-bottom: 12px;
             background: #f1f5f9;
-            padding: 15px;
+            padding: 10px;
             border-radius: 8px;
         }
 
         .param-group label {
             display: block;
-            font-size: 0.9em;
+            font-size: 0.85em;
             font-weight: 600;
-            margin-bottom: 5px;
+            margin-bottom: 3px;
         }
 
         .param-group input {
             width: 100%;
-            padding: 8px;
+            padding: 6px;
             border: 1px solid #cbd5e1;
             border-radius: 4px;
             box-sizing: border-box;
         }
 
         .slider-control {
-            margin-bottom: 15px;
+            margin-bottom: 10px;
             border: 1px solid #e2e8f0;
-            padding: 10px;
+            padding: 8px;
             border-radius: 8px;
         }
 
@@ -119,7 +119,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-bottom: 8px;
+            margin-bottom: 5px;
         }
 
         .slider-label {
@@ -158,13 +158,13 @@
         }
 
         .status-panel {
-            margin-top: 10px;
-            padding: 10px;
+            margin-top: 8px;
+            padding: 8px;
             border-radius: 6px;
-            font-size: 0.9em;
+            font-size: 0.85em;
             background: #f8fafc;
             border: 1px solid #e2e8f0;
-            min-height: 50px;
+            min-height: 40px;
             display: flex;
             align-items: center;
         }
@@ -188,12 +188,11 @@
         }
 
         #mainCanvas { height: 350px; }
-        #ueCanvas { height: 180px; }
 
         .table-container {
-            margin-top: 20px;
+            margin-top: 12px;
             overflow-x: auto;
-            max-height: 300px;
+            max-height: 260px;
             overflow-y: auto;
         }
 
@@ -224,6 +223,10 @@
 
 <div class="container">
     <div class="left-column">
+        <div class="card" style="text-align: center; font-size: 0.85em; color: #64748b; padding: 12px;">
+            Built with the assistance of <b>Google Gemini</b> and <strong>DeepSeek</strong>
+        </div>
+
         <div class="card">
             <h3>Parameter Setup</h3>
 
@@ -257,8 +260,8 @@
                     <span class="slider-value" id="val_y0">20.00</span>
                 </div>
                 <div class="range-inputs">
-                    <input type="number" id="min_y0" value="0.1">
-                    <input type="range" id="sli_y0" min="0.1" max="50" step="0.1" value="20">
+                    <input type="number" id="min_y0" value="0.2">
+                    <input type="range" id="sli_y0" min="0.2" max="50" step="0.1" value="20">
                     <input type="number" id="max_y0" value="50">
                 </div>
             </div>
@@ -280,11 +283,6 @@
             </div>
         </div>
 
-        <!-- UE -->
-        <div class="card">
-            <h3>UE Rotation $\theta_{\mathrm{UE}}$</h3>
-            <canvas id="ueCanvas"></canvas>
-        </div>
     </div>
 
     <div class="right-column">
@@ -335,7 +333,6 @@
         },
         status: document.getElementById('statusBox'),
         mainCanvas: document.getElementById('mainCanvas'),
-        ueCanvas: document.getElementById('ueCanvas'),
         tbody: document.querySelector('#dataTable tbody')
     };
 
@@ -345,7 +342,6 @@
                 updateStateFromDOM();
                 calculate();
                 drawMain();
-                drawUE();
             });
         });
 
@@ -357,7 +353,6 @@
                 updateStateFromDOM();
                 calculate();
                 drawMain();
-                drawUE();
             });
 
             [group.min, group.max].forEach(input => {
@@ -380,7 +375,6 @@
                     updateStateFromDOM();
                     calculate();
                     drawMain();
-                    drawUE();
                 });
             });
         });
@@ -456,50 +450,6 @@
         state.data = results;
     }
 
-    function drawUE() {
-        const canvas = dom.ueCanvas;
-        const ctx = canvas.getContext('2d');
-        const dpr = window.devicePixelRatio || 1;
-        const rect = canvas.getBoundingClientRect();
-        canvas.width = rect.width * dpr;
-        canvas.height = rect.height * dpr;
-        ctx.scale(dpr, dpr);
-
-        const w = rect.width;
-        const h = rect.height;
-        const cx = w / 2;
-        const cy = h / 2;
-
-        ctx.clearRect(0, 0, w, h);
-
-        const thetaRad = state.thetaDeg * Math.PI / 180;
-        
-        ctx.save();
-        ctx.translate(cx, cy);
-        ctx.rotate(-thetaRad);
-
-        const ballCount = 6;
-        const arrayLen = 120; 
-        const spacing = arrayLen / (ballCount - 1);
-        const startX = -arrayLen / 2;
-
-        ctx.beginPath();
-        ctx.moveTo(startX, 0);
-        ctx.lineTo(-startX, 0);
-        ctx.strokeStyle = '#94a3b8';
-        ctx.lineWidth = 2;
-        ctx.stroke();
-
-        for(let i=0; i<ballCount; i++) {
-            ctx.beginPath();
-            ctx.arc(startX + i*spacing, 0, 4, 0, Math.PI*2);
-            ctx.fillStyle = '#2563eb'; 
-            ctx.fill();
-        }
-        
-        ctx.restore();
-    }
-
     function drawMain() {
         const canvas = dom.mainCanvas;
         const ctx = canvas.getContext('2d');
@@ -528,7 +478,7 @@
 
         const A = state.A;
         const padding = 40;
-        const viewRange = Math.max(10, A * 1.5);
+        const viewRange = A / 0.8;
         const minX = -viewRange / 2;
         const maxX = viewRange / 2;
         const mapX = (val) => padding + (val - minX) / (maxX - minX) * (w - 2*padding);
@@ -622,7 +572,6 @@
     initListeners();
     calculate();
     drawMain();
-    drawUE();
 
 </script>
 
