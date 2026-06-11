@@ -1,0 +1,896 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Conference Deadline Timeline</title>
+<style>
+:root {
+  --bg: #f5f6fa;
+  --bg2: #ffffff;
+  --text: #2c3e50;
+  --text2: #7f8c8d;
+  --border: #e0e4e8;
+  --grid: #ecf0f1;
+  --today: #e74c3c;
+  --past: #b0b8c1;
+  --imminent: #e74c3c;
+  --upcoming: #f39c12;
+  --future: #27ae60;
+  --conf: #3498db;
+  --conf-bg: rgba(52,152,219,0.12);
+  --shadow: 0 2px 12px rgba(0,0,0,0.06);
+  --row-hover: rgba(52,152,219,0.04);
+  --next-year: #9b59b6;
+}
+[data-theme="dark"] {
+  --bg: #0f1117;
+  --bg2: #1a1d2e;
+  --text: #e2e8f0;
+  --text2: #8892a4;
+  --border: #2d3348;
+  --grid: #232740;
+  --shadow: 0 2px 12px rgba(0,0,0,0.3);
+  --row-hover: rgba(52,152,219,0.08);
+  --conf-bg: rgba(52,152,219,0.15);
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  min-height: 100vh;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+}
+header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+header h1 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.3rem;
+}
+header p {
+  color: var(--text2);
+  font-size: 0.95rem;
+}
+.controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+.year-tabs {
+  display: flex;
+  background: var(--bg2);
+  border-radius: 10px;
+  padding: 4px;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+}
+.year-tab {
+  padding: 0.5rem 1.4rem;
+  border: none;
+  background: none;
+  color: var(--text2);
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: all 0.2s;
+}
+.year-tab:hover { color: var(--text); }
+.year-tab.active {
+  background: var(--conf);
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(52,152,219,0.3);
+}
+.theme-btn {
+  width: 40px; height: 40px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: var(--bg2);
+  color: var(--text);
+  cursor: pointer;
+  font-size: 1.2rem;
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: var(--shadow);
+  transition: all 0.2s;
+}
+.theme-btn:hover { border-color: var(--conf); }
+
+/* Upcoming deadlines */
+.upcoming-section {
+  margin-bottom: 2rem;
+}
+.upcoming-section h2 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.8rem;
+  color: var(--text2);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.upcoming-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 0.8rem;
+}
+.upcoming-card {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1rem 1.2rem;
+  box-shadow: var(--shadow);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.2s;
+  cursor: pointer;
+  text-decoration: none;
+  color: var(--text);
+}
+.upcoming-card:hover {
+  border-color: var(--conf);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 16px rgba(52,152,219,0.15);
+}
+.upcoming-card .info .name {
+  font-weight: 700;
+  font-size: 1rem;
+}
+.upcoming-card .info .loc {
+  font-size: 0.82rem;
+  color: var(--text2);
+  margin-top: 2px;
+}
+.upcoming-card .countdown {
+  text-align: right;
+  flex-shrink: 0;
+  margin-left: 1rem;
+}
+.upcoming-card .countdown .days {
+  font-size: 1.5rem;
+  font-weight: 800;
+  line-height: 1;
+}
+.upcoming-card .countdown .label {
+  font-size: 0.75rem;
+  color: var(--text2);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+.upcoming-card.imminent .countdown .days { color: var(--imminent); }
+.upcoming-card.upcoming-warn .countdown .days { color: var(--upcoming); }
+.upcoming-card.future .countdown .days { color: var(--future); }
+
+/* Legend */
+.legend {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+  font-size: 0.82rem;
+  color: var(--text2);
+}
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+.legend-dot {
+  width: 10px; height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+/* Gantt chart */
+.gantt-wrapper {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  margin-bottom: 2rem;
+}
+.gantt-header {
+  display: flex;
+  border-bottom: 2px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: var(--bg2);
+}
+.gantt-label-col {
+  width: 140px;
+  min-width: 140px;
+  padding: 0.6rem 1rem;
+  font-weight: 700;
+  font-size: 0.8rem;
+  color: var(--text2);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-right: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+}
+.gantt-months {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+.gantt-month-header {
+  padding: 0.6rem 0;
+  text-align: center;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--text2);
+  border-right: 1px solid var(--grid);
+}
+.gantt-month-header:last-child { border-right: none; }
+.gantt-month-header.current-month {
+  color: var(--today);
+  font-weight: 800;
+}
+.gantt-body {
+  max-height: 600px;
+  overflow-y: auto;
+}
+.gantt-row {
+  display: flex;
+  border-bottom: 1px solid var(--grid);
+  transition: background 0.15s;
+  cursor: pointer;
+}
+.gantt-row:hover { background: var(--row-hover); }
+.gantt-row:last-child { border-bottom: none; }
+.gantt-row .label {
+  width: 140px;
+  min-width: 140px;
+  padding: 0.7rem 1rem;
+  font-weight: 600;
+  font-size: 0.85rem;
+  border-right: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.gantt-row .label.next-year { color: var(--next-year); }
+.gantt-row .bar-area {
+  flex: 1;
+  position: relative;
+  height: 42px;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+.gantt-row .bar-area .month-bg {
+  border-right: 1px solid var(--grid);
+}
+.gantt-row .bar-area .month-bg:last-child { border-right: none; }
+/* Today line */
+.today-line {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: var(--today);
+  z-index: 5;
+  opacity: 0.7;
+}
+.today-line::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -3px;
+  width: 8px;
+  height: 8px;
+  background: var(--today);
+  border-radius: 50%;
+}
+/* Bars */
+.bar-connection {
+  position: absolute;
+  top: 50%;
+  height: 3px;
+  transform: translateY(-50%);
+  border-radius: 2px;
+  z-index: 2;
+}
+.ddl-marker {
+  position: absolute;
+  top: 50%;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+  border: 2px solid var(--bg2);
+  box-shadow: 0 1px 4px rgba(0,0,0,0.15);
+}
+.conf-marker {
+  position: absolute;
+  top: 50%;
+  height: 20px;
+  min-width: 8px;
+  border-radius: 4px;
+  transform: translateY(-50%);
+  z-index: 3;
+  background: var(--conf);
+  box-shadow: 0 1px 4px rgba(0,0,0,0.12);
+}
+.conf-marker.next-year-marker {
+  background: var(--next-year);
+}
+.next-year-label {
+  position: absolute;
+  top: 50%;
+  right: 8px;
+  transform: translateY(-50%);
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--next-year);
+  z-index: 4;
+  white-space: nowrap;
+}
+
+/* Tooltip */
+.tooltip {
+  display: none;
+  position: fixed;
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 0.8rem 1rem;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+  z-index: 100;
+  font-size: 0.85rem;
+  max-width: 300px;
+  pointer-events: none;
+}
+.tooltip.show { display: block; }
+.tooltip .tt-name {
+  font-weight: 700;
+  font-size: 0.95rem;
+  margin-bottom: 0.3rem;
+}
+.tooltip .tt-row {
+  display: flex;
+  gap: 0.5rem;
+  color: var(--text2);
+  font-size: 0.82rem;
+  line-height: 1.5;
+}
+.tooltip .tt-label { font-weight: 600; color: var(--text); min-width: 65px; }
+
+/* Table view */
+.table-section {
+  margin-top: 2rem;
+}
+.table-section h2 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.8rem;
+  color: var(--text2);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.table-wrapper {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  box-shadow: var(--shadow);
+  overflow: auto;
+}
+.conf-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.88rem;
+}
+.conf-table th {
+  background: var(--bg2);
+  position: sticky;
+  top: 0;
+  padding: 0.7rem 1rem;
+  text-align: left;
+  font-weight: 700;
+  font-size: 0.78rem;
+  color: var(--text2);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-bottom: 2px solid var(--border);
+}
+.conf-table td {
+  padding: 0.6rem 1rem;
+  border-bottom: 1px solid var(--grid);
+}
+.conf-table tr:last-child td { border-bottom: none; }
+.conf-table tr:hover { background: var(--row-hover); }
+.conf-table a {
+  color: var(--conf);
+  text-decoration: none;
+  font-weight: 600;
+}
+.conf-table a:hover { text-decoration: underline; }
+.status-dot {
+  display: inline-block;
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  margin-right: 0.4rem;
+  vertical-align: middle;
+}
+.no-upcoming {
+  text-align: center;
+  padding: 1.5rem;
+  color: var(--text2);
+  font-style: italic;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .container { padding: 1rem; }
+  header h1 { font-size: 1.3rem; }
+  .gantt-label-col, .gantt-row .label { width: 100px; min-width: 100px; font-size: 0.75rem; padding: 0.5rem 0.6rem; }
+  .upcoming-cards { grid-template-columns: 1fr; }
+  .legend { gap: 0.8rem; font-size: 0.75rem; }
+}
+</style>
+</head>
+<body>
+<div class="container">
+  <header>
+    <h1>Conference Deadline Timeline</h1>
+    <p>Communications & Signal Processing Conference Deadlines &middot; Data updated Jun. 2026</p>
+  </header>
+
+  <div class="controls">
+    <div class="year-tabs" id="yearTabs"></div>
+    <button class="theme-btn" id="themeBtn" title="Toggle theme">
+      <span id="themeIcon">&#9790;</span>
+    </button>
+  </div>
+
+  <div class="legend">
+    <div class="legend-item"><div class="legend-dot" style="background:var(--past)"></div> Past DDL</div>
+    <div class="legend-item"><div class="legend-dot" style="background:var(--imminent)"></div> DDL &lt; 30 days</div>
+    <div class="legend-item"><div class="legend-dot" style="background:var(--upcoming)"></div> DDL &lt; 90 days</div>
+    <div class="legend-item"><div class="legend-dot" style="background:var(--future)"></div> DDL &gt; 90 days</div>
+    <div class="legend-item"><div class="legend-dot" style="background:var(--conf)"></div> Conference</div>
+    <div class="legend-item"><div class="legend-dot" style="background:var(--next-year)"></div> Next Year</div>
+  </div>
+
+  <div class="upcoming-section" id="upcomingSection">
+    <h2>Upcoming Deadlines</h2>
+    <div class="upcoming-cards" id="upcomingCards"></div>
+  </div>
+
+  <div class="gantt-wrapper">
+    <div class="gantt-header">
+      <div class="gantt-label-col">Conference</div>
+      <div class="gantt-months" id="ganttMonths"></div>
+    </div>
+    <div class="gantt-body" id="ganttBody"></div>
+  </div>
+
+  <div class="table-section">
+    <h2>Details</h2>
+    <div class="table-wrapper">
+      <table class="conf-table">
+        <thead>
+          <tr>
+            <th>Status</th>
+            <th>Conference</th>
+            <th>DDL</th>
+            <th>Date</th>
+            <th>Location</th>
+          </tr>
+        </thead>
+        <tbody id="tableBody"></tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<div class="tooltip" id="tooltip"></div>
+
+<script>
+const MONTHS = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+const today = new Date();
+const todayYear = today.getFullYear();
+const todayMonth = today.getMonth() + 1;
+const todayDay = today.getDate();
+const todayFrac = todayMonth + (todayDay - 1) / 30;
+
+const DATA = {
+  2027: [
+    { name: "ISIT'27", ddl: 1, conf: 7, loc: "TBD", url: "https://2027.ieee-isit.org/", next: false, dates: "Jun./Jul. (TBD)" },
+    { name: "EuCNC'27", ddl: 2, conf: 6, loc: "TBD", url: "https://www.eucnc.eu/", next: false, dates: "Jun. (TBD)" },
+    { name: "PIMRC'27", ddl: 3, conf: 9, loc: "Lisbon, Portugal", url: "https://pimrc2027.ieee-pimrc.org/", next: false, dates: "Sep. (TBD)" },
+    { name: "MeditCom'27", ddl: 3, conf: 7, loc: "TBD", url: "", next: false, dates: "Jul. (TBD)" },
+    { name: "MobiCom'27", ddl: 3, conf: 0, loc: "TBD", url: "https://www.sigmobile.org/mobicom/2027/", next: false, dates: "TBD" },
+    { name: "VTCFall'27", ddl: 3, conf: 10, loc: "TBD", url: "https://events.vtsociety.org/vtc2027-fall/", next: false, dates: "Sep./Oct. (TBD)" },
+    { name: "SPAWC'27", ddl: 3, conf: 0, loc: "TBD", url: "https://2027.ieeespawc.org/", next: false, dates: "TBD" },
+    { name: "EUSIPCO'27", ddl: 3, conf: 9, loc: "TBD", url: "https://eurasip.org/events/", next: false, dates: "Sep. (TBD)" },
+    { name: "ICCC'27", ddl: 4, conf: 8, loc: "TBD", url: "", next: false, dates: "Aug. (TBD)" },
+    { name: "Globecom'27", ddl: 4, conf: 12, loc: "Abu Dhabi, UAE", url: "https://globecom2027.ieee-globecom.org/", next: false, dates: "Dec. 6\u201310" },
+    { name: "Asilomar'27", ddl: 5, conf: 10, loc: "Pacific Grove, CA, USA", url: "https://www.asilomarsscconf.org/", next: false, dates: "Oct. (TBD)" },
+    { name: "WCSP'27", ddl: 6, conf: 11, loc: "TBD", url: "http://www.ic-wcsp.org/2027/", next: false, dates: "Oct./Nov. (TBD)" },
+    { name: "HK6GWS'27", ddl: 7, conf: 9, loc: "Hong Kong, China", url: "https://hk6gws2027.ieee-hk6gws.org/", next: false, dates: "Sep. (TBD)" },
+    { name: "INFOCOM'28", ddl: 7, conf: 5, loc: "TBD", url: "https://infocom2028.ieee-infocom.org/", next: true, dates: "May (TBD)" },
+    { name: "ICASSP'28", ddl: 9, conf: 5, loc: "TBD", url: "https://2028.ieeeicassp.org/", next: true, dates: "May (TBD)" },
+    { name: "WCNC'28", ddl: 9, conf: 0, loc: "TBD", url: "https://wcnc2028.ieee-wcnc.org/", next: true, dates: "TBD" },
+    { name: "MMSys'28", ddl: 9, conf: 3, loc: "TBD", url: "", next: true, dates: "Mar. (TBD)" },
+    { name: "ICC'28", ddl: 10, conf: 5, loc: "Chengdu, China", url: "https://icc2028.ieee-icc.org/", next: true, dates: "May 28 \u2013 Jun. 1" },
+    { name: "ICMLCN'28", ddl: 10, conf: 0, loc: "TBD", url: "", next: true, dates: "TBD" },
+    { name: "VTCSpring'28", ddl: 12, conf: 0, loc: "TBD", url: "https://events.vtsociety.org/vtc2028-spring/", next: true, dates: "TBD" },
+  ],
+  2026: [
+    { name: "ISIT'26", ddl: 1, conf: 7, loc: "Guangzhou, China", url: "https://2026.ieee-isit.org/", next: false, dates: "Jun. 28 \u2013 Jul. 3" },
+    { name: "EuCNC'26", ddl: 2, conf: 6, loc: "TBD", url: "https://www.eucnc.eu/", next: false, dates: "Jun." },
+    { name: "PIMRC'26", ddl: 3, conf: 9, loc: "Singapore", url: "https://pimrc2026.ieee-pimrc.org/", next: false, dates: "Sep. 1\u20134" },
+    { name: "MeditCom'26", ddl: 3, conf: 7, loc: "Cagliari, Italy", url: "https://meditcom2026.ieee-meditcom.org/", next: false, dates: "Jul. 6\u20139" },
+    { name: "MobiCom'26", ddl: 3, conf: 10, loc: "Austin, Texas, USA", url: "https://www.sigmobile.org/mobicom/2026/", next: false, dates: "Oct. 26\u201330" },
+    { name: "VTCFall'26", ddl: 3, conf: 9, loc: "Boston, MA, USA", url: "https://events.vtsociety.org/vtc2026-fall/", next: false, dates: "Sep. 6\u20139" },
+    { name: "SPAWC'26", ddl: 3, conf: 9, loc: "Athens, Greece", url: "https://2026.ieeespawc.org/", next: false, dates: "Sep. 7\u20139" },
+    { name: "EUSIPCO'26", ddl: 3, conf: 9, loc: "TBD", url: "https://eurasip.org/events/", next: false, dates: "Sep." },
+    { name: "ICCC'26", ddl: 4, conf: 8, loc: "Wuhan, China", url: "https://iccc2026.ieee-iccc.org/", next: false, dates: "Aug. 7\u20139" },
+    { name: "Globecom'26", ddl: 4, conf: 12, loc: "Macau, China", url: "https://globecom2026.ieee-globecom.org/", next: false, dates: "Dec. 7\u201311" },
+    { name: "Asilomar'26", ddl: 5, conf: 10, loc: "Pacific Grove, CA, USA", url: "https://www.asilomarsscconf.org/", next: false, dates: "Oct. 25\u201328" },
+    { name: "WCSP'26", ddl: 6, conf: 11, loc: "Shenzhen, China", url: "http://www.ic-wcsp.org/2026/", next: false, dates: "Nov. 12\u201314" },
+    { name: "HK6GWS'26", ddl: 7, conf: 9, loc: "Hong Kong, China", url: "https://hk6gws2026.ieee-hk6gws.org/", next: false, dates: "Sep." },
+    { name: "INFOCOM'27", ddl: 7, conf: 5, loc: "Honolulu, Hawaii, USA", url: "https://infocom2027.ieee-infocom.org/", next: true, dates: "May 24\u201327" },
+    { name: "ICASSP'27", ddl: 9, conf: 5, loc: "Toronto, Canada", url: "https://2027.ieeeicassp.org/", next: true, dates: "May 16\u201321" },
+    { name: "WCNC'27", ddl: 9, conf: 4, loc: "Panama City, Panama", url: "https://wcnc2027.ieee-wcnc.org/", next: true, dates: "Apr. 5\u20138" },
+    { name: "MMSys'27", ddl: 9, conf: 3, loc: "TBD", url: "", next: true, dates: "Mar." },
+    { name: "ICC'27", ddl: 10, conf: 6, loc: "Washington, D.C., USA", url: "https://icc2027.ieee-icc.org/", next: true, dates: "May 30 \u2013 Jun. 3" },
+    { name: "ICMLCN'27", ddl: 10, conf: 0, loc: "TBD", url: "https://icmlcn2027.ieee-icmlcn.org/", next: true, dates: "TBD" },
+    { name: "VTCSpring'27", ddl: 12, conf: 6, loc: "Hamburg, Germany", url: "https://events.vtsociety.org/vtc2027-spring/", next: true, dates: "Jun. 20\u201323" },
+  ],
+  2025: [
+    { name: "ISIT'25", ddl: 1, conf: 6, loc: "Ann Arbor, Michigan, USA", url: "https://2025.ieee-isit.org/", next: false, dates: "Jun." },
+    { name: "PIMRC'25", ddl: 3, conf: 9, loc: "Istanbul, T\u00fcrkiye", url: "https://pimrc2025.ieee-pimrc.org/program", next: false, dates: "Sep." },
+    { name: "MeditCom'25", ddl: 3, conf: 7, loc: "Nice, France", url: "https://meditcom2025.ieee-meditcom.org/", next: false, dates: "Jul." },
+    { name: "MobiCom'25", ddl: 3, conf: 11, loc: "Hong Kong, China", url: "https://www.sigmobile.org/mobicom/2025/", next: false, dates: "Nov." },
+    { name: "Globecom'25", ddl: 4, conf: 12, loc: "Taipei, Taiwan", url: "https://globecom2025.ieee-globecom.org/", next: false, dates: "Dec." },
+    { name: "VTCFall'25", ddl: 4, conf: 10, loc: "Chengdu, China", url: "https://events.vtsociety.org/vtc2025-fall/", next: false, dates: "Oct." },
+    { name: "SPAWC'25", ddl: 4, conf: 7, loc: "Surrey, UK", url: "https://2025.ieeespawc.org/", next: false, dates: "Jul." },
+    { name: "ICCC'25", ddl: 4, conf: 8, loc: "Shanghai, China", url: "https://iccc2025.ieee-iccc.org/", next: false, dates: "Aug." },
+    { name: "Asilomar'25", ddl: 4, conf: 10, loc: "Pacific Grove, CA, USA", url: "https://www.asilomarsscconf.org/", next: false, dates: "Oct." },
+    { name: "WCSP'25", ddl: 6, conf: 10, loc: "TBD", url: "http://www.ic-wcsp.org/2025/", next: false, dates: "Oct." },
+    { name: "HK6GWS'25", ddl: 7, conf: 9, loc: "Hong Kong, China", url: "https://hk6gws2025.ieee-hk6gws.org/", next: false, dates: "Sep." },
+    { name: "INFOCOM'26", ddl: 7, conf: 5, loc: "Tokyo, Japan", url: "https://infocom2026.ieee-infocom.org/", next: true, dates: "May" },
+    { name: "ICASSP'26", ddl: 9, conf: 5, loc: "Barcelona, Spain", url: "https://2026.ieeeicassp.org/", next: true, dates: "May" },
+    { name: "WCNC'26", ddl: 9, conf: 4, loc: "Kuala Lumpur, Malaysia", url: "https://wcnc2026.ieee-wcnc.org/", next: true, dates: "Apr." },
+    { name: "MMSys'26", ddl: 9, conf: 3, loc: "TBD", url: "", next: true, dates: "Mar." },
+    { name: "ICC'26", ddl: 11, conf: 6, loc: "Glasgow, UK", url: "https://icc2026.ieee-icc.org/", next: true, dates: "Jun." },
+    { name: "ICMLCN'26", ddl: 10, conf: 4, loc: "TBD", url: "https://icmlcn2026.ieee-icmlcn.org/", next: true, dates: "Apr." },
+    { name: "VTCSpring'26", ddl: 12, conf: 5, loc: "Nice, France", url: "https://events.vtsociety.org/vtc2026-spring/", next: true, dates: "May" },
+  ],
+  2024: [
+    { name: "ISIT'24", ddl: 1, conf: 7, loc: "Athens, Greece", url: "https://2024.ieee-isit.org/", next: false, dates: "Jul." },
+    { name: "PIMRC'24", ddl: 2, conf: 9, loc: "Valencia, Spain", url: "https://pimrc2024.ieee-pimrc.org/program", next: false, dates: "Sep." },
+    { name: "MeditCom'24", ddl: 3, conf: 7, loc: "Madrid, Spain", url: "https://meditcom2024.ieee-meditcom.org/", next: false, dates: "Jul." },
+    { name: "MobiCom'24", ddl: 3, conf: 11, loc: "Washington DC, USA", url: "https://www.sigmobile.org/mobicom/2024/", next: false, dates: "Nov." },
+    { name: "Globecom'24", ddl: 4, conf: 12, loc: "Cape Town, South Africa", url: "https://globecom2024.ieee-globecom.org/", next: false, dates: "Dec." },
+    { name: "VTCFall'24", ddl: 4, conf: 10, loc: "Washington DC, USA", url: "https://events.vtsociety.org/vtc2024-fall/", next: false, dates: "Oct." },
+    { name: "SPAWC'24", ddl: 4, conf: 9, loc: "Luca, Italy", url: "https://spawc2024.org/", next: false, dates: "Sep." },
+    { name: "ICCC'24", ddl: 4, conf: 8, loc: "Hangzhou, China", url: "https://iccc2024.ieee-iccc.org/", next: false, dates: "Aug." },
+    { name: "Asilomar'24", ddl: 5, conf: 10, loc: "Pacific Grove, CA, USA", url: "https://www.asilomarsscconf.org/", next: false, dates: "Oct." },
+    { name: "WCSP'24", ddl: 6, conf: 10, loc: "Hefei, China", url: "http://www.ic-wcsp.org/2024/", next: false, dates: "Oct." },
+    { name: "HK6GWS'24", ddl: 7, conf: 9, loc: "Hong Kong, China", url: "https://hk6gws2024.ieee-hk6gws.org/", next: false, dates: "Sep." },
+    { name: "INFOCOM'24", ddl: 7, conf: 12, loc: "Vancouver, Canada", url: "https://infocom2024.ieee-infocom.org/", next: false, dates: "Dec." },
+    { name: "ICASSP'25", ddl: 9, conf: 4, loc: "Hyderabad, India", url: "https://2025.ieeeicassp.org/", next: true, dates: "Apr." },
+    { name: "WCNC'25", ddl: 9, conf: 3, loc: "Milan, Italy", url: "https://wcnc2025.ieee-wcnc.org/", next: true, dates: "Mar." },
+    { name: "MMSys'25", ddl: 9, conf: 3, loc: "Bari, Italy", url: "https://2025.acmmmsys.org/", next: true, dates: "Mar." },
+    { name: "ICC'25", ddl: 10, conf: 6, loc: "Montreal QC, Canada", url: "https://icc2025.ieee-icc.org/", next: true, dates: "Jun." },
+    { name: "VTCSpring'25", ddl: 12, conf: 6, loc: "Oslo, Norway", url: "https://events.vtsociety.org/vtc2025-spring/", next: true, dates: "Jun." },
+    { name: "ICMLCN'25", ddl: 12, conf: 5, loc: "Barcelona, Spain", url: "https://icmlcn2025.ieee-icmlcn.org/", next: true, dates: "May" },
+  ]
+};
+
+const YEARS = Object.keys(DATA).map(Number).sort((a, b) => a - b);
+let activeYear = DATA[todayYear] ? todayYear : YEARS[YEARS.length - 1];
+const tooltip = document.getElementById('tooltip');
+
+// Theme
+function initTheme() {
+  const saved = localStorage.getItem('conf-timeline-theme');
+  if (saved) {
+    document.documentElement.setAttribute('data-theme', saved);
+  } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    document.documentElement.setAttribute('data-theme', 'dark');
+  }
+  updateThemeIcon();
+}
+function toggleTheme() {
+  const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+  const next = isDark ? 'light' : 'dark';
+  document.documentElement.setAttribute('data-theme', next);
+  localStorage.setItem('conf-timeline-theme', next);
+  updateThemeIcon();
+}
+function updateThemeIcon() {
+  const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+  document.getElementById('themeIcon').innerHTML = isDark ? '&#9788;' : '&#9790;';
+}
+document.getElementById('themeBtn').addEventListener('click', toggleTheme);
+
+// DDL status
+function getDdlStatus(year, ddlMonth) {
+  if (year < todayYear) return 'past';
+  if (year > todayYear) return 'future';
+  const diff = ddlMonth - todayMonth;
+  if (diff < 0) return 'past';
+  if (diff === 0) {
+    return 'imminent';
+  }
+  if (diff <= 1) return 'imminent';
+  if (diff <= 3) return 'upcoming';
+  return 'future';
+}
+function getStatusColor(status) {
+  switch(status) {
+    case 'past': return 'var(--past)';
+    case 'imminent': return 'var(--imminent)';
+    case 'upcoming': return 'var(--upcoming)';
+    case 'future': return 'var(--future)';
+  }
+}
+function getDaysUntilDdl(year, month) {
+  const ddlDate = new Date(year, month - 1, 28);
+  const diffMs = ddlDate - today;
+  return Math.ceil(diffMs / (1000 * 60 * 60 * 24));
+}
+
+// Build year tabs
+function buildYearTabs() {
+  const container = document.getElementById('yearTabs');
+  container.innerHTML = '';
+  YEARS.forEach(y => {
+    const btn = document.createElement('button');
+    btn.className = 'year-tab' + (y === activeYear ? ' active' : '');
+    btn.textContent = y;
+    btn.addEventListener('click', () => {
+      activeYear = y;
+      render();
+    });
+    container.appendChild(btn);
+  });
+}
+
+// Build upcoming deadlines
+function buildUpcoming() {
+  const container = document.getElementById('upcomingCards');
+  const section = document.getElementById('upcomingSection');
+  const confs = DATA[activeYear] || [];
+  const upcoming = confs
+    .map(c => ({ ...c, days: getDaysUntilDdl(activeYear, c.ddl) }))
+    .filter(c => c.days > -15)
+    .sort((a, b) => a.days - b.days)
+    .slice(0, 6);
+
+  if (upcoming.length === 0) {
+    container.innerHTML = '<div class="no-upcoming">No upcoming deadlines for this year</div>';
+    return;
+  }
+
+  container.innerHTML = upcoming.map(c => {
+    const status = getDdlStatus(activeYear, c.ddl);
+    const cls = status === 'imminent' ? 'imminent' : status === 'upcoming' ? 'upcoming-warn' : 'future';
+    const daysText = c.days < 0 ? `${Math.abs(c.days)}d ago` : c.days === 0 ? 'Today' : `${c.days}d`;
+    const daysLabel = c.days < 0 ? 'passed' : c.days === 0 ? '' : 'remaining';
+    const href = c.url ? `href="${c.url}" target="_blank" rel="noopener"` : '';
+    return `<a class="upcoming-card ${cls}" ${href}>
+      <div class="info">
+        <div class="name">${c.name}</div>
+        <div class="loc">${MONTHS[c.ddl - 1]} DDL &middot; ${c.loc}</div>
+      </div>
+      <div class="countdown">
+        <div class="days">${daysText}</div>
+        <div class="label">${daysLabel}</div>
+      </div>
+    </a>`;
+  }).join('');
+}
+
+// Build Gantt chart
+function buildGantt() {
+  // Month headers
+  const monthsEl = document.getElementById('ganttMonths');
+  monthsEl.innerHTML = MONTHS.map((m, i) => {
+    const isCurrent = activeYear === todayYear && (i + 1) === todayMonth;
+    return `<div class="gantt-month-header${isCurrent ? ' current-month' : ''}">${m}</div>`;
+  }).join('');
+
+  // Rows
+  const body = document.getElementById('ganttBody');
+  const confs = DATA[activeYear] || [];
+  body.innerHTML = '';
+
+  confs.forEach(c => {
+    const row = document.createElement('div');
+    row.className = 'gantt-row';
+    if (c.url) {
+      row.addEventListener('click', () => window.open(c.url, '_blank'));
+    }
+
+    // Label
+    const label = document.createElement('div');
+    label.className = 'label' + (c.next ? ' next-year' : '');
+    label.textContent = c.name;
+    row.appendChild(label);
+
+    // Bar area
+    const barArea = document.createElement('div');
+    barArea.className = 'bar-area';
+
+    // Month grid backgrounds
+    for (let i = 0; i < 12; i++) {
+      const bg = document.createElement('div');
+      bg.className = 'month-bg';
+      barArea.appendChild(bg);
+    }
+
+    // Today line
+    if (activeYear === todayYear) {
+      const tl = document.createElement('div');
+      tl.className = 'today-line';
+      tl.style.left = `${((todayFrac - 1) / 12) * 100}%`;
+      barArea.appendChild(tl);
+    }
+
+    const status = getDdlStatus(activeYear, c.ddl);
+    const statusColor = getStatusColor(status);
+    const ddlPos = ((c.ddl - 0.5) / 12) * 100;
+
+    if (c.next) {
+      // Next year conference: DDL marker -> arrow to right edge
+      const confEndPos = 100;
+      // Connection line
+      const conn = document.createElement('div');
+      conn.className = 'bar-connection';
+      conn.style.left = ddlPos + '%';
+      conn.style.width = (confEndPos - ddlPos) + '%';
+      conn.style.background = `linear-gradient(90deg, ${statusColor}, var(--next-year))`;
+      conn.style.opacity = '0.4';
+      barArea.appendChild(conn);
+
+      // DDL marker
+      const ddlM = document.createElement('div');
+      ddlM.className = 'ddl-marker';
+      ddlM.style.left = ddlPos + '%';
+      ddlM.style.background = statusColor;
+      barArea.appendChild(ddlM);
+
+      // Next year label
+      const nyl = document.createElement('div');
+      nyl.className = 'next-year-label';
+      const confText = c.conf > 0 ? MONTHS[c.conf - 1] : 'TBD';
+      nyl.textContent = `\u2192 ${confText} '${String(activeYear + 1).slice(2)}`;
+      barArea.appendChild(nyl);
+
+    } else if (c.conf > 0 && c.conf >= c.ddl) {
+      // Normal: DDL to Conference
+      const confPos = ((c.conf - 0.5) / 12) * 100;
+
+      // Connection line
+      const conn = document.createElement('div');
+      conn.className = 'bar-connection';
+      conn.style.left = ddlPos + '%';
+      conn.style.width = (confPos - ddlPos) + '%';
+      conn.style.background = `linear-gradient(90deg, ${statusColor}, var(--conf))`;
+      conn.style.opacity = '0.35';
+      barArea.appendChild(conn);
+
+      // DDL marker
+      const ddlM = document.createElement('div');
+      ddlM.className = 'ddl-marker';
+      ddlM.style.left = ddlPos + '%';
+      ddlM.style.background = statusColor;
+      barArea.appendChild(ddlM);
+
+      // Conference marker
+      const confM = document.createElement('div');
+      confM.className = 'conf-marker';
+      confM.style.left = `calc(${confPos}% - 4px)`;
+      confM.style.width = `${100/12 * 0.6}%`;
+      barArea.appendChild(confM);
+
+    } else {
+      // Edge case: conf < ddl and not next year (reference entry)
+      // Just show DDL marker
+      const ddlM = document.createElement('div');
+      ddlM.className = 'ddl-marker';
+      ddlM.style.left = ddlPos + '%';
+      ddlM.style.background = statusColor;
+      barArea.appendChild(ddlM);
+    }
+
+    // Tooltip events
+    row.addEventListener('mouseenter', (e) => showTooltip(e, c));
+    row.addEventListener('mousemove', (e) => moveTooltip(e));
+    row.addEventListener('mouseleave', hideTooltip);
+
+    row.appendChild(barArea);
+    body.appendChild(row);
+  });
+}
+
+// Build table
+function buildTable() {
+  const tbody = document.getElementById('tableBody');
+  const confs = DATA[activeYear] || [];
+  tbody.innerHTML = confs.map(c => {
+    const status = getDdlStatus(activeYear, c.ddl);
+    const color = getStatusColor(status);
+    const statusLabel = status.charAt(0).toUpperCase() + status.slice(1);
+    const link = c.url ? `<a href="${c.url}" target="_blank" rel="noopener">${c.name}</a>` : c.name;
+    const nextBadge = c.next ? ` <span style="color:var(--next-year);font-size:0.75rem;font-weight:700">[+1yr]</span>` : '';
+    return `<tr>
+      <td><span class="status-dot" style="background:${color}"></span>${statusLabel}</td>
+      <td>${link}${nextBadge}</td>
+      <td>${MONTHS[c.ddl - 1]}. ${activeYear}</td>
+      <td>${c.dates}</td>
+      <td>${c.loc}</td>
+    </tr>`;
+  }).join('');
+}
+
+// Tooltip
+function showTooltip(e, c) {
+  const status = getDdlStatus(activeYear, c.ddl);
+  const days = getDaysUntilDdl(activeYear, c.ddl);
+  let countdownText = '';
+  if (days > 0) countdownText = `${days} days remaining`;
+  else if (days === 0) countdownText = 'Deadline today!';
+  else countdownText = `${Math.abs(days)} days ago`;
+
+  const nextLabel = c.next ? ` (${activeYear + 1})` : '';
+  tooltip.innerHTML = `
+    <div class="tt-name">${c.name}</div>
+    <div class="tt-row"><span class="tt-label">DDL:</span> ${MONTHS[c.ddl - 1]}. ${activeYear} \u2014 ${countdownText}</div>
+    <div class="tt-row"><span class="tt-label">Date:</span> ${c.dates}${nextLabel}</div>
+    <div class="tt-row"><span class="tt-label">Location:</span> ${c.loc}</div>
+    ${c.url ? '<div class="tt-row" style="margin-top:4px;color:var(--conf);font-size:0.78rem">Click to visit website \u2192</div>' : ''}
+  `;
+  tooltip.classList.add('show');
+  moveTooltip(e);
+}
+function moveTooltip(e) {
+  const pad = 12;
+  let x = e.clientX + pad;
+  let y = e.clientY + pad;
+  const rect = tooltip.getBoundingClientRect();
+  if (x + rect.width > window.innerWidth) x = e.clientX - rect.width - pad;
+  if (y + rect.height > window.innerHeight) y = e.clientY - rect.height - pad;
+  tooltip.style.left = x + 'px';
+  tooltip.style.top = y + 'px';
+}
+function hideTooltip() {
+  tooltip.classList.remove('show');
+}
+
+// Render all
+function render() {
+  buildYearTabs();
+  buildUpcoming();
+  buildGantt();
+  buildTable();
+}
+
+initTheme();
+render();
+</script>
+</body>
+</html>

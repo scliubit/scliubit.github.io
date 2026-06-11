@@ -173,6 +173,8 @@ I received my B.S. and M.S. degree in Electrical Engineering from Beijing Instit
 
 <div class="news-section">
 <ul>
+<li><b><span class="accent">[2026.06]</span></b> Released a <b>Conference Deadline Timeline</b> tracking Communications &amp; Signal Processing deadlines. Check it out <a href="./conf-timeline.html">here</a>.</li>
+<li><b><span class="accent">[2026.06]</span></b> New article on <b>bending beam (caustic beamforming)</b> for next-generation wireless systems available on <a href="https://arxiv.org/abs/2606.12321">arXiv</a>.</li>
 <li><b><span class="accent">[2026.05]</span></b> Manuscript on near-field <b>secure communication</b> via <b>bending beams</b> accepted by IEEE WCL, available on <a href="https://arxiv.org/abs/2603.24077">arXiv</a> and <a href="https://ieeexplore.ieee.org/document/11505880">IEEE</a>.</li>
 <li><b><span class="accent">[2026.04]</span></b> Awarded Student Travel Grant for ICC 2026. Will chair oral Symposium sessions </li>
 <li><b><span class="accent">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></b> <b>WC-11 (Near-Field, ELAA & Holographic MIMO)</b> and</li>
@@ -292,7 +294,17 @@ Selected publications. <a href="/publications/">More Details</a>
 		  	{{ author }}{% if forloop.last == false %}, {% endif %}
 		{% endif %}
 	{% endfor %}
-	, "{{ pub.title }}", <i>{{ pub.venue }}</i>, vol. {{ pub.vol }}, no. {{ pub.issue }}, pp. {{ pub.pp }}, {{ pub.date | date: "%b. %Y" }}{% if pub.notes %}, <b><span class="accent">{{ pub.notes }}</span></b>{% endif %}.
+	, "{{ pub.title }}", <i>{{ pub.venue }}</i>, 
+	{% if pub.vol %}
+		vol. {{ pub.vol }},
+	{% endif %}
+	{% if pub.issue %}
+		no. {{ pub.issue }},
+	{% endif %}
+	{% if pub.pp %}
+		pp. {{ pub.pp }},
+	{% endif %}
+	{{ pub.date | date: "%b. %Y" }}{% if pub.notes %}, <b><span class="accent">{{ pub.notes }}</span></b>{% endif %}.
 	{% if pub.arxiv %}
 		[<a href="{{ pub.arxiv }}" target="_blank">arXiv</a>]
 	{% endif %}
