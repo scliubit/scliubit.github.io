@@ -510,11 +510,21 @@ const today = new Date();
 const todayYear = today.getFullYear();
 const todayMonth = today.getMonth() + 1;
 const todayDay = today.getDate();
-const todayFrac = todayMonth + (todayDay - 1) / 30;
+// Days in each month (non-leap reference); only used to map a (month,day) pair to a
+// position on the uniform 12-column grid so every marker lines up with the month grid.
+const DIM = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+// Convert a (month, day) pair to a year fraction on the 0..12 grid.
+// Day omitted -> month centre (fallback for coarse/TBD data).
+function mdFrac(m, d) {
+  if (!m) return null;
+  if (!d) return m - 0.5;
+  return (m - 1) + (d - 1) / DIM[m - 1];
+}
+function fracPct(f) { return f === null ? null : (f / 12) * 100; }
 
 const DATA = {
   2027: [
-    { name: "ISIT'27", ddl: 1, conf: 7, loc: "TBD", url: "https://2027.ieee-isit.org/", next: false, dates: "Jun./Jul. (TBD)" },
+    { name: "ISIT'27", ddl: 1, conf: 7, cs: [6, 27], ce: [7, 2], loc: "Sorrento, Italy", url: "https://2027.ieee-isit.org/", next: false, dates: "Jun. 27 \u2013 Jul. 2" },
     { name: "EuCNC'27", ddl: 2, conf: 6, loc: "TBD", url: "https://www.eucnc.eu/", next: false, dates: "Jun. (TBD)" },
     { name: "PIMRC'27", ddl: 3, conf: 9, loc: "Lisbon, Portugal", url: "https://pimrc2027.ieee-pimrc.org/", next: false, dates: "Sep. (TBD)" },
     { name: "MeditCom'27", ddl: 3, conf: 7, loc: "TBD", url: "", next: false, dates: "Jul. (TBD)" },
@@ -536,26 +546,26 @@ const DATA = {
     { name: "VTCSpring'28", ddl: 12, conf: 0, loc: "TBD", url: "https://events.vtsociety.org/vtc2028-spring/", next: true, dates: "TBD" },
   ],
   2026: [
-    { name: "ISIT'26", ddl: 1, conf: 7, loc: "Guangzhou, China", url: "https://2026.ieee-isit.org/", next: false, dates: "Jun. 28 \u2013 Jul. 3" },
-    { name: "EuCNC'26", ddl: 2, conf: 6, loc: "TBD", url: "https://www.eucnc.eu/", next: false, dates: "Jun." },
-    { name: "PIMRC'26", ddl: 3, conf: 9, loc: "Singapore", url: "https://pimrc2026.ieee-pimrc.org/", next: false, dates: "Sep. 1\u20134" },
-    { name: "MeditCom'26", ddl: 3, conf: 7, loc: "Cagliari, Italy", url: "https://meditcom2026.ieee-meditcom.org/", next: false, dates: "Jul. 6\u20139" },
-    { name: "MobiCom'26", ddl: 3, conf: 10, loc: "Austin, Texas, USA", url: "https://www.sigmobile.org/mobicom/2026/", next: false, dates: "Oct. 26\u201330" },
-    { name: "VTCFall'26", ddl: 3, conf: 9, loc: "Boston, MA, USA", url: "https://events.vtsociety.org/vtc2026-fall/", next: false, dates: "Sep. 6\u20139" },
-    { name: "SPAWC'26", ddl: 3, conf: 9, loc: "Athens, Greece", url: "https://2026.ieeespawc.org/", next: false, dates: "Sep. 7\u20139" },
-    { name: "EUSIPCO'26", ddl: 3, conf: 9, loc: "TBD", url: "https://eurasip.org/events/", next: false, dates: "Sep." },
-    { name: "ICCC'26", ddl: 4, conf: 8, loc: "Wuhan, China", url: "https://iccc2026.ieee-iccc.org/", next: false, dates: "Aug. 7\u20139" },
-    { name: "Globecom'26", ddl: 4, conf: 12, loc: "Macau, China", url: "https://globecom2026.ieee-globecom.org/", next: false, dates: "Dec. 7\u201311" },
-    { name: "Asilomar'26", ddl: 5, conf: 10, loc: "Pacific Grove, CA, USA", url: "https://www.asilomarsscconf.org/", next: false, dates: "Oct. 25\u201328" },
-    { name: "WCSP'26", ddl: 6, conf: 11, loc: "Shenzhen, China", url: "http://www.ic-wcsp.org/2026/", next: false, dates: "Nov. 12\u201314" },
-    { name: "HK6GWS'26", ddl: 7, conf: 9, loc: "Hong Kong, China", url: "https://hk6gws2026.ieee-hk6gws.org/", next: false, dates: "Sep." },
-    { name: "INFOCOM'27", ddl: 7, conf: 5, loc: "Honolulu, Hawaii, USA", url: "https://infocom2027.ieee-infocom.org/", next: true, dates: "May 24\u201327" },
-    { name: "ICASSP'27", ddl: 9, conf: 5, loc: "Toronto, Canada", url: "https://2027.ieeeicassp.org/", next: true, dates: "May 16\u201321" },
-    { name: "WCNC'27", ddl: 9, conf: 4, loc: "Panama City, Panama", url: "https://wcnc2027.ieee-wcnc.org/", next: true, dates: "Apr. 5\u20138" },
-    { name: "MMSys'27", ddl: 9, conf: 3, loc: "TBD", url: "", next: true, dates: "Mar." },
-    { name: "ICC'27", ddl: 10, conf: 6, loc: "Washington, D.C., USA", url: "https://icc2027.ieee-icc.org/", next: true, dates: "May 30 \u2013 Jun. 3" },
+    { name: "ISIT'26", ddl: 1, ddlDay: 16, conf: 7, cs: [6, 28], ce: [7, 3], loc: "Guangzhou, China", url: "https://2026.ieee-isit.org/", next: false, dates: "Jun. 28 \u2013 Jul. 3" },
+    { name: "EuCNC'26", ddl: 2, ddlDay: 13, conf: 6, cs: [6, 2], ce: [6, 5], loc: "Malaga, Spain", url: "https://www.eucnc.eu/", next: false, dates: "Jun. 2\u20135" },
+    { name: "EUSIPCO'26", ddl: 2, ddlDay: 13, conf: 9, cs: [8, 31], ce: [9, 4], loc: "Bruges, Belgium", url: "https://eusipco2026.org/", next: false, dates: "Aug. 31 \u2013 Sep. 4" },
+    { name: "MobiCom'26", ddl: 3, ddlDay: 13, conf: 10, cs: [10, 26], ce: [10, 30], loc: "Austin, Texas, USA", url: "https://www.sigmobile.org/mobicom/2026/", next: false, dates: "Oct. 26\u201330" },
+    { name: "VTCFall'26", ddl: 3, ddlDay: 21, conf: 9, cs: [9, 6], ce: [9, 9], loc: "Boston, MA, USA", url: "https://events.vtsociety.org/vtc2026-fall/", next: false, dates: "Sep. 6\u20139" },
+    { name: "SPAWC'26", ddl: 3, ddlDay: 22, conf: 9, cs: [9, 6], ce: [9, 9], loc: "Athens, Greece", url: "https://2026.ieeespawc.org/", next: false, dates: "Sep. 6\u20139" },
+    { name: "MeditCom'26", ddl: 3, ddlDay: 26, conf: 7, cs: [7, 6], ce: [7, 9], loc: "Cagliari, Italy", url: "https://meditcom2026.ieee-meditcom.org/", next: false, dates: "Jul. 6\u20139" },
+    { name: "ICCC'26", ddl: 4, ddlDay: 6, conf: 8, cs: [8, 7], ce: [8, 9], loc: "Wuhan, China", url: "https://iccc2026.ieee-iccc.org/", next: false, dates: "Aug. 7\u20139" },
+    { name: "PIMRC'26", ddl: 4, ddlDay: 16, conf: 9, cs: [9, 1], ce: [9, 4], loc: "Singapore", url: "https://pimrc2026.ieee-pimrc.org/", next: false, dates: "Sep. 1\u20134" },
+    { name: "Globecom'26", ddl: 5, ddlDay: 3, conf: 12, cs: [12, 7], ce: [12, 11], loc: "Macau, China", url: "https://globecom2026.ieee-globecom.org/", next: false, dates: "Dec. 7\u201311" },
+    { name: "Asilomar'26", ddl: 5, ddlDay: 8, conf: 10, cs: [10, 25], ce: [10, 28], loc: "Pacific Grove, CA, USA", url: "https://www.asilomarsscconf.org/", next: false, dates: "Oct. 25\u201328" },
+    { name: "HK6GWS'26", ddl: 7, conf: 12, cs: [12, 3], ce: [12, 4], loc: "Hong Kong, China", url: "https://hk6gws2026.ieee-hk6gws.org/", next: false, dates: "Dec. 3\u20134" },
+    { name: "INFOCOM'27", ddl: 7, ddlDay: 31, conf: 5, cs: [5, 24], ce: [5, 27], loc: "Honolulu, Hawaii, USA", url: "https://infocom2027.ieee-infocom.org/", next: true, dates: "May 24\u201327" },
+    { name: "WCSP'26", ddl: 8, ddlDay: 10, conf: 11, cs: [11, 12], ce: [11, 14], loc: "Shenzhen, China", url: "http://www.ic-wcsp.org/2026/", next: false, dates: "Nov. 12\u201314" },
+    { name: "VTCSpring'27", ddl: 9, ddlDay: 1, conf: 6, cs: [6, 20], ce: [6, 23], loc: "Hamburg, Germany", url: "https://events.vtsociety.org/vtc2027-spring/", next: true, dates: "Jun. 20\u201323" },
+    { name: "WCNC'27", ddl: 9, ddlDay: 15, conf: 4, cs: [4, 5], ce: [4, 8], loc: "Panama City, Panama", url: "https://wcnc2027.ieee-wcnc.org/", next: true, dates: "Apr. 5\u20138" },
+    { name: "ICASSP'27", ddl: 9, ddlDay: 16, conf: 5, cs: [5, 16], ce: [5, 21], loc: "Toronto, Canada", url: "https://2027.ieeeicassp.org/", next: true, dates: "May 16\u201321" },
+    { name: "MMSys'27", ddl: 9, conf: 3, loc: "TBD", url: "", next: true, dates: "Mar. (TBD)" },
+    { name: "ICC'27", ddl: 10, ddlDay: 2, conf: 6, cs: [5, 30], ce: [6, 3], loc: "Washington, D.C., USA", url: "https://icc2027.ieee-icc.org/", next: true, dates: "May 30 \u2013 Jun. 3" },
     { name: "ICMLCN'27", ddl: 10, conf: 0, loc: "TBD", url: "https://icmlcn2027.ieee-icmlcn.org/", next: true, dates: "TBD" },
-    { name: "VTCSpring'27", ddl: 12, conf: 6, loc: "Hamburg, Germany", url: "https://events.vtsociety.org/vtc2027-spring/", next: true, dates: "Jun. 20\u201323" },
   ],
   2025: [
     { name: "ISIT'25", ddl: 1, conf: 6, loc: "Ann Arbor, Michigan, USA", url: "https://2025.ieee-isit.org/", next: false, dates: "Jun." },
@@ -647,8 +657,8 @@ function getStatusColor(status) {
     case 'future': return 'var(--future)';
   }
 }
-function getDaysUntilDdl(year, month) {
-  const ddlDate = new Date(year, month - 1, 28);
+function getDaysUntilDdl(year, month, day) {
+  const ddlDate = new Date(year, month - 1, day || 28);
   const diffMs = ddlDate - today;
   return Math.ceil(diffMs / (1000 * 60 * 60 * 24));
 }
@@ -675,7 +685,7 @@ function buildUpcoming() {
   const section = document.getElementById('upcomingSection');
   const confs = DATA[activeYear] || [];
   const upcoming = confs
-    .map(c => ({ ...c, days: getDaysUntilDdl(activeYear, c.ddl) }))
+    .map(c => ({ ...c, days: getDaysUntilDdl(activeYear, c.ddl, c.ddlDay) }))
     .filter(c => c.days > -15)
     .sort((a, b) => a.days - b.days)
     .slice(0, 6);
@@ -742,79 +752,80 @@ function buildGantt() {
       barArea.appendChild(bg);
     }
 
-    // Today line
+    // Today line (positioned at today's exact date, on the same scale as the markers)
     if (activeYear === todayYear) {
       const tl = document.createElement('div');
       tl.className = 'today-line';
-      tl.style.left = `${((todayFrac - 1) / 12) * 100}%`;
+      tl.style.left = fracPct(mdFrac(todayMonth, todayDay)) + '%';
       barArea.appendChild(tl);
     }
 
     const status = getDdlStatus(activeYear, c.ddl);
     const statusColor = getStatusColor(status);
-    const ddlPos = ((c.ddl - 0.5) / 12) * 100;
+
+    // DDL position: precise to the day when known, otherwise the month centre.
+    const ddlPos = fracPct(mdFrac(c.ddl, c.ddlDay));
+    // Conference span: precise start/end when known, otherwise the month centre.
+    const csFrac = c.cs ? mdFrac(c.cs[0], c.cs[1]) : (c.conf > 0 ? c.conf - 0.5 : null);
+    const ceFrac = c.ce ? mdFrac(c.ce[0], c.ce[1]) : csFrac;
+
+    const addDdl = () => {
+      const ddlM = document.createElement('div');
+      ddlM.className = 'ddl-marker';
+      ddlM.style.left = ddlPos + '%';
+      ddlM.style.background = statusColor;
+      barArea.appendChild(ddlM);
+    };
 
     if (c.next) {
-      // Next year conference: DDL marker -> arrow to right edge
-      const confEndPos = 100;
-      // Connection line
+      // Next-year conference: DDL marker -> arrow to the right edge of the year
       const conn = document.createElement('div');
       conn.className = 'bar-connection';
       conn.style.left = ddlPos + '%';
-      conn.style.width = (confEndPos - ddlPos) + '%';
+      conn.style.width = (100 - ddlPos) + '%';
       conn.style.background = `linear-gradient(90deg, ${statusColor}, var(--next-year))`;
       conn.style.opacity = '0.4';
       barArea.appendChild(conn);
+      addDdl();
 
-      // DDL marker
-      const ddlM = document.createElement('div');
-      ddlM.className = 'ddl-marker';
-      ddlM.style.left = ddlPos + '%';
-      ddlM.style.background = statusColor;
-      barArea.appendChild(ddlM);
-
-      // Next year label
       const nyl = document.createElement('div');
       nyl.className = 'next-year-label';
-      const confText = c.conf > 0 ? MONTHS[c.conf - 1] : 'TBD';
+      const confMonth = csFrac !== null ? Math.round(csFrac) : (c.conf > 0 ? c.conf : 0);
+      const confText = confMonth > 0 ? MONTHS[confMonth - 1] : 'TBD';
       nyl.textContent = `\u2192 ${confText} '${String(activeYear + 1).slice(2)}`;
       barArea.appendChild(nyl);
 
-    } else if (c.conf > 0 && c.conf >= c.ddl) {
-      // Normal: DDL to Conference
-      const confPos = ((c.conf - 0.5) / 12) * 100;
+    } else if (csFrac !== null && ceFrac !== null) {
+      // Normal: DDL -> connection line -> blue box spanning the actual conference dates
+      let leftPct = fracPct(csFrac);
+      let rightPct = fracPct(ceFrac);
+      // Keep short conferences visible with a minimum width, centred on the midpoint.
+      const minWidth = 1.5;
+      if (rightPct - leftPct < minWidth) {
+        const mid = (leftPct + rightPct) / 2;
+        leftPct = mid - minWidth / 2;
+        rightPct = mid + minWidth / 2;
+      }
+      const confStartPct = fracPct(csFrac);
 
-      // Connection line
       const conn = document.createElement('div');
       conn.className = 'bar-connection';
       conn.style.left = ddlPos + '%';
-      conn.style.width = (confPos - ddlPos) + '%';
+      conn.style.width = Math.max(0, confStartPct - ddlPos) + '%';
       conn.style.background = `linear-gradient(90deg, ${statusColor}, var(--conf))`;
       conn.style.opacity = '0.35';
       barArea.appendChild(conn);
+      addDdl();
 
-      // DDL marker
-      const ddlM = document.createElement('div');
-      ddlM.className = 'ddl-marker';
-      ddlM.style.left = ddlPos + '%';
-      ddlM.style.background = statusColor;
-      barArea.appendChild(ddlM);
-
-      // Conference marker
       const confM = document.createElement('div');
       confM.className = 'conf-marker';
-      confM.style.left = `calc(${confPos}% - 4px)`;
-      confM.style.width = `${100/12 * 0.6}%`;
+      confM.style.left = leftPct + '%';
+      confM.style.width = (rightPct - leftPct) + '%';
       barArea.appendChild(confM);
 
     } else {
-      // Edge case: conf < ddl and not next year (reference entry)
-      // Just show DDL marker
-      const ddlM = document.createElement('div');
-      ddlM.className = 'ddl-marker';
-      ddlM.style.left = ddlPos + '%';
-      ddlM.style.background = statusColor;
-      barArea.appendChild(ddlM);
+      // Conference date not announced yet: show only the DDL marker.
+      addDdl();
     }
 
     // Tooltip events
@@ -850,7 +861,7 @@ function buildTable() {
 // Tooltip
 function showTooltip(e, c) {
   const status = getDdlStatus(activeYear, c.ddl);
-  const days = getDaysUntilDdl(activeYear, c.ddl);
+  const days = getDaysUntilDdl(activeYear, c.ddl, c.ddlDay);
   let countdownText = '';
   if (days > 0) countdownText = `${days} days remaining`;
   else if (days === 0) countdownText = 'Deadline today!';
