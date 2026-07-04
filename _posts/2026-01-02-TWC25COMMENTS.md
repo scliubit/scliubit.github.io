@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      "TWC'25 补充说明<br>Comments and Discussions for TWC'25"
+title:      "TWC'25: 泛函分析最佳天线密度分布<br>TWC'25: Optimal Antenna Density via Functional Analysis"
 # subtitle:   "📑 TWC'25: Near-Field Communication with Massive Movable Antennas: A Functional Perspective"
 date:       2026-01-02
 author:     "Shicong Liu"

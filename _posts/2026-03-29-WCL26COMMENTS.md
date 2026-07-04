@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      "WCL'26 补充说明<br>Comments and Discussions for WCL'26"
+title:      "WCL'26: 弯曲波束物理层安全<br>WCL'26: Robust and Secure Communication with Bending Beams"
 # subtitle:   "Caustic Beams for Secure Communication"
 date:       2026-03-29
 author:     "Shicong Liu"
