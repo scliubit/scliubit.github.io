@@ -71,22 +71,37 @@ redirect_from:
       opacity: 1;
     }
 
-	.theme-select {
-  		background-color: var(--global-bg-color);
-  		color: var(--global-text-color); 
+		.theme-select {
+	  		background-color: var(--global-bg-color);
+	  		color: var(--global-text-color); 
   		border: 1px solid var(--global-border-color);
   		padding: 2px 5px;
   		border-radius: 4px;
   		font-size: 0.9em;
-  		cursor: pointer;
-  		outline: none;
-  		/* height: 24px; */
-
-  		&:hover {
-    		border-color: var(--global-link-color);
-  		}
-	}
-</style>
+	  		cursor: pointer;
+	  		outline: none;
+	  		/* height: 24px; */
+		}
+		.theme-select:hover {
+			border-color: var(--global-link-color);
+		}
+		.theme-select-wrapper {
+			margin-left: auto;
+			display: flex;
+			align-items: center;
+			justify-content: flex-end;
+			gap: 6px;
+			white-space: nowrap;
+		}
+		.theme-select-label {
+			color: var(--global-text-color);
+		}
+		@media (max-width: 600px) {
+			.theme-select-wrapper {
+				width: 100%;
+			}
+		}
+	</style>
 
 <style>
     p {
@@ -146,20 +161,15 @@ function refreshPage() {
       <button class="refresh-btn" onclick="refreshPage()">Refresh</button>
       <div class="tooltip">Refresh for Updates</div>
 </div>
-<div class="theme-select-wrapper">
-    <select id="theme-selector" class="theme-select" onchange="setStyle(this.value)">
-      <option value="default">Default</option>
-      <option value="air">Air</option>
-      <option value="contrast">Contrast</option>
-      <option value="dirt">Dirt</option>
-      <option value="mint">Mint</option>
-	  <option value="sunrise">Sunrise</option>
-	  <option value="solarized">Solarized</option>
-	  <option value="tidal">Tidal (CVD: R/G)</option>
-	  <option value="coral">Coral (CVD: B/Y)</option>
-	  <option value="slate">Slate (CVD: Mono)</option>
-    </select>
-  </div>
+	<div class="theme-select-wrapper">
+		<span class="theme-select-label">Color Theme</span>
+	    <select id="theme-selector" class="theme-select">
+	      <option value="default">Default</option>
+		  <option value="sunrise">Sunrise</option>
+		  <option value="solarized">Solarized</option>
+		  <option value="tidal">Tidal (CVD: R/G)</option>
+	    </select>
+	  </div>
 </div>
 <br>
 
@@ -439,4 +449,3 @@ Selected publications. <a href="/publications/">More Details</a>
 <div class='center'>
 <a href="https://info.flagcounter.com/4GAt"><img src="https://s01.flagcounter.com/count2/4GAt/bg_FFFFFF/txt_000000/border_CCCCCC/columns_4/maxflags_8/viewers_Countries+and+Regions/labels_0/pageviews_1/flags_0/percent_0/" alt="Flag Counter" border="0"></a>
 </div>
-

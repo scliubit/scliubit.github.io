@@ -2,27 +2,18 @@
    Various functions that we want to use within the template
    ========================================================================== */
 
-// Determine the expected state of the theme toggle, which can be "dark", "light", or
-// "system". Default is "system".
+const allowedStyles = ["default", "sunrise", "solarized", "tidal"];
+const prefersDarkQuery = window.matchMedia("(prefers-color-scheme: dark)");
 
-let getStoredStyle = () => localStorage.getItem("style");
+let normalizeStyle = (style) => allowedStyles.includes(style) ? style : "default";
+let getStoredStyle = () => normalizeStyle(localStorage.getItem("style"));
 
 // set style
 let setStyle = (style) => {
-  // If the style is not recognized, default to "default"
-  if (!style || style === "default") {
-    $("html").attr("data-style", style);
-    localStorage.setItem("style", style);
-    // $("html").removeAttr("data-style");
-    // localStorage.removeItem("style");
-    // Synchronize the dropdown display (to prevent the dropdown state from being incorrect after the user clears the cache)
-    $("#theme-selector").val("default");
-  } else {
-    $("html").attr("data-style", style);
-    localStorage.setItem("style", style);
-    // Synchronize the dropdown display
-    $("#theme-selector").val(style);
-  }
+  const selectedStyle = normalizeStyle(style);
+  $("html").attr("data-style", selectedStyle);
+  localStorage.setItem("style", selectedStyle);
+  $("#theme-selector").val(selectedStyle);
 };
 
 let determineThemeSetting = () => {
@@ -37,73 +28,36 @@ let determineComputedTheme = () => {
   if (themeSetting != "system") {
     return themeSetting;
   }
-  return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+  return prefersDarkQuery.matches ? "dark" : "light";
 };
 
-// detect OS/browser preference
-const browserPref = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-
-// Set the theme on page load or when explicitly called
-let setTheme = (theme) => {
-  const use_theme =
-    theme ||
-    localStorage.getItem("theme") ||
-    $("html").attr("data-theme") ||
-    browserPref;
-
-  if (use_theme === "dark") {
+let applyTheme = (theme) => {
+  if (theme === "dark") {
     $("html").attr("data-theme", "dark");
     $("#theme-icon").removeClass("fa-sun").addClass("fa-moon");
-  } else if (use_theme === "light") {
+  } else {
     $("html").removeAttr("data-theme");
     $("#theme-icon").removeClass("fa-moon").addClass("fa-sun");
   }
+};
+
+// Set the theme on page load or when explicitly called
+let setTheme = (theme) => {
   if (theme) {
-    localStorage.setItem("theme", theme);
+    if (theme === "system") {
+      localStorage.removeItem("theme");
+    } else if (theme === "dark" || theme === "light") {
+      localStorage.setItem("theme", theme);
+    }
   }
+  applyTheme(determineComputedTheme());
 };
 
 // Toggle the theme manually
 var toggleTheme = () => {
-  const current_theme = $("html").attr("data-theme");
-  const new_theme = current_theme === "dark" ? "light" : "dark";
-  localStorage.setItem("theme", new_theme);
+  const new_theme = determineComputedTheme() === "dark" ? "light" : "dark";
   setTheme(new_theme);
 };
-
-/* ==========================================================================
-   Plotly integration script so that Markdown codeblocks will be rendered
-   ========================================================================== */
-
-// Read the Plotly data from the code block, hide it, and render the chart as new node. This allows for the 
-// JSON data to be retrieve when the theme is switched. The listener should only be added if the data is 
-// actually present on the page.
-import { plotlyDarkLayout, plotlyLightLayout } from './theme.js';
-let plotlyElements = document.querySelectorAll("pre>code.language-plotly");
-if (plotlyElements.length > 0) {
-  document.addEventListener("readystatechange", () => {
-    if (document.readyState === "complete") {
-      plotlyElements.forEach((elem) => {
-        // Parse the Plotly JSON data and hide it
-        var jsonData = JSON.parse(elem.textContent);
-        elem.parentElement.classList.add("hidden");
-
-        // Add the Plotly node
-        let chartElement = document.createElement("div");
-        elem.parentElement.after(chartElement);
-
-        // Set the theme for the plot and render it
-        const theme = (determineComputedTheme() === "dark") ? plotlyDarkLayout : plotlyLightLayout;
-        if (jsonData.layout) {
-          jsonData.layout.template = (jsonData.layout.template) ? { ...theme, ...jsonData.layout.template } : theme;
-        } else {
-          jsonData.layout = { template: theme };
-        }
-        Plotly.react(chartElement, jsonData.data, jsonData.layout);
-      });
-    }
-  });
-}
 
 /* ==========================================================================
    Actions that should occur when the page has been fully loaded
@@ -121,25 +75,14 @@ $(document).ready(function () {
 
     $('#theme-toggle').on('click', toggleTheme);
 
-    window.matchMedia('(prefers-color-scheme: dark)').addEventListener("change", (e) => {
-    if (!localStorage.getItem("theme")) {
-      setTheme(e.matches ? "dark" : "light");
-    }});
+    prefersDarkQuery.addEventListener("change", () => {
+      if (determineThemeSetting() === "system") {
+        setTheme();
+      }
+    });
   // SCSS SETTINGS - These should be the same as the settings in the relevant files 
   const scssLarge = 925;          // pixels, from /_sass/_themes.scss
   const scssMastheadHeight = 70;  // pixels, from the current theme (e.g., /_sass/theme/_default.scss)
-
-  // If the user hasn't chosen a theme, follow the OS preference
-//   setTheme();
-//   window.matchMedia('(prefers-color-scheme: dark)')
-//         .addEventListener("change", (e) => {
-//           if (!localStorage.getItem("theme")) {
-//             setTheme(e.matches ? "dark" : "light");
-//           }
-//         });
-
-  // Enable the theme toggle
-//   $('#theme-toggle').on('click', toggleTheme);
 
   // Enable the sticky footer
   var bumpIt = function () {
