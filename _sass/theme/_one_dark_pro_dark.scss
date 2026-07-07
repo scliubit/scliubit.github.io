@@ -1,0 +1,47 @@
+/* ==========================================================================
+   ONE DARK PRO THEME - DARK VERSION
+   Based on the One Dark Pro palette.
+   ========================================================================== */
+
+html[data-style="one-dark-pro"][data-theme="dark"] {
+  $primary-color   : #61afef;
+  $background      : #282c34;
+  $background-light: #2c313a;
+  $background-lighter: #3e4451;
+  $text            : #abb2bf;
+  $text-muted      : #7f848e;
+  $link            : #61afef;
+  $link-hover      : #98c379;
+  $link-visited    : #c678dd;
+  $footer          : #21252b;
+  $border          : #3e4451;
+  $border-dark     : #5c6370;
+
+  $danger-color    : #e06c75;
+  $info-color      : #56b6c2;
+  $success-color   : #98c379;
+  $warning-color   : #d19a66;
+
+  --global-base-color                 : #{$primary-color};
+  --global-bg-color                   : #{$background};
+  --global-footer-bg-color            : #{$footer};
+  --global-border-color               : #{$border};
+  --global-dark-border-color          : #{$border-dark};
+  --global-code-background-color      : #{$footer};
+  --global-code-text-color            : #{$text};
+  --global-fig-caption-color          : #{$text-muted};
+  --global-link-color                 : #{$link};
+  --global-link-color-hover           : #{$link-hover};
+  --global-link-color-visited         : #{$link-visited};
+  --global-masthead-link-color        : #{$text};
+  --global-masthead-link-color-hover  : #{$link};
+  --global-text-color                 : #{$text};
+  --global-text-color-light           : #{$text-muted};
+  --global-thead-color                : #{$background-lighter};
+  --global-footnote-color             : #{$danger-color};
+  --global-quote-background-color     : #{mix($background, $warning-color, 85%)};
+  --global-quote-border-color         : #{$warning-color};
+  --global-info-color                 : #{$info-color};
+  --global-success-color              : #{$success-color};
+  --global-warning-color              : #{$warning-color};
+}

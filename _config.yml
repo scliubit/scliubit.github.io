@@ -8,7 +8,7 @@
 
 # Basic Site Settings
 locale                   : "en-US"
-site_theme               : "default" # Available color themes: "default", "sunrise", "solarized", and "tidal"
+site_theme               : "default" # Available color themes: "default", "sunrise", "solarized", "tidal", and "one-dark-pro"
 title                    : "Shicong's Homepage"
 title_separator          : "-"
 name                     : &name "Shicong LIU"

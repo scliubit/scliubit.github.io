@@ -11,20 +11,11 @@ main:
   - title: "News"
     url: /#news
 
-  - title: "Education"
-    url: /#education
+  - title: "Research"
+    url: /#research
 
   - title: "Publications"
     url: /#publications
-
-  - title: "Services"
-    url: /#services
-
-  - title: "Awards"
-    url: /#awards-and-honors
-
-  # - title: "|"
-  #   url: /#awards-and-honors
 
   # - title: "Talks"
   #   url: /talks/    

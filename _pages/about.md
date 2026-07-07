@@ -13,18 +13,9 @@ redirect_from:
 </style>
 
 <style type="text/css">
-	.someClass {
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: space-between;
-	}
-	.someClass > div:last-child {
-		margin-left: auto;
-	}
-
-	.content-container {
-      display: flex;
-      align-items: center;
+		.content-container {
+	      display: flex;
+	      align-items: center;
       gap: 10px; 
       flex-wrap: wrap; 
     }
@@ -71,48 +62,149 @@ redirect_from:
       opacity: 1;
     }
 
-		.theme-select {
-	  		background-color: var(--global-bg-color);
-	  		color: var(--global-text-color); 
-  		border: 1px solid var(--global-border-color);
-  		padding: 2px 5px;
-  		border-radius: 4px;
-  		font-size: 0.9em;
-	  		cursor: pointer;
-	  		outline: none;
-	  		/* height: 24px; */
-		}
-		.theme-select:hover {
-			border-color: var(--global-link-color);
-		}
-		.theme-select-wrapper {
-			margin-left: auto;
-			display: flex;
-			align-items: center;
-			justify-content: flex-end;
-			gap: 6px;
-			white-space: nowrap;
-		}
-		.theme-select-label {
-			color: var(--global-text-color);
-		}
-		@media (max-width: 600px) {
-			.theme-select-wrapper {
-				width: 100%;
-			}
-		}
+    .theme-select {
+      background-color: var(--global-bg-color);
+      color: var(--global-text-color);
+      border: 1px solid var(--global-border-color);
+      padding: 2px 5px;
+      border-radius: 4px;
+      font-size: 1em;
+      cursor: pointer;
+      outline: none;
+      /* height: 24px; */
+    }
+    .theme-select:hover {
+      border-color: var(--global-link-color);
+    }
+    .theme-select-wrapper {
+      margin-left: auto;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 6px;
+      white-space: nowrap;
+    }
+    .theme-select-label {
+      color: var(--global-text-color);
+    }
+    @media (max-width: 430px) {
+      .theme-select-wrapper {
+        width: 100%;
+      }
+    }
 	</style>
 
 <style>
-    p {
-        text-align: justify;
-        text-justify: inter-word;
-    }
-    .accent { color: var(--global-footnote-color); }
-    .muted  { color: var(--global-text-color-light); }
+	    html {
+	      scroll-padding-top: 5rem;
+	    }
+	    p {
+	        text-align: justify;
+	        text-justify: inter-word;
+	    }
+	    .accent { color: var(--global-footnote-color); }
+	    .muted  { color: var(--global-text-color-light); }
+	    .research-grid {
+	      display: grid;
+	      grid-template-columns: 1fr;
+	      gap: 22px;
+	      margin: 1.5rem 0 4rem;
+	    }
+	    #news {
+	      padding-top: 5rem;
+	      margin-top: -5rem;
+	      scroll-margin-top: 5rem;
+	    }
+	    #research,
+	    #publications,
+	    #stats {
+	      padding-top: 7rem;
+	      margin-top: -4rem;
+	      scroll-margin-top: 6rem;
+	    }
+	    .page__content a.research-card,
+	    .page__content a.research-card:hover {
+	      text-decoration: none;
+	    }
+	    .research-card {
+	      display: grid;
+	      grid-template-columns: minmax(220px, 38%) 1fr;
+	      min-height: 230px;
+	      overflow: hidden;
+	      border: 1px solid var(--global-border-color);
+	      border-radius: 8px;
+	      background: var(--global-bg-color);
+	      color: var(--global-text-color);
+	      text-decoration: none;
+	      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+	      transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+	    }
+	    .research-card:hover {
+	      transform: translateY(-2px);
+	      border-color: var(--global-link-color);
+	      box-shadow: 0 8px 22px rgba(0, 0, 0, 0.08);
+	    }
+	    .research-card__image {
+	      width: 100%;
+	      height: 100%;
+	      min-height: 220px;
+	      aspect-ratio: 16 / 9;
+	      object-fit: contain;
+	      box-sizing: border-box;
+	      padding: 12px;
+	      background: var(--global-code-background-color);
+	      border-right: 1px solid var(--global-border-color);
+	    }
+	    .research-card__body {
+	      display: flex;
+	      flex-direction: column;
+	      justify-content: center;
+	      padding: 1.1rem 1.2rem;
+	    }
+	    .research-card__title {
+	      margin: 0 0 0.45rem;
+	      color: var(--global-text-color);
+	      font-size: 1.08rem;
+	      line-height: 1.35;
+	    }
+	    .research-card__summary {
+	      margin: 0;
+	      color: var(--global-text-color);
+	      font-size: 0.9rem;
+	      line-height: 1.5;
+	      text-align: left;
+	    }
+	    .research-card__tags {
+	      display: flex;
+	      flex-wrap: wrap;
+	      gap: 6px;
+	      margin-top: 0.7rem;
+	    }
+	    .research-card__tags span {
+	      border: 1px solid var(--global-border-color);
+	      border-radius: 999px;
+	      padding: 1px 7px;
+	      color: var(--global-text-color-light);
+	      font-size: 0.72rem;
+	      line-height: 1.6;
+	    }
+	    @media (max-width: 700px) {
+	      .research-card {
+	        grid-template-columns: 1fr;
+	      }
+	      .research-card__image {
+	        height: auto;
+	        min-height: 0;
+	        border-right: 0;
+	        border-bottom: 1px solid var(--global-border-color);
+	      }
+	      .research-card__body {
+	        justify-content: flex-start;
+	      }
+	    }
 
-    .news-section ul {
-      list-style: none;
+	    .news-section ul {
+	      list-style: none;
       padding-left: 5.5em;
       margin-left: 0;
     }
@@ -125,7 +217,6 @@ redirect_from:
       font-size: 0.9em;
       margin-right: 0.4em;
     }
-
     ol.publications {
       list-style: none;
       padding-left: 0;
@@ -139,7 +230,8 @@ redirect_from:
       font-size: 0.9em;
       margin-right: 0.3em;
     }
-</style>
+
+	</style>
 
 <script>
 function refreshPage() {
@@ -157,16 +249,17 @@ function refreshPage() {
 <div class="content-container" style="font-size:0.8em;">
 <!-- <img src="https://img.shields.io/github/actions/workflow/status/scliubit/scliubit.github.io/google_citation.yml?branch=main&logo=github" height="50px"> -->
 <img src="https://img.shields.io/github/last-commit/scliubit/scliubit.github.io?logo=github" height="50px">
-<div class="button-container" style="position: relative; z-index: 0;">
+<div class="button-container" style="position: relative;">
       <button class="refresh-btn" onclick="refreshPage()">Refresh</button>
       <div class="tooltip">Refresh for Updates</div>
 </div>
 	<div class="theme-select-wrapper">
-		<span class="theme-select-label">Color Theme</span>
+		<span class="theme-select-label">Color Theme:</span>
 	    <select id="theme-selector" class="theme-select">
 	      <option value="default">Default</option>
 		  <option value="sunrise">Sunrise</option>
 		  <option value="solarized">Solarized</option>
+		  <option value="one-dark-pro">One Dark Pro</option>
 		  <option value="tidal">Tidal (CVD: R/G)</option>
 	    </select>
 	  </div>
@@ -192,19 +285,19 @@ I received my B.S. and M.S. degree in Electrical Engineering from Beijing Instit
 <li><b><span class="accent">[2026.04]</span></b> Manuscript on <b>near-field optimal movable antenna placement</b> (discrete) accepted by IEEE TWC, available on <a href="https://arxiv.org/abs/2512.21660">arXiv</a> and <a href="https://ieeexplore.ieee.org/document/11501185">IEEE</a>. Toy demo available <a href="./demo.html">here</a>.</li>
 <li><b><span class="accent">[2026.03]</span></b> Manuscript on <b>near-field optimal movable antenna placement</b> (continuous) accepted by IEEE TWC, available on <a href="https://arxiv.org/abs/2508.01201">arXiv</a> and <a href="https://ieeexplore.ieee.org/document/11466358">IEEE</a>.</li>
 <li><b><span class="accent">[2026.03]</span></b> Awarded Outstanding Master's Thesis of 2025 by the Chinese Institute of Electronics (CIE).</li>
-<li><b><span class="accent">[2026.02]</span></b> Themes and Dark Modes (beta) are now available! Select the theme you like from the dropdown menu above, or click the top-right button to toggle between light and dark modes.</li>
 <li><b><span class="accent">[2026.02]</span></b> Nominated as 2025 <a href="https://www.comsoc.org/publications/journals/ieee-wcl/reviewer-appreciation" target="_blank">Exemplary Reviewer</a> of <span style="font-variant-caps: small-caps;">IEEE Wireless Communications Letters</span></li>
 <!-- <li><b><span class="accent">[2026.01]</span></b> New paper submitted to IEEE WCL, available on <a href="https://arxiv.org/abs/2603.24077">arXiv</a>.</li> -->
 <li><b><span class="accent">[2026.01]</span></b> Two conference papers accepted by ICASSP'26 and ICC'26. Available online: <a href="https://ieeexplore.ieee.org/document/11463842">ICASSP'26</a>, <a href="/files/icc26.pdf">ICC'26</a>.</li>
 <!-- <li><b><span class="accent">[2025.12]</span></b> New paper submitted to IEEE TWC, available on <a href="https://arxiv.org/abs/2512.21660">arXiv</a>. Toy demo available <a href="./demo.html">here</a>.</li> -->
 <!-- <li><b><span class="accent">[2025.12]</span></b> Comments and discussions for TWC'25 are released. See <a href="/posts/TWC25COMMENTS/">here</a> for more info.</li> -->
 <li><b><span class="accent">[2025.10]</span></b> New paper submitted to IEEE ICC. Journal Version available on <a href="https://arxiv.org/abs/2512.21660">arXiv</a>.</li>
-<li><b><span class="muted">[2025.05]</span></b> An errata for JSAC'25 was released. See <a href="/posts/JSAC25ERRATA/">here</a> for more info.</li>
 
 </ul>
 
 <details><summary>More News</summary>
 <ul>
+<li><b><span class="accent">[2026.02]</span></b> Themes and Dark Modes (beta) are now available! Select the theme you like from the dropdown menu above, or click the top-right button to toggle between light and dark modes.</li>
+<li><b><span class="muted">[2025.05]</span></b> An errata for JSAC'25 was released. See <a href="/posts/JSAC25ERRATA/">here</a> for more info.</li>
 <li><b><span class="accent">[2024.12]</span></b> Nominated as 2024 <a href="https://www.comsoc.org/publications/journals/ieee-comml/reviewer-and-editor-appreciation" target="_blank">Exemplary Reviewer</a> of <span style="font-variant-caps: small-caps;">IEEE Communications Letters</span></li>
 <li><b><span class="accent">[2024.11]</span></b> One coauthored <a href="https://www.nature.com/articles/s41467-024-54168-3" target="_blank">article</a> was accepted by <b>Nature Communications</b></li>
 <li><b><span class="muted">[2024.11]</span></b> Albums and Posts now support multiple languages :-P</li>
@@ -217,11 +310,45 @@ I received my B.S. and M.S. degree in Electrical Engineering from Beijing Instit
 </div>
 
 
-# Education
+# Research
 
-- <div class="someClass"><div>Ph.D. in Electronic Engineering, City University of Hong Kong</div><div>2023-2027&nbsp;(est.)</div></div>
-- <div class="someClass"><div>M.S. in Communications Engineering, Beijing Institute of Technology</div><div>2020-2023</div></div>
-- <div class="someClass"><div>B.S. in Electrical Engineering, Beijing Institute of Technology</div><div>2016-2020</div></div>
+<div class="research-grid">
+  <a class="research-card" href="/posts/WCL26COMMENTS/">
+    <img class="research-card__image" src="/images/in-post/caustic26/beamvis.png" alt="Bending Beam Visualization">
+    <div class="research-card__body">
+      <h2 class="research-card__title">Bending Beams For Secure Links</h2>
+      <p class="research-card__summary">Caustic beamforming shapes bending beams that follow curved trajectories, creating controllable non-line-of-sight secure regions and suppressing unintended receivers in the near field.</p>
+      <div class="research-card__tags"><span>Near-Field</span><span>Security</span><span>Caustics</span><span>Beamforming</span></div>
+    </div>
+  </a>
+
+  <a class="research-card" href="/posts/ICC_TWC26/">
+    <img class="research-card__image" src="/images/in-post/icc26/sysmod.png" alt="Movable Antenna System Model">
+    <div class="research-card__body">
+      <h2 class="research-card__title">Movable Antenna Placement</h2>
+      <p class="research-card__summary">Movable antennas are placed through electrostatic-equilibrium-inspired updates, turning discrete near-field placement into a structured optimization problem with low-complexity geometry.</p>
+      <div class="research-card__tags"><span>Movable Antenna</span><span>Optimization</span><span>Near-Field</span><span>Geometry</span></div>
+    </div>
+  </a>
+
+  <a class="research-card" href="/posts/TWC25COMMENTS/">
+    <img class="research-card__image" src="/images/in-post/twc25/fig2.png" alt="Optimal Antenna Density Illustration">
+    <div class="research-card__body">
+      <h2 class="research-card__title">Optimal Antenna Density</h2>
+      <p class="research-card__summary">Continuous antenna density design is treated as a functional optimization problem, revealing how aperture resources should concentrate across massive movable antenna systems.</p>
+      <div class="research-card__tags"><span>Functional Analysis</span><span>Density Design</span><span>Aperture</span><span>MIMO</span></div>
+    </div>
+  </a>
+
+  <a class="research-card" href="/posts/ICC24/">
+    <img class="research-card__image" src="/images/in-post/dpss/alg.png" alt="DPSS Channel Estimation Algorithm">
+    <div class="research-card__body">
+      <h2 class="research-card__title">Near-Field Channel Estimation</h2>
+      <p class="research-card__summary">Discrete prolate spheroidal sequences provide compact sparse dictionaries for near-field channels, reducing training overhead while preserving the dominant spatial structure.</p>
+      <div class="research-card__tags"><span>DPSS</span><span>Channel Estimation</span><span>Sparse Dictionary</span><span>Near-Field</span></div>
+    </div>
+  </a>
+</div>
 
 
 # Publications
@@ -390,40 +517,6 @@ Selected publications. <a href="/publications/">More Details</a>
 	{% endif %}
 {% endfor %}
 </ol>
-
-# Services
-
-
-## Academics
-
-- **TPC Member**, <i>Wireless Communication</i>, IEEE ICC'26, Glasgow, Scotland, UK.
-- **Session Chair**, <i>Antenna and Smart Antenna</i>, IEEE Globecom'24, Cape Town, South Africa.
-- **Session Chair**, <i>Mobile and Wireless Networks</i>, IEEE/CIC ICCC'23, Dalian, China.
-- **Peer Reviewer**, IEEE ComSoc Journals and Conferences.
-
-## Teaching
-
-- **Teaching Assistant**
-	- <div class="someClass"><div>EE3009: Data Commun. and Networking, City University of Hong Kong</div><div>2026 Spring</div></div>
-	- <div class="someClass"><div>EE3008: Principles of Communications, City University of Hong Kong</div><div>2024&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Fall</div></div>
-	- <div class="someClass"><div>EE3008: Principles of Communications, City University of Hong Kong</div><div>2024 Spring</div></div>
-	- <div class="someClass"><div>EE3008: Principles of Communications, City University of Hong Kong</div><div>2023&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Fall</div></div>
-	- <div class="someClass"><div>Innovation and Entrepreneurship, Beijing Institute of Technology</div><div>2023 Spring</div></div>
-	- <div class="someClass"><div>Frontiers of Communication Technology, Beijing Institute of Technology</div><div>2022 Spring</div></div>
-
-# Awards and Honors
-
-- <div class="someClass"><div>2025 Exemplary Reviewer of <span style="font-variant-caps: small-caps;">IEEE Wireless Communications Letters</span></div><div>2026</div></div>
-- <div class="someClass"><div>2024 Exemplary Reviewer of <span style="font-variant-caps: small-caps;">IEEE Communications Letters</span></div><div>2025</div></div>
-- <div class="someClass"><div>CityU Academic Excellence and QE Award</div><div>2024</div></div>
-- <div class="someClass"><div>Entrance Fellowship of CityU Graduate School</div><div>2023</div></div>
-- <div class="someClass"><div>Beijing Municipal Outstanding Master Graduate</div><div>2023</div></div>
-- <div class="someClass"><div>Hong Kong Ph.D. Fellowship Scheme (HKPFS) Awardee</div><div>2023</div></div>
-- <div class="someClass"><div>2021 Outstanding Student</div><div>2021</div></div>
-- <div class="someClass"><div>2021 National Scholarship (~2.5%) for Graduate Students</div><div>2021</div></div>
-- <div class="someClass"><div>2020 National Scholarship (~2.5%) for Graduate Students</div><div>2020</div></div>
-- <div class="someClass"><div>Meritorious Winner (~7%) in Mathematical Contest in Modeling (MCM)</div><div>2019</div></div>
-- <div class="someClass"><div>1st place in National Undergraduate Algorithmic Game Theory Championship</div><div>2018</div></div>
 
 
 

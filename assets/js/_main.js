@@ -2,7 +2,7 @@
    Various functions that we want to use within the template
    ========================================================================== */
 
-const allowedStyles = ["default", "sunrise", "solarized", "tidal"];
+const allowedStyles = ["default", "sunrise", "solarized", "tidal", "one-dark-pro"];
 const prefersDarkQuery = window.matchMedia("(prefers-color-scheme: dark)");
 
 let normalizeStyle = (style) => allowedStyles.includes(style) ? style : "default";
@@ -35,9 +35,11 @@ let applyTheme = (theme) => {
   if (theme === "dark") {
     $("html").attr("data-theme", "dark");
     $("#theme-icon").removeClass("fa-sun").addClass("fa-moon");
+    $("#theme-toggle .theme-toggle").attr("aria-pressed", "true");
   } else {
     $("html").removeAttr("data-theme");
     $("#theme-icon").removeClass("fa-moon").addClass("fa-sun");
+    $("#theme-toggle .theme-toggle").attr("aria-pressed", "false");
   }
 };
 
