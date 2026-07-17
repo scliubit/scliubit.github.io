@@ -105,9 +105,9 @@ redirect_from:
 	    .accent { color: var(--global-footnote-color); }
 	    .muted  { color: var(--global-text-color-light); }
 	    .research-grid {
-	      display: grid;
-	      grid-template-columns: 1fr;
-	      gap: 22px;
+	      display: flex;
+	      flex-direction: column;
+	      gap: 0;
 	      margin: 1.5rem 0 4rem;
 	    }
 	    #news {
@@ -128,49 +128,67 @@ redirect_from:
 	    }
 	    .research-card {
 	      display: grid;
-	      grid-template-columns: minmax(220px, 38%) 1fr;
-	      min-height: 230px;
-	      overflow: hidden;
-	      border: 1px solid var(--global-border-color);
-	      border-radius: 8px;
-	      background: var(--global-bg-color);
+	      grid-template-columns: 204px minmax(0, 1fr);
+	      gap: 18px;
+	      align-items: start;
+	      min-height: 0;
+	      padding: 16px 0;
+	      border: 0;
+	      border-top: 1px solid var(--global-border-color);
+	      border-radius: 0;
+	      background: transparent;
 	      color: var(--global-text-color);
 	      text-decoration: none;
-	      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
-	      transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+	      box-shadow: none;
+	    }
+	    .research-card:first-child {
+	      padding-top: 2px;
+	      border-top: 0;
 	    }
 	    .research-card:hover {
-	      transform: translateY(-2px);
-	      border-color: var(--global-link-color);
-	      box-shadow: 0 8px 22px rgba(0, 0, 0, 0.08);
+	      transform: none;
+	      box-shadow: none;
 	    }
 	    .research-card__image {
-	      width: 100%;
-	      height: 100%;
-	      min-height: 220px;
-	      aspect-ratio: 16 / 9;
+	      display: block;
+	      width: 204px;
+	      height: 142px;
+	      min-height: 0;
 	      object-fit: contain;
 	      box-sizing: border-box;
-	      padding: 12px;
+	      padding: 6px;
+	      border: 1px solid var(--global-border-color);
+	      border-radius: 6px;
 	      background: var(--global-code-background-color);
-	      border-right: 1px solid var(--global-border-color);
+	      transition: transform 0.22s ease, border-color 0.22s ease, box-shadow 0.22s ease;
+	    }
+	    .research-card:hover .research-card__image {
+	      transform: translateY(-2px);
+	      border-color: var(--global-link-color);
+	      box-shadow: 0 16px 40px rgba(41, 52, 61, 0.08);
 	    }
 	    .research-card__body {
 	      display: flex;
 	      flex-direction: column;
-	      justify-content: center;
-	      padding: 1.1rem 1.2rem;
+	      justify-content: flex-start;
+	      min-width: 0;
+	      padding: 0;
 	    }
 	    .research-card__title {
-	      margin: 0 0 0.45rem;
+	      margin: 0 0 0.3rem;
 	      color: var(--global-text-color);
-	      font-size: 1.08rem;
-	      line-height: 1.35;
+	      font-size: 1rem;
+	      font-weight: 600;
+	      line-height: 1.42;
+	      transition: color 0.15s ease;
+	    }
+	    .research-card:hover .research-card__title {
+	      color: var(--global-link-color);
 	    }
 	    .research-card__summary {
 	      margin: 0;
-	      color: var(--global-text-color);
-	      font-size: 0.9rem;
+	      color: var(--global-text-color-light);
+	      font-size: 0.86rem;
 	      line-height: 1.5;
 	      text-align: left;
 	    }
@@ -182,21 +200,25 @@ redirect_from:
 	    }
 	    .research-card__tags span {
 	      border: 1px solid var(--global-border-color);
-	      border-radius: 999px;
-	      padding: 1px 7px;
+	      border-radius: 4px;
+	      padding: 2px 8px;
+	      background: var(--global-code-background-color);
 	      color: var(--global-text-color-light);
-	      font-size: 0.72rem;
-	      line-height: 1.6;
+	      font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+	      font-size: 0.68rem;
+	      line-height: 1.45;
 	    }
 	    @media (max-width: 700px) {
 	      .research-card {
 	        grid-template-columns: 1fr;
+	        gap: 10px;
+	        padding: 17px 0;
 	      }
 	      .research-card__image {
+	        width: 100%;
 	        height: auto;
 	        min-height: 0;
-	        border-right: 0;
-	        border-bottom: 1px solid var(--global-border-color);
+	        aspect-ratio: 16 / 9;
 	      }
 	      .research-card__body {
 	        justify-content: flex-start;
@@ -311,7 +333,7 @@ I received my B.S. and M.S. degree in Electrical Engineering from Beijing Instit
 
 
 # Research
-
+<br>
 <div class="research-grid">
   <a class="research-card" href="/posts/WCL26COMMENTS/">
     <img class="research-card__image" src="/images/in-post/caustic26/beamvis.png" alt="Bending Beam Visualization">
