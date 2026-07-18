@@ -294,18 +294,26 @@ html.home-scroll-offset {
 .news-section {
   ul {
     list-style: none;
-    padding-left: 5.5em;
+    padding-left: 0;
     margin-left: 0;
   }
 
   li {
-    text-indent: -5.05em;
+    padding-left: 5.2em;
     margin-bottom: 0.4em;
+    text-align: justify;
+    text-justify: inter-word;
 
+    /* inline-block keeps the label baseline-aligned with the body text;
+       negative margin pulls it into the padding column.
+       width × font-size must equal padding-left: calc(5.2em / 0.9) × 0.9 = 5.2em */
     > b:first-child {
+      display: inline-block;
+      width: calc(5.2em / 0.9);
+      margin-left: calc(-5.2em / 0.9);
+      vertical-align: baseline;
       font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
       font-size: 0.9em;
-      margin-right: 0.4em;
     }
   }
 }
@@ -316,16 +324,19 @@ ol.publications {
   padding-left: 0;
 
   li {
-    position: relative;
-    padding-left: 2.6em;
+    padding-left: 2.7em;
     text-align: justify;
     text-justify: inter-word;
   }
 }
 
+/* inline-block keeps the number baseline-aligned with the entry text;
+   negative margin pulls it into the padding column (3em × 0.9 font-size = 2.7em) */
 .publications-number {
-  position: absolute;
-  left: 0;
+  display: inline-block;
+  width: 3em;
+  margin-left: -3em;
+  vertical-align: baseline;
   font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
   font-size: 0.9em;
 }
