@@ -1,0 +1,56 @@
+<ol class="publications">
+{% assign sorted_pubs = site.publications | where: "type", include.type | sort: 'date' | reverse %}
+{% for pub in sorted_pubs %}
+  <li>
+    <span class="publications-number">[{{ sorted_pubs.size | minus: forloop.index | plus: 1 }}]</span>
+    {% assign authors = pub.authors | split: ", " %}
+    {% for author in authors %}
+      {% if author == "S. Liu" %}
+        <strong>{{ author }}</strong>{% if forloop.last == false %}, {% endif %}
+      {% elsif author == "X. Yu" %}
+        <i>{{ author }}*</i>{% if forloop.last == false %}, {% endif %}
+      {% else %}
+        {{ author }}{% if forloop.last == false %}, {% endif %}
+      {% endif %}
+    {% endfor %}
+    {% if pub.type == "Conference" %}
+      , "{{ pub.title }}", in <i>{{ pub.venue }}</i>, {{ pub.location }}, {{ pub.date | date: "%b. %Y" }}{% if pub.notes %}, <b><span class="accent">{{ pub.notes }}</span></b>{% endif %}.
+    {% else %}
+      , "{{ pub.title }}", <i>{{ pub.venue }}</i>
+      {% if pub.vol %}
+        , vol. {{ pub.vol }}
+      {% endif %}
+      {% if pub.issue %}
+        , no. {{ pub.issue }}
+      {% endif %}
+      {% if pub.pp %}
+        , pp. {{ pub.pp }}
+      {% endif %}
+      , {{ pub.date | date: "%b. %Y" }}{% if pub.notes %}, <b><span class="accent">{{ pub.notes }}</span></b>{% endif %}.
+    {% endif %}
+    {% if pub.arxiv %}
+      [<a href="{{ pub.arxiv }}" target="_blank" rel="noopener noreferrer">arXiv</a>]
+    {% endif %}
+    {% if pub.paperurl %}
+      [<a href="{{ pub.paperurl }}" target="_blank" rel="noopener noreferrer">Paper</a>]
+    {% endif %}
+    {% if pub.errata %}
+      [<a href="{{ pub.errata }}" target="_blank" rel="noopener noreferrer">Erratum</a>]
+    {% endif %}
+    {% if pub.demo %}
+      [<a href="{{ pub.demo }}" target="_blank" rel="noopener noreferrer"><span class="accent">Demo</span></a>]
+    {% endif %}
+    {% if pub.codes %}
+      [<a href="{{ pub.codes }}" target="_blank" rel="noopener noreferrer"><span class="accent">Codes</span></a>]
+    {% endif %}
+    {% if pub.slidesurl %}
+      [<a href="{{ pub.slidesurl }}" target="_blank" rel="noopener noreferrer">Slides</a>]
+    {% endif %}
+    {% if pub.DOI %}
+      <a href="https://doi.org/{{ pub.DOI }}" target="_blank" rel="noopener noreferrer"><img src="https://zenodo.org/badge/DOI/{{ pub.DOI }}.svg" height="20px"></a>
+      <img src="https://api.juleskreuer.eu/citation-badge.php?doi={{ pub.DOI }}" height="20px">
+    {% endif %}
+    <br>
+  </li>
+{% endfor %}
+</ol>

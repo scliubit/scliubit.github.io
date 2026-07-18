@@ -4,8 +4,13 @@ layout: compress
 
 {% include base_path %}
 
+{% if page.lang == "en" %}
+  {% assign page_lang = "en" %}
+{% else %}
+  {% assign page_lang = "zh-CN" %}
+{% endif %}
 <!doctype html>
-<html lang="zh-CN" class="no-js">
+<html lang="{{ page_lang }}" class="no-js">
 {% include theme-init.html %}
   <head>
     {% include head.html %}

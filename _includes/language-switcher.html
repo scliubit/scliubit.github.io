@@ -1,0 +1,18 @@
+{% comment %}
+  Cross-page bilingual language switcher.
+  Assumes each multilingual post has two files:
+    - Chinese version: lang: zh, translation: /path/to/english-version/
+    - English version: lang: en, translation: /path/to/chinese-version/
+  multilingual: true controls whether this switcher is rendered.
+{% endcomment %}
+
+{% if page.translation %}
+  <div class="language-switcher" role="group" aria-label="Language switcher">
+    <a class="language-switcher__link{% if page.lang == 'zh' %} is-active{% endif %}" href="{% if page.lang == 'en' %}{{ page.translation }}{% else %}{{ page.url }}{% endif %}" role="button"{% if page.lang == 'zh' %} aria-current="page"{% endif %}>
+      <i class="fa-solid fa-language" aria-hidden="true"></i> 中文
+    </a>
+    <a class="language-switcher__link{% if page.lang == 'en' %} is-active{% endif %}" href="{% if page.lang == 'zh' %}{{ page.translation }}{% else %}{{ page.url }}{% endif %}" role="button"{% if page.lang == 'en' %} aria-current="page"{% endif %}>
+      English
+    </a>
+  </div>
+{% endif %}

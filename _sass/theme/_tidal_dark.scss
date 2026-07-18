@@ -63,4 +63,5 @@ html[data-style="tidal"][data-theme="dark"] {
   --global-quote-background-color     : #{mix($background, $cb-orange, 85%)};
   --global-quote-border-color         : #{$cb-orange};
   --global-info-color                 : #{$info-color};
+  --global-shadow-color               : rgba(0, 0, 0, 0.20);
 }

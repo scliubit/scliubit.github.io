@@ -63,6 +63,7 @@ html[data-style="sunrise"] {
     /* Code block colors so fenced blocks match the warm palette */
     --code-bg : #{$background-light};
     --code-border : #{$border};
+    --global-shadow-color : rgba(80, 50, 30, 0.10);
 
     .page__footer-follow .social-icons i,
     .page__footer-follow .social-icons .svg-inline--fa {

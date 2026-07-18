@@ -112,7 +112,7 @@
   </script>
 {% endif %}
 
-{% if site.social %}
+{% if site.social and site.social.links and site.social.links.size > 0 %}
   <script type="application/ld+json">
     {
       "@context" : "http://schema.org",
@@ -136,4 +136,39 @@
 {% if site.yandex_site_verification %}
   <meta name="yandex-verification" content="{{ site.yandex_site_verification }}">
 {% endif %}
+
+{% comment %}
+  Person schema based on site.author. Provides structured data for Google
+  Knowledge Panel / search results.
+{% endcomment %}
+{% if site.author.name %}
+  {% assign same_as = "" %}
+  {% if site.author.googlescholar %}{% assign same_as = same_as | append: site.author.googlescholar %}{% endif %}
+  {% if site.author.orcid %}{% assign same_as = same_as | append: "|" | append: site.author.orcid %}{% endif %}
+  {% if site.author.researchgate %}{% assign same_as = same_as | append: "|" | append: site.author.researchgate %}{% endif %}
+  {% if site.author.github %}{% assign same_as = same_as | append: "|" | append: "https://github.com/" | append: site.author.github %}{% endif %}
+  {% assign same_as_array = same_as | split: "|" %}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": {{ site.author.name | jsonify }},
+    "jobTitle": "Ph.D. Candidate",
+    "worksFor": {
+      "@type": "Organization",
+      "name": {{ site.author.employer | jsonify }},
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Hong Kong",
+        "addressCountry": "HK"
+      }
+    },
+    "email": {{ site.author.email | jsonify }},
+    "url": {{ seo_url | jsonify }},
+    "image": {{ site.author.avatar | prepend: "/images/" | prepend: base_path | prepend: seo_url | jsonify }},
+    "sameAs": {{ same_as_array | jsonify }}
+  }
+  </script>
+{% endif %}
+
 <!-- end SEO -->

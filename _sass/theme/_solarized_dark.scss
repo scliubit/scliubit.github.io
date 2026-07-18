@@ -61,4 +61,5 @@ html[data-style="solarized"][data-theme="dark"] {
     --global-quote-background-color     : #{mix($sol-base03, $sol-yellow, 85%)};
     --global-quote-border-color         : #{$sol-yellow};
     --global-info-color                 : #{$info-color};
+    --global-shadow-color               : rgba(0, 0, 0, 0.20);
 }

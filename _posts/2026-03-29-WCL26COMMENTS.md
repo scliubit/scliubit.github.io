@@ -10,6 +10,8 @@ catalog: true
 mathjax: true
 comment: true
 multilingual: true
+lang: zh
+translation: /posts/WCL26COMMENTS-en/
 hide-in-nav: true
 tags:
     - research

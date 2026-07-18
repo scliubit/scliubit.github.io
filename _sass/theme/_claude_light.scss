@@ -55,4 +55,5 @@ html[data-style="claude"] {
     --global-quote-background-color     : #{mix($claude-cream, $claude-orange, 90%)};
     --global-quote-border-color         : #{mix(#fff, $claude-orange, 20%)};
     --global-info-color                 : #{$info-color};
+    --global-shadow-color               : rgba(60, 50, 40, 0.08);
 }

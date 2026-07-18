@@ -56,7 +56,8 @@ html[data-style="default"][data-theme="dark"] {
     --global-text-color-light           : #f3f3f3;
     --global-thead-color                : #{$background-lighter};
     --global-footnote-color             : #ff5533;
-    --global-quote-background-color     : #3A1F23;
-    --global-quote-border-color         : #{mix(#ffffff, #ff0000, 80%)};
+    --global-quote-background-color     : #263238;
+    --global-quote-border-color         : #4f7782;
+    --global-shadow-color               : rgba(0, 0, 0, 0.20);
 }
 

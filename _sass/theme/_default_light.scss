@@ -44,11 +44,12 @@ html[data-style="default"] {
     --global-masthead-link-color        : #{$dark-gray};
     --global-masthead-link-color-hover  : #{mix(#000, $gray, 25%)};
     --global-text-color                 : #{$dark-gray};
-    --global-text-color-light           : #{$light-gray};
+    --global-text-color-light           : #{mix(#fff, $gray, 10%)};
     --global-thead-color                : #{$lighter-gray};
     --global-footnote-color             : #ff0000;
     --global-quote-background-color     : #{mix(#ffffff, #ff0000, 90%)};
     --global-quote-border-color         : #{mix(#ffffff, #ff0000, 20%)};
     --global-info-color                 : #{$info-color};
+    --global-shadow-color               : rgba(0, 0, 0, 0.08);
 }
 

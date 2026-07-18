@@ -1,14 +1,24 @@
 <script>
   (function() {
     var allowedStyles = ["default", "sunrise", "claude", "tidal", "one-dark-pro"];
-    var style = localStorage.getItem("style");
+    var style;
+    try {
+      style = localStorage.getItem("style");
+    } catch (e) {
+      style = null;
+    }
     if (allowedStyles.indexOf(style) === -1) {
       style = "default";
-      localStorage.setItem("style", style);
+      try { localStorage.setItem("style", style); } catch (e) {}
     }
     document.documentElement.setAttribute("data-style", style);
 
-    var theme = localStorage.getItem("theme");
+    var theme;
+    try {
+      theme = localStorage.getItem("theme");
+    } catch (e) {
+      theme = null;
+    }
     if (theme !== "dark" && theme !== "light" && theme !== "system") {
       theme = "system";
     }
