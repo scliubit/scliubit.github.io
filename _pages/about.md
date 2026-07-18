@@ -280,7 +280,7 @@ function refreshPage() {
 	    <select id="theme-selector" class="theme-select">
 	      <option value="default">Default</option>
 		  <option value="sunrise">Sunrise</option>
-		  <option value="solarized">Solarized</option>
+		  <option value="claude">Claude</option>
 		  <option value="one-dark-pro">One Dark Pro</option>
 		  <option value="tidal">Tidal (CVD: R/G)</option>
 	    </select>

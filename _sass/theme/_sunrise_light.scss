@@ -60,6 +60,10 @@ html[data-style="sunrise"] {
     --global-quote-background-color : #{mix(#ffffff, $primary-color, 80%)};
     --global-quote-border-color : #{mix(#ffffff, $primary-color, 20%)};
 
+    /* Code block colors so fenced blocks match the warm palette */
+    --code-bg : #{$background-light};
+    --code-border : #{$border};
+
     .page__footer-follow .social-icons i,
     .page__footer-follow .social-icons .svg-inline--fa {
         color: inherit;

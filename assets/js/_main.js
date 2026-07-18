@@ -2,7 +2,7 @@
    Various functions that we want to use within the template
    ========================================================================== */
 
-const allowedStyles = ["default", "sunrise", "solarized", "tidal", "one-dark-pro"];
+const allowedStyles = ["default", "sunrise", "claude", "tidal", "one-dark-pro"];
 const prefersDarkQuery = window.matchMedia("(prefers-color-scheme: dark)");
 
 let normalizeStyle = (style) => allowedStyles.includes(style) ? style : "default";

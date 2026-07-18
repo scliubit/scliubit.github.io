@@ -1,0 +1,59 @@
+/* ==========================================================================
+    CLAUDE THEME - DARK VERSION
+    Based on Anthropic's official brand palette, extended for dark mode.
+    Source: https://github.com/anthropics/skills/tree/main/skills/brand-guidelines
+    ========================================================================== */
+
+/* Claude palette */
+$claude-orange            : #D97757;
+$claude-orange-light      : #E88B6A;
+$claude-orange-dark       : mix(#000, $claude-orange-light, 25%);
+$claude-orange-pale       : mix(#fff, $claude-orange-light, 25%);
+$claude-bg                : #1F1F1E;
+$claude-bg-light          : #2A2928;
+$claude-bg-lighter        : #2D2D2C;
+$claude-text              : #E8E6E3;
+$claude-text-muted        : #B0AEA5;
+$claude-border            : #3E3D3A;
+$claude-border-dark       : #4F4E4A;
+
+/* Color codes used for the site */
+$danger-color             : #EF4444;
+$info-color               : $claude-orange-light;
+$notice-color             : $claude-text-muted;
+$success-color            : #34D399;
+$warning-color            : #FBBF24;
+
+/* Other basic settings for the template */
+$border-radius            : 4px;
+$box-shadow               : 0 1px 1px rgba(0, 0, 0, 0.125);
+$global-transition        : all 0.2s ease-in-out;
+$masthead-height          : 70px;
+$navicon-width            : 28px;
+$navicon-height           : 4px;
+$sidebar-link-max-width   : 250px;
+$sidebar-screen-min-width : 1024px;
+
+/* Claude dark theme */
+html[data-style="claude"][data-theme="dark"] {
+    --global-base-color                 : #{$claude-orange-light};
+    --global-bg-color                   : #{$claude-bg};
+    --global-footer-bg-color            : #{$claude-bg-light};
+    --global-border-color               : #{$claude-border};
+    --global-dark-border-color          : #{$claude-border-dark};
+    --global-code-background-color      : #{$claude-bg-lighter};
+    --global-code-text-color            : #{$claude-text};
+    --global-fig-caption-color          : #{$claude-text-muted};
+    --global-link-color                 : #{$claude-orange-light};
+    --global-link-color-hover           : #{$claude-orange-pale};
+    --global-link-color-visited         : #{mix(#fff, $claude-orange-light, 40%)};
+    --global-masthead-link-color        : #{$claude-text};
+    --global-masthead-link-color-hover  : #{$claude-orange-light};
+    --global-text-color                 : #{$claude-text};
+    --global-text-color-light           : #{$claude-text-muted};
+    --global-thead-color                : #{$claude-bg-light};
+    --global-footnote-color             : #{$claude-orange-light};
+    --global-quote-background-color     : #{mix($claude-bg, $claude-orange, 85%)};
+    --global-quote-border-color         : #{mix(#fff, $claude-orange, 80%)};
+    --global-info-color                 : #{$info-color};
+}
