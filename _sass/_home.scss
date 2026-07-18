@@ -316,16 +316,18 @@ ol.publications {
   padding-left: 0;
 
   li {
-    padding-left: 2.5em;
-    text-indent: -2.2em;
-    text-align: left;
+    position: relative;
+    padding-left: 2.6em;
+    text-align: justify;
+    text-justify: inter-word;
   }
 }
 
 .publications-number {
+  position: absolute;
+  left: 0;
   font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
   font-size: 0.9em;
-  margin-right: 0.3em;
 }
 
 /* Stats section - scoped to homepage to avoid overriding post figure widths */

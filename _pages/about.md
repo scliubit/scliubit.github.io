@@ -102,8 +102,8 @@ I am a Ph.D. candidate at the City University of Hong Kong, supervised by <a hre
 </div>
 
 <div class="center">
-<p class="research-more" style="margin-top: 3cm;">
-<a href="/year-archive/"><span class="accent">All Research →</span></a>
+<p class="research-more" style="margin-top: 1cm;">
+<a href="/year-archive/"><span class="accent">Find Out More →</span></a>
 </p>
 </div>
 
