@@ -172,6 +172,9 @@ header p {
 .upcoming-card.imminent .countdown .days { color: var(--imminent); }
 .upcoming-card.upcoming-warn .countdown .days { color: var(--upcoming); }
 .upcoming-card.future .countdown .days { color: var(--future); }
+.upcoming-card.past { opacity: 0.75; }
+.upcoming-card.past .countdown .days { color: var(--past); }
+.upcoming-card.past .info .name { color: var(--text2); }
 
 /* Legend */
 .legend {
@@ -200,8 +203,13 @@ header p {
   border: 1px solid var(--border);
   border-radius: 14px;
   box-shadow: var(--shadow);
-  overflow: hidden;
+  overflow-x: auto;
   margin-bottom: 2rem;
+}
+/* Keep the chart readable on narrow screens: the inner content keeps a
+   minimum width and the wrapper scrolls horizontally instead. */
+.gantt-inner {
+  min-width: 700px;
 }
 .gantt-header {
   display: flex;
@@ -241,10 +249,6 @@ header p {
 .gantt-month-header.current-month {
   color: var(--today);
   font-weight: 800;
-}
-.gantt-body {
-  max-height: 600px;
-  overflow-y: auto;
 }
 .gantt-row {
   display: flex;
@@ -451,7 +455,7 @@ header p {
 <div class="container">
   <header>
     <h1>Conference Deadline Timeline</h1>
-    <p>Communications & Signal Processing Conference Deadlines &middot; Data updated Jun. 2026</p>
+    <p>Communications & Signal Processing Conference Deadlines &middot; Data updated Aug. 2026</p>
   </header>
 
   <div class="controls">
@@ -476,11 +480,13 @@ header p {
   </div>
 
   <div class="gantt-wrapper">
-    <div class="gantt-header">
-      <div class="gantt-label-col">Conference</div>
-      <div class="gantt-months" id="ganttMonths"></div>
+    <div class="gantt-inner">
+      <div class="gantt-header">
+        <div class="gantt-label-col">Conference</div>
+        <div class="gantt-months" id="ganttMonths"></div>
+      </div>
+      <div class="gantt-body" id="ganttBody"></div>
     </div>
-    <div class="gantt-body" id="ganttBody"></div>
   </div>
 
   <div class="table-section">
@@ -524,12 +530,12 @@ function fracPct(f) { return f === null ? null : (f / 12) * 100; }
 
 const DATA = {
   2027: [
-    { name: "ISIT'27", ddl: 1, conf: 7, cs: [6, 27], ce: [7, 2], loc: "Sorrento, Italy", url: "https://2027.ieee-isit.org/", next: false, dates: "Jun. 27 \u2013 Jul. 2" },
+    { name: "ISIT'27", ddl: 1, ddlDay: 10, conf: 7, cs: [6, 27], ce: [7, 2], loc: "Sorrento, Italy", url: "https://2027.ieee-isit.org/", next: false, dates: "Jun. 27 \u2013 Jul. 2" },
     { name: "EuCNC'27", ddl: 2, conf: 6, loc: "TBD", url: "https://www.eucnc.eu/", next: false, dates: "Jun. (TBD)" },
-    { name: "PIMRC'27", ddl: 3, conf: 9, loc: "Lisbon, Portugal", url: "https://pimrc2027.ieee-pimrc.org/", next: false, dates: "Sep. (TBD)" },
+    { name: "VTCFall'27", ddl: 2, ddlDay: 1, conf: 9, cs: [9, 27], ce: [9, 30], loc: "Osaka, Japan", url: "https://events.vtsociety.org/vtc2027-fall/", next: false, dates: "Sep. 27\u201330" },
+    { name: "PIMRC'27", ddl: 3, ddlDay: 12, conf: 9, cs: [9, 7], ce: [9, 10], loc: "Lisbon, Portugal", url: "https://pimrc2027.ieee-pimrc.org/", next: false, dates: "Sep. 7\u201310" },
     { name: "MeditCom'27", ddl: 3, conf: 7, loc: "TBD", url: "", next: false, dates: "Jul. (TBD)" },
-    { name: "MobiCom'27", ddl: 3, conf: 0, loc: "TBD", url: "https://www.sigmobile.org/mobicom/2027/", next: false, dates: "TBD" },
-    { name: "VTCFall'27", ddl: 3, conf: 10, loc: "TBD", url: "https://events.vtsociety.org/vtc2027-fall/", next: false, dates: "Sep./Oct. (TBD)" },
+    { name: "MobiCom'27", ddl: 3, conf: 10, cs: [10, 18], ce: [10, 22], loc: "TBD", url: "https://www.sigmobile.org/mobicom/2027/", next: false, dates: "Oct. 18\u201322" },
     { name: "SPAWC'27", ddl: 3, conf: 0, loc: "TBD", url: "https://2027.ieeespawc.org/", next: false, dates: "TBD" },
     { name: "EUSIPCO'27", ddl: 3, conf: 9, loc: "TBD", url: "https://eurasip.org/events/", next: false, dates: "Sep. (TBD)" },
     { name: "ICCC'27", ddl: 4, conf: 8, loc: "TBD", url: "", next: false, dates: "Aug. (TBD)" },
@@ -561,9 +567,10 @@ const DATA = {
     { name: "INFOCOM'27", ddl: 7, ddlDay: 31, conf: 5, cs: [5, 24], ce: [5, 27], loc: "Honolulu, Hawaii, USA", url: "https://infocom2027.ieee-infocom.org/", next: true, dates: "May 24\u201327" },
     { name: "WCSP'26", ddl: 8, ddlDay: 10, conf: 11, cs: [11, 12], ce: [11, 14], loc: "Shenzhen, China", url: "http://www.ic-wcsp.org/2026/", next: false, dates: "Nov. 12\u201314" },
     { name: "VTCSpring'27", ddl: 9, ddlDay: 1, conf: 6, cs: [6, 20], ce: [6, 23], loc: "Hamburg, Germany", url: "https://events.vtsociety.org/vtc2027-spring/", next: true, dates: "Jun. 20\u201323" },
+    { name: "MobiCom'27", ddl: 9, ddlDay: 2, conf: 10, cs: [10, 18], ce: [10, 22], loc: "TBD", url: "https://www.sigmobile.org/mobicom/2027/", next: true, dates: "Oct. 18\u201322" },
     { name: "WCNC'27", ddl: 9, ddlDay: 15, conf: 4, cs: [4, 5], ce: [4, 8], loc: "Panama City, Panama", url: "https://wcnc2027.ieee-wcnc.org/", next: true, dates: "Apr. 5\u20138" },
     { name: "ICASSP'27", ddl: 9, ddlDay: 16, conf: 5, cs: [5, 16], ce: [5, 21], loc: "Toronto, Canada", url: "https://2027.ieeeicassp.org/", next: true, dates: "May 16\u201321" },
-    { name: "MMSys'27", ddl: 9, conf: 3, loc: "TBD", url: "", next: true, dates: "Mar. (TBD)" },
+    { name: "MMSys'27", ddl: 9, ddlDay: 17, conf: 3, cs: [3, 30], ce: [4, 2], loc: "Ghent, Belgium", url: "https://2027.acmmmsys.org/", next: true, dates: "Mar. 30 \u2013 Apr. 2" },
     { name: "ICC'27", ddl: 10, ddlDay: 2, conf: 6, cs: [5, 30], ce: [6, 3], loc: "Washington, D.C., USA", url: "https://icc2027.ieee-icc.org/", next: true, dates: "May 30 \u2013 Jun. 3" },
     { name: "ICMLCN'27", ddl: 10, conf: 0, loc: "TBD", url: "https://icmlcn2027.ieee-icmlcn.org/", next: true, dates: "TBD" },
   ],
@@ -697,7 +704,8 @@ function buildUpcoming() {
 
   container.innerHTML = upcoming.map(c => {
     const status = getDdlStatus(activeYear, c.ddl);
-    const cls = status === 'imminent' ? 'imminent' : status === 'upcoming' ? 'upcoming-warn' : 'future';
+    // Deadlines that have already passed are shown in grey, never green.
+    const cls = c.days < 0 ? 'past' : status === 'imminent' ? 'imminent' : status === 'upcoming' ? 'upcoming-warn' : 'future';
     const daysText = c.days < 0 ? `${Math.abs(c.days)}d ago` : c.days === 0 ? 'Today' : `${c.days}d`;
     const daysLabel = c.days < 0 ? 'passed' : c.days === 0 ? '' : 'remaining';
     const href = c.url ? `href="${c.url}" target="_blank" rel="noopener"` : '';
