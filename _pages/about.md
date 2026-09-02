@@ -40,7 +40,24 @@ redirect_from:
 
 Hello :-)
 
-I am a Ph.D. candidate at the City University of Hong Kong, supervised by <a href="https://www.ee.cityu.edu.hk/~alexyu/" target="_blank">Prof. Xianghao YU</a>. I received my B.S. and M.S. degrees in Electrical Engineering from Beijing Institute of Technology, supervised by <a href="https://gaozhen16.github.io" target="_blank">Prof. Zhen GAO</a>. My research lies at the intersection of signal processing and wireless communications, with a recent focus on <b>near-field communications</b>, <b>movable antenna systems</b>, and <b>bending caustic beams</b>. I have published some papers at IEEE ComSoc/SPS/VTS conferences and journals with total google scholar citations ~900, and have been nominated as an Exemplary Reviewer by <i>IEEE Commun. Lett.</i> and <i>IEEE Wireless Commun. Lett.</i>
+I am a Ph.D. candidate at the City University of Hong Kong, supervised by <a href="https://www.ee.cityu.edu.hk/~alexyu/" target="_blank">Prof. Xianghao YU</a>. I received my B.S. and M.S. degrees in Electrical Engineering from Beijing Institute of Technology, supervised by <a href="https://gaozhen16.github.io" target="_blank">Prof. Zhen GAO</a>. My research lies at the intersection of signal processing and wireless communications, with a recent focus on <b>near-field communications</b>, <b>movable antenna systems</b>, and <b>bending caustic beams</b>. I have published some papers at IEEE ComSoc/SPS/VTS conferences and journals with total google scholar citations ~1000, and have been nominated as an Exemplary Reviewer by <i>IEEE Commun. Lett.</i> and <i>IEEE Wireless Commun. Lett.</i>
+
+```json
+{
+  base_url: "83 Tat Chee Ave, Yeung G2325, T31",
+  api_key: +85234422100,
+  context_window: up to 1,000 tokens,
+  auto_compact_limit: 5 mins,
+  reasoning: true, 
+  web_search: true,
+  multi_modal: true,
+  pre_train: "Beijing Institute of Technology",
+  post_train: {
+    MS: "Beijing Institute of Technology",
+    PhD: "City University of Hong Kong"
+  }
+}
+```
 
 <!-- I received my B.S. and M.S. degree in Electrical Engineering from Beijing Institute of Technology, Beijing, China, in 2020 and 2023, respectively, under the supervision of <a href="https://gaozhen16.github.io" target="_blank">Prof. Zhen GAO</a>. I am currently a Ph.D. candidate at the City University of Hong Kong, Hong Kong SAR, under the supervision of <a href="https://www.ee.cityu.edu.hk/~alexyu/" target="_blank">Prof. Xianghao YU</a>. My research interest includes signal processing and wireless communication. I have published some papers at IEEE ComSoc/SPS/VTS conferences and journals with total google scholar citations ~900. -->
 
