@@ -1,8 +1,9 @@
 
 name: Get Citation Data
 
-on: 
- page_build: 
+on:
+ page_build:
+ workflow_dispatch:
  schedule:
   - cron:  '0 8 * * *'
 
@@ -25,7 +26,7 @@ jobs:
         python3 -m pip install pip-system-certs
         python3 -m pip install --upgrade certifi
         export SSL_CERT_FILE=$(python3 -m certifi)
-        python3 main.py
+        python3 main_new.py
         cd ./results
         git init
         git config --local user.name "${GITHUB_ACTOR}"

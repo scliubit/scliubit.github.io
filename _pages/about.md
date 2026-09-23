@@ -68,6 +68,7 @@ I am a Ph.D. candidate at the City University of Hong Kong, supervised by <a hre
 
 <div class="news-section">
 <ul>
+<li><b><span class="accent">[2026.06]</span></b>New article on <b>Diaggregated LLM Inference</b> available on <a href="https://arxiv.org/abs/2609.26763">arXiv</a>.</li>
 <li><b><span class="accent">[2026.09]</span></b>Serve as a TPC member at ICC'27.</li>
 <li><b><span class="accent">[2026.06]</span></b>Released a <b>Conference Deadline Timeline</b> tracking Communications & Signal Processing deadlines. Check it out <a href="./conf-timeline.html">here</a>.</li>
 <li><b><span class="accent">[2026.06]</span></b>New article on <b>bending beam (caustic beamforming)</b> for next-generation wireless systems available on <a href="https://arxiv.org/abs/2606.12321">arXiv</a>.</li>
@@ -79,7 +80,7 @@ I am a Ph.D. candidate at the City University of Hong Kong, supervised by <a hre
 <li><b><span class="accent">[2026.03]</span></b>Manuscript on <b>near-field optimal movable antenna placement</b> (continuous) accepted by IEEE TWC, available on <a href="https://arxiv.org/abs/2508.01201">arXiv</a> and <a href="https://ieeexplore.ieee.org/document/11466358">IEEE</a>.</li>
 <li><b><span class="accent">[2026.03]</span></b>Awarded Outstanding Master's Thesis of 2025 by the Chinese Institute of Electronics (CIE).</li>
 <li><b><span class="accent">[2026.02]</span></b>Nominated as 2025 <a href="https://www.comsoc.org/publications/journals/ieee-wcl/reviewer-appreciation" target="_blank">Exemplary Reviewer</a> of <span style="font-variant-caps: small-caps;">IEEE Wireless Communications Letters</span></li>
-<li><b><span class="accent">[2026.01]</span></b>Two conference papers accepted by ICASSP'26 and ICC'26. Available online: <a href="https://ieeexplore.ieee.org/document/11463842">ICASSP'26</a>, <a href="/files/icc26.pdf">ICC'26</a>.</li>
+<li><b><span class="accent">[2026.01]</span></b>Two conference papers accepted by ICASSP'26 and ICC'26. Available online: <a href="https://ieeexplore.ieee.org/document/11463842">ICASSP'26</a>, <a href="https://ieeexplore.ieee.org/document/11588130">ICC'26</a>.</li>
 
 </ul>
 
