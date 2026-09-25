@@ -61,4 +61,10 @@ html[data-style="sunrise"][data-theme="dark"] {
     --global-quote-background-color : #{mix(#000000, $primary-color, 80%)};
     --global-quote-border-color : #{mix(#000000, $primary-color, 20%)};
     --global-shadow-color : rgba(0, 0, 0, 0.25);
+
+    /* Code block colors: must override the light block's --code-*,
+       which has higher specificity than _vscode_scheme's [data-theme="dark"] */
+    --code-bg : #{$code-bg};
+    --code-fg : #{$text};
+    --code-border : #{$border-dark};
 }

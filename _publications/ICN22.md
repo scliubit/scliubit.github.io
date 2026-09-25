@@ -10,7 +10,6 @@ collection: publications
 category: manuscripts
 # excerpt: 'Channel estimation and signal detection.'
 date: "Mar. 2022"
-arxiv: 'https://arxiv.org/abs/2006.02201'
 # codes: 'https://github.com/scliubit/complex-DnCNN'
 # slidesurl: 'http://academicpages.github.io/files/slides1.pdf'
 paperurl: 'https://ieeexplore.ieee.org/document/9765812'

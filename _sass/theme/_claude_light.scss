@@ -4,37 +4,27 @@
     Source: https://github.com/anthropics/skills/tree/main/skills/brand-guidelines
     ========================================================================== */
 
-/* Claude palette */
-$claude-orange            : #D97757;
-$claude-orange-dark       : mix(#000, $claude-orange, 25%);
-$claude-orange-light      : mix(#fff, $claude-orange, 25%);
-$claude-cream             : #FAF9F5;
-$claude-cream-dark        : #F5F4ED;
-$claude-cream-darker      : #EBEADF;
-$claude-text              : #141413;
-$claude-text-muted        : #B0AEA5;
-$claude-border            : #E8E6DC;
-$claude-border-dark       : #D4D2CA;
-
-/* Color codes used for the site */
-$danger-color             : #DC2626;
-$info-color               : $claude-orange;
-$notice-color             : $claude-text-muted;
-$success-color            : #059669;
-$warning-color            : #D97706;
-
-/* Other basic settings for the template */
-$border-radius            : 4px;
-$box-shadow               : 0 1px 1px rgba(0, 0, 0, 0.125);
-$global-transition        : all 0.2s ease-in-out;
-$masthead-height          : 70px;
-$navicon-width            : 28px;
-$navicon-height           : 4px;
-$sidebar-link-max-width   : 250px;
-$sidebar-screen-min-width : 1024px;
-
 /* Claude light theme */
 html[data-style="claude"] {
+    /* Claude palette (block-scoped to avoid leaking into global scope) */
+    $claude-orange            : #D97757;
+    $claude-orange-dark       : mix(#000, $claude-orange, 25%);
+    $claude-orange-light      : mix(#fff, $claude-orange, 25%);
+    $claude-cream             : #FAF9F5;
+    $claude-cream-dark        : #F5F4ED;
+    $claude-cream-darker      : #EBEADF;
+    $claude-text              : #141413;
+    $claude-text-muted        : #B0AEA5;
+    $claude-border            : #E8E6DC;
+    $claude-border-dark       : #D4D2CA;
+
+    /* Color codes used for the site */
+    $danger-color             : #DC2626;
+    $info-color               : $claude-orange;
+    $notice-color             : $claude-text-muted;
+    $success-color            : #059669;
+    $warning-color            : #D97706;
+
     --global-base-color                 : #{$claude-orange};
     --global-bg-color                   : #{$claude-cream};
     --global-footer-bg-color            : #{$claude-cream-dark};

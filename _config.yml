@@ -168,6 +168,7 @@ exclude:
   - .github
   - .jekyll-assets-cache
   - .sass-cache
+  - abandoned
   - assets/js/_main.js
   - assets/js/plugins
   - assets/js/vendor
@@ -178,10 +179,12 @@ exclude:
   - Gemfile
   - Gruntfile.js
   - gulpfile.js
+  - google_scholar_crawler
   - LICENSE
   - local
   - log
   - node_modules
+  - others
   - package.json*
   - Rakefile
   - README

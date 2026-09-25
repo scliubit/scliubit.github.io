@@ -68,7 +68,7 @@ I am a Ph.D. candidate at the City University of Hong Kong, supervised by <a hre
 
 <div class="news-section">
 <ul>
-<li><b><span class="accent">[2026.06]</span></b>New article on <b>Diaggregated LLM Inference</b> available on <a href="https://arxiv.org/abs/2609.26763">arXiv</a>.</li>
+<li><b><span class="accent">[2026.09]</span></b>New article on <b>Diaggregated LLM Inference</b> available on <a href="https://arxiv.org/abs/2609.26763">arXiv</a>.</li>
 <li><b><span class="accent">[2026.09]</span></b>Serve as a TPC member at ICC'27.</li>
 <li><b><span class="accent">[2026.06]</span></b>Released a <b>Conference Deadline Timeline</b> tracking Communications & Signal Processing deadlines. Check it out <a href="./conf-timeline.html">here</a>.</li>
 <li><b><span class="accent">[2026.06]</span></b>New article on <b>bending beam (caustic beamforming)</b> for next-generation wireless systems available on <a href="https://arxiv.org/abs/2606.12321">arXiv</a>.</li>
