@@ -47,14 +47,14 @@ date: 2025-03-14
 
 <div>
     <img class="postimg" src="/images/album/hassel/503cx.jpeg" width="450px" />
-    <div class="caption">500cx 内部与机身外壳分离</div>
+    <div class="caption">503cx 内部与机身外壳分离</div>
 </div>
 
 分离后的内部结构相对简洁，比起Pentax和Nikon之类的135画幅机型，哈苏的机械结构甚至都要更加简单，当然这也得益于哈苏的模块化设计思路，许多机构被分散到了镜头和后背上，这样手动维修起来也会更加方便。
 
 <div>
     <img class="postimg" src="/images/album/hassel/inner.jpeg" width="450px" />
-    <div class="caption">500cx 内部主要结构</div>
+    <div class="caption">503cx 内部主要结构</div>
 </div>
 
 这个图是我在拆开的第一时间拍摄的，可以看出第二个齿轮的螺丝根本没有拧紧，这可能是上次维修师傅粗心或不专业导致的。这就是导致我这次卡死的元凶。首先观察机身，边缘露出在机身之外的缺口齿轮实际上说明机身上弦分为两步，前半程主要是过片与部分机构联动，这部分上弦过程并不费力。当缺口部分齿轮转到内部时，后续上弦过程明显更费力，因为此时才是反光板回落、快门弹簧上劲的过程。上弦后释放快门，最外侧露出边缘的齿轮内部的平板弹簧会带动部分机构回转复位，从而准备下一次上弦。一个快门释放的视频可以在[这里](https://www.bilibili.com/video/BV1LfQSYMEPM)找到。
@@ -69,7 +69,7 @@ date: 2025-03-14
 
 <div>
     <img class="postimg" src="/images/album/hassel/spring.jpeg" width="360px" />
-    <div class="caption">500cx 外侧齿轮上的平板弹簧</div>
+    <div class="caption">503cx 外侧齿轮上的平板弹簧</div>
 </div>
 
 当然，看到这一幕是不容易的。更大可能性是，由于上次维修师傅留下的错误，这个弹簧并没有安装到位，所以在打开黑色盖板的一瞬间，这个平板弹簧就会飞出。上图作为一个参考，以防万一有人没能看到弹簧的初始位置。

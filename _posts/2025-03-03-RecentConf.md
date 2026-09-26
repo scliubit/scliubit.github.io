@@ -131,7 +131,7 @@ $${}^{+1}$$ means the conference will be held the year after.
 |         | MobiCom'24   | Nov.          | Washington DC, USA      | [MobiCom'24](https://www.sigmobile.org/mobicom/2024/)        |
 | Apr.    | Globecom'24  | Dec.          | Cape Town, South Africa | [Globecom'24](https://globecom2024.ieee-globecom.org/)       |
 |         | VTCFall'24   | Oct.          | Washington DC, USA      | [VTCFall'24](https://events.vtsociety.org/vtc2024-fall/)     |
-|         | SPAWC'24     | Sept.         | Luca, Italy             | [SPAWC'24](https://spawc2024.org/)                           |
+|         | SPAWC'24     | Sept.         | Lucca, Italy            | [SPAWC'24](https://spawc2024.org/)                           |
 |         | ICCC'24      | Aug.          | Hangzhou, China         | [ICCC'24](https://iccc2024.ieee-iccc.org/)                   |
 | May.    | Asilomar'24  | Oct.          | Pacific Grove, CA, USA  | [Asilomar](https://www.asilomarsscconf.org/)                 |
 | Jun.    | WCSP'24      | Oct.          | Hefei, China            | [WCSP'24](http://www.ic-wcsp.org/2024/)                      |
