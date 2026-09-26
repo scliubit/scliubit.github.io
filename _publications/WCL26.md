@@ -1,5 +1,6 @@
 ---
 authors: "S. Liu, X. Yu, and R. Schober"
+corr: "X. Yu"
 title: "Robust and Secure Near-Field Communication via Curved Caustic Beams"
 type: "Journal"
 venue: "IEEE Wireless Commun. Lett."

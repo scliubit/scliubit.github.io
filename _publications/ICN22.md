@@ -1,5 +1,6 @@
 ---
-authors: "X. Zhou; K. Ying; S. Liu; M. Ke; Z. Gao and M.-S. Alouini"
+authors: "X. Zhou, K. Ying, S. Liu, M. Ke, Z. Gao and M.-S. Alouini"
+corr: "Z. Gao"
 title: "Reconfigurable Intelligent Surface Assisted Grant-Free Massive Access"
 type: "Journal"
 venue: "Intell. Converg. Netw."

@@ -132,6 +132,8 @@ I am a Ph.D. candidate at the City University of Hong Kong, supervised by <a hre
 
 Selected publications. <a href="/publications/">More Details</a>
 
+<strong>Bold</strong> for myself;&nbsp;&nbsp; <i>Italic*</i> for the corresponding author.
+
 ## Journals
 
 {% include publication-list.html type="Journal" %}

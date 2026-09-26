@@ -1,5 +1,6 @@
 ---
 authors: "S. Liu, Z. Gao, C. Hu, S. Tan, L. Fang and L. Qiao"
+corr: "Z. Gao"
 title: "Model-Driven Deep Learning Based Precoding for FDD Cell-Free Massive MIMO with Imperfect CSI"
 type: "Conference"
 venue: "Proc. IEEE International Wireless Communications and Mobile Computing (IWCMC)"

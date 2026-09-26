@@ -1,5 +1,6 @@
 ---
 authors: "S. Liu, X. Yu"
+corr: "X. Yu"
 title: "Low-Complexity Near-Field Localization with XL-MIMO Sectored Uniform Circular Arrays"
 type: "Conference"
 venue: "Proc. IEEE Globecom"

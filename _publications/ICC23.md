@@ -1,5 +1,6 @@
 ---
 authors: "S. Liu, X. Yu, Z. Gao, and D. W. K. Ng"
+corr: "X. Yu"
 title: "DPSS-based dictionary design for near-field XL-MIMO channel estimation"
 type: "Conference"
 venue: "Proc. IEEE Int. Conf. Commun. (ICC)"

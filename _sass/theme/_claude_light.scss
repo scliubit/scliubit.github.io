@@ -41,7 +41,7 @@ html[data-style="claude"] {
     --global-text-color                 : #{$claude-text};
     --global-text-color-light           : #{$claude-text-muted};
     --global-thead-color                : #{$claude-cream-darker};
-    --global-footnote-color             : #{$claude-orange};
+    --global-footnote-color             : #{mix(#ffffff, #ff0000, 10%)};
     --global-quote-background-color     : #{mix($claude-cream, $claude-orange, 90%)};
     --global-quote-border-color         : #{mix(#fff, $claude-orange, 20%)};
     --global-info-color                 : #{$info-color};

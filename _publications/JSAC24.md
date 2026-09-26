@@ -1,5 +1,6 @@
 ---
 authors: "S. Liu, X. Yu, Z. Gao, J. Xu, D. W. K. Ng, and S. Cui"
+corr: "X. Yu"
 title: "Sensing-Enhanced Channel Estimation for Near-Field XL-MIMO Systems"
 type: "Journal"
 venue: "IEEE J. Sel. Areas Commun."

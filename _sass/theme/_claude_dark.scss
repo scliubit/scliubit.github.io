@@ -42,7 +42,7 @@ html[data-style="claude"][data-theme="dark"] {
     --global-text-color                 : #{$claude-text};
     --global-text-color-light           : #{$claude-text-muted};
     --global-thead-color                : #{$claude-bg-light};
-    --global-footnote-color             : #{$claude-orange-light};
+    --global-footnote-color             : #ff6b7f;
     --global-quote-background-color     : #{mix($claude-bg, $claude-orange, 85%)};
     --global-quote-border-color         : #{mix(#fff, $claude-orange, 80%)};
     --global-info-color                 : #{$info-color};

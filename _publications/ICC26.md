@@ -1,5 +1,6 @@
 ---
 authors: "S. Liu, X. Yu"
+corr: "X. Yu"
 title: "Near-Field Line-of-Sight Communication with Massive Movable Antennas"
 type: "Conference"
 venue: "Proc. IEEE ICC"

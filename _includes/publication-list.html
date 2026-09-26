@@ -1,7 +1,19 @@
 <ol class="publications">
-{% assign sorted_pubs = site.publications | where: "type", include.type | sort: 'date' | reverse %}
-{% for pub in sorted_pubs %}
-  <li><span class="publications-number">[{{ sorted_pubs.size | minus: forloop.index | plus: 1 }}]</span>{% assign authors = pub.authors | split: ", " %}{% for author in authors %}{% if author == "S. Liu" %}<strong>{{ author }}</strong>{% elsif author == "X. Yu" %}<i>{{ author }}*</i>{% else %}{{ author }}{% endif %}{% if forloop.last == false %}, {% endif %}{% endfor %}{% if pub.type == "Conference" %}, "{{ pub.title }}", in <i>{{ pub.venue }}</i>, {{ pub.location }}, {{ pub.date | date: "%b. %Y" }}{% if pub.notes %}, <b><span class="accent">{{ pub.notes }}</span></b>{% endif %}.{% else %}, "{{ pub.title }}", <i>{{ pub.venue }}</i>{% if pub.vol %}, vol. {{ pub.vol }}{% endif %}{% if pub.issue %}, no. {{ pub.issue }}{% endif %}{% if pub.pp %}, pp. {{ pub.pp }}{% endif %}, {{ pub.date | date: "%b. %Y" }}{% if pub.notes %}, <b><span class="accent">{{ pub.notes }}</span></b>{% endif %}.{% endif %}
+{% assign pubs = site.publications | where: "type", include.type %}
+{% assign sort_keys = "" %}
+{% for pub in pubs %}
+  {% assign ts = pub.date | date: "%Y%m%d" | plus: 0 %}
+  {% assign inv = 99999999 | minus: ts %}
+  {% assign ord = pub.order | default: 50 | plus: 100 | append: "" | remove_first: "1" %}
+  {% assign idx = forloop.index0 | plus: 100 | append: "" | remove_first: "1" %}
+  {% capture sort_keys %}{{ sort_keys }}{{ inv }}-{{ ord }}-{{ idx }};{% endcapture %}
+{% endfor %}
+{% assign sort_keys = sort_keys | split: ";" | sort %}
+{% for key in sort_keys %}
+  {% assign parts = key | split: "-" %}
+  {% assign idx0 = parts[2] | plus: 0 %}
+  {% assign pub = pubs[idx0] %}
+  <li><span class="publications-number">[{{ pubs.size | minus: forloop.index | plus: 1 }}]</span>{% assign auth = pub.authors %}{% if pub.corr %}{% assign corr_names = pub.corr | replace: ";", "," | split: "," %}{% for name in corr_names %}{% assign cname = name | strip %}{% if cname != "" %}{% capture marked %}<i>{{ cname }}*</i>{% endcapture %}{% assign auth = auth | replace: cname, marked %}{% endif %}{% endfor %}{% endif %}{% assign auth = auth | replace: "S. Liu", "<strong>S. Liu</strong>" %}{{ auth }}{% if pub.type == "Conference" %}, "{{ pub.title }}", in <i>{{ pub.venue }}</i>, {{ pub.location }}, {{ pub.date | date: "%b. %Y" }}{% if pub.notes %}, <b><span class="accent">{{ pub.notes }}</span></b>{% endif %}.{% else %}, "{{ pub.title }}", <i>{{ pub.venue }}</i>{% if pub.vol %}, vol. {{ pub.vol }}{% endif %}{% if pub.issue %}, no. {{ pub.issue }}{% endif %}{% if pub.pp %}, pp. {{ pub.pp }}{% endif %}, {{ pub.date | date: "%b. %Y" }}{% if pub.notes %}, <b><span class="accent">{{ pub.notes }}</span></b>{% endif %}.{% endif %}
     {% if pub.arxiv %}[<a href="{{ pub.arxiv }}" target="_blank" rel="noopener noreferrer">arXiv</a>]{% endif %}
     {% if pub.paperurl %}[<a href="{{ pub.paperurl }}" target="_blank" rel="noopener noreferrer">Paper</a>]{% endif %}
     {% if pub.errata %}[<a href="{{ pub.errata }}" target="_blank" rel="noopener noreferrer">Erratum</a>]{% endif %}

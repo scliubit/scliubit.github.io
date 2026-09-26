@@ -1,5 +1,6 @@
 ---
 authors: "Z. Gao, S. Liu, Y. Su, Z. Li and D. Zheng"
+corr: "Z. Li"
 title: "Hybrid Knowledge-Data Driven Channel Semantic Acquisition and Beamforming for Cell-Free Massive MIMO"
 type: "Journal"
 venue: "IEEE J. Sel. Topics Signal Process."

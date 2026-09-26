@@ -1,5 +1,7 @@
 ---
 authors: "S. Liu, X. Yu, J. Xu and R. Zhang"
+corr: "X. Yu"
+order: 1
 title: "Near-Field Communication with Massive Movable Antennas: A Functional Perspective"
 type: "Journal"
 venue: "IEEE Trans. Wireless Commun."

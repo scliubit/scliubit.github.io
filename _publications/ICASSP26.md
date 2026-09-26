@@ -1,5 +1,6 @@
 ---
 authors: "H. Sun, S. Liu, X. Yu, Y. Sun"
+corr: "X. Yu"
 title: "Flow Matching-Based Active Learning for Radio Map Construction with Low-Altitude UAVs"
 type: "Conference"
 venue: "Proc. IEEE ICASSP"

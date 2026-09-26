@@ -1,5 +1,6 @@
 ---
 authors: "S. Liu, Z. Gao, G. Chen, Y. Su, and L. Peng"
+corr: "Z. Gao"
 title: "Transformer-based Joint Source Channel Coding for Textual Semantic Communication"
 type: "Conference"
 venue: "Proc. IEEE Int. Conf. Commun. China (ICCC)"

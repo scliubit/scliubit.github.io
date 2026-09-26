@@ -1,5 +1,6 @@
 ---
 authors: "S. Liu, Z. Gao, Y. Wu, D. W. K. Ng, and X. Gao, K.-K. Wong, S. Chatzinotas, and B. Ottersten"
+corr: "Z. Gao"
 title: "LEO Satellite Constellations for 5G and Beyond: How Will They Reshape Vertical Domains?"
 type: "Article"
 venue: "IEEE Commun. Mag."

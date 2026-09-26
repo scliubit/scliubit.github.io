@@ -1,5 +1,7 @@
 ---
 authors: "S. Liu, X. Yu, Z. Gao, and J. Zhang"
+corr: "X. Yu"
+order: 1
 title: "SARA: SLO-Aware Resource Allocation for Disaggregated Agentic LLM Services"
 type: "Journal"
 venue: "arXiv preprint"

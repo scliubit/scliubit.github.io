@@ -1,5 +1,6 @@
 ---
 authors: "S. Liu, Z. Gao, J. Zhang, M. D. Renzo and M. -S. Alouini"
+corr: "Z. Gao"
 title: "Deep Denoising Neural Network Assisted Compressive Channel Estimation for mmWave Intelligent Reflecting Surfaces"
 type: "Journal"
 venue: "IEEE Trans. Veh. Technol."

@@ -1,5 +1,6 @@
 ---
 authors: "S. Liu, X. Yu, and R. Schober"
+corr: "X. Yu"
 title: "Bending the Rules of Propagation: Caustic Beamforming for Next-Generation Wireless Systems"
 type: "Article"
 venue: "arXiv preprint"
