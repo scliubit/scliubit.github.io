@@ -1,0 +1,55 @@
+/* ==========================================================================
+    RETRO THEME - LIGHT VERSION
+    CRT terminal with the lights on: warm off-white phosphor screen,
+    dark green characters, amber accents. Pairs with the pixel fonts
+    in _retro_fonts.scss.
+    ========================================================================== */
+
+/* Retro light theme */
+html[data-style="retro"] {
+    /* CRT palette (block-scoped to avoid leaking into global scope) */
+    $crt-green                : #1f6b3c;
+    $crt-green-dark           : #1e4d2b;
+    $crt-green-muted          : #52705c;
+    $crt-amber                : #b45309;
+    $crt-amber-dark           : #7c3a06;
+    $crt-bg                   : #f5f2e8;
+    $crt-bg-dark              : #ebe7d8;
+    $crt-code-bg              : #f0ede0;
+    $crt-border               : #d8d2c0;
+    $crt-border-dark          : #c4bda4;
+
+    /* Color codes used for the site */
+    $danger-color             : #b3402e;
+    $info-color               : $crt-green;
+    $notice-color             : $crt-green-muted;
+    $success-color            : #2f7d4a;
+    $warning-color            : $crt-amber;
+
+    --global-base-color                 : #{$crt-green};
+    --global-bg-color                   : #{$crt-bg};
+    --global-footer-bg-color            : #{$crt-bg-dark};
+    --global-border-color               : #{$crt-border};
+    --global-dark-border-color          : #{$crt-border-dark};
+    --global-code-background-color      : #{$crt-code-bg};
+    --global-code-text-color            : #{$crt-green-dark};
+    --global-fig-caption-color          : #{$crt-green-muted};
+    --global-link-color                 : #{$crt-green};
+    --global-link-color-hover           : #{$crt-amber};
+    --global-link-color-visited         : #{$crt-green-muted};
+    --global-masthead-link-color        : #{$crt-green-dark};
+    --global-masthead-link-color-hover  : #{$crt-amber};
+    --global-text-color                 : #{$crt-green-dark};
+    --global-text-color-light           : #{$crt-green-muted};
+    --global-thead-color                : #{$crt-bg-dark};
+    --global-footnote-color             : #{$crt-amber};
+    --global-quote-background-color     : #{mix($crt-bg, $crt-amber, 88%)};
+    --global-quote-border-color         : #{$crt-amber};
+    --global-info-color                 : #{$info-color};
+    --global-shadow-color               : rgba(60, 55, 35, 0.10);
+
+    .page__footer-follow .social-icons i,
+    .page__footer-follow .social-icons .svg-inline--fa {
+        color: inherit;
+    }
+}

@@ -1,0 +1,49 @@
+/* ==========================================================================
+    RETRO THEME - DARK VERSION
+    Synthwave '84: deep space purple base, neon pink/cyan/yellow accents.
+    ========================================================================== */
+
+/* Retro dark theme */
+html[data-style="retro"][data-theme="dark"] {
+    /* Retro palette (block-scoped to avoid leaking into global scope) */
+    $retro-pink               : #ff71ce;
+    $retro-cyan               : #01cdfe;
+    $retro-purple             : #b967ff;
+    $retro-yellow             : #fffb96;
+    $retro-bg                 : #160f2d;
+    $retro-bg-dark            : #120b24;
+    $retro-bg-lighter         : #241842;
+    $retro-text               : #e6e1f5;
+    $retro-text-muted         : #9d94c0;
+    $retro-border             : #3a2d5c;
+    $retro-border-dark        : #4d3d73;
+
+    /* Color codes used for the site */
+    $danger-color             : #ff5c8a;
+    $info-color               : $retro-cyan;
+    $notice-color             : $retro-text-muted;
+    $success-color            : #05ffa1;
+    $warning-color            : #fffb96;
+
+    --global-base-color                 : #{$retro-pink};
+    --global-bg-color                   : #{$retro-bg};
+    --global-footer-bg-color            : #{$retro-bg-dark};
+    --global-border-color               : #{$retro-border};
+    --global-dark-border-color          : #{$retro-border-dark};
+    --global-code-background-color      : #{$retro-bg-lighter};
+    --global-code-text-color            : #{$retro-text};
+    --global-fig-caption-color          : #{$retro-text-muted};
+    --global-link-color                 : #{$retro-pink};
+    --global-link-color-hover           : #{$retro-cyan};
+    --global-link-color-visited         : #{$retro-purple};
+    --global-masthead-link-color        : #{$retro-text};
+    --global-masthead-link-color-hover  : #{$retro-pink};
+    --global-text-color                 : #{$retro-text};
+    --global-text-color-light           : #{$retro-text-muted};
+    --global-thead-color                : #{$retro-bg-lighter};
+    --global-footnote-color             : #{$retro-yellow};
+    --global-quote-background-color     : #{mix($retro-bg, $retro-purple, 85%)};
+    --global-quote-border-color         : #{mix($retro-bg, $retro-cyan, 40%)};
+    --global-info-color                 : #{$info-color};
+    --global-shadow-color               : rgba(0, 0, 0, 0.40);
+}

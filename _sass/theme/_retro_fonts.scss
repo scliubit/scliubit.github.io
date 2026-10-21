@@ -1,0 +1,85 @@
+/* ==========================================================================
+    RETRO THEME - PIXEL FONTS
+    Retro Pixel Font (Cute Prop / Cute Mono) by TakWolf, OFL-1.1 licensed.
+    Source: https://github.com/TakWolf/retro-pixel-font
+    Latin-only fonts; CJK is covered by a GB2312 subset of GNU Unifont 18.0.01
+    (OFL-1.1 + GPL font exception, https://unifoundry.com/unifont/), then by
+    the system fonts in each stack.
+    ========================================================================== */
+
+@font-face {
+    font-family: "Retro Pixel Cute Prop";
+    src: url("../fonts/retro/retro-pixel-cute-prop.ttf.woff2") format("woff2");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Retro Pixel Cute Mono";
+    src: url("../fonts/retro/retro-pixel-cute-mono.ttf.woff2") format("woff2");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Retro Unifont ZH";
+    src: url("../fonts/retro/retro-unifont-zh.woff2") format("woff2");
+    font-display: swap;
+}
+
+/* Retro font stacks (block-scoped to avoid leaking into global scope) */
+html[data-style="retro"] {
+    $retro-prop : "Retro Pixel Cute Prop", "Retro Unifont ZH", Georgia, "Times New Roman", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", serif;
+    $retro-mono : "Retro Pixel Cute Mono", "Retro Unifont ZH", "SFMono-Regular", Monaco, Consolas, "Liberation Mono", monospace;
+
+    /* --- proportional: body text, headings, nav, sidebar, footer --- */
+    /* :lang() must skip icon elements (<i>, academicons, FA svg): posts use
+       <html lang="zh-CN">, so an unfiltered :lang(zh) would match every icon
+       and override the icon font, rendering tofu. */
+    body,
+    :lang(zh):not(i):not(.ai):not(svg),
+    :lang(zh-CN):not(i):not(.ai):not(svg),
+    :lang(zh-TW):not(i):not(.ai):not(svg),
+    :lang(zh-HK):not(i):not(.ai):not(svg),
+    h1, h2, h3, h4, h5, h6,
+    figcaption,
+    table,
+    input, button, select, textarea,
+    .btn,
+    .notice,
+    .skip-link,
+    .breadcrumbs,
+    .masthead__inner-wrap,
+    .greedy-nav a,
+    .nav__title,
+    .nav__sub-title,
+    .toc,
+    .sidebar,
+    .sidebar p,
+    .sidebar li,
+    .sidebar h2, .sidebar h3, .sidebar h4, .sidebar h5, .sidebar h6,
+    .sidebar .author__name,
+    .author__urls,
+    .page__lead,
+    .page__content dt,
+    .page__content dd,
+    .page__meta,
+    .archive__item-title,
+    .page__footer-copyright,
+    .page__footer li {
+        font-family: $retro-prop;
+    }
+
+    /* --- monospace: code and homepage accent labels --- */
+    /* The :lang() code selectors repeat _base.scss's zh rules at higher
+       specificity so Cute Mono wins on Chinese pages. */
+    tt, code, kbd, samp, pre,
+    :lang(zh) tt, :lang(zh) code, :lang(zh) kbd, :lang(zh) samp, :lang(zh) pre, :lang(zh) code span,
+    :lang(zh-CN) tt, :lang(zh-CN) code, :lang(zh-CN) kbd, :lang(zh-CN) samp, :lang(zh-CN) pre, :lang(zh-CN) code span,
+    :lang(zh-TW) tt, :lang(zh-TW) code, :lang(zh-TW) kbd, :lang(zh-TW) samp, :lang(zh-TW) pre, :lang(zh-TW) code span,
+    :lang(zh-HK) tt, :lang(zh-HK) code, :lang(zh-HK) kbd, :lang(zh-HK) samp, :lang(zh-HK) pre, :lang(zh-HK) code span,
+    .highlight,
+    .news-section li > b:first-child,
+    .research-card__tags span,
+    .publications-number {
+        font-family: $retro-mono;
+    }
+}
