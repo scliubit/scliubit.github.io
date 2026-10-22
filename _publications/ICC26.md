@@ -11,6 +11,7 @@ category: conferences
 # excerpt: 'This paper is about the number 1. The number 2 is left for future work.'
 date: "July 2026"
 paperurl: 'https://ieeexplore.ieee.org/document/11588130'
+poster: '/files/icc26_poster.pdf'
 # arxiv: 'https://arxiv.org/abs/2405.01000'
 # DOI: '10.1109/GLOBECOM52923.2024.10900975'
 # slidesurl: 'http://academicpages.github.io/files/slides1.pdf'
