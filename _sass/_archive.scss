@@ -75,6 +75,22 @@
   }
 }
 
+.talk__item {
+  margin-bottom: 5em;
+}
+
+.talk__slides {
+  margin: 0.75em 0 0.25em;
+
+  img {
+    display: block;
+    width: 100%;
+    max-width: 480px;
+    border: 1px solid $border-color;
+    border-radius: $border-radius;
+  }
+}
+
 .archive__item:hover {
   .archive__item-teaser {
     box-shadow: 0 0 10px rgba(#000, 0.25);
