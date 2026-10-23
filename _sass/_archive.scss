@@ -77,6 +77,10 @@
 
 .talk__item {
   margin-bottom: 5em;
+
+  .archive__item-excerpt {
+    text-align: justify;
+  }
 }
 
 .talk__slides {
