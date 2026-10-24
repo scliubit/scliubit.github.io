@@ -135,7 +135,13 @@ $(document).ready(function () {
   // This avoids the flash/refresh effect when clicking navigation items that lead to other pages.
   $("a[href^='#']").not(".masthead a, .greedy-nav a").smoothScroll({
     offset: -scssMastheadHeight,
-    preventDefault: false,
+    preventDefault: true,
+    afterScroll: function() {
+      if (this.hash && window.location.hash !== this.hash &&
+          window.history && window.history.pushState) {
+        window.history.pushState(null, "", this.hash);
+      }
+    },
   });
 
   // add lightbox class to all image links

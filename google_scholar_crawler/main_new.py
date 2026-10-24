@@ -6,13 +6,10 @@ Replacement for main.py. Compared with the old script:
 - auto mode: tries a direct connection first, then falls back to rotating
   free proxies (direct is fast when it works, e.g. local runs; CI runners
   are often blocked by Scholar and need the proxy path)
-- proxy rotation that actually rotates: a single ProxyGenerator is kept
-  across attempts so scholarly's dirty-proxy memory survives, the failing
-  proxy is explicitly marked dirty (scholarly's navigator passes the wrong
-  dict key and never marks it), and sessions are re-bound after each
-  rotation. The old script recreated the ProxyGenerator every retry, which
-  reset the dirty set and deterministically re-picked the same proxy.
-- validates the payload before touching the existing results
+- fixes scholarly's proxy health-check mapping and free-proxy refresh calls
+- keeps proxy rotation in the outer loop, re-binds both sessions after each
+  rotation, and fails fast on captchas so retries remain bounded
+- validates the author identity and payload before touching existing results
 - writes output atomically and exits non-zero on failure so CI shows red
   instead of silently keeping stale data
 """
@@ -26,6 +23,7 @@ import tempfile
 import time
 from datetime import datetime, timezone
 
+from fp.fp import FreeProxy
 from scholarly import ProxyGenerator, scholarly
 
 MAX_RETRIES = 10
@@ -42,12 +40,71 @@ logging.basicConfig(
 log = logging.getLogger("scholar-crawler")
 
 
+class CaptchaDetected(RuntimeError):
+    pass
+
+
+class ManagedProxyGenerator(ProxyGenerator):
+    """Apply dependency compatibility fixes and leave rotation to the caller."""
+
+    def _check_proxy(self, proxies) -> bool:
+        request_proxies = {}
+        for scheme in ("http", "https"):
+            proxy = proxies.get(scheme) or proxies.get(f"{scheme}://")
+            if proxy:
+                request_proxies[scheme] = proxy
+        return super()._check_proxy(request_proxies)
+
+    def _fp_coroutine(self, timeout=1, wait_time=120):
+        freeproxy = FreeProxy(rand=False, timeout=timeout)
+        if not hasattr(self, "_dirty_freeproxies"):
+            self._dirty_freeproxies = set()
+        all_proxies = freeproxy.get_proxy_list(repeat=False)
+        all_proxies.reverse()
+
+        t1 = time.time()
+        while time.time() - t1 < wait_time:
+            proxy = all_proxies.pop()
+            if not all_proxies:
+                all_proxies = freeproxy.get_proxy_list(repeat=True)
+                all_proxies.reverse()
+            if proxy in self._dirty_freeproxies:
+                continue
+            proxies = {"http://": proxy, "https://": proxy}
+            proxy_works = self._check_proxy(proxies)
+            if proxy_works:
+                dirty_proxy = yield proxy
+                t1 = time.time()
+            else:
+                dirty_proxy = proxy
+            self._dirty_freeproxies.add(dirty_proxy)
+
+    def _handle_captcha2(self, url):
+        raise CaptchaDetected("Google Scholar requested a captcha")
+
+    def get_next_proxy(self, num_tries=None, old_timeout=3, old_proxy=None):
+        return self._session, old_timeout
+
+    def rotate(self, num_tries=None, old_timeout=3, old_proxy=None):
+        return super().get_next_proxy(
+            num_tries=num_tries,
+            old_timeout=old_timeout,
+            old_proxy=old_proxy,
+        )
+
+
+def bind_proxy_generator(pg: ManagedProxyGenerator) -> None:
+    scholarly.set_retries(1)
+    scholarly.use_proxy(pg, pg)
+
+
 def fetch_author_once(scholar_id: str) -> dict:
     author = scholarly.search_author_id(scholar_id)
     return scholarly.fill(author, sections=FILL_SECTIONS)
 
 
 def fetch_author_direct(scholar_id: str, retries: int):
+    bind_proxy_generator(ManagedProxyGenerator())
     for attempt in range(1, retries + 1):
         try:
             author = fetch_author_once(scholar_id)
@@ -61,28 +118,20 @@ def fetch_author_direct(scholar_id: str, retries: int):
 
 
 def current_proxy(pg: ProxyGenerator):
-    # scholarly stores proxies under 'http://'/'https://' keys (its navigator
-    # mistakenly looks up 'http', which is why its own rotation never marks
-    # the failing proxy dirty)
     return pg._proxies.get("http://") or pg._proxies.get("http")
 
 
-def rotate_proxy(pg: ProxyGenerator, num_tries: int) -> None:
+def rotate_proxy(pg: ManagedProxyGenerator, num_tries: int) -> None:
     old = current_proxy(pg)
-    # the free-proxy coroutine compares against raw host:port list entries,
-    # so strip the scheme before reporting the failed proxy as dirty
     raw = old.split("://", 1)[-1] if old else None
-    pg.get_next_proxy(num_tries=num_tries, old_proxy=raw)
-    # get_next_proxy builds a NEW session object on pg; re-bind it (and pass
-    # pg twice, otherwise use_proxy spawns a hidden secondary ProxyGenerator
-    # with its own fresh FreeProxies() for /citations pages)
-    scholarly.use_proxy(pg, pg)
+    pg.rotate(num_tries=num_tries, old_proxy=raw)
+    bind_proxy_generator(pg)
 
 
 def fetch_author_via_proxies(scholar_id: str, retries: int):
-    pg = ProxyGenerator()
+    pg = ManagedProxyGenerator()
     pg.FreeProxies()
-    scholarly.use_proxy(pg, pg)
+    bind_proxy_generator(pg)
 
     last_err = None
     for attempt in range(1, retries + 1):
@@ -105,12 +154,39 @@ def fetch_author_via_proxies(scholar_id: str, retries: int):
     return None
 
 
-def validate(author: dict) -> None:
-    missing = [k for k in ("name", "citedby", "publications") if k not in author]
+def validate(author: dict, expected_scholar_id: str) -> None:
+    if not isinstance(author, dict):
+        raise ValueError("payload is not an object")
+    missing = [
+        k for k in ("name", "scholar_id", "citedby", "publications")
+        if k not in author
+    ]
     if missing:
         raise ValueError(f"payload missing keys: {missing}")
-    if not isinstance(author["citedby"], int) or author["citedby"] < 0:
-        raise ValueError(f"suspicious citedby value: {author['citedby']!r}")
+    if not isinstance(author["name"], str) or not author["name"].strip():
+        raise ValueError("author name is empty")
+    if author["scholar_id"] != expected_scholar_id:
+        raise ValueError(
+            f"author id mismatch: requested {expected_scholar_id!r}, "
+            f"got {author['scholar_id']!r}"
+        )
+    citedby = author["citedby"]
+    if isinstance(citedby, bool) or not isinstance(citedby, int) or citedby < 0:
+        raise ValueError(f"suspicious citedby value: {citedby!r}")
+
+    publications = author["publications"]
+    if not isinstance(publications, list) or not publications:
+        raise ValueError("publications must be a non-empty list")
+    publication_ids = []
+    for index, publication in enumerate(publications):
+        if not isinstance(publication, dict):
+            raise ValueError(f"publication {index} is not an object")
+        publication_id = publication.get("author_pub_id")
+        if not isinstance(publication_id, str) or not publication_id.strip():
+            raise ValueError(f"publication {index} has no author_pub_id")
+        publication_ids.append(publication_id)
+    if len(set(publication_ids)) != len(publication_ids):
+        raise ValueError("publications contain duplicate author_pub_id values")
 
 
 def write_json_atomic(path: str, data: dict) -> None:
@@ -135,7 +211,7 @@ def main() -> int:
     )
     args = parser.parse_args()
 
-    scholar_id = os.environ.get("GOOGLE_SCHOLAR_ID", DEFAULT_SCHOLAR_ID)
+    scholar_id = os.environ.get("GOOGLE_SCHOLAR_ID", "").strip() or DEFAULT_SCHOLAR_ID
     log.info("Fetching scholar id %s (mode=%s)", scholar_id, args.mode)
 
     author = None
@@ -154,7 +230,7 @@ def main() -> int:
         return 1
 
     try:
-        validate(author)
+        validate(author, scholar_id)
     except ValueError as e:
         log.error("Fetched data failed validation: %s; keeping existing results", e)
         return 1
