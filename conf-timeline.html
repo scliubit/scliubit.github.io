@@ -182,6 +182,7 @@ header p {
 .upcoming-card.imminent .countdown .days { color: var(--imminent); }
 .upcoming-card.upcoming-warn .countdown .days { color: var(--upcoming); }
 .upcoming-card.future .countdown .days { color: var(--future); }
+.upcoming-card.unknown .countdown .days { color: var(--text2); }
 .upcoming-card.past { opacity: 0.75; }
 .upcoming-card.past .countdown .days { color: var(--past); }
 .upcoming-card.past .info .name { color: var(--text2); }
@@ -465,7 +466,7 @@ header p {
 <div class="container">
   <header>
     <h1>Conference Deadline Timeline</h1>
-    <p>Communications, Signal Processing & AI Conference Deadlines &middot; Data updated Oct. 2026</p>
+    <p>Communications, Signal Processing & AI Conference Deadlines &middot; Data updated Nov. 2026</p>
     <p class="disclaimer">DDLs are not always up to date. Check official websites for latest info.</p>
   </header>
 
@@ -563,7 +564,7 @@ const DATA = {
     { name: "MMSys'28", ddl: 9, conf: 3, loc: "TBD", url: "", next: true, dates: "Mar. (TBD)" },
     { name: "ICC'28", ddl: 10, conf: 5, cs: [5, 28], ce: [6, 1], loc: "Chengdu, China", url: "https://icc2028.ieee-icc.org/", next: true, dates: "May 28 \u2013 Jun. 1" },
     { name: "ICMLCN'28", ddl: 10, conf: 0, loc: "TBD", url: "", next: true, dates: "TBD" },
-    { name: "CVPR'28", ddl: 11, conf: 6, cs: [6, 11], ce: [6, 15], loc: "San Antonio, TX, USA", url: "https://www.thecvf.com/", next: true, dates: "Jun. 11\u201315 (TBD)" },
+    { name: "CVPR'28", ddl: 11, conf: 6, cs: [6, 11], ce: [6, 15], loc: "San Antonio, TX, USA", url: "https://www.thecvf.com/", next: true, dates: "Jun. 11\u201315" },
     { name: "VTCSpring'28", ddl: 12, conf: 0, loc: "TBD", url: "https://events.vtsociety.org/vtc2028-spring/", next: true, dates: "TBD" },
   ],
   2026: [
@@ -578,18 +579,18 @@ const DATA = {
     { name: "PIMRC'26", ddl: 3, ddlDay: 16, conf: 9, cs: [9, 1], ce: [9, 4], loc: "Singapore", url: "https://pimrc2026.ieee-pimrc.org/", next: false, dates: "Sep. 1\u20134" },
     { name: "Globecom'26", ddl: 5, ddlDay: 3, conf: 12, cs: [12, 7], ce: [12, 11], loc: "Macau, China", url: "https://globecom2026.ieee-globecom.org/", next: false, dates: "Dec. 7\u201311" },
     { name: "Asilomar'26", ddl: 5, ddlDay: 1, conf: 10, cs: [10, 25], ce: [10, 28], loc: "Pacific Grove, CA, USA", url: "https://www.asilomarsscconf.org/", next: false, dates: "Oct. 25\u201328" },
-    { name: "NeurIPS'26", ddl: 5, ddlDay: 6, conf: 12, cs: [12, 6], ce: [12, 12], loc: "Sydney, Australia", url: "https://neurips.cc/Conferences/2026", next: false, dates: "Dec. 6\u201312" },
+    { name: "NeurIPS'26", ddl: 5, ddlDay: 6, conf: 12, cs: [12, 6], ce: [12, 12], loc: "Sydney, Australia (Main); Atlanta, GA, USA; Paris, France (Satellites)", url: "https://neurips.cc/Conferences/2026", next: false, dates: "Sydney: Dec. 6\u201312; Atlanta & Paris: Dec. 9\u201313" },
     { name: "HK6GWS'26", ddl: 7, conf: 12, cs: [12, 3], ce: [12, 4], loc: "Hong Kong, China", url: "https://hk6gws2026.ieee-hk6gws.org/", next: false, dates: "Dec. 3\u20134" },
     { name: "AAAI'27", ddl: 7, ddlDay: 28, conf: 2, cs: [2, 16], ce: [2, 23], loc: "Montr\u00e9al, Canada", url: "https://aaai.org/conference/aaai/aaai-27/", next: true, dates: "Feb. 16\u201323" },
     { name: "INFOCOM'27", ddl: 7, ddlDay: 31, conf: 5, cs: [5, 24], ce: [5, 27], loc: "Honolulu, Hawaii, USA", url: "https://infocom2027.ieee-infocom.org/", next: true, dates: "May 24\u201327" },
     { name: "WCSP'26", ddl: 9, ddlDay: 1, conf: 11, cs: [11, 12], ce: [11, 14], loc: "Shenzhen, China", url: "http://www.ic-wcsp.org/2026/", next: false, dates: "Nov. 12\u201314" },
     { name: "MobiCom'27", ddl: 9, ddlDay: 2, conf: 10, cs: [10, 18], ce: [10, 22], loc: "TBD", url: "https://www.sigmobile.org/mobicom/2027/", next: true, dates: "Oct. 18\u201322" },
-    { name: "WCNC'27", ddl: 10, ddlDay: 26, conf: 4, cs: [4, 5], ce: [4, 8], loc: "Panama City, Panama", url: "https://wcnc2027.ieee-wcnc.org/", next: true, dates: "Apr. 5\u20138" },
+    { name: "WCNC'27", ddl: 11, ddlDay: 9, conf: 4, cs: [4, 5], ce: [4, 8], loc: "Panama City, Panama", url: "https://wcnc2027.ieee-wcnc.org/authors/call-papers", next: true, dates: "Apr. 5\u20138" },
     { name: "ICASSP'27", ddl: 9, ddlDay: 23, conf: 5, cs: [5, 16], ce: [5, 21], loc: "Toronto, Canada", url: "https://2027.ieeeicassp.org/", next: true, dates: "May 16\u201321" },
     { name: "ICLR'27", ddl: 9, ddlDay: 25, conf: 4, cs: [4, 26], ce: [4, 30], loc: "San Francisco, CA, USA", url: "https://iclr.cc/Conferences/2027", next: true, dates: "Apr. 26\u201330" },
     { name: "MMSys'27", ddl: 9, ddlDay: 17, conf: 3, cs: [3, 30], ce: [4, 2], loc: "Ghent, Belgium", url: "https://2027.acmmmsys.org/", next: true, dates: "Mar. 30 \u2013 Apr. 2" },
     { name: "VTCSpring'27", ddl: 10, ddlDay: 14, conf: 6, cs: [6, 20], ce: [6, 23], loc: "Hamburg, Germany", url: "https://events.vtsociety.org/vtc2027-spring/", next: true, dates: "Jun. 20\u201323" },
-    { name: "ICC'27", ddl: 10, ddlDay: 16, conf: 6, cs: [5, 30], ce: [6, 3], loc: "Washington, D.C., USA", url: "https://icc2027.ieee-icc.org/", next: true, dates: "May 30 \u2013 Jun. 3" },
+    { name: "ICC'27", ddl: 10, ddlDay: 30, conf: 6, cs: [5, 30], ce: [6, 3], loc: "Washington, D.C., USA", url: "https://icc2027.ieee-icc.org/authors/call-symposium-papers", next: true, dates: "May 30 \u2013 Jun. 3" },
     { name: "ICMLCN'27", ddl: 10, conf: 0, loc: "TBD", url: "https://icmlcn2027.ieee-icmlcn.org/", next: true, dates: "TBD" },
     { name: "MMSys'27 (R2)", ddl: 11, ddlDay: 19, conf: 3, cs: [3, 30], ce: [4, 2], loc: "Ghent, Belgium", url: "https://2027.acmmmsys.org/", next: true, dates: "Mar. 30 \u2013 Apr. 2" },
     { name: "CVPR'27", ddl: 11, ddlDay: 16, conf: 6, cs: [6, 20], ce: [6, 25], loc: "Seattle, WA, USA", url: "https://cvpr.thecvf.com/Conferences/2027", next: true, dates: "Jun. 20\u201325" },
@@ -664,17 +665,26 @@ function updateThemeIcon() {
 document.getElementById('themeBtn').addEventListener('click', toggleTheme);
 
 // DDL status
-function getDdlStatus(year, ddlMonth) {
-  if (year < todayYear) return 'past';
-  if (year > todayYear) return 'future';
-  const diff = ddlMonth - todayMonth;
-  if (diff < 0) return 'past';
-  if (diff === 0) {
-    return 'imminent';
-  }
-  if (diff <= 1) return 'imminent';
-  if (diff <= 3) return 'upcoming';
+function getDaysUntilDdl(year, month, day) {
+  if (!day) return null;
+  const ddlUtc = Date.UTC(year, month - 1, day);
+  const todayUtc = Date.UTC(todayYear, todayMonth - 1, todayDay);
+  return Math.round((ddlUtc - todayUtc) / 86400000);
+}
+function getStatusFromDays(days) {
+  if (days < 0) return 'past';
+  if (days < 30) return 'imminent';
+  if (days < 90) return 'upcoming';
   return 'future';
+}
+function getDdlStatus(year, ddlMonth, ddlDay) {
+  const days = getDaysUntilDdl(year, ddlMonth, ddlDay);
+  if (days !== null) return getStatusFromDays(days);
+
+  const firstStatus = getStatusFromDays(getDaysUntilDdl(year, ddlMonth, 1));
+  const lastDay = new Date(year, ddlMonth, 0).getDate();
+  const lastStatus = getStatusFromDays(getDaysUntilDdl(year, ddlMonth, lastDay));
+  return firstStatus === lastStatus ? firstStatus : 'unknown';
 }
 function getStatusColor(status) {
   switch(status) {
@@ -682,12 +692,8 @@ function getStatusColor(status) {
     case 'imminent': return 'var(--imminent)';
     case 'upcoming': return 'var(--upcoming)';
     case 'future': return 'var(--future)';
+    default: return 'var(--text2)';
   }
-}
-function getDaysUntilDdl(year, month, day) {
-  const ddlDate = new Date(year, month - 1, day || 28);
-  const diffMs = ddlDate - today;
-  return Math.ceil(diffMs / (1000 * 60 * 60 * 24));
 }
 
 // Build year tabs
@@ -709,12 +715,20 @@ function buildYearTabs() {
 // Build upcoming deadlines
 function buildUpcoming() {
   const container = document.getElementById('upcomingCards');
-  const section = document.getElementById('upcomingSection');
   const confs = DATA[activeYear] || [];
   const upcoming = confs
-    .map(c => ({ ...c, days: getDaysUntilDdl(activeYear, c.ddl, c.ddlDay) }))
-    .filter(c => c.days > -15)
-    .sort((a, b) => a.days - b.days)
+    .map(c => ({
+      ...c,
+      status: getDdlStatus(activeYear, c.ddl, c.ddlDay),
+      days: getDaysUntilDdl(activeYear, c.ddl, c.ddlDay)
+    }))
+    .filter(c => c.days === null ? c.status !== 'past' : c.days > -15)
+    .sort((a, b) => {
+      if (a.days === null && b.days === null) return a.ddl - b.ddl;
+      if (a.days === null) return 1;
+      if (b.days === null) return -1;
+      return a.days - b.days;
+    })
     .slice(0, 6);
 
   if (upcoming.length === 0) {
@@ -723,11 +737,13 @@ function buildUpcoming() {
   }
 
   container.innerHTML = upcoming.map(c => {
-    const status = getDdlStatus(activeYear, c.ddl);
-    // Deadlines that have already passed are shown in grey, never green.
-    const cls = c.days < 0 ? 'past' : status === 'imminent' ? 'imminent' : status === 'upcoming' ? 'upcoming-warn' : 'future';
-    const daysText = c.days < 0 ? `${Math.abs(c.days)}d ago` : c.days === 0 ? 'Today' : `${c.days}d`;
-    const daysLabel = c.days < 0 ? 'passed' : c.days === 0 ? '' : 'remaining';
+    const cls = c.days !== null && c.days < 0 ? 'past'
+      : c.status === 'imminent' ? 'imminent'
+      : c.status === 'upcoming' ? 'upcoming-warn'
+      : c.status === 'unknown' ? 'unknown'
+      : 'future';
+    const daysText = c.days === null ? 'TBD' : c.days < 0 ? `${Math.abs(c.days)}d ago` : c.days === 0 ? 'Today' : `${c.days}d`;
+    const daysLabel = c.days === null ? 'exact day' : c.days < 0 ? 'passed' : c.days === 0 ? '' : 'remaining';
     const href = c.url ? `href="${c.url}" target="_blank" rel="noopener"` : '';
     return `<a class="upcoming-card ${cls}" ${href}>
       <div class="info">
@@ -788,7 +804,7 @@ function buildGantt() {
       barArea.appendChild(tl);
     }
 
-    const status = getDdlStatus(activeYear, c.ddl);
+    const status = getDdlStatus(activeYear, c.ddl, c.ddlDay);
     const statusColor = getStatusColor(status);
 
     // DDL position: precise to the day when known, otherwise the month centre.
@@ -871,15 +887,16 @@ function buildTable() {
   const tbody = document.getElementById('tableBody');
   const confs = DATA[activeYear] || [];
   tbody.innerHTML = confs.map(c => {
-    const status = getDdlStatus(activeYear, c.ddl);
+    const status = getDdlStatus(activeYear, c.ddl, c.ddlDay);
     const color = getStatusColor(status);
-    const statusLabel = status.charAt(0).toUpperCase() + status.slice(1);
+    const statusLabel = status === 'unknown' ? 'TBD' : status.charAt(0).toUpperCase() + status.slice(1);
+    const ddlLabel = `${MONTHS[c.ddl - 1]}. ${c.ddlDay ? `${c.ddlDay}, ` : ''}${activeYear}${c.ddlDay ? '' : ' (day TBD)'}`;
     const link = c.url ? `<a href="${c.url}" target="_blank" rel="noopener">${c.name}</a>` : c.name;
     const nextBadge = c.next ? ` <span style="color:var(--next-year);font-size:0.75rem;font-weight:700">[+1yr]</span>` : '';
     return `<tr>
       <td><span class="status-dot" style="background:${color}"></span>${statusLabel}</td>
       <td>${link}${nextBadge}</td>
-      <td>${MONTHS[c.ddl - 1]}. ${activeYear}</td>
+      <td>${ddlLabel}</td>
       <td>${c.dates}</td>
       <td>${c.loc}</td>
     </tr>`;
@@ -888,17 +905,18 @@ function buildTable() {
 
 // Tooltip
 function showTooltip(e, c) {
-  const status = getDdlStatus(activeYear, c.ddl);
   const days = getDaysUntilDdl(activeYear, c.ddl, c.ddlDay);
   let countdownText = '';
-  if (days > 0) countdownText = `${days} days remaining`;
+  if (days === null) countdownText = 'exact deadline TBD';
+  else if (days > 0) countdownText = `${days} days remaining`;
   else if (days === 0) countdownText = 'Deadline today!';
   else countdownText = `${Math.abs(days)} days ago`;
 
+  const ddlLabel = `${MONTHS[c.ddl - 1]}. ${c.ddlDay ? `${c.ddlDay}, ` : ''}${activeYear}`;
   const nextLabel = c.next ? ` (${activeYear + 1})` : '';
   tooltip.innerHTML = `
     <div class="tt-name">${c.name}</div>
-    <div class="tt-row"><span class="tt-label">DDL:</span> ${MONTHS[c.ddl - 1]}. ${activeYear} \u2014 ${countdownText}</div>
+    <div class="tt-row"><span class="tt-label">DDL:</span> ${ddlLabel} \u2014 ${countdownText}</div>
     <div class="tt-row"><span class="tt-label">Date:</span> ${c.dates}${nextLabel}</div>
     <div class="tt-row"><span class="tt-label">Location:</span> ${c.loc}</div>
     ${c.url ? '<div class="tt-row" style="margin-top:4px;color:var(--conf);font-size:0.78rem">Click to visit website \u2192</div>' : ''}

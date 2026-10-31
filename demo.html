@@ -233,12 +233,12 @@
             <div class="static-params">
                 <div class="param-group">
                     <label>Antenna Number $M$</label>
-                    <input type="number" id="inp_M" value="16" min="3" step="1">
+                    <input type="number" id="inp_M" value="16" min="3" max="512" step="1">
                 </div>
                 <br>
                 <div class="param-group">
                     <label>Aperture $A_{\mathrm T}$</label>
-                    <input type="number" id="inp_A" value="5" step="0.1">
+                    <input type="number" id="inp_A" value="5" min="0.1" step="0.1">
                 </div>
             </div>
 
@@ -315,7 +315,7 @@
         M: 16,
         A: 5,
         x0: 0,
-        y0: 10,
+        y0: 20,
         thetaDeg: 0,
         isValid: true,
         data: []
@@ -359,6 +359,11 @@
                 input.addEventListener('change', () => {
                     let minVal = parseFloat(group.min.value);
                     let maxVal = parseFloat(group.max.value);
+                    if (!Number.isFinite(minVal) || !Number.isFinite(maxVal)) {
+                        group.min.value = group.slider.min;
+                        group.max.value = group.slider.max;
+                        return;
+                    }
                     if (minVal >= maxVal) {
                         maxVal = minVal + 1;
                         group.max.value = maxVal;
@@ -381,51 +386,77 @@
     }
 
     function updateStateFromDOM() {
-        state.M = parseInt(dom.inputs.M.value);
-        state.A = parseFloat(dom.inputs.A.value);
-        state.x0 = parseFloat(dom.sliders.x0.slider.value);
-        state.y0 = parseFloat(dom.sliders.y0.slider.value);
-        state.thetaDeg = parseFloat(dom.sliders.theta.slider.value);
+        state.M = Number(dom.inputs.M.value);
+        state.A = Number(dom.inputs.A.value);
+        state.x0 = Number(dom.sliders.x0.slider.value);
+        state.y0 = Number(dom.sliders.y0.slider.value);
+        state.thetaDeg = Number(dom.sliders.theta.slider.value);
     }
 
     let isRenderingMath = false;
+    let mathRenderPending = false;
+
+    function renderStatusMath() {
+        if (!window.MathJax || !window.MathJax.typesetPromise) return;
+        if (isRenderingMath) {
+            mathRenderPending = true;
+            return;
+        }
+
+        isRenderingMath = true;
+        MathJax.typesetPromise([dom.status]).catch(err => {
+            console.warn('MathJax render error:', err);
+        }).then(() => {
+            isRenderingMath = false;
+            if (mathRenderPending) {
+                mathRenderPending = false;
+                renderStatusMath();
+            }
+        });
+    }
+
+    function setStatus(html, isValid) {
+        state.isValid = isValid;
+        dom.status.className = isValid ? 'status-panel status-valid' : 'status-panel status-error';
+        dom.status.innerHTML = html;
+        renderStatusMath();
+    }
+
+    function invalidate(message) {
+        state.data = [];
+        setStatus(`<span>${message}</span>`, false);
+    }
 
     function calculate() {
         const { M, A, x0, y0, thetaDeg } = state;
-        if (M < 3 || isNaN(M)) return;
+        if (!Number.isInteger(M) || M < 3 || M > 512) {
+            invalidate('M must be an integer between 3 and 512.');
+            return;
+        }
+        if (!Number.isFinite(A) || A <= 0) {
+            invalidate('Aperture must be a positive finite number.');
+            return;
+        }
+        if (![x0, y0, thetaDeg].every(Number.isFinite) || y0 <= 0) {
+            invalidate('UE coordinates must be finite, and y0 must be greater than zero.');
+            return;
+        }
 
         const theta = thetaDeg * Math.PI / 180.0;
         const phi0 = Math.atan(-x0 / y0);
-        const diff = Math.abs(phi0 - theta);
+        const signedDiff = phi0 - theta;
+        const diff = Math.abs(signedDiff);
         const limit = Math.PI / 2;
 
-        let statusHtml = "";
         if (diff >= limit) {
-            state.isValid = false;
             const diffDeg = (diff * 180 / Math.PI).toFixed(1);
-            dom.status.className = 'status-panel status-error';
-            statusHtml = `<span>$|\\varphi_0 - \\theta_{\\mathrm{UE}}| = ${diffDeg}^{\\circ} \\ge 90^{\\circ}$</span>`;
-            state.data = [];
-        } else {
-            state.isValid = true;
-            const phi0Deg = (phi0 * 180 / Math.PI).toFixed(1);
-            dom.status.className = 'status-panel status-valid';
-            statusHtml = `<span>$\\varphi_0 = ${phi0Deg}^{\\circ}$,  $ \\varphi_0 - \\theta_{\\mathrm{UE}} = ${(diff * 180 / Math.PI).toFixed(1)}^{\\circ}$</span>`;
+            invalidate(`<span>$|\\varphi_0 - \\theta_{\\mathrm{UE}}| = ${diffDeg}^{\\circ} \\ge 90^{\\circ}$</span>`);
+            return;
         }
 
-        dom.status.innerHTML = statusHtml;
-        
-        if (window.MathJax && window.MathJax.typesetPromise && !isRenderingMath) {
-            isRenderingMath = true;
-            MathJax.typesetPromise([dom.status]).then(() => {
-                isRenderingMath = false;
-            }).catch(err => {
-                console.warn('MathJax render error:', err);
-                isRenderingMath = false;
-            });
-        }
-
-        if (!state.isValid) return;
+        const phi0Deg = (phi0 * 180 / Math.PI).toFixed(1);
+        const signedDiffDeg = (signedDiff * 180 / Math.PI).toFixed(1);
+        setStatus(`<span>$\\varphi_0 = ${phi0Deg}^{\\circ}$,  $ \\varphi_0 - \\theta_{\\mathrm{UE}} = ${signedDiffDeg}^{\\circ}$</span>`, true);
 
         let t = [-1, 1];
         const N = M - 2;
@@ -442,7 +473,7 @@
         for (let i = 0; i < M; i++) {
             const tm = t[i];
             const sm = s_min + (tm + 1) / 2 * (s_max - s_min);
-            let s_clamped = Math.max(-1, Math.min(1, sm));
+            const s_clamped = Math.max(-1, Math.min(1, sm));
             const phi_angle = Math.asin(s_clamped) + theta;
             const x = x0 + y0 * Math.tan(phi_angle);
             results.push({ id: i+1, t: tm, s: sm, x: x });
@@ -570,6 +601,7 @@
     }
 
     initListeners();
+    updateStateFromDOM();
     calculate();
     drawMain();
 
