@@ -1,0 +1,934 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Shicong LIU//Conference Deadline Timeline//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+NAME:Conference Deadlines & Events
+X-WR-CALNAME:Conference Deadlines & Events
+X-WR-CALDESC:Exact-day submission deadlines and conference dates from https
+ ://scliubit.github.io/conf-timeline.html
+REFRESH-INTERVAL;VALUE=DURATION:P1D
+X-PUBLISHED-TTL:P1D
+X-APPLE-CALENDAR-COLOR:#3498DB
+BEGIN:VEVENT
+UID:ddl-20251210-icmlcn-26@scliubit.github.io
+DTSTAMP:20261101T093358Z
+LAST-MODIFIED:20261101T093358Z
+DTSTART;VALUE=DATE:20251210
+DTEND;VALUE=DATE:20251211
+SUMMARY:ICMLCN'26 Submission Deadline
+DESCRIPTION:Submission deadline for ICMLCN'26. The timeline only specifies 
+ the date\; check the official website for the exact time and timezone. Sou
+ rce: https://scliubit.github.io/conf-timeline.html
+URL:https://icmlcn2026.ieee-icmlcn.org/
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ddl-20260116-isit-26@scliubit.github.io
+DTSTAMP:20261101T093358Z
+LAST-MODIFIED:20261101T093358Z
+DTSTART;VALUE=DATE:20260116
+DTEND;VALUE=DATE:20260117
+SUMMARY:ISIT'26 Submission Deadline
+DESCRIPTION:Submission deadline for ISIT'26. The timeline only specifies th
+ e date\; check the official website for the exact time and timezone. Sourc
+ e: https://scliubit.github.io/conf-timeline.html
+URL:https://2026.ieee-isit.org/
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ddl-20260213-eucnc-26@scliubit.github.io
+DTSTAMP:20261101T093358Z
+LAST-MODIFIED:20261101T093358Z
+DTSTART;VALUE=DATE:20260213
+DTEND;VALUE=DATE:20260214
+SUMMARY:EuCNC'26 Submission Deadline
+DESCRIPTION:Submission deadline for EuCNC'26. The timeline only specifies t
+ he date\; check the official website for the exact time and timezone. Sour
+ ce: https://scliubit.github.io/conf-timeline.html
+URL:https://www.eucnc.eu/
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ddl-20260213-eusipco-26@scliubit.github.io
+DTSTAMP:20261101T093358Z
+LAST-MODIFIED:20261101T093358Z
+DTSTART;VALUE=DATE:20260213
+DTEND;VALUE=DATE:20260214
+SUMMARY:EUSIPCO'26 Submission Deadline
+DESCRIPTION:Submission deadline for EUSIPCO'26. The timeline only specifies
+  the date\; check the official website for the exact time and timezone. So
+ urce: https://scliubit.github.io/conf-timeline.html
+URL:https://eusipco2026.org/
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ddl-20260313-mobicom-26@scliubit.github.io
+DTSTAMP:20261101T093358Z
+LAST-MODIFIED:20261101T093358Z
+DTSTART;VALUE=DATE:20260313
+DTEND;VALUE=DATE:20260314
+SUMMARY:MobiCom'26 Submission Deadline
+DESCRIPTION:Submission deadline for MobiCom'26. The timeline only specifies
+  the date\; check the official website for the exact time and timezone. So
+ urce: https://scliubit.github.io/conf-timeline.html
+URL:https://www.sigmobile.org/mobicom/2026/
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ddl-20260321-vtcfall-26@scliubit.github.io
+DTSTAMP:20261101T093358Z
+LAST-MODIFIED:20261101T093358Z
+DTSTART;VALUE=DATE:20260321
+DTEND;VALUE=DATE:20260322
+SUMMARY:VTCFall'26 Submission Deadline
+DESCRIPTION:Submission deadline for VTCFall'26. The timeline only specifies
+  the date\; check the official website for the exact time and timezone. So
+ urce: https://scliubit.github.io/conf-timeline.html
+URL:https://events.vtsociety.org/vtc2026-fall/
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ddl-20260405-spawc-26@scliubit.github.io
+DTSTAMP:20261101T093358Z
+LAST-MODIFIED:20261101T093358Z
+DTSTART;VALUE=DATE:20260405
+DTEND;VALUE=DATE:20260406
+SUMMARY:SPAWC'26 Submission Deadline
+DESCRIPTION:Submission deadline for SPAWC'26. The timeline only specifies t
+ he date\; check the official website for the exact time and timezone. Sour
+ ce: https://scliubit.github.io/conf-timeline.html
+URL:https://2026.ieeespawc.org/
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ddl-20260326-meditcom-26@scliubit.github.io
+DTSTAMP:20261101T093358Z
+LAST-MODIFIED:20261101T093358Z
+DTSTART;VALUE=DATE:20260326
+DTEND;VALUE=DATE:20260327
+SUMMARY:MeditCom'26 Submission Deadline
+DESCRIPTION:Submission deadline for MeditCom'26. The timeline only specifie
+ s the date\; check the official website for the exact time and timezone. S
+ ource: https://scliubit.github.io/conf-timeline.html
+URL:https://meditcom2026.ieee-meditcom.org/
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ddl-20260406-iccc-26@scliubit.github.io
+DTSTAMP:20261101T093358Z
+LAST-MODIFIED:20261101T093358Z
+DTSTART;VALUE=DATE:20260406
+DTEND;VALUE=DATE:20260407
+SUMMARY:ICCC'26 Submission Deadline
+DESCRIPTION:Submission deadline for ICCC'26. The timeline only specifies th
+ e date\; check the official website for the exact time and timezone. Sourc
+ e: https://scliubit.github.io/conf-timeline.html
+URL:https://iccc2026.ieee-iccc.org/
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ddl-20260316-pimrc-26@scliubit.github.io
+DTSTAMP:20261101T093358Z
+LAST-MODIFIED:20261101T093358Z
+DTSTART;VALUE=DATE:20260316
+DTEND;VALUE=DATE:20260317
+SUMMARY:PIMRC'26 Submission Deadline
+DESCRIPTION:Submission deadline for PIMRC'26. The timeline only specifies t
+ he date\; check the official website for the exact time and timezone. Sour
+ ce: https://scliubit.github.io/conf-timeline.html
+URL:https://pimrc2026.ieee-pimrc.org/
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ddl-20260503-globecom-26@scliubit.github.io
+DTSTAMP:20261101T093358Z
+LAST-MODIFIED:20261101T093358Z
+DTSTART;VALUE=DATE:20260503
+DTEND;VALUE=DATE:20260504
+SUMMARY:Globecom'26 Submission Deadline
+DESCRIPTION:Submission deadline for Globecom'26. The timeline only specifie
+ s the date\; check the official website for the exact time and timezone. S
+ ource: https://scliubit.github.io/conf-timeline.html
+URL:https://globecom2026.ieee-globecom.org/
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ddl-20260501-asilomar-26@scliubit.github.io
+DTSTAMP:20261101T093358Z
+LAST-MODIFIED:20261101T093358Z
+DTSTART;VALUE=DATE:20260501
+DTEND;VALUE=DATE:20260502
+SUMMARY:Asilomar'26 Submission Deadline
+DESCRIPTION:Submission deadline for Asilomar'26. The timeline only specifie
+ s the date\; check the official website for the exact time and timezone. S
+ ource: https://scliubit.github.io/conf-timeline.html
+URL:https://www.asilomarsscconf.org/
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ddl-20260506-neurips-26@scliubit.github.io
+DTSTAMP:20261101T093358Z
+LAST-MODIFIED:20261101T093358Z
+DTSTART;VALUE=DATE:20260506
+DTEND;VALUE=DATE:20260507
+SUMMARY:NeurIPS'26 Submission Deadline
+DESCRIPTION:Submission deadline for NeurIPS'26. The timeline only specifies
+  the date\; check the official website for the exact time and timezone. So
+ urce: https://scliubit.github.io/conf-timeline.html
+URL:https://neurips.cc/Conferences/2026
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ddl-20260728-aaai-27@scliubit.github.io
+DTSTAMP:20261101T093358Z
+LAST-MODIFIED:20261101T093358Z
+DTSTART;VALUE=DATE:20260728
+DTEND;VALUE=DATE:20260729
+SUMMARY:AAAI'27 Submission Deadline
+DESCRIPTION:Submission deadline for AAAI'27. The timeline only specifies th
+ e date\; check the official website for the exact time and timezone. Sourc
+ e: https://scliubit.github.io/conf-timeline.html
+URL:https://aaai.org/conference/aaai/aaai-27/
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ddl-20260731-infocom-27@scliubit.github.io
+DTSTAMP:20261101T093358Z
+LAST-MODIFIED:20261101T093358Z
+DTSTART;VALUE=DATE:20260731
+DTEND;VALUE=DATE:20260801
+SUMMARY:INFOCOM'27 Submission Deadline
+DESCRIPTION:Submission deadline for INFOCOM'27. The timeline only specifies
+  the date\; check the official website for the exact time and timezone. So
+ urce: https://scliubit.github.io/conf-timeline.html
+URL:https://infocom2027.ieee-infocom.org/
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ddl-20260901-wcsp-26@scliubit.github.io
+DTSTAMP:20261101T093358Z
+LAST-MODIFIED:20261101T093358Z
+DTSTART;VALUE=DATE:20260901
+DTEND;VALUE=DATE:20260902
+SUMMARY:WCSP'26 Submission Deadline
+DESCRIPTION:Submission deadline for WCSP'26. The timeline only specifies th
+ e date\; check the official website for the exact time and timezone. Sourc
+ e: https://scliubit.github.io/conf-timeline.html
+URL:http://www.ic-wcsp.org/2026/
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ddl-20260902-mobicom-27@scliubit.github.io
+DTSTAMP:20261101T093358Z
+LAST-MODIFIED:20261101T093358Z
+DTSTART;VALUE=DATE:20260902
+DTEND;VALUE=DATE:20260903
+SUMMARY:MobiCom'27 Submission Deadline
+DESCRIPTION:Submission deadline for MobiCom'27. The timeline only specifies
+  the date\; check the official website for the exact time and timezone. So
+ urce: https://scliubit.github.io/conf-timeline.html
+URL:https://www.sigmobile.org/mobicom/2027/
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ddl-20261109-wcnc-27@scliubit.github.io
+DTSTAMP:20261101T093358Z
+LAST-MODIFIED:20261101T093358Z
+DTSTART;VALUE=DATE:20261109
+DTEND;VALUE=DATE:20261110
+SUMMARY:WCNC'27 Submission Deadline
+DESCRIPTION:Submission deadline for WCNC'27. The timeline only specifies th
+ e date\; check the official website for the exact time and timezone. Sourc
+ e: https://scliubit.github.io/conf-timeline.html
+URL:https://wcnc2027.ieee-wcnc.org/authors/call-papers
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ddl-20260923-icassp-27@scliubit.github.io
+DTSTAMP:20261101T093358Z
+LAST-MODIFIED:20261101T093358Z
+DTSTART;VALUE=DATE:20260923
+DTEND;VALUE=DATE:20260924
+SUMMARY:ICASSP'27 Submission Deadline
+DESCRIPTION:Submission deadline for ICASSP'27. The timeline only specifies 
+ the date\; check the official website for the exact time and timezone. Sou
+ rce: https://scliubit.github.io/conf-timeline.html
+URL:https://2027.ieeeicassp.org/
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ddl-20260925-iclr-27@scliubit.github.io
+DTSTAMP:20261101T093358Z
+LAST-MODIFIED:20261101T093358Z
+DTSTART;VALUE=DATE:20260925
+DTEND;VALUE=DATE:20260926
+SUMMARY:ICLR'27 Submission Deadline
+DESCRIPTION:Submission deadline for ICLR'27. The timeline only specifies th
+ e date\; check the official website for the exact time and timezone. Sourc
+ e: https://scliubit.github.io/conf-timeline.html
+URL:https://iclr.cc/Conferences/2027
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ddl-20260917-mmsys-27@scliubit.github.io
+DTSTAMP:20261101T093358Z
+LAST-MODIFIED:20261101T093358Z
+DTSTART;VALUE=DATE:20260917
+DTEND;VALUE=DATE:20260918
+SUMMARY:MMSys'27 Submission Deadline
+DESCRIPTION:Submission deadline for MMSys'27. The timeline only specifies t
+ he date\; check the official website for the exact time and timezone. Sour
+ ce: https://scliubit.github.io/conf-timeline.html
+URL:https://2027.acmmmsys.org/
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ddl-20261014-vtcspring-27@scliubit.github.io
+DTSTAMP:20261101T093358Z
+LAST-MODIFIED:20261101T093358Z
+DTSTART;VALUE=DATE:20261014
+DTEND;VALUE=DATE:20261015
+SUMMARY:VTCSpring'27 Submission Deadline
+DESCRIPTION:Submission deadline for VTCSpring'27. The timeline only specifi
+ es the date\; check the official website for the exact time and timezone. 
+ Source: https://scliubit.github.io/conf-timeline.html
+URL:https://events.vtsociety.org/vtc2027-spring/
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ddl-20261030-icc-27@scliubit.github.io
+DTSTAMP:20261101T093358Z
+LAST-MODIFIED:20261101T093358Z
+DTSTART;VALUE=DATE:20261030
+DTEND;VALUE=DATE:20261031
+SUMMARY:ICC'27 Submission Deadline
+DESCRIPTION:Submission deadline for ICC'27. The timeline only specifies the
+  date\; check the official website for the exact time and timezone. Source
+ : https://scliubit.github.io/conf-timeline.html
+URL:https://icc2027.ieee-icc.org/authors/call-symposium-papers
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ddl-20261119-mmsys-27-r2@scliubit.github.io
+DTSTAMP:20261101T093358Z
+LAST-MODIFIED:20261101T093358Z
+DTSTART;VALUE=DATE:20261119
+DTEND;VALUE=DATE:20261120
+SUMMARY:MMSys'27 (R2) Submission Deadline
+DESCRIPTION:Submission deadline for MMSys'27 (R2). The timeline only specif
+ ies the date\; check the official website for the exact time and timezone.
+  Source: https://scliubit.github.io/conf-timeline.html
+URL:https://2027.acmmmsys.org/
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ddl-20261116-cvpr-27@scliubit.github.io
+DTSTAMP:20261101T093358Z
+LAST-MODIFIED:20261101T093358Z
+DTSTART;VALUE=DATE:20261116
+DTEND;VALUE=DATE:20261117
+SUMMARY:CVPR'27 Submission Deadline
+DESCRIPTION:Submission deadline for CVPR'27. The timeline only specifies th
+ e date\; check the official website for the exact time and timezone. Sourc
+ e: https://scliubit.github.io/conf-timeline.html
+URL:https://cvpr.thecvf.com/Conferences/2027
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ddl-20270104-acl-27@scliubit.github.io
+DTSTAMP:20261101T093358Z
+LAST-MODIFIED:20261101T093358Z
+DTSTART;VALUE=DATE:20270104
+DTEND;VALUE=DATE:20270105
+SUMMARY:ACL'27 Submission Deadline
+DESCRIPTION:Submission deadline for ACL'27. The timeline only specifies the
+  date\; check the official website for the exact time and timezone. Source
+ : https://scliubit.github.io/conf-timeline.html
+URL:https://2027.aclweb.org/
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ddl-20270110-isit-27@scliubit.github.io
+DTSTAMP:20261101T093358Z
+LAST-MODIFIED:20261101T093358Z
+DTSTART;VALUE=DATE:20270110
+DTEND;VALUE=DATE:20270111
+SUMMARY:ISIT'27 Submission Deadline
+DESCRIPTION:Submission deadline for ISIT'27. The timeline only specifies th
+ e date\; check the official website for the exact time and timezone. Sourc
+ e: https://scliubit.github.io/conf-timeline.html
+URL:https://2027.ieee-isit.org/
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ddl-20270201-vtcfall-27@scliubit.github.io
+DTSTAMP:20261101T093358Z
+LAST-MODIFIED:20261101T093358Z
+DTSTART;VALUE=DATE:20270201
+DTEND;VALUE=DATE:20270202
+SUMMARY:VTCFall'27 Submission Deadline
+DESCRIPTION:Submission deadline for VTCFall'27. The timeline only specifies
+  the date\; check the official website for the exact time and timezone. So
+ urce: https://scliubit.github.io/conf-timeline.html
+URL:https://events.vtsociety.org/vtc2027-fall/
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ddl-20270206-eusipco-27@scliubit.github.io
+DTSTAMP:20261101T093358Z
+LAST-MODIFIED:20261101T093358Z
+DTSTART;VALUE=DATE:20270206
+DTEND;VALUE=DATE:20270207
+SUMMARY:EUSIPCO'27 Submission Deadline
+DESCRIPTION:Submission deadline for EUSIPCO'27. The timeline only specifies
+  the date\; check the official website for the exact time and timezone. So
+ urce: https://scliubit.github.io/conf-timeline.html
+URL:https://eusipco2027.de/
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ddl-20270226-meditcom-27@scliubit.github.io
+DTSTAMP:20261101T093358Z
+LAST-MODIFIED:20261101T093358Z
+DTSTART;VALUE=DATE:20270226
+DTEND;VALUE=DATE:20270227
+SUMMARY:MeditCom'27 Submission Deadline
+DESCRIPTION:Submission deadline for MeditCom'27. The timeline only specifie
+ s the date\; check the official website for the exact time and timezone. S
+ ource: https://scliubit.github.io/conf-timeline.html
+URL:https://meditcom2027.ieee-meditcom.org/
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ddl-20270312-pimrc-27@scliubit.github.io
+DTSTAMP:20261101T093358Z
+LAST-MODIFIED:20261101T093358Z
+DTSTART;VALUE=DATE:20270312
+DTEND;VALUE=DATE:20270313
+SUMMARY:PIMRC'27 Submission Deadline
+DESCRIPTION:Submission deadline for PIMRC'27. The timeline only specifies t
+ he date\; check the official website for the exact time and timezone. Sour
+ ce: https://scliubit.github.io/conf-timeline.html
+URL:https://pimrc2027.ieee-pimrc.org/
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:conf-20260628-isit-26@scliubit.github.io
+DTSTAMP:20261101T093358Z
+LAST-MODIFIED:20261101T093358Z
+DTSTART;VALUE=DATE:20260628
+DTEND;VALUE=DATE:20260704
+SUMMARY:ISIT'26
+DESCRIPTION:Conference dates: Jun. 28 – Jul. 3. Check the official websit
+ e for the latest information. Source: https://scliubit.github.io/conf-time
+ line.html
+LOCATION:Guangzhou\, China
+URL:https://2026.ieee-isit.org/
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:conf-20260602-eucnc-26@scliubit.github.io
+DTSTAMP:20261101T093358Z
+LAST-MODIFIED:20261101T093358Z
+DTSTART;VALUE=DATE:20260602
+DTEND;VALUE=DATE:20260606
+SUMMARY:EuCNC'26
+DESCRIPTION:Conference dates: Jun. 2–5. Check the official website for th
+ e latest information. Source: https://scliubit.github.io/conf-timeline.htm
+ l
+LOCATION:Malaga\, Spain
+URL:https://www.eucnc.eu/
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:conf-20260831-eusipco-26@scliubit.github.io
+DTSTAMP:20261101T093358Z
+LAST-MODIFIED:20261101T093358Z
+DTSTART;VALUE=DATE:20260831
+DTEND;VALUE=DATE:20260905
+SUMMARY:EUSIPCO'26
+DESCRIPTION:Conference dates: Aug. 31 – Sep. 4. Check the official websit
+ e for the latest information. Source: https://scliubit.github.io/conf-time
+ line.html
+LOCATION:Bruges\, Belgium
+URL:https://eusipco2026.org/
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:conf-20261026-mobicom-26@scliubit.github.io
+DTSTAMP:20261101T093358Z
+LAST-MODIFIED:20261101T093358Z
+DTSTART;VALUE=DATE:20261026
+DTEND;VALUE=DATE:20261031
+SUMMARY:MobiCom'26
+DESCRIPTION:Conference dates: Oct. 26–30. Check the official website for 
+ the latest information. Source: https://scliubit.github.io/conf-timeline.h
+ tml
+LOCATION:Austin\, Texas\, USA
+URL:https://www.sigmobile.org/mobicom/2026/
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:conf-20260906-vtcfall-26@scliubit.github.io
+DTSTAMP:20261101T093358Z
+LAST-MODIFIED:20261101T093358Z
+DTSTART;VALUE=DATE:20260906
+DTEND;VALUE=DATE:20260910
+SUMMARY:VTCFall'26
+DESCRIPTION:Conference dates: Sep. 6–9. Check the official website for th
+ e latest information. Source: https://scliubit.github.io/conf-timeline.htm
+ l
+LOCATION:Boston\, MA\, USA
+URL:https://events.vtsociety.org/vtc2026-fall/
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:conf-20260906-spawc-26@scliubit.github.io
+DTSTAMP:20261101T093358Z
+LAST-MODIFIED:20261101T093358Z
+DTSTART;VALUE=DATE:20260906
+DTEND;VALUE=DATE:20260910
+SUMMARY:SPAWC'26
+DESCRIPTION:Conference dates: Sep. 6–9. Check the official website for th
+ e latest information. Source: https://scliubit.github.io/conf-timeline.htm
+ l
+LOCATION:Athens\, Greece
+URL:https://2026.ieeespawc.org/
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:conf-20260706-meditcom-26@scliubit.github.io
+DTSTAMP:20261101T093358Z
+LAST-MODIFIED:20261101T093358Z
+DTSTART;VALUE=DATE:20260706
+DTEND;VALUE=DATE:20260710
+SUMMARY:MeditCom'26
+DESCRIPTION:Conference dates: Jul. 6–9. Check the official website for th
+ e latest information. Source: https://scliubit.github.io/conf-timeline.htm
+ l
+LOCATION:Cagliari\, Italy
+URL:https://meditcom2026.ieee-meditcom.org/
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:conf-20260807-iccc-26@scliubit.github.io
+DTSTAMP:20261101T093358Z
+LAST-MODIFIED:20261101T093358Z
+DTSTART;VALUE=DATE:20260807
+DTEND;VALUE=DATE:20260810
+SUMMARY:ICCC'26
+DESCRIPTION:Conference dates: Aug. 7–9. Check the official website for th
+ e latest information. Source: https://scliubit.github.io/conf-timeline.htm
+ l
+LOCATION:Wuhan\, China
+URL:https://iccc2026.ieee-iccc.org/
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:conf-20260901-pimrc-26@scliubit.github.io
+DTSTAMP:20261101T093358Z
+LAST-MODIFIED:20261101T093358Z
+DTSTART;VALUE=DATE:20260901
+DTEND;VALUE=DATE:20260905
+SUMMARY:PIMRC'26
+DESCRIPTION:Conference dates: Sep. 1–4. Check the official website for th
+ e latest information. Source: https://scliubit.github.io/conf-timeline.htm
+ l
+LOCATION:Singapore
+URL:https://pimrc2026.ieee-pimrc.org/
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:conf-20261207-globecom-26@scliubit.github.io
+DTSTAMP:20261101T093358Z
+LAST-MODIFIED:20261101T093358Z
+DTSTART;VALUE=DATE:20261207
+DTEND;VALUE=DATE:20261212
+SUMMARY:Globecom'26
+DESCRIPTION:Conference dates: Dec. 7–11. Check the official website for t
+ he latest information. Source: https://scliubit.github.io/conf-timeline.ht
+ ml
+LOCATION:Macau\, China
+URL:https://globecom2026.ieee-globecom.org/
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:conf-20261025-asilomar-26@scliubit.github.io
+DTSTAMP:20261101T093358Z
+LAST-MODIFIED:20261101T093358Z
+DTSTART;VALUE=DATE:20261025
+DTEND;VALUE=DATE:20261029
+SUMMARY:Asilomar'26
+DESCRIPTION:Conference dates: Oct. 25–28. Check the official website for 
+ the latest information. Source: https://scliubit.github.io/conf-timeline.h
+ tml
+LOCATION:Pacific Grove\, CA\, USA
+URL:https://www.asilomarsscconf.org/
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:conf-20261206-neurips-26@scliubit.github.io
+DTSTAMP:20261101T093358Z
+LAST-MODIFIED:20261101T093358Z
+DTSTART;VALUE=DATE:20261206
+DTEND;VALUE=DATE:20261213
+SUMMARY:NeurIPS'26
+DESCRIPTION:Conference dates: Sydney: Dec. 6–12\; Atlanta & Paris: Dec. 9
+ –13. Check the official website for the latest information. Source: http
+ s://scliubit.github.io/conf-timeline.html
+LOCATION:Sydney\, Australia (Main)\; Atlanta\, GA\, USA\; Paris\, France (S
+ atellites)
+URL:https://neurips.cc/Conferences/2026
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:conf-20261203-hk6gws-26@scliubit.github.io
+DTSTAMP:20261101T093358Z
+LAST-MODIFIED:20261101T093358Z
+DTSTART;VALUE=DATE:20261203
+DTEND;VALUE=DATE:20261205
+SUMMARY:HK6GWS'26
+DESCRIPTION:Conference dates: Dec. 3–4. Check the official website for th
+ e latest information. Source: https://scliubit.github.io/conf-timeline.htm
+ l
+LOCATION:Hong Kong\, China
+URL:https://hk6gws2026.ieee-hk6gws.org/
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:conf-20270216-aaai-27@scliubit.github.io
+DTSTAMP:20261101T093358Z
+LAST-MODIFIED:20261101T093358Z
+DTSTART;VALUE=DATE:20270216
+DTEND;VALUE=DATE:20270224
+SUMMARY:AAAI'27
+DESCRIPTION:Conference dates: Feb. 16–23. Check the official website for 
+ the latest information. Source: https://scliubit.github.io/conf-timeline.h
+ tml
+LOCATION:Montréal\, Canada
+URL:https://aaai.org/conference/aaai/aaai-27/
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:conf-20270524-infocom-27@scliubit.github.io
+DTSTAMP:20261101T093358Z
+LAST-MODIFIED:20261101T093358Z
+DTSTART;VALUE=DATE:20270524
+DTEND;VALUE=DATE:20270528
+SUMMARY:INFOCOM'27
+DESCRIPTION:Conference dates: May 24–27. Check the official website for t
+ he latest information. Source: https://scliubit.github.io/conf-timeline.ht
+ ml
+LOCATION:Honolulu\, Hawaii\, USA
+URL:https://infocom2027.ieee-infocom.org/
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:conf-20261112-wcsp-26@scliubit.github.io
+DTSTAMP:20261101T093358Z
+LAST-MODIFIED:20261101T093358Z
+DTSTART;VALUE=DATE:20261112
+DTEND;VALUE=DATE:20261115
+SUMMARY:WCSP'26
+DESCRIPTION:Conference dates: Nov. 12–14. Check the official website for 
+ the latest information. Source: https://scliubit.github.io/conf-timeline.h
+ tml
+LOCATION:Shenzhen\, China
+URL:http://www.ic-wcsp.org/2026/
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:conf-20271018-mobicom-27@scliubit.github.io
+DTSTAMP:20261101T093358Z
+LAST-MODIFIED:20261101T093358Z
+DTSTART;VALUE=DATE:20271018
+DTEND;VALUE=DATE:20271023
+SUMMARY:MobiCom'27
+DESCRIPTION:Conference dates: Oct. 18–22. Check the official website for 
+ the latest information. Source: https://scliubit.github.io/conf-timeline.h
+ tml
+URL:https://www.sigmobile.org/mobicom/2027/
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:conf-20270405-wcnc-27@scliubit.github.io
+DTSTAMP:20261101T093358Z
+LAST-MODIFIED:20261101T093358Z
+DTSTART;VALUE=DATE:20270405
+DTEND;VALUE=DATE:20270409
+SUMMARY:WCNC'27
+DESCRIPTION:Conference dates: Apr. 5–8. Check the official website for th
+ e latest information. Source: https://scliubit.github.io/conf-timeline.htm
+ l
+LOCATION:Panama City\, Panama
+URL:https://wcnc2027.ieee-wcnc.org/authors/call-papers
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:conf-20270516-icassp-27@scliubit.github.io
+DTSTAMP:20261101T093358Z
+LAST-MODIFIED:20261101T093358Z
+DTSTART;VALUE=DATE:20270516
+DTEND;VALUE=DATE:20270522
+SUMMARY:ICASSP'27
+DESCRIPTION:Conference dates: May 16–21. Check the official website for t
+ he latest information. Source: https://scliubit.github.io/conf-timeline.ht
+ ml
+LOCATION:Toronto\, Canada
+URL:https://2027.ieeeicassp.org/
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:conf-20270426-iclr-27@scliubit.github.io
+DTSTAMP:20261101T093358Z
+LAST-MODIFIED:20261101T093358Z
+DTSTART;VALUE=DATE:20270426
+DTEND;VALUE=DATE:20270501
+SUMMARY:ICLR'27
+DESCRIPTION:Conference dates: Apr. 26–30. Check the official website for 
+ the latest information. Source: https://scliubit.github.io/conf-timeline.h
+ tml
+LOCATION:San Francisco\, CA\, USA
+URL:https://iclr.cc/Conferences/2027
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:conf-20270330-mmsys-27@scliubit.github.io
+DTSTAMP:20261101T093358Z
+LAST-MODIFIED:20261101T093358Z
+DTSTART;VALUE=DATE:20270330
+DTEND;VALUE=DATE:20270403
+SUMMARY:MMSys'27
+DESCRIPTION:Conference dates: Mar. 30 – Apr. 2. Check the official websit
+ e for the latest information. Source: https://scliubit.github.io/conf-time
+ line.html
+LOCATION:Ghent\, Belgium
+URL:https://2027.acmmmsys.org/
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:conf-20270620-vtcspring-27@scliubit.github.io
+DTSTAMP:20261101T093358Z
+LAST-MODIFIED:20261101T093358Z
+DTSTART;VALUE=DATE:20270620
+DTEND;VALUE=DATE:20270624
+SUMMARY:VTCSpring'27
+DESCRIPTION:Conference dates: Jun. 20–23. Check the official website for 
+ the latest information. Source: https://scliubit.github.io/conf-timeline.h
+ tml
+LOCATION:Hamburg\, Germany
+URL:https://events.vtsociety.org/vtc2027-spring/
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:conf-20270530-icc-27@scliubit.github.io
+DTSTAMP:20261101T093358Z
+LAST-MODIFIED:20261101T093358Z
+DTSTART;VALUE=DATE:20270530
+DTEND;VALUE=DATE:20270604
+SUMMARY:ICC'27
+DESCRIPTION:Conference dates: May 30 – Jun. 3. Check the official website
+  for the latest information. Source: https://scliubit.github.io/conf-timel
+ ine.html
+LOCATION:Washington\, D.C.\, USA
+URL:https://icc2027.ieee-icc.org/authors/call-symposium-papers
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:conf-20270330-mmsys-27-r2@scliubit.github.io
+DTSTAMP:20261101T093358Z
+LAST-MODIFIED:20261101T093358Z
+DTSTART;VALUE=DATE:20270330
+DTEND;VALUE=DATE:20270403
+SUMMARY:MMSys'27 (R2)
+DESCRIPTION:Conference dates: Mar. 30 – Apr. 2. Check the official websit
+ e for the latest information. Source: https://scliubit.github.io/conf-time
+ line.html
+LOCATION:Ghent\, Belgium
+URL:https://2027.acmmmsys.org/
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:conf-20270620-cvpr-27@scliubit.github.io
+DTSTAMP:20261101T093358Z
+LAST-MODIFIED:20261101T093358Z
+DTSTART;VALUE=DATE:20270620
+DTEND;VALUE=DATE:20270626
+SUMMARY:CVPR'27
+DESCRIPTION:Conference dates: Jun. 20–25. Check the official website for 
+ the latest information. Source: https://scliubit.github.io/conf-timeline.h
+ tml
+LOCATION:Seattle\, WA\, USA
+URL:https://cvpr.thecvf.com/Conferences/2027
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:conf-20270817-acl-27@scliubit.github.io
+DTSTAMP:20261101T093358Z
+LAST-MODIFIED:20261101T093358Z
+DTSTART;VALUE=DATE:20270817
+DTEND;VALUE=DATE:20270823
+SUMMARY:ACL'27
+DESCRIPTION:Conference dates: Aug. 17–22. Check the official website for 
+ the latest information. Source: https://scliubit.github.io/conf-timeline.h
+ tml
+LOCATION:Kyoto\, Japan
+URL:https://2027.aclweb.org/
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:conf-20270627-isit-27@scliubit.github.io
+DTSTAMP:20261101T093358Z
+LAST-MODIFIED:20261101T093358Z
+DTSTART;VALUE=DATE:20270627
+DTEND;VALUE=DATE:20270703
+SUMMARY:ISIT'27
+DESCRIPTION:Conference dates: Jun. 27 – Jul. 2. Check the official websit
+ e for the latest information. Source: https://scliubit.github.io/conf-time
+ line.html
+LOCATION:Sorrento\, Italy
+URL:https://2027.ieee-isit.org/
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:conf-20270608-eucnc-27@scliubit.github.io
+DTSTAMP:20261101T093358Z
+LAST-MODIFIED:20261101T093358Z
+DTSTART;VALUE=DATE:20270608
+DTEND;VALUE=DATE:20270612
+SUMMARY:EuCNC'27
+DESCRIPTION:Conference dates: Jun. 8–11. Check the official website for t
+ he latest information. Source: https://scliubit.github.io/conf-timeline.ht
+ ml
+LOCATION:Dublin\, Ireland
+URL:https://www.eucnc.eu/
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:conf-20270927-vtcfall-27@scliubit.github.io
+DTSTAMP:20261101T093358Z
+LAST-MODIFIED:20261101T093358Z
+DTSTART;VALUE=DATE:20270927
+DTEND;VALUE=DATE:20271001
+SUMMARY:VTCFall'27
+DESCRIPTION:Conference dates: Sep. 27–30. Check the official website for 
+ the latest information. Source: https://scliubit.github.io/conf-timeline.h
+ tml
+LOCATION:Osaka\, Japan
+URL:https://events.vtsociety.org/vtc2027-fall/
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:conf-20270830-eusipco-27@scliubit.github.io
+DTSTAMP:20261101T093358Z
+LAST-MODIFIED:20261101T093358Z
+DTSTART;VALUE=DATE:20270830
+DTEND;VALUE=DATE:20270904
+SUMMARY:EUSIPCO'27
+DESCRIPTION:Conference dates: Aug. 30 – Sep. 3. Check the official websit
+ e for the latest information. Source: https://scliubit.github.io/conf-time
+ line.html
+LOCATION:Darmstadt\, Germany
+URL:https://eusipco2027.de/
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:conf-20270705-meditcom-27@scliubit.github.io
+DTSTAMP:20261101T093358Z
+LAST-MODIFIED:20261101T093358Z
+DTSTART;VALUE=DATE:20270705
+DTEND;VALUE=DATE:20270709
+SUMMARY:MeditCom'27
+DESCRIPTION:Conference dates: Jul. 5–8. Check the official website for th
+ e latest information. Source: https://scliubit.github.io/conf-timeline.htm
+ l
+LOCATION:Tunis\, Tunisia
+URL:https://meditcom2027.ieee-meditcom.org/
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:conf-20270907-pimrc-27@scliubit.github.io
+DTSTAMP:20261101T093358Z
+LAST-MODIFIED:20261101T093358Z
+DTSTART;VALUE=DATE:20270907
+DTEND;VALUE=DATE:20270911
+SUMMARY:PIMRC'27
+DESCRIPTION:Conference dates: Sep. 7–10. Check the official website for t
+ he latest information. Source: https://scliubit.github.io/conf-timeline.ht
+ ml
+LOCATION:Lisbon\, Portugal
+URL:https://pimrc2027.ieee-pimrc.org/
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:conf-20270920-spawc-27@scliubit.github.io
+DTSTAMP:20261101T093358Z
+LAST-MODIFIED:20261101T093358Z
+DTSTART;VALUE=DATE:20270920
+DTEND;VALUE=DATE:20270924
+SUMMARY:SPAWC'27
+DESCRIPTION:Conference dates: Sep. 20–23. Check the official website for 
+ the latest information. Source: https://scliubit.github.io/conf-timeline.h
+ tml
+LOCATION:Grenoble\, France
+URL:https://signalprocessingsociety.org/event-names/spawc
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:conf-20271206-globecom-27@scliubit.github.io
+DTSTAMP:20261101T093358Z
+LAST-MODIFIED:20261101T093358Z
+DTSTART;VALUE=DATE:20271206
+DTEND;VALUE=DATE:20271211
+SUMMARY:Globecom'27
+DESCRIPTION:Conference dates: Dec. 6–10. Check the official website for t
+ he latest information. Source: https://scliubit.github.io/conf-timeline.ht
+ ml
+LOCATION:Abu Dhabi\, UAE
+URL:https://globecom2027.ieee-globecom.org/
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:conf-20280528-icassp-28@scliubit.github.io
+DTSTAMP:20261101T093358Z
+LAST-MODIFIED:20261101T093358Z
+DTSTART;VALUE=DATE:20280528
+DTEND;VALUE=DATE:20280603
+SUMMARY:ICASSP'28
+DESCRIPTION:Conference dates: May 28 – Jun. 2. Check the official website
+  for the latest information. Source: https://scliubit.github.io/conf-timel
+ ine.html
+LOCATION:Tokyo\, Japan
+URL:https://2028.ieeeicassp.org/
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:conf-20280528-icc-28@scliubit.github.io
+DTSTAMP:20261101T093358Z
+LAST-MODIFIED:20261101T093358Z
+DTSTART;VALUE=DATE:20280528
+DTEND;VALUE=DATE:20280602
+SUMMARY:ICC'28
+DESCRIPTION:Conference dates: May 28 – Jun. 1. Check the official website
+  for the latest information. Source: https://scliubit.github.io/conf-timel
+ ine.html
+LOCATION:Chengdu\, China
+URL:https://icc2028.ieee-icc.org/
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:conf-20280611-cvpr-28@scliubit.github.io
+DTSTAMP:20261101T093358Z
+LAST-MODIFIED:20261101T093358Z
+DTSTART;VALUE=DATE:20280611
+DTEND;VALUE=DATE:20280616
+SUMMARY:CVPR'28
+DESCRIPTION:Conference dates: Jun. 11–15. Check the official website for 
+ the latest information. Source: https://scliubit.github.io/conf-timeline.h
+ tml
+LOCATION:San Antonio\, TX\, USA
+URL:https://www.thecvf.com/
+TRANSP:TRANSPARENT
+END:VEVENT
+END:VCALENDAR

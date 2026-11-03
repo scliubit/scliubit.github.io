@@ -117,6 +117,43 @@ header p {
   transition: all 0.2s;
 }
 .theme-btn:hover { border-color: var(--conf); }
+.calendar-subscribe {
+  display: flex;
+  justify-content: center;
+  gap: 0.7rem;
+  flex-wrap: wrap;
+  margin: -1rem 0 0.5rem;
+}
+.calendar-btn {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--bg2);
+  color: var(--text);
+  box-shadow: var(--shadow);
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+.calendar-btn:hover {
+  border-color: var(--conf);
+  color: var(--conf);
+}
+.calendar-btn.primary {
+  background: var(--conf);
+  border-color: var(--conf);
+  color: #fff;
+}
+.calendar-btn.primary:hover { filter: brightness(1.08); }
+.calendar-note {
+  text-align: center;
+  color: var(--text2);
+  font-size: 0.75rem;
+  margin-bottom: 2rem;
+}
 
 /* Upcoming deadlines */
 .upcoming-section {
@@ -476,6 +513,12 @@ header p {
       <span id="themeIcon">&#9790;</span>
     </button>
   </div>
+
+  <div class="calendar-subscribe">
+    <a class="calendar-btn primary" id="calendarSubscribe" href="webcal://scliubit.github.io/conference-calendar.ics">Subscribe in Apple Calendar</a>
+    <a class="calendar-btn" href="/conference-calendar.ics" download>Download .ics</a>
+  </div>
+  <p class="calendar-note" id="calendarNote">All-day events for exact-day submission deadlines and conference dates. Month-only and TBD dates are omitted.</p>
 
   <div class="legend">
     <div class="legend-item"><div class="legend-dot" style="background:var(--past)"></div> Past DDL</div>
@@ -946,6 +989,33 @@ function render() {
   buildTable();
 }
 
+function initCalendarSubscription() {
+  const link = document.getElementById('calendarSubscribe');
+  const isLocal = ['localhost', '127.0.0.1', '[::1]'].includes(window.location.hostname);
+
+  if (!isLocal) {
+    link.href = `webcal://${window.location.host}/conference-calendar.ics`;
+    return;
+  }
+
+  const port = window.location.port ? `:${window.location.port}` : '';
+  const url = `http://127.0.0.1${port}/conference-calendar.ics`;
+  link.href = url;
+  link.textContent = 'Copy Local Subscription URL';
+  document.getElementById('calendarNote').textContent = 'Local testing: paste the copied HTTP URL into Calendar → File → New Calendar Subscription.';
+
+  link.addEventListener('click', async (event) => {
+    event.preventDefault();
+    try {
+      await navigator.clipboard.writeText(url);
+      link.textContent = 'Copied — Paste in Apple Calendar';
+    } catch {
+      window.prompt('Copy this URL into Calendar → File → New Calendar Subscription:', url);
+    }
+  });
+}
+
+initCalendarSubscription();
 initTheme();
 render();
 </script>
