@@ -46,7 +46,7 @@ I am a Ph.D. candidate at the City University of Hong Kong, supervised by <a hre
 
 <div class="news-section">
 <ul>
-<li><b><span class="accent">[2026.10]</span></b>Welcome Submissions to the IEEE ICC'27 Workshop on <b>Beam Engineering for 6G</b>. CFP and URL Coming Soon.</li>
+<li><b><span class="accent">[2026.11]</span></b>Welcome Submissions to the IEEE ICC'27 Workshop on <b><a href="/files/ICC2027_CFP_BE.pdf">Beam Engineering for 6G</a></b>. Submission URL Coming Soon.</li>
 <li><b><span class="accent">[2026.10]</span></b>1,000 Google Scholar citations reached.</li>
 <li><b><span class="accent">[2026.09]</span></b>New article on <b>Disaggregated LLM Inference</b> available on <a href="https://arxiv.org/abs/2609.26763">arXiv</a>.</li>
 <li><b><span class="accent">[2026.09]</span></b>Serve as a TPC member at ICC'27.</li>
