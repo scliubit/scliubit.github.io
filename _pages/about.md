@@ -11,6 +11,7 @@ redirect_from:
 
 <div class="home-top-bar">
   <img src="https://img.shields.io/github/last-commit/scliubit/scliubit.github.io?logo=github&label=last%20update" height="20px">
+  <button type="button" onclick="window.location.href='/conf-timeline.html'">Conference Timeline</button>
   <!--
   <div class="button-container" style="position: relative;">
     <button class="refresh-btn" onclick="refreshPage()">Refresh</button>
@@ -50,7 +51,6 @@ I am a Ph.D. candidate at the City University of Hong Kong, supervised by <a hre
 <li><b><span class="accent">[2026.10]</span></b>1,000 Google Scholar citations reached.</li>
 <li><b><span class="accent">[2026.09]</span></b>New article on <b>Disaggregated LLM Inference</b> available on <a href="https://arxiv.org/abs/2609.26763">arXiv</a>.</li>
 <li><b><span class="accent">[2026.09]</span></b>Serve as a TPC member at ICC'27.</li>
-<li><b><span class="accent">[2026.06]</span></b>Released a <b>Conference Deadline Timeline</b> tracking Communications & Signal Processing deadlines. Check it out <a href="./conf-timeline.html">here</a>.</li>
 <li><b><span class="accent">[2026.06]</span></b>New article on <b>bending beam (caustic beamforming)</b> for next-generation wireless systems available on <a href="https://arxiv.org/abs/2606.12321">arXiv</a>.</li>
 <li><b><span class="accent">[2026.05]</span></b>Manuscript on near-field <b>secure communication</b> via <b>bending beams</b> accepted by IEEE WCL, available on <a href="https://arxiv.org/abs/2603.24077">arXiv</a> and <a href="https://ieeexplore.ieee.org/document/11505880">IEEE</a>.</li>
 <li><b><span class="accent">[2026.04]</span></b>Awarded Student Travel Grant for ICC 2026. Will chair oral Symposium sessions </li>
@@ -67,6 +67,7 @@ I am a Ph.D. candidate at the City University of Hong Kong, supervised by <a hre
 <details><summary>More News</summary>
 <ul>
 <li><b><span class="accent">[2026.08]</span></b>Out of Office until Sept 1st.</li>
+<li><b><span class="accent">[2026.06]</span></b>Released a <b>Conference Deadline Timeline</b> tracking Communications & Signal Processing deadlines. Check it out <a href="./conf-timeline.html">here</a>.</li>
 <li><b><span class="accent">[2026.02]</span></b>Themes and Dark Modes (beta) are now available! Select the theme you like from the dropdown menu above, or click the top-right button to toggle between light and dark modes.</li>
 <li><b><span class="accent">[2025.10]</span></b>New paper submitted to IEEE ICC. Journal Version available on <a href="https://arxiv.org/abs/2512.21660">arXiv</a>.</li>
 <li><b><span class="muted">[2025.05]</span></b>Errata for JSAC'25 were released. See <a href="/posts/JSAC25ERRATA/">here</a> for more info.</li>
