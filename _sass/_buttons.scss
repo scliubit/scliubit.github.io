@@ -56,6 +56,13 @@
       color: #fff !important;
       border-color: $gray;
     }
+
+    // Mobile "Follow" button: avoid a white block on dark backgrounds.
+    html[data-theme="dark"] &:not(:hover) {
+      color: var(--global-text-color) !important;
+      border-color: var(--global-border-color) !important;
+      background-color: var(--global-bg-color);
+    }
   }
 
   /* light outline */

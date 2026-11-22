@@ -279,6 +279,18 @@
         transform: translateX(1.25rem);
       }
     }
+
+    // The static $masthead-link-color(-hover) grays are tuned for light backgrounds
+    // (hover #5c6266 nearly vanishes on dark ones); use each theme's masthead colours instead.
+    a {
+      color: var(--global-masthead-link-color);
+    }
+
+    a:hover,
+    .nav-controls a:hover,
+    .hidden-links a:hover {
+      color: var(--global-masthead-link-color-hover);
+    }
   }
 
   .visible-links {

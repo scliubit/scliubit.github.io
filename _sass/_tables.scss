@@ -18,6 +18,11 @@ table {
 thead {
   background-color: $lighter-gray;
   border-bottom: 1px solid $light-gray;
+
+  // The static light-gray header sits under light text in dark mode; use the theme's header colour.
+  html[data-theme="dark"] & {
+    background-color: var(--global-thead-color);
+  }
 }
 
 th {

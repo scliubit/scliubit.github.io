@@ -60,6 +60,7 @@ html[data-style="sunrise"][data-theme="dark"] {
     --global-footnote-color : #{$danger-color};
     --global-quote-background-color : #{mix(#000000, $primary-color, 80%)};
     --global-quote-border-color : #{mix(#000000, $primary-color, 20%)};
+    --global-info-color : #{$info-color};
     --global-shadow-color : rgba(0, 0, 0, 0.25);
 
     /* Code block colors: must override the light block's --code-*,

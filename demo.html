@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -232,12 +232,11 @@
 
             <div class="static-params">
                 <div class="param-group">
-                    <label>Antenna Number $M$</label>
+                    <label for="inp_M">Antenna Number $M$</label>
                     <input type="number" id="inp_M" value="16" min="3" max="512" step="1">
                 </div>
-                <br>
                 <div class="param-group">
-                    <label>Aperture $A_{\mathrm T}$</label>
+                    <label for="inp_A">Aperture $A_{\mathrm T}$</label>
                     <input type="number" id="inp_A" value="5" min="0.1" step="0.1">
                 </div>
             </div>
@@ -336,23 +335,33 @@
         tbody: document.querySelector('#dataTable tbody')
     };
 
+    // Coalesce bursts of input/resize events into one recompute + redraw per frame.
+    let updateQueued = false;
+    function scheduleUpdate() {
+        if (updateQueued) return;
+        updateQueued = true;
+        requestAnimationFrame(() => {
+            updateQueued = false;
+            updateStateFromDOM();
+            calculate();
+            drawMain();
+        });
+    }
+
     function initListeners() {
         ['M', 'A'].forEach(key => {
-            dom.inputs[key].addEventListener('input', () => {
-                updateStateFromDOM();
-                calculate();
-                drawMain();
-            });
+            dom.inputs[key].addEventListener('input', scheduleUpdate);
         });
+
+        // The canvas backing store is sized from its CSS box, so redraw when that box changes.
+        window.addEventListener('resize', scheduleUpdate);
 
         Object.keys(dom.sliders).forEach(key => {
             const group = dom.sliders[key];
-            
+
             group.slider.addEventListener('input', () => {
                 group.val.textContent = key === 'theta' ? group.slider.value + '°' : parseFloat(group.slider.value).toFixed(2);
-                updateStateFromDOM();
-                calculate();
-                drawMain();
+                scheduleUpdate();
             });
 
             [group.min, group.max].forEach(input => {
@@ -418,6 +427,10 @@
     function setStatus(html, isValid) {
         state.isValid = isValid;
         dom.status.className = isValid ? 'status-panel status-valid' : 'status-panel status-error';
+        // Drop MathJax's bookkeeping for the old content before replacing it, so it does not pile up while dragging.
+        if (window.MathJax && window.MathJax.typesetClear) {
+            MathJax.typesetClear([dom.status]);
+        }
         dom.status.innerHTML = html;
         renderStatusMath();
     }
@@ -451,6 +464,17 @@
         if (diff >= limit) {
             const diffDeg = (diff * 180 / Math.PI).toFixed(1);
             invalidate(`<span>$|\\varphi_0 - \\theta_{\\mathrm{UE}}| = ${diffDeg}^{\\circ} \\ge 90^{\\circ}$</span>`);
+            return;
+        }
+
+        // The sine map s(x) = sin(atan((x - x0)/y0) - theta) is only invertible on the aperture if the
+        // offset angle stays inside (-90°, 90°) at both edges x = ±A/2; checking the centre alone is not
+        // enough. Outside that range sin() folds back and asin() returns positions on the wrong side.
+        const edgeOffsets = [-A / 2, A / 2].map(x => Math.atan((x - x0) / y0) - theta);
+        const worstEdge = Math.max(...edgeOffsets.map(Math.abs));
+        if (worstEdge >= limit) {
+            const edgeDeg = (worstEdge * 180 / Math.PI).toFixed(1);
+            invalidate(`<span>Aperture edge: $|\\varphi(\\pm A_{\\mathrm T}/2) - \\theta_{\\mathrm{UE}}| = ${edgeDeg}^{\\circ} \\ge 90^{\\circ}$</span>`);
             return;
         }
 

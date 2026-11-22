@@ -1,5 +1,6 @@
 {
-	"name": "Minimal Mistakes",
+	"name": "Shicong's Homepage",
+	"short_name": "Shicong",
 	"icons": [
 		{
 			"src": "\/images\/android-chrome-36x36.png?v=M44lzPylqQ",
@@ -36,6 +37,14 @@
 			"sizes": "192x192",
 			"type": "image\/png",
 			"density": 4
+		},
+		{
+			"src": "\/images\/android-chrome-512x512.png?v=M44lzPylqQ",
+			"sizes": "512x512",
+			"type": "image\/png"
 		}
-	]
+	],
+	"theme_color": "#ffffff",
+	"background_color": "#ffffff",
+	"display": "browser"
 }

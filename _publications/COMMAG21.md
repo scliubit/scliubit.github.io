@@ -1,5 +1,5 @@
 ---
-authors: "S. Liu, Z. Gao, Y. Wu, D. W. K. Ng, and X. Gao, K.-K. Wong, S. Chatzinotas, and B. Ottersten"
+authors: "S. Liu, Z. Gao, Y. Wu, D. W. K. Ng, X. Gao, K.-K. Wong, S. Chatzinotas, and B. Ottersten"
 corr: "Z. Gao"
 title: "LEO Satellite Constellations for 5G and Beyond: How Will They Reshape Vertical Domains?"
 type: "Article"
@@ -20,5 +20,3 @@ paperurl: 'https://ieeexplore.ieee.org/document/9502642'
 DOI: '10.1109/MCOM.001.2001081'
 # citation: 'Your Name, You. (2009). &quot;Paper Title Number 1.&quot; <i>Journal 1</i>. 1(1).'
 ---
-
-TODO: Add abstract

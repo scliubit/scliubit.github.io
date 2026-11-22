@@ -70,6 +70,12 @@ function slug(name) {
   return name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
 }
 
+// Extra submission rounds such as "MMSys'27 (R2)" are the same conference;
+// strip the round suffix so they share one conference event.
+function conferenceName(name) {
+  return name.replace(/\s*\(R\d+\)\s*$/i, '');
+}
+
 function eventLines({ uid, start, end, summary, description, location, url }) {
   const lines = [
     'BEGIN:VEVENT',
@@ -113,13 +119,14 @@ for (const [yearValue, entries] of Object.entries(data)) {
       const end = addDays(utcDate(conferenceYear, conference.ce[0], conference.ce[1]), 1);
       if (end <= start) throw new Error(`Invalid conference date range for ${conference.name}`);
 
-      const uid = `conf-${formatDate(start)}-${slug(conference.name)}@scliubit.github.io`;
+      const name = conferenceName(conference.name);
+      const uid = `conf-${formatDate(start)}-${slug(name)}@scliubit.github.io`;
       if (!conferences.has(uid)) {
         conferences.set(uid, eventLines({
           uid,
           start,
           end,
-          summary: conference.name,
+          summary: name,
           description: `Conference dates: ${conference.dates}. Check the official website for the latest information. Source: https://scliubit.github.io/conf-timeline.html`,
           location: conference.loc,
           url: conference.url,

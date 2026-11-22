@@ -1,4 +1,5 @@
 ---
+published: false # unlinked upstream template page; remove this line to publish it again
 permalink: /non-menu-page/
 title: "Page not in menu"
 author_profile: true

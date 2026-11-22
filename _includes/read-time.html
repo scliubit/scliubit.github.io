@@ -1,17 +1,33 @@
+{% comment %}
+  Reading time for mixed Chinese/English pages.
+  GitHub Pages runs Jekyll 3.10, whose number_of_words only splits on whitespace, so a Chinese
+  paragraph counts as one "word". Instead:
+    - Latin text is counted in words (number_of_words) at site.words_per_minute;
+    - CJK text is counted in characters at site.cjk_chars_per_minute. The characters are isolated
+      by deleting ASCII letters, digits, punctuation and spaces; what remains is CJK characters and
+      full-width punctuation.
+  For Chinese text number_of_words also counts each space-separated CJK run once; that slight
+  overcount is accepted.
+{% endcomment %}
 {% if post.read_time %}
-  {% assign words = post.content | strip_html | number_of_words %}
+  {% assign rt_text = post.content | strip_html %}
 {% elsif page.read_time %}
-  {% assign words = page.content | strip_html | number_of_words %}
+  {% assign rt_text = page.content | strip_html %}
 {% endif %}
-
-{% if site.words_per_minute %}
-  {% if words < 60 %}
-	  {{ site.data.ui-text[site.locale].less_than | default: "less than" }} 1 {{ site.data.ui-text[site.locale].minute_read | default: "minute read" }}
-	{% elsif words < 120 %}
-	  1 {{ site.data.ui-text[site.locale].minute_read | default: "minute read" }}
-	{% else %}
-	  {{ words | divided_by:site.words_per_minute }} {{ site.data.ui-text[site.locale].minutes_read | default: "minutes read" }}
-	{% endif %}
+{% assign rt_wpm = site.words_per_minute | default: 200 %}
+{% assign rt_cpm = site.cjk_chars_per_minute | default: 300 %}
+{% assign rt_words = rt_text | number_of_words %}
+{% assign rt_cjk = rt_text | strip_newlines | remove: " " %}
+{% assign rt_ascii = 'a b c d e f g h i j k l m n o p q r s t u v w x y z A B C D E F G H I J K L M N O P Q R S T U V W X Y Z 0 1 2 3 4 5 6 7 8 9 . , ; : ! ? " ( ) [ ] { } < > - _ / \ | * & % $ # @ ^ + = ~ `' | append: " '" | split: " " %}
+{% for rt_char in rt_ascii %}{% assign rt_cjk = rt_cjk | remove: rt_char %}{% endfor %}
+{% assign rt_minutes = rt_cjk.size | times: 1.0 | divided_by: rt_cpm %}
+{% assign rt_word_minutes = rt_words | times: 1.0 | divided_by: rt_wpm %}
+{% assign rt_minutes = rt_minutes | plus: rt_word_minutes %}
+{% assign rt_rounded = rt_minutes | round %}
+{% if rt_minutes < 1 %}
+  {{ site.data.ui-text[site.locale].less_than | default: "less than" }} 1 {{ site.data.ui-text[site.locale].minute_read | default: "minute read" }}
+{% elsif rt_rounded <= 1 %}
+  1 {{ site.data.ui-text[site.locale].minute_read | default: "minute read" }}
 {% else %}
-  {{ site.data.ui-text[site.locale].undefined_wpm | "Undefined parameter words_per_minute at _config.yml" }}
+  {{ rt_rounded }} {{ site.data.ui-text[site.locale].minutes_read | default: "minutes read" }}
 {% endif %}

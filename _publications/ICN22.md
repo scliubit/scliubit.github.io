@@ -17,5 +17,3 @@ paperurl: 'https://ieeexplore.ieee.org/document/9765812'
 DOI: '10.23919/ICN.2022.0009'
 # citation: 'Your Name, You. (2009). &quot;Paper Title Number 1.&quot; <i>Journal 1</i>. 1(1).'
 ---
-
-TODO: Add abstract

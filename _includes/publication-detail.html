@@ -1,0 +1,28 @@
+{% comment %}
+  Body of a _publications detail page (/publications/<name>/): authors, abstract (the `excerpt`
+  front matter) and every link the homepage list shows. Rendered by _layouts/single.html.
+{% endcomment %}
+{% if page.authors %}
+<p class="publication__authors">{{ page.authors | replace: "S. Liu", "<strong>S. Liu</strong>" }}</p>
+{% endif %}
+
+{% assign pub_abstract = page.excerpt | strip_html | strip %}
+{% if pub_abstract != "" %}
+<h2>Abstract</h2>
+<p>{{ pub_abstract }}</p>
+{% endif %}
+
+{% capture pub_links %}
+  {% if page.arxiv %}[<a href="{{ page.arxiv }}" target="_blank" rel="noopener noreferrer">arXiv</a>]{% endif %}
+  {% if page.paperurl %}[<a href="{{ page.paperurl }}" target="_blank" rel="noopener noreferrer">Paper</a>]{% endif %}
+  {% if page.DOI %}[<a href="https://doi.org/{{ page.DOI }}" target="_blank" rel="noopener noreferrer">DOI</a>]{% endif %}
+  {% if page.poster %}[<a href="{{ page.poster }}" target="_blank" rel="noopener noreferrer">Poster</a>]{% endif %}
+  {% if page.errata %}[<a href="{{ page.errata }}" target="_blank" rel="noopener noreferrer">Erratum</a>]{% endif %}
+  {% if page.demo %}[<a href="{{ page.demo }}" target="_blank" rel="noopener noreferrer">Demo</a>]{% endif %}
+  {% if page.codes %}[<a href="{{ page.codes }}" target="_blank" rel="noopener noreferrer">Codes</a>]{% endif %}
+  {% if page.slidesurl %}[<a href="{{ page.slidesurl }}" target="_blank" rel="noopener noreferrer">Slides</a>]{% endif %}
+{% endcapture %}
+{% assign pub_links = pub_links | strip %}
+{% if pub_links != "" %}
+<p class="publication__links">{{ pub_links }}</p>
+{% endif %}

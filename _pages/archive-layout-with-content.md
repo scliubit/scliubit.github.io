@@ -1,4 +1,5 @@
 ---
+published: false # unlinked upstream template page; remove this line to publish it again
 title: "Archive Layout with Content"
 layout: archive
 permalink: /archive-layout-with-content/

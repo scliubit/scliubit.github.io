@@ -42,7 +42,8 @@ html[data-style="default"][data-theme="dark"] {
     --global-masthead-link-color-hover  : #{$primary-color};
     --global-text-color                 : #{$text};
     --global-text-color-light           : #f3f3f3;
-    --global-thead-color                : #{$background-lighter};
+    --global-thead-color                : #{mix(#fff, $background, 10%)};
+    --global-info-color                 : #{$info-color};
     --global-footnote-color             : #ff5533;
     --global-quote-background-color     : #263238;
     --global-quote-border-color         : #4f7782;

@@ -17,6 +17,12 @@
           animation-delay: 0.15s;
   z-index: 20;
 
+  // The ::after rule below already draws the theme-coloured divider; in dark mode the static
+  // light-gray border would add a second, bright line under it (transparent keeps the height).
+  html[data-theme="dark"] & {
+    border-bottom-color: transparent;
+  }
+
   &::after {
     content: "";
     position: absolute;

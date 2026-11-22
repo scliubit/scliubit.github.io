@@ -133,7 +133,7 @@ div.highlighter-rouge, figure.highlight {
 /* core mappings of vscode */
 .highlight {
   /* code body */
-  .w, .p, .n .nl { color: var(--code-fg); } 
+  .w, .p, .n, .nl { color: var(--code-fg); }
 
   /* comments */
   .c, .cm, .cp, .c1, .cs { color: var(--code-comment); }
@@ -155,7 +155,7 @@ div.highlighter-rouge, figure.highlight {
   .nf, .nd { color: var(--code-func); }
 
   /* classes/types */
-  .nc, .kt, .nt { color: var(--code-type); }
+  .nc, .kt { color: var(--code-type); }
 
   /* variables */
   .nv, .vc, .vg, .vi { color: var(--code-var); }

@@ -37,8 +37,8 @@ function updateNav() {
   // The visible list is not overflowing
   } else {
 
-    // There is space for another item in the nav
-    if(availableSpace > breaks[breaks.length-1]) {
+    // Restore every item that fits again (a single resize, e.g. maximizing, can free room for several)
+    while(breaks.length && availableSpace > breaks[breaks.length-1]) {
 
       // Move the item to the visible list
       $hlinks.children().first().appendTo($vlinks);

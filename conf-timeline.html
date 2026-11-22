@@ -665,7 +665,7 @@ const DATA = {
     { name: "MobiCom'24", ddl: 3, conf: 11, loc: "Washington DC, USA", url: "https://www.sigmobile.org/mobicom/2024/", next: false, dates: "Nov." },
     { name: "Globecom'24", ddl: 4, conf: 12, loc: "Cape Town, South Africa", url: "https://globecom2024.ieee-globecom.org/", next: false, dates: "Dec." },
     { name: "VTCFall'24", ddl: 4, conf: 10, loc: "Washington DC, USA", url: "https://events.vtsociety.org/vtc2024-fall/", next: false, dates: "Oct." },
-    { name: "SPAWC'24", ddl: 4, conf: 9, loc: "Luca, Italy", url: "https://spawc2024.org/", next: false, dates: "Sep." },
+    { name: "SPAWC'24", ddl: 4, conf: 9, loc: "Lucca, Italy", url: "https://spawc2024.org/", next: false, dates: "Sep." },
     { name: "ICCC'24", ddl: 4, conf: 8, loc: "Hangzhou, China", url: "https://iccc2024.ieee-iccc.org/", next: false, dates: "Aug." },
     { name: "Asilomar'24", ddl: 5, conf: 10, loc: "Pacific Grove, CA, USA", url: "https://www.asilomarsscconf.org/", next: false, dates: "Oct." },
     { name: "WCSP'24", ddl: 6, conf: 10, loc: "Hefei, China", url: "http://www.ic-wcsp.org/2024/", next: false, dates: "Oct." },
@@ -877,7 +877,8 @@ function buildGantt() {
 
       const nyl = document.createElement('div');
       nyl.className = 'next-year-label';
-      const confMonth = csFrac !== null ? Math.round(csFrac) : (c.conf > 0 ? c.conf : 0);
+      // Use the real start month; rounding the 0-based grid fraction shifted first-half-of-month starts back by one.
+      const confMonth = c.cs ? c.cs[0] : (c.conf > 0 ? c.conf : 0);
       const confText = confMonth > 0 ? MONTHS[confMonth - 1] : 'TBD';
       nyl.textContent = `\u2192 ${confText} '${String(activeYear + 1).slice(2)}`;
       barArea.appendChild(nyl);
